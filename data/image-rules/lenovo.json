@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "brand": "Lenovo",
+  "slug": "lenovo",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "item.lenovo.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 1,
+    "readyCount": 0,
+    "partialCount": 1,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "lenovo-yoga-air14",
+      "title": "Lenovo 推出 YOGA Air 14 Aura AI 元启版，继续扩展 AI PC 产品线",
+      "category": "digital",
+      "subcategory": "电脑",
+      "products": [
+        "YOGA Air 14 Aura AI元启版",
+        "14英寸轻薄笔记本电脑",
+        "流岚粉"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://item.lenovo.com.cn/product/1045787.html",
+      "currentImage": "/news/digital/lenovo-yoga-air14.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/lenovo-yoga-air14.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

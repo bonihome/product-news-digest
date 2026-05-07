@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F3F3F3"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FCFCFC" stroke="#D7D7D7"/>
+  <text x="110" y="165" fill="#5E5E5E" font-family="Georgia, serif" font-size="30" letter-spacing="5">NARS</text>
+  <text x="110" y="285" fill="#191919" font-family="Georgia, serif" font-size="72">Powder Focus</text>
+  <text x="110" y="395" fill="#6A6A6A" font-family="Arial, sans-serif" font-size="34">Soft Velvet Loose Powder</text>
+  <text x="110" y="450" fill="#6A6A6A" font-family="Arial, sans-serif" font-size="34">Light Reflecting Setting Powder</text>
+</svg>

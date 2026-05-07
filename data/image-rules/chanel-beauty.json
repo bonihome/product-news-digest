@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "brand": "CHANEL Beauty",
+  "slug": "chanel-beauty",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.chanel.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 0,
+    "partialCount": 3,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "chanel-beauty-n5-fragrance",
+      "title": "CHANEL Beauty 推出 N°5 香水系列新一季主打，经典花香调继续领衔香氛阵容",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "N°5 香奈儿五号香水（经典）",
+        "N°5 L'EAU 香奈儿五号之水",
+        "N°5 香奈儿五号香水随行手袋装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fragrance/p/125530/n5-eau-de-parfum-spray/",
+      "currentImage": "/news/beauty/chanel-n5.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/chanel-n5.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-beauty-chance-tendre",
+      "title": "CHANEL Beauty 推出邂逅柔情香氛层叠系列，花果香调延伸至身体护理",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "CHANCE EAU TENDRE 香奈儿邂逅柔情香水",
+        "香奈儿邂逅柔情精华油",
+        "香奈儿邂逅柔情润体乳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fragrance/p/126260/chance-eau-tendre-eau-de-parfum-spray/",
+      "currentImage": "/news/beauty/chanel-chance-tendre.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/chanel-chance-tendre.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-beauty-coco-mademoiselle",
+      "title": "CHANEL Beauty 推出可可小姐馥郁香水，琥珀木香调继续扩展经典香氛线",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "COCO MADEMOISELLE 香奈儿可可小姐馥郁香水",
+        "香奈儿可可小姐清新之水",
+        "香奈儿可可小姐发香喷雾"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fragrance/p/116660/coco-mademoiselle-eau-de-parfum-intense-spray/",
+      "currentImage": "/news/beauty/chanel-coco-mademoiselle.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/chanel-coco-mademoiselle.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

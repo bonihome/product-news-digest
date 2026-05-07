@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#EDE5DB"/>
+  <rect x="72" y="72" width="1056" height="756" rx="34" fill="#FAF6F0"/>
+  <rect x="345" y="312" width="510" height="300" rx="34" fill="#131313"/>
+  <path d="M345 410C450 360 750 360 855 410V450H345V410Z" fill="#1D1D1D"/>
+  <path d="M420 362L780 582" stroke="#3E3E3E" stroke-width="5"/>
+  <path d="M780 362L420 582" stroke="#3E3E3E" stroke-width="5"/>
+  <path d="M420 308C445 230 522 188 600 188C678 188 755 230 780 308" stroke="#B68E57" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="575" cy="458" r="28" fill="#B68E57"/>
+  <circle cx="625" cy="458" r="28" fill="#B68E57" fill-opacity="0.88"/>
+  <text x="100" y="708" fill="#403A34" font-family="Georgia, serif" font-size="56">Chanel 翻盖手袋</text>
+  <text x="100" y="772" fill="#8A7C6E" font-family="Arial, sans-serif" font-size="28">Chanel</text>
+</svg>

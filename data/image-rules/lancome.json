@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "brand": "Lancôme",
+  "slug": "lancome",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.lancome.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 1,
+    "readyCount": 1,
+    "partialCount": 0,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "homepage_product_card_capture",
+      "local_crop"
+    ],
+    "notes": [
+      "Lancôme China is heavily front-end rendered and product links are not consistently exposed in HTML.",
+      "For homepage-led stories, capture the visible product card or module image and mirror locally."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "lancome-home",
+      "title": "Lancôme 推出小黑瓶精华领衔的护肤阵容，经典修护线继续扩容",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "小黑瓶精华",
+        "菁纯面霜",
+        "极光水乳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.lancome.com.cn/",
+      "currentImage": "/news/beauty/lancome-genifique-packshot-clean.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "homepage_product_card_capture_to_local_mirror",
+        "priority": [
+          "homepage_product_card_capture",
+          "local_crop",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/lancome-genifique-packshot-clean.jpg",
+        "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/prod/lan/20250326/759cf952-d649-4834-af54-d1f665b2fea0.jpg",
+        "candidateImageHost": "res-wxec-unipt.lorealchina.com",
+        "notes": [
+          "Current local image was derived from an official homepage product card or campaign module.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

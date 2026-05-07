@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F4F1EA"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FFFBF6" stroke="#D7CEC2"/>
+  <text x="110" y="165" fill="#8B5D14" font-family="Georgia, serif" font-size="30" letter-spacing="5">WILSON TENNIS</text>
+  <text x="110" y="285" fill="#201913" font-family="Georgia, serif" font-size="76">Rush Pro 4.5</text>
+  <text x="110" y="395" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">New tennis shoe</text>
+  <text x="110" y="450" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">More comfort and stability</text>
+  <text x="110" y="505" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">4D Support Chassis 2.0</text>
+  <circle cx="955" cy="350" r="88" fill="#F3E57D"/>
+  <path d="M830 610C900 520 1010 515 1090 610" stroke="#D9D0C5" stroke-width="18" stroke-linecap="round"/>
+</svg>

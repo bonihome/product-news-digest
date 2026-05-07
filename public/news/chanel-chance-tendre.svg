@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F8E7EA"/>
+  <circle cx="600" cy="355" r="210" fill="#F9CFD6" stroke="#1B1714" stroke-width="6"/>
+  <circle cx="600" cy="355" r="164" fill="#FFF8F8" stroke="#1B1714" stroke-width="4"/>
+  <rect x="522" y="168" width="156" height="48" rx="10" fill="#1B1714"/>
+  <rect x="560" y="136" width="80" height="42" rx="8" fill="#FCECEF" stroke="#1B1714" stroke-width="4"/>
+  <text x="600" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#1B1714">CHANCE</text>
+  <text x="600" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#A15667">EAU TENDRE</text>
+  <text x="600" y="642" text-anchor="middle" font-family="Georgia, serif" font-size="62" fill="#1B1714">CHANCE EAU TENDRE</text>
+  <text x="600" y="690" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" letter-spacing="4" fill="#A15667">EAU DE PARFUM</text>
+</svg>

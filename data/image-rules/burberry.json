@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "brand": "Burberry",
+  "slug": "burberry",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.burberry.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 6,
+    "readyCount": 0,
+    "partialCount": 6,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "burberry",
+      "title": "Burberry 推出新季女装系列，风衣与外套继续领衔",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "Fitzrovia Trench Coat",
+        "Suede Urchin Clogs",
+        "Small Rider Bag"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+      "currentImage": "/news/luxury/burberry.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/burberry.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "burberry-rider",
+      "title": "Burberry 推出新款 Rider Bag，包袋线迎来当季重点更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Small Rider Bag",
+        "Equestrian Knight Design",
+        "Runway bag"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.burberry.cn/small-rider-bag-p81254981",
+      "currentImage": "/news/luxury/burberry-rider.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/burberry-rider.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "burberry-backpack",
+      "title": "Burberry 推出 EKD 饰牌双肩包，皮具线新增实用款式",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "粒纹小牛皮双肩包",
+        "EKD 饰牌",
+        "Burberry 格纹内衬"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.burberry.cn/knight-stamp-backpack-p81144391",
+      "currentImage": "/news/luxury/burberry-backpack.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/burberry-backpack.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "burberry-heritage-trench",
+      "title": "Burberry 推出 Heritage Trench 风衣，经典成衣线继续焕新",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "Heritage Trench 风衣",
+        "经典束带设计",
+        "防雨棉质面料"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+      "currentImage": "/news/luxury/burberry-heritage-trench.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/burberry-heritage-trench.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "burberry-check-shirt",
+      "title": "Burberry 推出格纹衬衫与轻外套组合，完善新季成衣层次",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "格纹衬衫",
+        "轻外套",
+        "新季鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+      "currentImage": "/news/luxury/burberry-check-shirt.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/burberry-check-shirt.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "burberry-rocking-horse",
+      "title": "Burberry 推出 Rocking Horse 包款，皮具线继续扩展马术主题",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Rocking Horse 包款",
+        "马术灵感扣件",
+        "皮革肩背设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.burberry.cn/l/womens-bags/",
+      "currentImage": "/news/luxury/burberry-rocking-horse.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/burberry-rocking-horse.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

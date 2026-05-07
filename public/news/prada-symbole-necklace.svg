@@ -1,0 +1,9 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F2ECE6"/>
+  <path d="M600 230C676 230 738 292 738 368V388" stroke="#343434" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 230C524 230 462 292 462 368V388" stroke="#343434" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 402L694 566H506L600 402Z" fill="#1A1A1A"/>
+  <path d="M600 442L652 534H548L600 442Z" fill="#F2ECE6"/>
+  <text x="600" y="708" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#1A1714">PRADA SYMBOLE</text>
+  <text x="600" y="754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#6F625A">JEWELRY</text>
+</svg>

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "brand": "Apple",
+  "slug": "apple",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.apple.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 0,
+    "partialCount": 3,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "apple-iphone",
+      "title": "Apple 推出 iPhone 17e，扩展新一代入门机型阵容",
+      "category": "digital",
+      "subcategory": "手机",
+      "products": [
+        "iPhone 17e",
+        "A19 芯片",
+        "48MP 双摄系统"
+      ],
+      "sourceType": "Official News",
+      "sourcePage": "https://www.apple.com.cn/cn/newsroom/2026/03/apple-introduces-iphone-17e/",
+      "currentImage": "/news/digital/apple-iphone.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/apple-iphone.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "apple-ipad",
+      "title": "Apple 发布搭载 M4 的新款 iPad Air，平板产品线再度升级",
+      "category": "digital",
+      "subcategory": "平板",
+      "products": [
+        "iPad Air with M4",
+        "Apple Pencil Pro",
+        "Magic Keyboard"
+      ],
+      "sourceType": "Official News",
+      "sourcePage": "https://www.apple.com.cn/cn/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/",
+      "currentImage": "/news/digital/apple-ipad.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/apple-ipad.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "apple-accessories",
+      "title": "Apple 推出 AirPods 4，更新无线音频配件阵容",
+      "category": "digital",
+      "subcategory": "配件",
+      "products": [
+        "AirPods 4",
+        "AirPods 4 主动降噪款",
+        "USB-C 充电盒"
+      ],
+      "sourceType": "Official News",
+      "sourcePage": "https://www.apple.com.cn/newsroom/2024/09/apple-introduces-all-new-airpods-4-with-industry-defining-audio-and-design/",
+      "currentImage": "/news/digital/apple-accessories.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/apple-accessories.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#EEE8E1"/>
+  <rect x="72" y="72" width="1056" height="756" rx="34" fill="#F8F4EF"/>
+  <rect x="330" y="292" width="540" height="340" rx="38" fill="#1B1A19"/>
+  <path d="M400 292C420 210 510 172 600 172C690 172 780 210 800 292" stroke="#B08A57" stroke-width="14" stroke-linecap="round"/>
+  <path d="M330 380H870" stroke="#5A5855" stroke-width="8"/>
+  <path d="M390 347L810 577" stroke="#3C3A37" stroke-width="5"/>
+  <path d="M810 347L390 577" stroke="#3C3A37" stroke-width="5"/>
+  <rect x="546" y="410" width="108" height="74" rx="28" fill="#B08A57"/>
+  <text x="100" y="708" fill="#403A34" font-family="Georgia, serif" font-size="56">CHANEL 25 中号手袋</text>
+  <text x="100" y="772" fill="#8A7C6E" font-family="Arial, sans-serif" font-size="28">Chanel</text>
+</svg>

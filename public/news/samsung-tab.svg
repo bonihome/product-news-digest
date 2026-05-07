@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#EEF2F7"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FAFCFF" stroke="#C7D2DE"/>
+  <text x="110" y="165" fill="#4A6A8A" font-family="Georgia, serif" font-size="30" letter-spacing="5">SAMSUNG TABLET</text>
+  <text x="110" y="285" fill="#17202A" font-family="Georgia, serif" font-size="74">Galaxy Tab S11</text>
+  <text x="110" y="366" fill="#17202A" font-family="Georgia, serif" font-size="74">Series</text>
+  <text x="110" y="482" fill="#5C6B79" font-family="Arial, sans-serif" font-size="34">Galaxy AI</text>
+  <text x="110" y="537" fill="#5C6B79" font-family="Arial, sans-serif" font-size="34">Samsung DeX</text>
+  <text x="110" y="592" fill="#5C6B79" font-family="Arial, sans-serif" font-size="34">Redesigned S Pen</text>
+  <rect x="790" y="180" width="280" height="390" rx="26" fill="#DCE5F0"/>
+  <rect x="830" y="215" width="200" height="320" rx="14" fill="#F9FCFF"/>
+</svg>

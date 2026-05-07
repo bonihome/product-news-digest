@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F7F0EA"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FFF9F4" stroke="#DCCFC4"/>
+  <text x="110" y="165" fill="#8B5D14" font-family="Georgia, serif" font-size="30" letter-spacing="5">CARTIER JEWELRY</text>
+  <text x="110" y="285" fill="#201913" font-family="Georgia, serif" font-size="76">New Jewelry</text>
+  <text x="110" y="395" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">LOVE bracelet</text>
+  <text x="110" y="450" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Trinity ring</text>
+  <text x="110" y="505" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Clash de Cartier ring</text>
+  <circle cx="900" cy="360" r="90" stroke="#C9A66B" stroke-width="28"/>
+  <circle cx="1020" cy="460" r="70" stroke="#D5B07A" stroke-width="24"/>
+</svg>

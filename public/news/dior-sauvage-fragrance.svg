@@ -1,0 +1,15 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#E8EDF2"/>
+  <rect x="454" y="136" width="292" height="490" rx="24" fill="url(#paint0_linear)" stroke="#1B1714" stroke-width="6"/>
+  <rect x="516" y="88" width="168" height="54" rx="12" fill="#11161B"/>
+  <text x="600" y="342" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#F6F7F8">SAUVAGE</text>
+  <text x="600" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#D8E1E8">DIOR</text>
+  <text x="600" y="708" text-anchor="middle" font-family="Georgia, serif" font-size="60" fill="#1B1714">SAUVAGE</text>
+  <text x="600" y="754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#55626D">EAU DE TOILETTE</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="600" y1="136" x2="600" y2="626" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#314351"/>
+      <stop offset="1" stop-color="#0D141A"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#EEF0F2"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FAFBFC" stroke="#CBD2D8"/>
+  <text x="110" y="165" fill="#5C6670" font-family="Georgia, serif" font-size="30" letter-spacing="5">MICROSOFT SURFACE</text>
+  <text x="110" y="285" fill="#1C1F22" font-family="Georgia, serif" font-size="74">Surface Laptop 6</text>
+  <text x="110" y="395" fill="#65707B" font-family="Arial, sans-serif" font-size="34">Intel Core Ultra H-series</text>
+  <text x="110" y="450" fill="#65707B" font-family="Arial, sans-serif" font-size="34">Copilot experiences</text>
+  <text x="110" y="505" fill="#65707B" font-family="Arial, sans-serif" font-size="34">Surface Studio Camera</text>
+  <path d="M780 555L980 315L1070 555H780Z" fill="#D6DBE0"/>
+  <rect x="765" y="575" width="325" height="28" rx="12" fill="#C5CCD3"/>
+</svg>

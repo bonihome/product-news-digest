@@ -1,0 +1,16 @@
+[Unit]
+Description=Product News Digest analytics server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/srv/product-news-digest
+EnvironmentFile=/srv/product-news-digest/.env
+ExecStart=/usr/bin/env npm run analytics:server
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F6F0E8"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FFF9F2" stroke="#D9CDC1"/>
+  <text x="110" y="165" fill="#8B5D14" font-family="Georgia, serif" font-size="30" letter-spacing="5">LOUIS VUITTON</text>
+  <text x="110" y="285" fill="#201913" font-family="Georgia, serif" font-size="78">Capucines</text>
+  <text x="110" y="370" fill="#201913" font-family="Georgia, serif" font-size="78">New Season</text>
+  <text x="110" y="485" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">My Capucines</text>
+  <text x="110" y="540" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Capucines Mini</text>
+  <text x="110" y="595" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Capucines East-West</text>
+  <rect x="790" y="210" width="132" height="170" rx="24" fill="#B78952"/>
+  <rect x="930" y="250" width="120" height="150" rx="24" fill="#D0B18A"/>
+  <rect x="860" y="430" width="170" height="120" rx="26" fill="#9A5D42"/>
+  <path d="M820 260C820 220 892 220 892 260" stroke="#7B522F" stroke-width="14" stroke-linecap="round"/>
+  <path d="M955 290C955 255 1025 255 1025 290" stroke="#A37A51" stroke-width="12" stroke-linecap="round"/>
+  <path d="M900 455C900 410 990 410 990 455" stroke="#7C4A35" stroke-width="14" stroke-linecap="round"/>
+</svg>

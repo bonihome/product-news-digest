@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "brand": "Bvlgari",
+  "slug": "bvlgari",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.bulgari.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 6,
+    "readyCount": 0,
+    "partialCount": 6,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "bulgari-serpenti-watch",
+      "title": "Bvlgari 推出 Serpenti 珠宝腕表，高珠腕表线迎来新作",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Serpenti系列珠宝腕表",
+        "102678",
+        "18K玫瑰金单螺旋表链"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.bulgari.cn/zh-cn/products/102678-e",
+      "currentImage": "/news/luxury/bulgari-serpenti-watch.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/bulgari-serpenti-watch.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "bulgari-serpenti-bag-grey",
+      "title": "Bvlgari 推出灰色 Serpenti East-West Maxi Chain 肩包",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Serpenti East-West Maxi Chain肩包",
+        "292033",
+        "迷雾蛋白石灰色都会小牛皮"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.bulgari.cn/zh-cn/products/292033-e",
+      "currentImage": "/news/luxury/bulgari-serpenti-bag-grey.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/bulgari-serpenti-bag-grey.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "bulgari-serpenti-bag-green",
+      "title": "Bvlgari 推出绿色 Serpenti East-West Maxi Chain 肩包，拓展系列配色",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Serpenti East-West Maxi Chain肩包",
+        "292678",
+        "绿色小牛皮版本"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.bulgari.cn/zh-cn/products/292678-e",
+      "currentImage": "/news/luxury/bulgari-serpenti-bag-green.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/bulgari-serpenti-bag-green.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "bulgari-serpenti-sedu-watch",
+      "title": "Bvlgari 推出 Serpenti Seduttori 腕表，珠宝腕表线继续扩展",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Serpenti Seduttori",
+        "蛇首表壳",
+        "珠宝式表链"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.bulgari.cn/zh-cn/products/102678-e",
+      "currentImage": "/news/luxury/bulgari-serpenti-sedu-watch.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "bulgari-octo-watch",
+      "title": "Bvlgari 推出 Octo 腕表新作，男士制表线同步更新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Octo 腕表",
+        "几何表壳",
+        "纤薄机芯设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.bulgari.cn/zh-cn/watches",
+      "currentImage": "/news/luxury/bulgari-octo-watch.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/bulgari-octo-watch.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "bulgari-serpenti-top-handle",
+      "title": "Bvlgari 推出 Serpenti Top Handle 手袋，包袋线再添新廓形",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Serpenti Top Handle",
+        "蛇首搭扣",
+        "挺括手提包型"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.bulgari.cn/zh-cn/products/292033-e",
+      "currentImage": "/news/luxury/bulgari-serpenti-top-handle.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/bulgari-serpenti-top-handle.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

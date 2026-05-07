@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "brand": "CHANDO",
+  "slug": "chando",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.chando-himalaya.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "browser_product_image_download",
+      "official_product_card_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "CHANDO product images can be blocked when fetched without a referer and user agent.",
+      "Use the official product detail page in a browser session or send the page as referer when downloading product images from chandowebprd.chandogroup.com.",
+      "Mirror the verified product image locally after download."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "chando-purple",
+      "title": "自然堂推出第七代小紫瓶精华，升级抗疲老护理线",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "肌源修护小紫瓶精华液第七代",
+        "超抗小紫瓶",
+        "极地精华露"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chando-himalaya.com/product_detail_1241756158335782912.html",
+      "currentImage": "/news/beauty/chando-purple-real.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/chando-purple-real.png",
+        "candidateImageUrl": "https://chandowebprd.chandogroup.com/images/aa434f1dafda4fdfa4fe30e2f75166ff.1776224329550.png",
+        "candidateImageHost": "chandowebprd.chandogroup.com",
+        "notes": [
+          "Download the official product image with the product detail page as referer, then mirror locally to avoid saving anti-hotlink HTML responses.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "chando-foundation",
+      "title": "自然堂推出柔雾持妆粉底液，底妆线再添主打新品",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "柔雾持妆粉底液",
+        "柔雾持妆气垫霜",
+        "松露水光气垫霜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chando-himalaya.com/cosmetics/980090450474045440.html",
+      "currentImage": "/news/beauty/chando-foundation-real.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/chando-foundation-real.png",
+        "candidateImageUrl": "https://chandowebprd.chandogroup.com/images/d1c85c4d6616409192aea01aed1b3c50.1713838299550.png",
+        "candidateImageHost": "chandowebprd.chandogroup.com",
+        "notes": [
+          "Download the official product image with the product detail page as referer, then mirror locally to avoid saving anti-hotlink HTML responses.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

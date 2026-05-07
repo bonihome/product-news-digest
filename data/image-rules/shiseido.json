@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "brand": "SHISEIDO",
+  "slug": "shiseido",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.shiseido.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 3,
+    "partialCount": 0,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "product_detail_packshot_download",
+      "homepage_product_card_capture",
+      "local_mirror"
+    ],
+    "notes": [
+      "For direct product stories, use the 1000x1000 itemmaster packshot from the product detail page.",
+      "For homepage-led stories, prefer a product-card crop over a text-heavy hero banner."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "shiseido-home",
+      "title": "SHISEIDO 推出悦薇家族护肤阵容，面霜与水乳组合成为本季主打",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "悦薇面霜",
+        "悦薇水乳",
+        "悦薇眼霜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.shiseido.com.cn/",
+      "currentImage": "/news/beauty/shiseido-vital-perfection-packshot-2.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "homepage_product_card_capture_to_local_mirror",
+        "priority": [
+          "product_detail_packshot_download",
+          "homepage_product_card_capture",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/shiseido-vital-perfection-packshot-2.png",
+        "candidateImageUrl": "https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dwe572840d/landingshi/2026/20260309/section-1/6.png",
+        "candidateImageHost": "www.shiseido.com.cn",
+        "notes": [
+          "Homepage-led skincare story currently uses a product-card style local crop for cleaner site presentation.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "shiseido-ultimune",
+      "title": "SHISEIDO 推出新一代「红腰子」精华，继续加码修护赛道",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "「红腰子」抗老精华",
+        "红妍肌活精华露",
+        "红腰子精华"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums",
+      "currentImage": "/news/beauty/shiseido-ultimune-packshot.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "product_detail_packshot_download_to_local_mirror",
+        "priority": [
+          "product_detail_packshot_download",
+          "homepage_product_card_capture",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/shiseido-ultimune-packshot.jpg",
+        "candidateImageUrl": "https://www.shiseido.com.cn/dw/image/v2/BCSK_PRD/on/demandware.static/-/Sites-itemmaster_shiseido/default/dw6a224066/images/chuchuangtu/baidi/baiditu-s17283-50.jpg?sw=1000&sh=1000&sm=fit",
+        "candidateImageHost": "www.shiseido.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "shiseido-uv",
+      "title": "SHISEIDO 推出「蓝胖子」防晒，持续强化高热度防护单品",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "「蓝胖子」防晒",
+        "Perfect UV Protector",
+        "悦薇水乳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.shiseido.com.cn/uv-perfect-protector-15678wlc.html",
+      "currentImage": "/news/beauty/shiseido-uv-packshot.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "product_detail_packshot_download_to_local_mirror",
+        "priority": [
+          "product_detail_packshot_download",
+          "homepage_product_card_capture",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/shiseido-uv-packshot.jpg",
+        "candidateImageUrl": "https://www.shiseido.com.cn/dw/image/v2/BCSK_PRD/on/demandware.static/-/Sites-itemmaster_shiseido/default/dwef0d71eb/images/products/15678wlc/plain.jpg?sw=1000&sh=1000&sm=fit",
+        "candidateImageHost": "www.shiseido.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

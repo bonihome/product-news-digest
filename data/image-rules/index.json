@@ -1,0 +1,465 @@
+{
+  "generatedAt": "2026-05-07T12:58:37.457Z",
+  "brandCount": 51,
+  "brands": [
+    {
+      "brand": "Adidas",
+      "slug": "adidas",
+      "file": "data/image-rules/adidas.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Apple",
+      "slug": "apple",
+      "file": "data/image-rules/apple.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Arc'teryx",
+      "slug": "arc-teryx",
+      "file": "data/image-rules/arc-teryx.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "ASICS",
+      "slug": "asics",
+      "file": "data/image-rules/asics.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Bobbi Brown",
+      "slug": "bobbi-brown",
+      "file": "data/image-rules/bobbi-brown.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Burberry",
+      "slug": "burberry",
+      "file": "data/image-rules/burberry.json",
+      "storyCount": 6,
+      "readyCount": 0,
+      "partialCount": 6,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Bvlgari",
+      "slug": "bvlgari",
+      "file": "data/image-rules/bvlgari.json",
+      "storyCount": 6,
+      "readyCount": 0,
+      "partialCount": 6,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Cartier",
+      "slug": "cartier",
+      "file": "data/image-rules/cartier.json",
+      "storyCount": 9,
+      "readyCount": 0,
+      "partialCount": 9,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "CHANDO",
+      "slug": "chando",
+      "file": "data/image-rules/chando.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Chanel",
+      "slug": "chanel",
+      "file": "data/image-rules/chanel.json",
+      "storyCount": 9,
+      "readyCount": 0,
+      "partialCount": 9,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "CHANEL Beauty",
+      "slug": "chanel-beauty",
+      "file": "data/image-rules/chanel-beauty.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Charlotte Tilbury",
+      "slug": "charlotte-tilbury",
+      "file": "data/image-rules/charlotte-tilbury.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Clé de Peau Beauté",
+      "slug": "cle-de-peau-beaute",
+      "file": "data/image-rules/cle-de-peau-beaute.json",
+      "storyCount": 4,
+      "readyCount": 0,
+      "partialCount": 4,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Clinique",
+      "slug": "clinique",
+      "file": "data/image-rules/clinique.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "DESCENTE",
+      "slug": "descente",
+      "file": "data/image-rules/descente.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Dior",
+      "slug": "dior",
+      "file": "data/image-rules/dior.json",
+      "storyCount": 6,
+      "readyCount": 0,
+      "partialCount": 6,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Dior Beauty",
+      "slug": "dior-beauty",
+      "file": "data/image-rules/dior-beauty.json",
+      "storyCount": 5,
+      "readyCount": 0,
+      "partialCount": 5,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Estée Lauder",
+      "slug": "estee-lauder",
+      "file": "data/image-rules/estee-lauder.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Gucci",
+      "slug": "gucci",
+      "file": "data/image-rules/gucci.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Hermes",
+      "slug": "hermes",
+      "file": "data/image-rules/hermes.json",
+      "storyCount": 9,
+      "readyCount": 0,
+      "partialCount": 9,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Hermès Beauty",
+      "slug": "hermes-beauty",
+      "file": "data/image-rules/hermes-beauty.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "HONOR",
+      "slug": "honor",
+      "file": "data/image-rules/honor.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Huawei",
+      "slug": "huawei",
+      "file": "data/image-rules/huawei.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "IPSA",
+      "slug": "ipsa",
+      "file": "data/image-rules/ipsa.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Kiehl's",
+      "slug": "kiehl-s",
+      "file": "data/image-rules/kiehl-s.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "KOLON SPORT",
+      "slug": "kolon-sport",
+      "file": "data/image-rules/kolon-sport.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "La Mer",
+      "slug": "la-mer",
+      "file": "data/image-rules/la-mer.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Lancôme",
+      "slug": "lancome",
+      "file": "data/image-rules/lancome.json",
+      "storyCount": 1,
+      "readyCount": 1,
+      "partialCount": 0,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Lenovo",
+      "slug": "lenovo",
+      "file": "data/image-rules/lenovo.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Longines",
+      "slug": "longines",
+      "file": "data/image-rules/longines.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Louis Vuitton",
+      "slug": "louis-vuitton",
+      "file": "data/image-rules/louis-vuitton.json",
+      "storyCount": 6,
+      "readyCount": 0,
+      "partialCount": 6,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "MAOGEPING",
+      "slug": "maogeping",
+      "file": "data/image-rules/maogeping.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Microsoft Surface",
+      "slug": "microsoft-surface",
+      "file": "data/image-rules/microsoft-surface.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 0,
+      "needsReplacementCount": 2
+    },
+    {
+      "brand": "Mizuno",
+      "slug": "mizuno",
+      "file": "data/image-rules/mizuno.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "NARS",
+      "slug": "nars",
+      "file": "data/image-rules/nars.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Nike",
+      "slug": "nike",
+      "file": "data/image-rules/nike.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "OMEGA",
+      "slug": "omega",
+      "file": "data/image-rules/omega.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "On",
+      "slug": "on",
+      "file": "data/image-rules/on.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "OPPO",
+      "slug": "oppo",
+      "file": "data/image-rules/oppo.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Prada",
+      "slug": "prada",
+      "file": "data/image-rules/prada.json",
+      "storyCount": 12,
+      "readyCount": 12,
+      "partialCount": 0,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Prada Beauty",
+      "slug": "prada-beauty",
+      "file": "data/image-rules/prada-beauty.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "PROYA",
+      "slug": "proya",
+      "file": "data/image-rules/proya.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Samsung",
+      "slug": "samsung",
+      "file": "data/image-rules/samsung.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "SHISEIDO",
+      "slug": "shiseido",
+      "file": "data/image-rules/shiseido.json",
+      "storyCount": 3,
+      "readyCount": 3,
+      "partialCount": 0,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Shu Uemura",
+      "slug": "shu-uemura",
+      "file": "data/image-rules/shu-uemura.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Tiffany & Co.",
+      "slug": "tiffany-and-co",
+      "file": "data/image-rules/tiffany-and-co.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Van Cleef & Arpels",
+      "slug": "van-cleef-and-arpels",
+      "file": "data/image-rules/van-cleef-and-arpels.json",
+      "storyCount": 3,
+      "readyCount": 3,
+      "partialCount": 0,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "vivo",
+      "slug": "vivo",
+      "file": "data/image-rules/vivo.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Wilson",
+      "slug": "wilson",
+      "file": "data/image-rules/wilson.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 0,
+      "needsReplacementCount": 2
+    },
+    {
+      "brand": "Winona",
+      "slug": "winona",
+      "file": "data/image-rules/winona.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "YONEX",
+      "slug": "yonex",
+      "file": "data/image-rules/yonex.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
+      "needsReplacementCount": 0
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F5F0E7"/>
+  <rect x="70" y="70" width="1060" height="760" rx="36" fill="#FBF8F1"/>
+  <circle cx="600" cy="365" r="134" fill="#FFFDF8" stroke="#D8C9A8" stroke-width="18"/>
+  <path d="M600 248C632 293 706 300 706 365C706 430 632 437 600 482C568 437 494 430 494 365C494 300 568 293 600 248Z" fill="#EDE2C8"/>
+  <circle cx="600" cy="365" r="95" fill="#FFF7E5"/>
+  <path d="M600 283C623 317 676 322 676 365C676 408 623 413 600 447C577 413 524 408 524 365C524 322 577 317 600 283Z" fill="#FFFFFF"/>
+  <rect x="585" y="200" width="30" height="62" rx="15" fill="#C9B385"/>
+  <path d="M600 155C558 155 524 189 524 231V244H548V231C548 202 571 179 600 179C629 179 652 202 652 231V244H676V231C676 189 642 155 600 155Z" fill="#C9B385"/>
+  <text x="100" y="708" fill="#6B5840" font-family="Georgia, serif" font-size="56">Vintage Alhambra 吊坠</text>
+  <text x="100" y="772" fill="#A28A67" font-family="Arial, sans-serif" font-size="28">Van Cleef &amp; Arpels</text>
+</svg>

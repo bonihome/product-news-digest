@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "brand": "Hermes",
+  "slug": "hermes",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.hermes.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 9,
+    "readyCount": 0,
+    "partialCount": 9,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "hermes-hacademi",
+      "title": "Hermes 推出 Hacademi 手包，皮具线迎来新一轮更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Hacademi手包",
+        "单个马鞍针法接裆",
+        "镂空翻盖设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/hacademi%E6%89%8B%E5%8C%85-H086976CK37/",
+      "currentImage": "/news/luxury/hermes-hacademi.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-hacademi.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-mini-clic-kelly",
+      "title": "Hermes 推出 Mini Clic Kelly 手镯，珠宝配饰线持续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Mini Clic Kelly手镯",
+        "Kelly锁扣",
+        "窄版珐琅手镯"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/mini-clic-kelly%E6%89%8B%E9%95%AF-H200004Fv94PM/",
+      "currentImage": "/news/luxury/hermes-mini-clic-kelly.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-mini-clic-kelly.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-arceau-watch",
+      "title": "Hermes 推出 Arceau Le Temps Voyageur 41 毫米腕表",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Arceau Le Temps Voyageur腕表",
+        "41毫米表壳",
+        "H1837机芯"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/arceau-le-temps-voyageur%E8%85%95%E8%A1%A841%E6%AF%AB%E7%B1%B3-W057198WW00/",
+      "currentImage": "/news/luxury/hermes-arceau-watch.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-arceau-watch.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-garden-party",
+      "title": "Hermes 推出 Garden Party 手袋，皮具线继续扩展日常经典款",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Garden Party 手袋",
+        "大容量托特结构",
+        "皮革手柄"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/",
+      "currentImage": "/news/luxury/hermes-garden-party.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-garden-party.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-kelly-pocket",
+      "title": "Hermes 推出 Kelly Pocket 紧凑包型，丰富小尺寸皮具阵容",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Kelly Pocket",
+        "紧凑包型",
+        "标志性翻盖结构"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/",
+      "currentImage": "/news/luxury/hermes-kelly-pocket.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-kelly-pocket.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-farandole",
+      "title": "Hermes 推出 Farandole 项链，珠宝配饰线持续延展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Farandole 项链",
+        "链条结构",
+        "银饰设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
+      "currentImage": "/news/luxury/hermes-farandole.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-farandole.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-collier-de-chien",
+      "title": "Hermes 推出 Collier de Chien 手镯，经典配饰线再度更新",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Collier de Chien 手镯",
+        "铆钉元素",
+        "几何线条设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
+      "currentImage": "/news/luxury/hermes-collier-de-chien.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-collier-de-chien.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-h08-watch",
+      "title": "Hermes 推出 H08 腕表新作，男士制表线持续扩展",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "H08 腕表",
+        "运动化表壳",
+        "橡胶表带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+      "currentImage": "/news/luxury/hermes-h08-watch.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-h08-watch.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-cape-cod-watch",
+      "title": "Hermes 推出 Cape Cod 腕表，经典双圈表带设计回归",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Cape Cod 腕表",
+        "双圈表带",
+        "柔和方形表壳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+      "currentImage": "/news/luxury/hermes-cape-cod-watch.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

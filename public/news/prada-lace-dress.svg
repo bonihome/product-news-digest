@@ -1,0 +1,10 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#EFE9E5"/>
+  <path d="M600 174L690 236L650 322L754 650H446L550 322L510 236L600 174Z" fill="#121212"/>
+  <path d="M510 236H690" stroke="#D7D0CB" stroke-width="8" stroke-linecap="round"/>
+  <path d="M550 322H650" stroke="#D7D0CB" stroke-width="6" stroke-linecap="round"/>
+  <path d="M500 428H700" stroke="#2A2A2A" stroke-width="4" stroke-dasharray="10 10"/>
+  <path d="M482 520H718" stroke="#2A2A2A" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="600" y="714" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#151515">PRADA LACE DRESS</text>
+  <text x="600" y="758" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#7B6E68">READY-TO-WEAR</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F6F0EA"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FFF9F5" stroke="#DDCFC3"/>
+  <text x="110" y="165" fill="#7B5D4A" font-family="Georgia, serif" font-size="30" letter-spacing="5">BOBBI BROWN</text>
+  <text x="110" y="285" fill="#231913" font-family="Georgia, serif" font-size="72">China Makeup Watch</text>
+  <text x="110" y="395" fill="#6D6158" font-family="Arial, sans-serif" font-size="34">Intensive Serum Foundation</text>
+  <text x="110" y="450" fill="#6D6158" font-family="Arial, sans-serif" font-size="34">Highlighting Powder</text>
+</svg>

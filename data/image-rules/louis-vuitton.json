@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "brand": "Louis Vuitton",
+  "slug": "louis-vuitton",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.louisvuitton.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 6,
+    "readyCount": 0,
+    "partialCount": 6,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "lv",
+      "title": "Louis Vuitton 推出新一季 Capucines 包袋系列",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "My Capucines",
+        "Capucines Mini",
+        "Capucines East-West"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/capucines-mini-capucines-nvprod7540209v/M28548",
+      "currentImage": "/news/luxury/lv.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-readywear",
+      "title": "Louis Vuitton 发布新季女装成衣系列",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "Ready-to-Wear pieces",
+        "Seasonal knitwear",
+        "Women New This Season looks"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+      "currentImage": "/news/luxury/lv-readywear.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-readywear.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-my-capucines",
+      "title": "Louis Vuitton 推出 My Capucines 个性化版本，延展经典手袋系列",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "My Capucines",
+        "双镀字母装饰",
+        "可调节链条与肩带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/my-capucines-capucines-nvprod7110114v/K00018",
+      "currentImage": "/news/luxury/lv-my-capucines.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-my-capucines.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-capucines-bb",
+      "title": "Louis Vuitton 推出 Capucines BB 新作，经典手袋系列持续扩容",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Capucines BB",
+        "顶部手柄设计",
+        "可拆卸肩带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+      "currentImage": "/news/luxury/lv-capucines-bb.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-capucines-bb.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-tweed-jacket",
+      "title": "Louis Vuitton 推出新季粗花呢夹克，女装系列继续延展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "粗花呢夹克",
+        "短款外套",
+        "针织上衣"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+      "currentImage": "/news/luxury/lv-tweed-jacket.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-tweed-jacket.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-silk-dress",
+      "title": "Louis Vuitton 推出新季真丝连衣裙，成衣线再添重点单品",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "真丝连衣裙",
+        "剪裁外套",
+        "新季造型单品"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+      "currentImage": "/news/luxury/lv-silk-dress.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-silk-dress.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

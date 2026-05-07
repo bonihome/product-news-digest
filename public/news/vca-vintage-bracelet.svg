@@ -1,0 +1,21 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F6F1EA"/>
+  <rect x="72" y="72" width="1056" height="756" rx="34" fill="#FCFAF5"/>
+  <path d="M245 430C330 365 870 365 955 430" stroke="#D7C39B" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#FFF7E6" stroke="#D7C39B" stroke-width="12">
+    <circle cx="315" cy="430" r="54"/>
+    <circle cx="455" cy="395" r="54"/>
+    <circle cx="600" cy="385" r="54"/>
+    <circle cx="745" cy="395" r="54"/>
+    <circle cx="885" cy="430" r="54"/>
+  </g>
+  <g fill="#FFFFFF">
+    <path d="M315 396C328 416 357 419 357 430C357 441 328 444 315 464C302 444 273 441 273 430C273 419 302 416 315 396Z"/>
+    <path d="M455 361C468 381 497 384 497 395C497 406 468 409 455 429C442 409 413 406 413 395C413 384 442 381 455 361Z"/>
+    <path d="M600 351C613 371 642 374 642 385C642 396 613 399 600 419C587 399 558 396 558 385C558 374 587 371 600 351Z"/>
+    <path d="M745 361C758 381 787 384 787 395C787 406 758 409 745 429C732 409 703 406 703 395C703 384 732 381 745 361Z"/>
+    <path d="M885 396C898 416 927 419 927 430C927 441 898 444 885 464C872 444 843 441 843 430C843 419 872 416 885 396Z"/>
+  </g>
+  <text x="100" y="708" fill="#6B5840" font-family="Georgia, serif" font-size="56">Vintage Alhambra 手链</text>
+  <text x="100" y="772" fill="#A28A67" font-family="Arial, sans-serif" font-size="28">Van Cleef &amp; Arpels</text>
+</svg>

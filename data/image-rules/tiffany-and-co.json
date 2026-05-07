@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "brand": "Tiffany & Co.",
+  "slug": "tiffany-and-co",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.tiffany.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 0,
+    "partialCount": 3,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "tiffany-hardwear",
+      "title": "Tiffany & Co. 推出 HardWear 链环项链，都市珠宝线持续升级",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Tiffany HardWear渐变链环项链",
+        "18K黄金链环",
+        "HardWear系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.tiffany.cn/jewelry/items/tiffany-hardwear-link-necklace-38086766/",
+      "currentImage": "/news/luxury/tiffany-hardwear.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/tiffany-hardwear.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "tiffany-smile-necklace",
+      "title": "Tiffany & Co. 推出 Tiffany T Smile 项链，轻珠宝系列延续热度",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Tiffany T Smile项链",
+        "白18K金镶蓝宝石",
+        "小号吊坠"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.tiffany.cn/jewelry/necklaces-pendants/tiffany-t-smile-pendant-35385533/",
+      "currentImage": "/news/luxury/tiffany-smile-necklace.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/tiffany-smile-necklace.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "tiffany-lock",
+      "title": "Tiffany & Co. 推出 Tiffany Lock 系列手链，锁扣主题珠宝再添新作",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Tiffany Lock手链",
+        "窄式手镯",
+        "链式手链"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.tiffany.cn/jewelry/shop/bracelets/tiffany-lock/",
+      "currentImage": "/news/luxury/tiffany-lock.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/tiffany-lock.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

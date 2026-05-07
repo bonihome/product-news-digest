@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "HONOR",
+  "slug": "honor",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.honor.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "honor-magic8",
+      "title": "HONOR 发布荣耀 Magic8 Pro，完善高端手机阵容",
+      "category": "digital",
+      "subcategory": "手机",
+      "products": [
+        "荣耀Magic8 Pro",
+        "荣耀Magic8 RSR | 保时捷设计",
+        "荣耀Magic8 Pro Air"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.honor.com/cn/phones/honor-magic8-pro/",
+      "currentImage": "/news/digital/honor-magic8.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/honor-magic8.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "honor-tablets",
+      "title": "HONOR 推出荣耀 MagicPad 3 Pro 12.3，平板线迎来新成员",
+      "category": "digital",
+      "subcategory": "平板",
+      "products": [
+        "荣耀MagicPad 3 Pro 12.3\"",
+        "荣耀平板10 Pro",
+        "荣耀平板GT2 Pro"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.honor.com/cn/tablets/",
+      "currentImage": "/news/digital/honor-tablets.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/honor-tablets.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

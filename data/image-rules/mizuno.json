@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "brand": "Mizuno",
+  "slug": "mizuno",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "www.mizuno.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 1,
+    "readyCount": 0,
+    "partialCount": 1,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "mizuno-tennis",
+      "title": "Mizuno 推出 WAVE ENFORCE TOUR AC，网球鞋阵容持续扩充",
+      "category": "sports",
+      "subcategory": "网球",
+      "products": [
+        "WAVE ENFORCE TOUR AC网球鞋",
+        "WAVE EXCEED TOUR 5 AC",
+        "WAVE EXCEED LIGHT 2 AC"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.mizuno.com.cn/qiuxie/538.html",
+      "currentImage": "/news/sports/mizuno-tennis.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/mizuno-tennis.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

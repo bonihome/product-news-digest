@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "brand": "OMEGA",
+  "slug": "omega",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.omegawatches.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 0,
+    "partialCount": 3,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "omega-moonwatch",
+      "title": "OMEGA 推出超霸专业月球表，经典登月系列持续焕新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "超霸系列专业月球表",
+        "310.30.42.50.01.002",
+        "42毫米精钢表链款"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.omegawatches.cn/watches/speedmaster/moonwatch-professional/product",
+      "currentImage": "/news/luxury/omega-moonwatch.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/omega-moonwatch.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "omega-speedmaster-38",
+      "title": "OMEGA 推出超霸 38 毫米腕表，精钢与 Sedna 金组合亮相",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "超霸38毫米腕表",
+        "324.28.38.50.02.002",
+        "精钢-Sedna 18K金表壳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.omegawatches.cn/watch-omega-speedmaster-38-co-axial-chronometer-chronograph-38-mm-32428385002002",
+      "currentImage": "/news/luxury/omega-speedmaster-38.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/omega-speedmaster-38.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "omega-aqua-terra",
+      "title": "OMEGA 推出海马系列 Aqua Terra 38 毫米腕表，运动表线再迎更新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "海马系列Aqua Terra 150米腕表",
+        "220.10.38.20.01.001",
+        "38毫米精钢表链款"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.omegawatches.cn/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382001001",
+      "currentImage": "/news/luxury/omega-aqua-terra.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/omega-aqua-terra.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

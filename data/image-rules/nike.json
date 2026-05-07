@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "Nike",
+  "slug": "nike",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "www.nike.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "nike-basketball",
+      "title": "Nike 推出 LeBron XXIII EP，篮球鞋新品再添旗舰款",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "LeBron XXIII EP",
+        "Basketball new releases",
+        "Performance footwear"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.nike.com.cn/w/new-3n82y",
+      "currentImage": "/news/sports/nike-basketball.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-basketball.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-basketball-feed",
+      "title": "Nike 持续更新篮球新品，Kobe Air Force 1 Low 加入本季阵容",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "Kobe Air Force 1 Low",
+        "LeBron XXIII EP",
+        "Basketball apparel"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.nike.com.cn/w/new-3n82y",
+      "currentImage": "/news/sports/nike-basketball-feed.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-basketball-feed.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

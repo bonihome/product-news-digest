@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "brand": "Van Cleef & Arpels",
+  "slug": "van-cleef-and-arpels",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.vancleefarpels.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 3,
+    "partialCount": 0,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "product_gallery_currentSrc",
+      "local_mirror"
+    ],
+    "notes": [
+      "Use the exact product page gallery and prefer the front or detail image from currentSrc.",
+      "Local PNG mirrors are more stable than relying on live CN CDN responses."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "vca-alhambra",
+      "title": "Van Cleef & Arpels 推出 Vintage Alhambra 吊坠，经典幸运珠宝再迎新作",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Vintage Alhambra吊坠",
+        "Vintage Alhambra手链",
+        "Vintage Alhambra耳环"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcarp9xg00---vintage-alhambra-pendant.html",
+      "currentImage": "/news/luxury/vca-vintage-pendant.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "product_gallery_currentSrc_to_local_mirror",
+        "priority": [
+          "product_gallery_currentSrc",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/vca-vintage-pendant.png",
+        "candidateImageUrl": "https://www.vancleefarpels.cn/content/dam/rcq/vca/Rz/4M/Ut/Vy/QD/-6/c6/13/zo/4v/6g/Rz4MUtVyQD-6c613zo4v6g.png.transform.vca-w820-1x.png",
+        "candidateImageHost": "www.vancleefarpels.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "vca-bracelet",
+      "title": "Van Cleef & Arpels 推出 Vintage Alhambra 手链，幸运系列持续扩充",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Vintage Alhambra手链",
+        "5枚四叶幸运图案",
+        "18K黄金与钻石"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcara41400---vintage-alhambra-bracelet-5-motifs.html",
+      "currentImage": "/news/luxury/vca-vintage-bracelet.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "product_gallery_currentSrc_to_local_mirror",
+        "priority": [
+          "product_gallery_currentSrc",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/vca-vintage-bracelet.png",
+        "candidateImageUrl": "https://www.vancleefarpels.cn/content/dam/rcq/vca/L8/7Y/Eh/oM/Sg/yH/yH/Od/Bq/iJ/vg/L87YEhoMSgyHyHOdBqiJvg.png.transform.vca-w820-1x.png",
+        "candidateImageHost": "www.vancleefarpels.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "vca-magic-alhambra",
+      "title": "Van Cleef & Arpels 推出 Magic Alhambra 手链，扩大高珠幸运主题阵容",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Magic Alhambra手链",
+        "5枚主题图案",
+        "白K金与钻石"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcard78700---magic-alhambra-bracelet-5-motifs.html",
+      "currentImage": "/news/luxury/vca-magic-bracelet.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "product_gallery_currentSrc_to_local_mirror",
+        "priority": [
+          "product_gallery_currentSrc",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/vca-magic-bracelet.png",
+        "candidateImageUrl": "https://www.vancleefarpels.cn/content/dam/rcq/vca/tR/Va/8Y/rm/Qt/uH/xp/pM/6k/6t/qQ/tRVa8YrmQtuHxppM6k6tqQ.png.transform.vca-w820-1x.png",
+        "candidateImageHost": "www.vancleefarpels.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

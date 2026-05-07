@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "brand": "Dior Beauty",
+  "slug": "dior-beauty",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.dior.com",
+    "www.dior.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 5,
+    "readyCount": 0,
+    "partialCount": 5,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "dior-beauty",
+      "title": "Dior Beauty 推出新一季 Forever 底妆系列，强化底妆主线",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "Dior Forever Skin Glow",
+        "Dior Forever Skin Wear",
+        "Dior Addict"
+      ],
+      "sourceType": "Official News",
+      "sourcePage": "https://www.dior.com/en_us/beauty/page/whats-new.html",
+      "currentImage": "/news/beauty/dior-forever-new.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/dior-forever-new.jpg",
+        "candidateImageUrl": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640",
+        "candidateImageHost": "www.dior.com",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-beauty-lips",
+      "title": "Dior Beauty 加码唇妆更新，Addict 与 Lip Glow Oil 成为焦点",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "Dior Addict",
+        "Lip Glow Oil",
+        "Rosy Glow"
+      ],
+      "sourceType": "Official News",
+      "sourcePage": "https://www.dior.com/en_us/beauty/page/whats-new.html",
+      "currentImage": "/news/beauty/dior-addict-new.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/dior-addict-new.jpg",
+        "candidateImageUrl": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw9831c51b/Y0319000/Y0319000_C031900038_E01_RHC.jpg?sw=640",
+        "candidateImageHost": "www.dior.com",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-beauty-miss-dior-fragrance",
+      "title": "Dior Beauty 推出 Miss Dior 香氛组合，花香调继续扩展女士香水主线",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "Miss Dior 淡香精",
+        "Miss Dior 香精",
+        "Miss Dior Roller-Pearl 滚珠香氛"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior",
+      "currentImage": "/news/beauty/dior-miss-dior-real.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/dior-miss-dior-real.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-beauty-jadore-fragrance",
+      "title": "Dior Beauty 推出 J’adore 香氛系列新一季主打，经典花束香调继续领衔",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "J’adore 淡香精",
+        "J’adore Parfum d'eau",
+        "J’adore 身体乳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/jadore",
+      "currentImage": "/news/beauty/dior-jadore-real.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/dior-jadore-real.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-beauty-sauvage-fragrance",
+      "title": "Dior Beauty 推出 Sauvage 新一季香氛阵容，木质清新调持续扩展男士香水线",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "Sauvage 淡香水",
+        "Sauvage Eau Forte",
+        "Sauvage 须后润肤露"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/beauty/products/y0685240-sauvage-eau-de-toilette",
+      "currentImage": "/news/beauty/dior-sauvage-real.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/dior-sauvage-real.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

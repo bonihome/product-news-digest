@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F4EEEC"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FFF9F7" stroke="#DCCFCA"/>
+  <text x="110" y="165" fill="#A14637" font-family="Georgia, serif" font-size="30" letter-spacing="5">SHISEIDO</text>
+  <text x="110" y="285" fill="#261816" font-family="Georgia, serif" font-size="72">China Hero Products</text>
+  <text x="110" y="395" fill="#6E5D5A" font-family="Arial, sans-serif" font-size="34">Ultimune Serum</text>
+  <text x="110" y="450" fill="#6E5D5A" font-family="Arial, sans-serif" font-size="34">Perfect UV Protector</text>
+  <text x="110" y="505" fill="#6E5D5A" font-family="Arial, sans-serif" font-size="34">Vital Perfection Line</text>
+</svg>

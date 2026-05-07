@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "brand": "On",
+  "slug": "on",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "www.on.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "product_gallery_currentSrc_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "On product pages expose stable product gallery assets through currentSrc values on brand CDN images.",
+      "Prefer the first hero gallery image and mirror it locally for product cards."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "on-cloudsurfer-max",
+      "title": "On 推出 Cloudsurfer Max，缓震跑鞋产品线迎来新作",
+      "category": "sports",
+      "subcategory": "跑步",
+      "products": [
+        "Cloudsurfer Max",
+        "CloudTec Phase",
+        "Helion foam"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.on.com/en-us/products/cloudsurfer-max-m-3mf3043/mens",
+      "currentImage": "/news/sports/on-cloudsurfer-max.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/on-cloudsurfer-max.webp",
+        "candidateImageUrl": "https://images.ctfassets.net/hnk2vsx53n6l/1VGvF5KSK6shaFwdzgvKRu/5009bc69b19aeb617e0cbebb12e23c83/e23710a3d0ff66844466531dd9d7940b7b22540f.png?fm=webp",
+        "candidateImageHost": "images.ctfassets.net",
+        "notes": [
+          "The current local mirror comes from the official On product gallery hero image.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "on-cloudmonster-2",
+      "title": "On 推出 Cloudmonster 2，厚底推进型跑鞋继续扩展训练线",
+      "category": "sports",
+      "subcategory": "跑步",
+      "products": [
+        "Cloudmonster 2",
+        "max cushioned road runners",
+        "energy return"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.on.com/en-us/products/cloudmonster-2-m-3me1012/mens",
+      "currentImage": "/news/sports/on-cloudmonster-2-page.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/on-cloudmonster-2-page.png",
+        "candidateImageUrl": "https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp",
+        "candidateImageHost": "images.ctfassets.net",
+        "notes": [
+          "The current local mirror comes from the official On product gallery hero image.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

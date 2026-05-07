@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "brand": "OPPO",
+  "slug": "oppo",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.oppo.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 1,
+    "readyCount": 0,
+    "partialCount": 1,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "oppo-findx9",
+      "title": "OPPO 推出 Find X9 系列，影像旗舰继续升级",
+      "category": "digital",
+      "subcategory": "手机",
+      "products": [
+        "OPPO Find X9",
+        "4K 超清实况照片",
+        "7025mAh 冰川电池"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.oppo.com/cn/smartphones/series-find-x/find-x9/",
+      "currentImage": "/news/digital/oppo-findx9.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/oppo-findx9.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

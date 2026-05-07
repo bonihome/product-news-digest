@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#EDE7E1"/>
+  <path d="M390 492C390 404 460 336 548 336H652C740 336 810 404 810 492V574C810 618 774 654 730 654H470C426 654 390 618 390 574V492Z" fill="#5F4A3E"/>
+  <path d="M476 338C476 270 530 216 598 216H602C670 216 724 270 724 338" stroke="#5F4A3E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M540 452H660" stroke="#CCB7A6" stroke-width="10" stroke-linecap="round"/>
+  <text x="600" y="708" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#1A1714">PRADA RE-EDITION 2005</text>
+  <text x="600" y="754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#7C695D">MINI BAG</text>
+</svg>

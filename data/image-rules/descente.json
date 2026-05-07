@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "brand": "DESCENTE",
+  "slug": "descente",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "allterrain.descente.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "official_collection_asset_download",
+      "official_page_screenshot",
+      "local_mirror"
+    ],
+    "notes": [
+      "DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches.",
+      "Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "descente-allterrain",
+      "title": "DESCENTE 推出 ALLTERRAIN 新一季机能阵容，户外线继续加码",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "ALLTERRAIN",
+        "ALLTERRAIN 81",
+        "MIZUSAWA DOWN"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://allterrain.descente.com/products_en/DU5FJKI2M/",
+      "currentImage": "/news/sports/descente-allterrain.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/descente-allterrain.jpg",
+        "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg",
+        "candidateImageHost": "allterrain.descente.com",
+        "notes": [
+          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset or page screenshot due to Cloudflare protection on commerce pages.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "descente-allterrain-81",
+      "title": "DESCENTE 继续扩展 ALLTERRAIN 81，户外机能副线同步推进",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "ALLTERRAIN 81",
+        "MIZUSAWA DOWN",
+        "urban outdoor line"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://allterrain.descente.com/products_en/DU5FJKI2M/",
+      "currentImage": "/news/sports/descente-allterrain-page.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/descente-allterrain-page.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset or page screenshot due to Cloudflare protection on commerce pages.",
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

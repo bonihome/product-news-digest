@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "brand": "KOLON SPORT",
+  "slug": "kolon-sport",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "www.kolonsport.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "product_gallery_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "KOLON SPORT product pages expose stable gallery assets on images.kolonmall.com.",
+      "Prefer the LM1 front-view product image for the lead card, then mirror locally."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "kolon-hyperleap-tlx",
+      "title": "KOLON SPORT 推出 HYPERLEAP TL-X，越野跑鞋线继续扩展",
+      "category": "sports",
+      "subcategory": "跑步",
+      "products": [
+        "HYPERLEAP TL-X",
+        "TRAIL",
+        "男女通用越野跑鞋"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.kolonsport.com/Product/FE4TX26010BLK",
+      "currentImage": "/news/sports/kolon-hyperleap-tlx.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/kolon-hyperleap-tlx.jpg",
+        "candidateImageUrl": "https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4TX26010BLK_LM1.jpg",
+        "candidateImageHost": "images.kolonmall.com",
+        "notes": [
+          "The current local mirror uses the LM1 front-view product image from the official KOLON SPORT product gallery.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "kolon-hawk-rise-gtx",
+      "title": "KOLON SPORT 推出 Hawk Rise GTX，徒步鞋线继续扩展",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "Hawk Rise GTX",
+        "하이킹 슈즈",
+        "hiking shoes"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.kolonsport.com/",
+      "currentImage": "/news/sports/kolon-hawk-rise-page.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/kolon-hawk-rise-page.png",
+        "candidateImageUrl": "https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4KX26310GRY_LM1.jpg",
+        "candidateImageHost": "images.kolonmall.com",
+        "notes": [
+          "The current local mirror uses the LM1 front-view product image from the official KOLON SPORT product gallery.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "Clinique",
+  "slug": "clinique",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.clinique.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "clinique-yellow-moisturizer",
+      "title": "Clinique 推出黄油家族新一季护理组合，基础护肤线持续扩容",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "倩碧天才黄油",
+        "润肤啫喱",
+        "透明黄油乳液"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.clinique.com.cn/products/26195",
+      "currentImage": "/news/beauty/clinique-yellow-moisturizer.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/clinique-yellow-moisturizer.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "clinique-eb-milky-lotion",
+      "title": "Clinique 推出匀净卓研润肤乳液，继续拓展美白护理线",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "CLINIQUE EB BRIGHTER MILKY LOTION",
+        "匀净卓研润肤乳液",
+        "京都玉露精萃"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.clinique.com.cn/product/1693/52944/clinique-eb-brighter-milky-lotion",
+      "currentImage": "/news/beauty/clinique-eb-milky-lotion.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/clinique-eb-milky-lotion.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

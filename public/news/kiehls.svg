@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F4F0E9"/>
+  <rect x="70" y="70" width="1060" height="760" rx="32" fill="#FEFBF7" stroke="#D9D1C4"/>
+  <text x="110" y="165" fill="#6C5C49" font-family="Georgia, serif" font-size="30" letter-spacing="5">KIEHL'S</text>
+  <text x="110" y="285" fill="#221B15" font-family="Georgia, serif" font-size="72">China Skin Best Sellers</text>
+  <text x="110" y="395" fill="#665E54" font-family="Arial, sans-serif" font-size="34">Calendula Toner</text>
+  <text x="110" y="450" fill="#665E54" font-family="Arial, sans-serif" font-size="34">Ultra Facial Cream</text>
+  <text x="110" y="505" fill="#665E54" font-family="Arial, sans-serif" font-size="34">Clearly Corrective Serum</text>
+</svg>

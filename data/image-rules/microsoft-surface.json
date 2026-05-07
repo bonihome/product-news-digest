@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "brand": "Microsoft Surface",
+  "slug": "microsoft-surface",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.microsoft.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 0,
+    "needsReplacementCount": 2
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "microsoft-laptop",
+      "title": "Microsoft 推出 Surface Laptop 6，瞄准新一代 AI PC 市场",
+      "category": "digital",
+      "subcategory": "电脑",
+      "products": [
+        "Surface Laptop 6",
+        "Intel Core Ultra H-series",
+        "Surface Studio Camera"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.microsoft.com/zh-cn/surface/business/surface-laptop-6",
+      "currentImage": "/news/microsoft-surface.svg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "needs_replacement",
+      "acquisition": {
+        "method": "manual_editorial_placeholder",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/microsoft-surface.svg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "Current asset is an editorial placeholder and should be replaced with a real official product image later.",
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "microsoft-laptop-family",
+      "title": "Microsoft 扩充 Surface Laptop 家族，进一步铺开 Copilot+ PC 阵容",
+      "category": "digital",
+      "subcategory": "电脑",
+      "products": [
+        "Surface Laptop",
+        "Copilot+ PC",
+        "Touchscreen display"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.microsoft.com/zh-cn/surface/devices/surface-laptop/",
+      "currentImage": "/news/microsoft-surface.svg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "needs_replacement",
+      "acquisition": {
+        "method": "manual_editorial_placeholder",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/microsoft-surface.svg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "Current asset is an editorial placeholder and should be replaced with a real official product image later.",
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

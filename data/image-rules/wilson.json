@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "brand": "Wilson",
+  "slug": "wilson",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "www.wilson.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 0,
+    "needsReplacementCount": 2
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "wilson-tennis",
+      "title": "Wilson 推出 Rush Pro 4.5，网球鞋产品线再度更新",
+      "category": "sports",
+      "subcategory": "网球",
+      "products": [
+        "Rush Pro 4.5",
+        "Rush Pro 4.0",
+        "4D Support Chassis 2.0"
+      ],
+      "sourceType": "Official News",
+      "sourcePage": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe",
+      "currentImage": "/news/wilson-tennis.svg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "needs_replacement",
+      "acquisition": {
+        "method": "manual_editorial_placeholder",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/wilson-tennis.svg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "Current asset is an editorial placeholder and should be replaced with a real official product image later.",
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "wilson-tennis-shoe",
+      "title": "Wilson 以 Rush Pro 4.5 延续高性能网球鞋更新节奏",
+      "category": "sports",
+      "subcategory": "网球",
+      "products": [
+        "Rush Pro 4.5 Men’s",
+        "Tennis Shoe",
+        "Performance outsole"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.wilson.com/en-us/product/rush-pro-4-5-wrs00868",
+      "currentImage": "/news/wilson-tennis.svg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "needs_replacement",
+      "acquisition": {
+        "method": "manual_editorial_placeholder",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/wilson-tennis.svg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "Current asset is an editorial placeholder and should be replaced with a real official product image later.",
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

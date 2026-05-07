@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#ECE8E5"/>
+  <path d="M360 470C360 380 432 310 520 310H680C768 310 840 380 840 470V602C840 628 818 650 792 650H408C382 650 360 628 360 602V470Z" fill="#151515"/>
+  <path d="M486 330C486 270 534 220 594 220H606C666 220 714 270 714 330" stroke="#151515" stroke-width="24" stroke-linecap="round"/>
+  <rect x="478" y="404" width="244" height="116" rx="16" fill="#272727"/>
+  <text x="600" y="712" text-anchor="middle" font-family="Georgia, serif" font-size="60" fill="#151515">PRADA PASSAGE</text>
+  <text x="600" y="758" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#6D625A">LEATHER BAG</text>
+</svg>

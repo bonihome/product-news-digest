@@ -1,0 +1,3236 @@
+{
+  "generatedAt": "2026-05-07T12:58:37.458Z",
+  "brandCount": 51,
+  "brands": [
+    {
+      "brand": "Adidas",
+      "slug": "adidas",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.adidas.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "adidas-football",
+          "subcategory": "足球",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=JQ0952",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-football.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-football-boots",
+          "subcategory": "足球",
+          "sourcePage": "https://www.adidas.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-football-boots.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Apple",
+      "slug": "apple",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "www.apple.com.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "apple-iphone",
+          "subcategory": "手机",
+          "sourcePage": "https://www.apple.com.cn/cn/newsroom/2026/03/apple-introduces-iphone-17e/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/apple-iphone.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "apple-ipad",
+          "subcategory": "平板",
+          "sourcePage": "https://www.apple.com.cn/cn/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/apple-ipad.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "apple-accessories",
+          "subcategory": "配件",
+          "sourcePage": "https://www.apple.com.cn/newsroom/2024/09/apple-introduces-all-new-airpods-4-with-industry-defining-audio-and-design/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/apple-accessories.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Arc'teryx",
+      "slug": "arc-teryx",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "arcteryx.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "gallery_asset_download",
+        "official_product_page_screenshot",
+        "local_mirror"
+      ],
+      "notes": [
+        "Arc'teryx localized product pages can mix icons, detail shots, and product imagery.",
+        "Prefer Sanity-hosted official gallery assets when they show the jacket body or construction details clearly.",
+        "Use a localized page screenshot only as a fallback when the page does not expose a usable product image."
+      ],
+      "stories": [
+        {
+          "storyId": "arcteryx-alpha-sv",
+          "subcategory": "户外",
+          "sourcePage": "https://arcteryx.com/us/zh/shop/mens/alpha-sv-jacket-9899",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/arcteryx-alpha-sv-hanging.jpg",
+          "candidateImageUrl": "https://cdn.sanity.io/images/inkbj32c/production/7a649d6f8f0ee59bd267191e4d08009dc30afddf-600x600.jpg?auto=format&q=75",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "arcteryx-alpha-sv-detail",
+          "subcategory": "户外",
+          "sourcePage": "https://arcteryx.com/us/zh/shop/mens/alpha-sv-jacket-9899",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/arcteryx-alpha-sv-detail.jpg",
+          "candidateImageUrl": "https://cdn.sanity.io/images/inkbj32c/production/e5a16a928380d0c5c9e0f083bc2fe8133714d98d-600x600.jpg?auto=format&q=75",
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "ASICS",
+      "slug": "asics",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.asics.com.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "asics-tennis",
+          "subcategory": "网球",
+          "sourcePage": "https://www.asics.com.cn/gel-resolution-8/p/0020009531-103",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/asics-tennis.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Bobbi Brown",
+      "slug": "bobbi-brown",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.bobbibrown.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "bobbibrown-serum-foundation",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.bobbibrown.com.cn/product/25706/104102/wechat/carousel1/intensive-serum-foundation-spf-40",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/bobbibrown-home-real.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "bobbibrown-highlighter",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.bobbibrown.com.cn/product/14022/55765/highlighting-powder",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/bobbibrown-home.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Burberry",
+      "slug": "burberry",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.burberry.cn"
+      ],
+      "storyCount": 6,
+      "status": {
+        "storyCount": 6,
+        "readyCount": 0,
+        "partialCount": 6,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "burberry",
+          "subcategory": "服装",
+          "sourcePage": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/burberry.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "burberry-rider",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.burberry.cn/small-rider-bag-p81254981",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/burberry-rider.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "burberry-backpack",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.burberry.cn/knight-stamp-backpack-p81144391",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/burberry-backpack.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "burberry-heritage-trench",
+          "subcategory": "服装",
+          "sourcePage": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/burberry-heritage-trench.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "burberry-check-shirt",
+          "subcategory": "服装",
+          "sourcePage": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/burberry-check-shirt.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "burberry-rocking-horse",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.burberry.cn/l/womens-bags/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/burberry-rocking-horse.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Bvlgari",
+      "slug": "bvlgari",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.bulgari.cn"
+      ],
+      "storyCount": 6,
+      "status": {
+        "storyCount": 6,
+        "readyCount": 0,
+        "partialCount": 6,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "bulgari-serpenti-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.bulgari.cn/zh-cn/products/102678-e",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/bulgari-serpenti-watch.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "bulgari-serpenti-bag-grey",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.bulgari.cn/zh-cn/products/292033-e",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/bulgari-serpenti-bag-grey.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "bulgari-serpenti-bag-green",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.bulgari.cn/zh-cn/products/292678-e",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/bulgari-serpenti-bag-green.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "bulgari-serpenti-sedu-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.bulgari.cn/zh-cn/products/102678-e",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "bulgari-octo-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.bulgari.cn/zh-cn/watches",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/bulgari-octo-watch.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "bulgari-serpenti-top-handle",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.bulgari.cn/zh-cn/products/292033-e",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/bulgari-serpenti-top-handle.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Cartier",
+      "slug": "cartier",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.cartier.cn"
+      ],
+      "storyCount": 9,
+      "status": {
+        "storyCount": 9,
+        "readyCount": 0,
+        "partialCount": 9,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "cartier",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.cartier.cn/creation/B6067517",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.cartier.cn/creation/WSPN0013",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-watch.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.cartier.cn/creation/L1002260",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-bag.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-love-necklace",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.cartier.cn/creation/B6067517",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-love-necklace.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-clash-ring",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.cartier.cn/creation/B6067517",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-clash-ring.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-panthere-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.cartier.cn/creation/WSPN0013",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-panthere-watch.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-tank-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.cartier.cn/creation/WSPN0013",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-tank-watch.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-must-shoulder-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.cartier.cn/creation/L1002260",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-must-shoulder-bag.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cartier-must-wallet",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.cartier.cn/creation/L1002260",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/cartier-must-wallet.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "CHANDO",
+      "slug": "chando",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.chando-himalaya.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "browser_product_image_download",
+        "official_product_card_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "CHANDO product images can be blocked when fetched without a referer and user agent.",
+        "Use the official product detail page in a browser session or send the page as referer when downloading product images from chandowebprd.chandogroup.com.",
+        "Mirror the verified product image locally after download."
+      ],
+      "stories": [
+        {
+          "storyId": "chando-purple",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.chando-himalaya.com/product_detail_1241756158335782912.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/chando-purple-real.png",
+          "candidateImageUrl": "https://chandowebprd.chandogroup.com/images/aa434f1dafda4fdfa4fe30e2f75166ff.1776224329550.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chando-foundation",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.chando-himalaya.com/cosmetics/980090450474045440.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/chando-foundation-real.png",
+          "candidateImageUrl": "https://chandowebprd.chandogroup.com/images/d1c85c4d6616409192aea01aed1b3c50.1713838299550.png",
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Chanel",
+      "slug": "chanel",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.chanel.cn"
+      ],
+      "storyCount": 9,
+      "status": {
+        "storyCount": 9,
+        "readyCount": 0,
+        "partialCount": 9,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "chanel-25-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.chanel.cn/cn/fashion/p/AS5311B2030494305/mittelgrosse-chanel-25-tasche-genarbtes-kalbsleder-goldfarbenes-metall/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-25-bag.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-coco-crush",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.chanel.cn/cn/fine-jewelry/p/J12093/coco-crush-ring/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-coco-crush.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-j12-bleu",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.chanel.cn/cn/watches/p/H10288/j12-bleu-38-mm-sapphires-watch/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-j12-bleu.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-25-mini",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.chanel.cn/cn/fashion/handbags/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-25-mini.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-flap-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.chanel.cn/cn/fashion/handbags/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-flap-bag.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-coco-crush-necklace",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.chanel.cn/cn/fine-jewelry/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-coco-crush-necklace.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-camelia-ring",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.chanel.cn/cn/fine-jewelry/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-camelia-ring.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-j12-black",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.chanel.cn/cn/watches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-j12-black.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-premiere-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.chanel.cn/cn/watches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-premiere-watch.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "CHANEL Beauty",
+      "slug": "chanel-beauty",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.chanel.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "chanel-beauty-n5-fragrance",
+          "subcategory": "香水",
+          "sourcePage": "https://www.chanel.cn/cn/fragrance/p/125530/n5-eau-de-parfum-spray/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/chanel-n5.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-beauty-chance-tendre",
+          "subcategory": "香水",
+          "sourcePage": "https://www.chanel.cn/cn/fragrance/p/126260/chance-eau-tendre-eau-de-parfum-spray/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/chanel-chance-tendre.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-beauty-coco-mademoiselle",
+          "subcategory": "香水",
+          "sourcePage": "https://www.chanel.cn/cn/fragrance/p/116660/coco-mademoiselle-eau-de-parfum-intense-spray/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/chanel-coco-mademoiselle.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Charlotte Tilbury",
+      "slug": "charlotte-tilbury",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.charlottetilbury.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "ct",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.charlottetilbury.com/us/products/new",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/ct-pillowtalk.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "ct-pillowtalk",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.charlottetilbury.com/us/products/new",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/ct.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Clé de Peau Beauté",
+      "slug": "cle-de-peau-beaute",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.cledepeau-beaute.com.cn"
+      ],
+      "storyCount": 4,
+      "status": {
+        "storyCount": 4,
+        "readyCount": 0,
+        "partialCount": 4,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "cpb-home",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.cledepeau-beaute.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/cpb-home-local.jpg",
+          "candidateImageUrl": "https://www.cledepeau-beaute.com.cn/on/demandware.static/-/Sites-cpb_cn-Library/default/dw4fcc2ecc/CPB/2024KV/KV1-PC-20241104.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cpb-foundation",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.cledepeau-beaute.com.cn/radiant-fluid-fd-matte-202302141066.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/cpb-foundation.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cpb-primer",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.cledepeau-beaute.com.cn/correct-cream-veil-A16182.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/cpb-primer.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "cpb-cleanser",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.cledepeau-beaute.com.cn/gentle-clean-milk-13222.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/cpb-cleanser.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Clinique",
+      "slug": "clinique",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.clinique.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "clinique-yellow-moisturizer",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.clinique.com.cn/products/26195",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/clinique-yellow-moisturizer.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "clinique-eb-milky-lotion",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.clinique.com.cn/product/1693/52944/clinique-eb-brighter-milky-lotion",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/clinique-eb-milky-lotion.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "DESCENTE",
+      "slug": "descente",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "allterrain.descente.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "official_collection_asset_download",
+        "official_page_screenshot",
+        "local_mirror"
+      ],
+      "notes": [
+        "DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches.",
+        "Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally."
+      ],
+      "stories": [
+        {
+          "storyId": "descente-allterrain",
+          "subcategory": "户外",
+          "sourcePage": "https://allterrain.descente.com/products_en/DU5FJKI2M/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/descente-allterrain.jpg",
+          "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "descente-allterrain-81",
+          "subcategory": "户外",
+          "sourcePage": "https://allterrain.descente.com/products_en/DU5FJKI2M/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/descente-allterrain-page.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Dior",
+      "slug": "dior",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.dior.cn"
+      ],
+      "storyCount": 6,
+      "status": {
+        "storyCount": 6,
+        "readyCount": 0,
+        "partialCount": 6,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "dior-book-tote",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/M1324OWHP_M51U",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-book-tote.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-dioramour-book-tote",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/S5584PEHS_M19I",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-dioramour-book-tote.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-gem-dior",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/jewelry-timepieces/gem-dior",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-gem-dior.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-lady-d-joy",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion/bags",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-lady-d-joy.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-rose-des-vents",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/jewelry-timepieces",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-rose-des-vents.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-oui-ring",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/jewelry-timepieces",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-oui-ring.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Dior Beauty",
+      "slug": "dior-beauty",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.dior.com",
+        "www.dior.cn"
+      ],
+      "storyCount": 5,
+      "status": {
+        "storyCount": 5,
+        "readyCount": 0,
+        "partialCount": 5,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "dior-beauty",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.dior.com/en_us/beauty/page/whats-new.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/dior-forever-new.jpg",
+          "candidateImageUrl": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-beauty-lips",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.dior.com/en_us/beauty/page/whats-new.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/dior-addict-new.jpg",
+          "candidateImageUrl": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw9831c51b/Y0319000/Y0319000_C031900038_E01_RHC.jpg?sw=640",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-beauty-miss-dior-fragrance",
+          "subcategory": "香水",
+          "sourcePage": "https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/dior-miss-dior-real.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-beauty-jadore-fragrance",
+          "subcategory": "香水",
+          "sourcePage": "https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/jadore",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/dior-jadore-real.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-beauty-sauvage-fragrance",
+          "subcategory": "香水",
+          "sourcePage": "https://www.dior.cn/zh_cn/beauty/products/y0685240-sauvage-eau-de-toilette",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/dior-sauvage-real.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Estée Lauder",
+      "slug": "estee-lauder",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.esteelauder.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "cn_product_page_asset_download",
+        "cn_series_page_asset_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "The global Estee Lauder media/export hotlinks can return 403 in server-side fetches.",
+        "Prefer official China product or series pages, then download the visible product asset with a browser-like user agent and referer.",
+        "Mirror the asset locally after download so the frontend does not depend on blocked hotlinks."
+      ],
+      "stories": [
+        {
+          "storyId": "estee",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.esteelauder.com/whats-new-skincare",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/estee-anr-official.jpg",
+          "candidateImageUrl": "https://www.esteelauder.com.cn/media/export/cms/products/308x424/el_sku_G37B01_308x424_0.jpg?w=3840",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "estee-makeup",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.esteelauder.com/products/708/product-catalog/whats-new",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/estee-doublewear-local.png",
+          "candidateImageUrl": "https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg",
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Gucci",
+      "slug": "gucci",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.gucci.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "gucci-horsebit",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.gucci.cn/zh/pr/760253AAA7G1000",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/gucci-horsebit.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "gucci-marmont",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.gucci.cn/zh/pr/837267AAE389050",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/gucci-marmont.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "gucci-horsebit-soft",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.gucci.cn/zh/pr/752002FAD6L9741",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/gucci-horsebit-soft.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Hermes",
+      "slug": "hermes",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.hermes.cn"
+      ],
+      "storyCount": 9,
+      "status": {
+        "storyCount": 9,
+        "readyCount": 0,
+        "partialCount": 9,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "hermes-hacademi",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/hacademi%E6%89%8B%E5%8C%85-H086976CK37/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-hacademi.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-mini-clic-kelly",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/mini-clic-kelly%E6%89%8B%E9%95%AF-H200004Fv94PM/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-mini-clic-kelly.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-arceau-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/arceau-le-temps-voyageur%E8%85%95%E8%A1%A841%E6%AF%AB%E7%B1%B3-W057198WW00/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-arceau-watch.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-garden-party",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-garden-party.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-kelly-pocket",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-kelly-pocket.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-farandole",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-farandole.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-collier-de-chien",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-collier-de-chien.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-h08-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-h08-watch.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-cape-cod-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Hermès Beauty",
+      "slug": "hermes-beauty",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.hermes.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "hermes-beauty-terre-dhermes",
+          "subcategory": "香水",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%A4%A7%E5%9C%B0%E9%A6%A5%E9%83%81%E9%A6%99%E6%A0%B9%E8%8D%89%E9%A6%99%E5%9E%8B%E9%A6%99%E6%B0%B4-V40946/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/hermes-terre-dhermes.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-beauty-twilly-ginger",
+          "subcategory": "香水",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E4%B8%9D%E6%84%8F%E8%8D%94%E9%9F%B5%E6%B7%A1%E9%A6%99%E7%B2%BE-V110826VN/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/hermes-twilly-ginger.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-beauty-nil-garden",
+          "subcategory": "香水",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%B0%BC%E7%BD%97%E6%B2%B3%E8%8A%B1%E5%9B%AD%E9%A6%99%E6%B0%B4-V26993/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/hermes-nil-garden.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "HONOR",
+      "slug": "honor",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "www.honor.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "honor-magic8",
+          "subcategory": "手机",
+          "sourcePage": "https://www.honor.com/cn/phones/honor-magic8-pro/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/honor-magic8.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "honor-tablets",
+          "subcategory": "平板",
+          "sourcePage": "https://www.honor.com/cn/tablets/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/honor-tablets.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Huawei",
+      "slug": "huawei",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "consumer.huawei.com"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "huawei-pura90",
+          "subcategory": "手机",
+          "sourcePage": "https://consumer.huawei.com/cn/phones/pura90-pro-max/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/huawei-pura90.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "IPSA",
+      "slug": "ipsa",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.ipsa.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "ipsa-home",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.ipsa.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/ipsa-home.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "ipsa-products",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.ipsa.com.cn/Products",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/ipsa-products.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Kiehl's",
+      "slug": "kiehl-s",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.kiehls.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "kiehls-home",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.kiehls.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/kiehls-home-real.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "kiehls-best-sellers",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.kiehls.com.cn/about/products/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/kiehls-home.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "KOLON SPORT",
+      "slug": "kolon-sport",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.kolonsport.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "product_gallery_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "KOLON SPORT product pages expose stable gallery assets on images.kolonmall.com.",
+        "Prefer the LM1 front-view product image for the lead card, then mirror locally."
+      ],
+      "stories": [
+        {
+          "storyId": "kolon-hyperleap-tlx",
+          "subcategory": "跑步",
+          "sourcePage": "https://www.kolonsport.com/Product/FE4TX26010BLK",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/kolon-hyperleap-tlx.jpg",
+          "candidateImageUrl": "https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4TX26010BLK_LM1.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "kolon-hawk-rise-gtx",
+          "subcategory": "户外",
+          "sourcePage": "https://www.kolonsport.com/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/kolon-hawk-rise-page.png",
+          "candidateImageUrl": "https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4KX26310GRY_LM1.jpg",
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "La Mer",
+      "slug": "la-mer",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.lamer.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "lamer-protecting-veil",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.lamer.com.cn/product/24587/128775/the-protecting-veil",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/lamer-protecting-veil.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lamer-skincolor",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.lamer.com.cn/skincolor",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/lamer-skincolor.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Lancôme",
+      "slug": "lancome",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.lancome.com.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 1,
+        "partialCount": 0,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "homepage_product_card_capture",
+        "local_crop"
+      ],
+      "notes": [
+        "Lancôme China is heavily front-end rendered and product links are not consistently exposed in HTML.",
+        "For homepage-led stories, capture the visible product card or module image and mirror locally."
+      ],
+      "stories": [
+        {
+          "storyId": "lancome-home",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.lancome.com.cn/",
+          "method": "homepage_product_card_capture_to_local_mirror",
+          "priority": [
+            "homepage_product_card_capture",
+            "local_crop",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/lancome-genifique-packshot-clean.jpg",
+          "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/prod/lan/20250326/759cf952-d649-4834-af54-d1f665b2fea0.jpg",
+          "automationStatus": "ready"
+        }
+      ]
+    },
+    {
+      "brand": "Lenovo",
+      "slug": "lenovo",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "item.lenovo.com.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "lenovo-yoga-air14",
+          "subcategory": "电脑",
+          "sourcePage": "https://item.lenovo.com.cn/product/1045787.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/lenovo-yoga-air14.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Longines",
+      "slug": "longines",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.longines.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "longines-hydroconquest",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.longines.cn/watch-hydroconquest-l3-840-4-96-6",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/longines-hydroconquest.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "longines-conquest",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.longines.cn/watch-conquest-l3-830-4-92-6",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/longines-conquest.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "longines-conquest-34",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.longines.cn/watch-conquest-l3-430-4-02-6",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/longines-conquest-34.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Louis Vuitton",
+      "slug": "louis-vuitton",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.louisvuitton.cn"
+      ],
+      "storyCount": 6,
+      "status": {
+        "storyCount": 6,
+        "readyCount": 0,
+        "partialCount": 6,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "lv",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/capucines-mini-capucines-nvprod7540209v/M28548",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-readywear",
+          "subcategory": "服装",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-readywear.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-my-capucines",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/my-capucines-capucines-nvprod7110114v/K00018",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-my-capucines.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-capucines-bb",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-capucines-bb.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-tweed-jacket",
+          "subcategory": "服装",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-tweed-jacket.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-silk-dress",
+          "subcategory": "服装",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/new-this-season/_/N-t18gb9e5",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-silk-dress.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "MAOGEPING",
+      "slug": "maogeping",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.maogepingbeauty.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "mgp-highlight",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.maogepingbeauty.com/makeup/light-shadow/Light-Highlighting/41.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/maogeping-highlight.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "mgp-cushion",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.maogepingbeauty.com/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/maogeping-cushion.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Microsoft Surface",
+      "slug": "microsoft-surface",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "www.microsoft.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 0,
+        "needsReplacementCount": 2
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "microsoft-laptop",
+          "subcategory": "电脑",
+          "sourcePage": "https://www.microsoft.com/zh-cn/surface/business/surface-laptop-6",
+          "method": "manual_editorial_placeholder",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/microsoft-surface.svg",
+          "candidateImageUrl": null,
+          "automationStatus": "needs_replacement"
+        },
+        {
+          "storyId": "microsoft-laptop-family",
+          "subcategory": "电脑",
+          "sourcePage": "https://www.microsoft.com/zh-cn/surface/devices/surface-laptop/",
+          "method": "manual_editorial_placeholder",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/microsoft-surface.svg",
+          "candidateImageUrl": null,
+          "automationStatus": "needs_replacement"
+        }
+      ]
+    },
+    {
+      "brand": "Mizuno",
+      "slug": "mizuno",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.mizuno.com.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "mizuno-tennis",
+          "subcategory": "网球",
+          "sourcePage": "https://www.mizuno.com.cn/qiuxie/538.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/mizuno-tennis.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "NARS",
+      "slug": "nars",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.narscosmetics.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "nars-soft-velvet",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.narscosmetics.com.cn/soft-velvet-pdr-34101428.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/nars-soft.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nars-light-reflecting",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.narscosmetics.com.cn/LIGHT-REFLECTING-SETTING-POWDER-34105894.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/nars-light.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Nike",
+      "slug": "nike",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.nike.com.cn"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "nike-basketball",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.nike.com.cn/w/new-3n82y",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-basketball.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-basketball-feed",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.nike.com.cn/w/new-3n82y",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-basketball-feed.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "OMEGA",
+      "slug": "omega",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.omegawatches.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "omega-moonwatch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.omegawatches.cn/watches/speedmaster/moonwatch-professional/product",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/omega-moonwatch.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "omega-speedmaster-38",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.omegawatches.cn/watch-omega-speedmaster-38-co-axial-chronometer-chronograph-38-mm-32428385002002",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/omega-speedmaster-38.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "omega-aqua-terra",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.omegawatches.cn/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382001001",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/omega-aqua-terra.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "On",
+      "slug": "on",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.on.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "product_gallery_currentSrc_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "On product pages expose stable product gallery assets through currentSrc values on brand CDN images.",
+        "Prefer the first hero gallery image and mirror it locally for product cards."
+      ],
+      "stories": [
+        {
+          "storyId": "on-cloudsurfer-max",
+          "subcategory": "跑步",
+          "sourcePage": "https://www.on.com/en-us/products/cloudsurfer-max-m-3mf3043/mens",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/on-cloudsurfer-max.webp",
+          "candidateImageUrl": "https://images.ctfassets.net/hnk2vsx53n6l/1VGvF5KSK6shaFwdzgvKRu/5009bc69b19aeb617e0cbebb12e23c83/e23710a3d0ff66844466531dd9d7940b7b22540f.png?fm=webp",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "on-cloudmonster-2",
+          "subcategory": "跑步",
+          "sourcePage": "https://www.on.com/en-us/products/cloudmonster-2-m-3me1012/mens",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/on-cloudmonster-2-page.png",
+          "candidateImageUrl": "https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp",
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "OPPO",
+      "slug": "oppo",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "www.oppo.com"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "oppo-findx9",
+          "subcategory": "手机",
+          "sourcePage": "https://www.oppo.com/cn/smartphones/series-find-x/find-x9/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/oppo-findx9.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Prada",
+      "slug": "prada",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.prada.cn"
+      ],
+      "storyCount": 12,
+      "status": {
+        "storyCount": 12,
+        "readyCount": 12,
+        "partialCount": 0,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "resolved_browser_image",
+        "reconstructed_dam_path",
+        "local_mirror"
+      ],
+      "notes": [
+        "Prada bag, ready-to-wear, and jewelry pages can fail in browser with HTTP2 errors.",
+        "When browser extraction fails, reconstruct the DAM path from productCode, material, color, and variant.",
+        "Prefer SLF front-view assets and mirror them locally for stable server delivery."
+      ],
+      "stories": [
+        {
+          "storyId": "prada-passage-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-passage-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA495/2G52F0201/1BA495_2G52_F0201_V_OPO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-lace-dress",
+          "subcategory": "服装",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-lace-dress.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/P/P3Q/P3Q17/17VMF0002/P3Q17_17VM_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-eternal-gold-necklace",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-eternal-gold.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1JC/1JCA06/2DA5F0056/1JCA06_2DA5_F0056_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-reedition-2005-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-re-edition-2005-suede-mini-bag/1N204W_2G64_F0003",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-reedition-2005-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1N2/1N204W/2G64F0003/1N204W_2G64_F0003_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-double-mini-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/women/bags/totes/products.Prada_Double_Saffiano_%E7%9A%AE%E9%9D%A9%E8%BF%B7%E4%BD%A0%E6%89%8B%E8%A2%8B.1BG443_2A4A_F0G3Z_V_XOO.html",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-double-mini-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BG/1BG443/2A4AF0G3Z/1BG443_2A4A_F0G3Z_V_XOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-renylon-skirt",
+          "subcategory": "服装",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/re-nylon-skirt/21H015_1WQ8_F0002_S_OOO",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-renylon-skirt.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/2/21H/21H015/1WQ8F0002/21H015_1WQ8_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-chino-circle-skirt",
+          "subcategory": "服装",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/chino-circle-midi-skirt/P132JE_10YP_F0002_S_OOO",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-chino-skirt.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/P/P13/P132JE/10YPF0002/P132JE_10YP_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-symbole-necklace",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-symbole-necklace/1JCA43_2DSP_F0002",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-symbole-necklace.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1JC/1JCA43/2DSPF0002/1JCA43_2DSP_F0002_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-bonnie-medium-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-bonnie-medium-printed-linen-and-leather-handbag/1BA426_2FPT_F0009_V_OTM",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-bonnie-medium-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA426/2FPTF0009/1BA426_2FPT_F0009_V_OTM_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-route-large-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-route-large-leather-top-handle-bag/1BB162_2HFQ_F0002_V_OOO",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-route-large-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BB/1BB162/2HFQF0002/1BB162_2HFQ_F0002_V_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-carry-mini-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-carry-mini-leather-handbag/1BA496_2C6A_F0002_V_OOO",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-carry-mini-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA496/2C6AF0002/1BA496_2C6A_F0002_V_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "prada-jardiniere-mini-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/prada-jardiniere-cotton-canvas-mini-bag/1BA038_RCYA_F0018_V_8OK",
+          "method": "reconstructed_dam_path_to_local_mirror",
+          "priority": [
+            "resolved_browser_image",
+            "reconstructed_dam_path",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/prada-jardiniere-mini-bag.jpg",
+          "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA038/RCYAF0018/1BA038_RCYA_F0018_V_8OK_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+          "automationStatus": "ready"
+        }
+      ]
+    },
+    {
+      "brand": "Prada Beauty",
+      "slug": "prada-beauty",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.prada.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "prada-beauty-paradoxe-radical",
+          "subcategory": "香水",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/prada-paradoxe-radical-clean.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "prada-beauty-paradoxe-virtual-flower",
+          "subcategory": "香水",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/paradoxe-virtual-flower-edp-50ml/1A1353_2HEG_F0Z99_P_ML050",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/prada-paradoxe-virtual-flower-clean.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "prada-beauty-luna-rossa-ocean",
+          "subcategory": "香水",
+          "sourcePage": "https://www.prada.cn/cn/zh/p/luna-rossa-ocean-edt-100-ml/2A1156_2D00_F0Z99_P_ML100",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/prada-luna-rossa-ocean-clean.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "PROYA",
+      "slug": "proya",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.proya.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "proya-redruby",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.proya.com/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/proya-redruby.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "proya-dualkang",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.proya.com/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/proya-dualkang.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "slug": "samsung",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "www.samsung.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "samsung-tablet",
+          "subcategory": "平板",
+          "sourcePage": "https://www.samsung.com/cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/samsung-tablet.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "samsung-phone",
+          "subcategory": "手机",
+          "sourcePage": "https://www.samsung.com/cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/samsung-phone.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "SHISEIDO",
+      "slug": "shiseido",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.shiseido.com.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 3,
+        "partialCount": 0,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "product_detail_packshot_download",
+        "homepage_product_card_capture",
+        "local_mirror"
+      ],
+      "notes": [
+        "For direct product stories, use the 1000x1000 itemmaster packshot from the product detail page.",
+        "For homepage-led stories, prefer a product-card crop over a text-heavy hero banner."
+      ],
+      "stories": [
+        {
+          "storyId": "shiseido-home",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.shiseido.com.cn/",
+          "method": "homepage_product_card_capture_to_local_mirror",
+          "priority": [
+            "product_detail_packshot_download",
+            "homepage_product_card_capture",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/shiseido-vital-perfection-packshot-2.png",
+          "candidateImageUrl": "https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dwe572840d/landingshi/2026/20260309/section-1/6.png",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "shiseido-ultimune",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums",
+          "method": "product_detail_packshot_download_to_local_mirror",
+          "priority": [
+            "product_detail_packshot_download",
+            "homepage_product_card_capture",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/shiseido-ultimune-packshot.jpg",
+          "candidateImageUrl": "https://www.shiseido.com.cn/dw/image/v2/BCSK_PRD/on/demandware.static/-/Sites-itemmaster_shiseido/default/dw6a224066/images/chuchuangtu/baidi/baiditu-s17283-50.jpg?sw=1000&sh=1000&sm=fit",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "shiseido-uv",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.shiseido.com.cn/uv-perfect-protector-15678wlc.html",
+          "method": "product_detail_packshot_download_to_local_mirror",
+          "priority": [
+            "product_detail_packshot_download",
+            "homepage_product_card_capture",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/shiseido-uv-packshot.jpg",
+          "candidateImageUrl": "https://www.shiseido.com.cn/dw/image/v2/BCSK_PRD/on/demandware.static/-/Sites-itemmaster_shiseido/default/dwef0d71eb/images/products/15678wlc/plain.jpg?sw=1000&sh=1000&sm=fit",
+          "automationStatus": "ready"
+        }
+      ]
+    },
+    {
+      "brand": "Shu Uemura",
+      "slug": "shu-uemura",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.shuuemura.com.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "shu-home",
+          "subcategory": "彩妆",
+          "sourcePage": "https://www.shuuemura.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/shuuemura-home-real.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Tiffany & Co.",
+      "slug": "tiffany-and-co",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.tiffany.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 0,
+        "partialCount": 3,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "tiffany-hardwear",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.tiffany.cn/jewelry/items/tiffany-hardwear-link-necklace-38086766/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/tiffany-hardwear.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "tiffany-smile-necklace",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.tiffany.cn/jewelry/necklaces-pendants/tiffany-t-smile-pendant-35385533/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/tiffany-smile-necklace.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "tiffany-lock",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.tiffany.cn/jewelry/shop/bracelets/tiffany-lock/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/tiffany-lock.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Van Cleef & Arpels",
+      "slug": "van-cleef-and-arpels",
+      "categories": [
+        "luxury"
+      ],
+      "officialDomains": [
+        "www.vancleefarpels.cn"
+      ],
+      "storyCount": 3,
+      "status": {
+        "storyCount": 3,
+        "readyCount": 3,
+        "partialCount": 0,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "product_gallery_currentSrc",
+        "local_mirror"
+      ],
+      "notes": [
+        "Use the exact product page gallery and prefer the front or detail image from currentSrc.",
+        "Local PNG mirrors are more stable than relying on live CN CDN responses."
+      ],
+      "stories": [
+        {
+          "storyId": "vca-alhambra",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcarp9xg00---vintage-alhambra-pendant.html",
+          "method": "product_gallery_currentSrc_to_local_mirror",
+          "priority": [
+            "product_gallery_currentSrc",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/vca-vintage-pendant.png",
+          "candidateImageUrl": "https://www.vancleefarpels.cn/content/dam/rcq/vca/Rz/4M/Ut/Vy/QD/-6/c6/13/zo/4v/6g/Rz4MUtVyQD-6c613zo4v6g.png.transform.vca-w820-1x.png",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "vca-bracelet",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcara41400---vintage-alhambra-bracelet-5-motifs.html",
+          "method": "product_gallery_currentSrc_to_local_mirror",
+          "priority": [
+            "product_gallery_currentSrc",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/vca-vintage-bracelet.png",
+          "candidateImageUrl": "https://www.vancleefarpels.cn/content/dam/rcq/vca/L8/7Y/Eh/oM/Sg/yH/yH/Od/Bq/iJ/vg/L87YEhoMSgyHyHOdBqiJvg.png.transform.vca-w820-1x.png",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "vca-magic-alhambra",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcard78700---magic-alhambra-bracelet-5-motifs.html",
+          "method": "product_gallery_currentSrc_to_local_mirror",
+          "priority": [
+            "product_gallery_currentSrc",
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/vca-magic-bracelet.png",
+          "candidateImageUrl": "https://www.vancleefarpels.cn/content/dam/rcq/vca/tR/Va/8Y/rm/Qt/uH/xp/pM/6k/6t/qQ/tRVa8YrmQtuHxppM6k6tqQ.png.transform.vca-w820-1x.png",
+          "automationStatus": "ready"
+        }
+      ]
+    },
+    {
+      "brand": "vivo",
+      "slug": "vivo",
+      "categories": [
+        "digital"
+      ],
+      "officialDomains": [
+        "www.vivo.com.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "vivo-xfold",
+          "subcategory": "手机",
+          "sourcePage": "https://www.vivo.com.cn/vivo/xfold/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/vivo-xfold.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Wilson",
+      "slug": "wilson",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.wilson.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 0,
+        "needsReplacementCount": 2
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "wilson-tennis",
+          "subcategory": "网球",
+          "sourcePage": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe",
+          "method": "manual_editorial_placeholder",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/wilson-tennis.svg",
+          "candidateImageUrl": null,
+          "automationStatus": "needs_replacement"
+        },
+        {
+          "storyId": "wilson-tennis-shoe",
+          "subcategory": "网球",
+          "sourcePage": "https://www.wilson.com/en-us/product/rush-pro-4-5-wrs00868",
+          "method": "manual_editorial_placeholder",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/wilson-tennis.svg",
+          "candidateImageUrl": null,
+          "automationStatus": "needs_replacement"
+        }
+      ]
+    },
+    {
+      "brand": "Winona",
+      "slug": "winona",
+      "categories": [
+        "beauty"
+      ],
+      "officialDomains": [
+        "www.winona.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "winona-cream",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.winona.cn/product/110010.html",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/winona-cream.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "YONEX",
+      "slug": "yonex",
+      "categories": [
+        "sports"
+      ],
+      "officialDomains": [
+        "www.yonex.cn"
+      ],
+      "storyCount": 1,
+      "status": {
+        "storyCount": 1,
+        "readyCount": 0,
+        "partialCount": 1,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "local_mirror"
+      ],
+      "notes": [
+        "Default rule file generated from the current story dataset.",
+        "For remote official assets, the server can download and mirror the current image URL directly."
+      ],
+      "stories": [
+        {
+          "storyId": "yonex-tennis",
+          "subcategory": "网球",
+          "sourcePage": "https://www.yonex.cn/home/index/mall/id/1",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/yonex-tennis-page.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    }
+  ]
+}

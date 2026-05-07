@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "brand": "Chanel",
+  "slug": "chanel",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.chanel.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 9,
+    "readyCount": 0,
+    "partialCount": 9,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "chanel-25-bag",
+      "title": "Chanel 推出 CHANEL 25 中号手袋，精品手袋线迎来新作",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "CHANEL 25中号手袋",
+        "颗粒压花小牛皮",
+        "金色金属链条"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fashion/p/AS5311B2030494305/mittelgrosse-chanel-25-tasche-genarbtes-kalbsleder-goldfarbenes-metall/",
+      "currentImage": "/news/luxury/chanel-25-bag.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-25-bag.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-coco-crush",
+      "title": "Chanel 推出 COCO CRUSH 白金镶钻新作，珠宝线持续焕新",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "COCO CRUSH戒指",
+        "白18K金镶钻",
+        "菱格纹图案"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fine-jewelry/p/J12093/coco-crush-ring/",
+      "currentImage": "/news/luxury/chanel-coco-crush.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-coco-crush.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-j12-bleu",
+      "title": "Chanel 推出 J12 BLEU 蓝宝石腕表，高级制表线再添新作",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "J12 BLEU蓝宝石腕表",
+        "38毫米",
+        "Caliber 12.1机芯"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/watches/p/H10288/j12-bleu-38-mm-sapphires-watch/",
+      "currentImage": "/news/luxury/chanel-j12-bleu.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-j12-bleu.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-25-mini",
+      "title": "Chanel 推出 CHANEL 25 小号手袋，经典手袋系列持续延展",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "CHANEL 25 小号手袋",
+        "菱格纹绗缝",
+        "皮穿链肩带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fashion/handbags/",
+      "currentImage": "/news/luxury/chanel-25-mini.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-25-mini.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-flap-bag",
+      "title": "Chanel 推出翻盖手袋新作，精品皮具线再添标志性款式",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "翻盖手袋",
+        "双 C 扣件",
+        "链条肩带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fashion/handbags/",
+      "currentImage": "/news/luxury/chanel-flap-bag.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-flap-bag.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-coco-crush-necklace",
+      "title": "Chanel 推出 COCO CRUSH 项链新作，珠宝线延续菱格纹主题",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "COCO CRUSH 项链",
+        "菱格纹吊坠",
+        "18K 金链条"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fine-jewelry/",
+      "currentImage": "/news/luxury/chanel-coco-crush-necklace.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-coco-crush-necklace.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-camelia-ring",
+      "title": "Chanel 推出 Camélia 戒指新作，花卉主题珠宝持续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Camélia 戒指",
+        "山茶花主题",
+        "镶钻细节"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fine-jewelry/",
+      "currentImage": "/news/luxury/chanel-camelia-ring.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-camelia-ring.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-j12-black",
+      "title": "Chanel 推出 J12 黑色陶瓷腕表，经典制表线继续焕新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "J12 黑色陶瓷腕表",
+        "高科技精密陶瓷",
+        "自动上链机芯"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/watches/",
+      "currentImage": "/news/luxury/chanel-j12-black.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-j12-black.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-premiere-watch",
+      "title": "Chanel 推出 Première 腕表新作，女性腕表线再添优雅选择",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Première 腕表",
+        "八角形表壳",
+        "链条表带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/watches/",
+      "currentImage": "/news/luxury/chanel-premiere-watch.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/chanel-premiere-watch.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

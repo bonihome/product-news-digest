@@ -1,0 +1,2 @@
+# 每周一北京时间 09:15 发送上一周期周报
+15 9 * * 1 /srv/product-news-digest/scripts/run-weekly-report.sh >> /var/log/product-news-digest/weekly-report.log 2>&1

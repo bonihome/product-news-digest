@@ -1,0 +1,14 @@
+[Unit]
+Description=Product News Digest scheduled pipeline
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/srv/product-news-digest
+EnvironmentFile=/srv/product-news-digest/.env
+ExecStart=/srv/product-news-digest/scripts/run-scheduled-pipeline.sh
+
+[Install]
+WantedBy=multi-user.target

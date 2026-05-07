@@ -1,0 +1,9 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F0EAE5"/>
+  <path d="M468 240H732L782 650H418L468 240Z" fill="#B89D8A"/>
+  <path d="M486 286H714" stroke="#6B5549" stroke-width="10" stroke-linecap="round"/>
+  <path d="M520 392H680" stroke="#8C7567" stroke-width="4"/>
+  <path d="M496 506H704" stroke="#8C7567" stroke-width="4"/>
+  <text x="600" y="708" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#1A1714">PRADA CHINO MIDI SKIRT</text>
+  <text x="600" y="754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#7E685C">READY-TO-WEAR</text>
+</svg>

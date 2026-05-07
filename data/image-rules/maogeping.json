@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "MAOGEPING",
+  "slug": "maogeping",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.maogepingbeauty.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "mgp-highlight",
+      "title": "毛戈平推出光影塑颜高光粉膏，继续强化骨相彩妆特色",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "光影塑颜高光粉膏",
+        "3D Light Highlighting Cream Foundation",
+        "#800"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.maogepingbeauty.com/makeup/light-shadow/Light-Highlighting/41.html",
+      "currentImage": "/news/beauty/maogeping-highlight.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/maogeping-highlight.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "mgp-cushion",
+      "title": "毛戈平推出奢华鱼子无瑕气垫粉底液，底妆线迎来重点新品",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "奢华鱼子无瑕气垫粉底液SPF30/PA+++",
+        "魅色凝润唇膏",
+        "光影塑颜高光粉膏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.maogepingbeauty.com/",
+      "currentImage": "/news/beauty/maogeping-cushion.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/maogeping-cushion.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F5EEE7"/>
+  <rect x="60" y="60" width="1080" height="780" rx="32" fill="#FFF9F3" stroke="#D6C7B9"/>
+  <text x="100" y="170" fill="#8B5D14" font-family="Georgia, serif" font-size="30" letter-spacing="5">DIOR FASHION</text>
+  <text x="100" y="300" fill="#201913" font-family="Georgia, serif" font-size="84">2026 Spring</text>
+  <text x="100" y="390" fill="#201913" font-family="Georgia, serif" font-size="84">New Arrivals</text>
+  <text x="100" y="500" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Dioramour Medium Dior Book Tote</text>
+  <text x="100" y="555" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Adiorable Mini Bucket Bag</text>
+  <text x="100" y="610" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Dior Secret Garden Square Scarf</text>
+  <circle cx="980" cy="250" r="110" fill="#E4D0D2"/>
+  <circle cx="920" cy="500" r="88" fill="#D8D1E8"/>
+  <circle cx="1035" cy="570" r="120" fill="#F0DDD0"/>
+</svg>

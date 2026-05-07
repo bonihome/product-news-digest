@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "Samsung",
+  "slug": "samsung",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.samsung.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "samsung-tablet",
+      "title": "Samsung 推出 Galaxy Tab S11 Ultra，平板旗舰再添新作",
+      "category": "digital",
+      "subcategory": "平板",
+      "products": [
+        "Galaxy Tab S11 Ultra",
+        "Galaxy Tab S11",
+        "S Pen"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.samsung.com/cn/",
+      "currentImage": "/news/digital/samsung-tablet.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/samsung-tablet.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "samsung-phone",
+      "title": "Samsung 发布 Galaxy S26 系列，继续押注高端手机与 Galaxy AI",
+      "category": "digital",
+      "subcategory": "手机",
+      "products": [
+        "Galaxy S26",
+        "Galaxy S26+",
+        "Galaxy S26 Ultra"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.samsung.com/cn/",
+      "currentImage": "/news/digital/samsung-phone.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/samsung-phone.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

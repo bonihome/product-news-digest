@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F7E9CF"/>
+  <path d="M600 110 C690 110 752 188 742 308 L714 540 C708 620 660 676 600 676 C540 676 492 620 486 540 L458 308 C448 188 510 110 600 110Z" fill="#E7C36A" stroke="#241A18" stroke-width="6"/>
+  <ellipse cx="600" cy="290" rx="126" ry="108" fill="#FFF4DA" stroke="#241A18" stroke-width="4"/>
+  <text x="600" y="304" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#241A18">J’adore</text>
+  <text x="600" y="736" text-anchor="middle" font-family="Georgia, serif" font-size="60" fill="#241A18">J’ADORE</text>
+  <text x="600" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#9C7426">DIOR FRAGRANCE</text>
+</svg>

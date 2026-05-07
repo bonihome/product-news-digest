@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#F7EFE7"/>
+  <rect x="60" y="60" width="1080" height="780" rx="32" fill="#FFF9F2" stroke="#DCCEC0"/>
+  <text x="100" y="170" fill="#8B5D14" font-family="Georgia, serif" font-size="30" letter-spacing="5">DIOR BEAUTY</text>
+  <text x="100" y="300" fill="#201913" font-family="Georgia, serif" font-size="76">The New Forever</text>
+  <text x="100" y="386" fill="#201913" font-family="Georgia, serif" font-size="76">Foundation Focus</text>
+  <text x="100" y="500" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Dior Forever Skin Glow</text>
+  <text x="100" y="555" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Dior Forever Skin Wear</text>
+  <text x="100" y="610" fill="#6E6257" font-family="Arial, sans-serif" font-size="34">Dior Addict</text>
+  <rect x="870" y="210" width="84" height="320" rx="42" fill="#E3CFC4"/>
+  <rect x="980" y="260" width="70" height="270" rx="35" fill="#D7C9E7"/>
+  <rect x="915" y="565" width="190" height="110" rx="18" fill="#EED9CC"/>
+</svg>

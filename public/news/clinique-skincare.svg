@@ -1,0 +1,18 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F7FBE5"/>
+  <rect x="84" y="84" width="1432" height="732" rx="34" fill="#FCFEF3" stroke="#D6E6A1" stroke-width="4"/>
+  <text x="112" y="164" fill="#53662B" font-family="Georgia, serif" font-size="28" letter-spacing="6">CLINIQUE</text>
+  <text x="112" y="244" fill="#22300E" font-family="Georgia, serif" font-size="72">China Skin Stories</text>
+  <text x="112" y="322" fill="#748054" font-family="Arial, sans-serif" font-size="28">Dramatically Different / Brighter Milky Lotion</text>
+  <rect x="112" y="396" width="390" height="292" rx="30" fill="#EFF6CF"/>
+  <rect x="540" y="396" width="390" height="292" rx="30" fill="#E8F0BF"/>
+  <rect x="968" y="396" width="420" height="292" rx="30" fill="#F2F8D9"/>
+  <text x="148" y="474" fill="#314319" font-family="Arial, sans-serif" font-size="34">Yellow Moisturizer</text>
+  <text x="148" y="528" fill="#314319" font-family="Arial, sans-serif" font-size="24">Base hydration family</text>
+  <text x="148" y="606" fill="#314319" font-family="Arial, sans-serif" font-size="34">Brighter Lotion</text>
+  <text x="148" y="660" fill="#314319" font-family="Arial, sans-serif" font-size="24">Kyoto gyokuro brightening care</text>
+  <circle cx="1180" cy="542" r="94" fill="#FCFEF3" stroke="#9DB45C" stroke-width="12"/>
+  <rect x="1262" y="462" width="34" height="164" rx="17" fill="#9DB45C"/>
+  <rect x="1108" y="462" width="34" height="164" rx="17" fill="#9DB45C"/>
+  <text x="112" y="778" fill="#748054" font-family="Arial, sans-serif" font-size="24">Official China site source linked in each story</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F3ECE1"/>
+  <circle cx="600" cy="256" r="96" stroke="#D3A84C" stroke-width="18"/>
+  <path d="M600 352V574" stroke="#D3A84C" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="600" cy="612" r="34" fill="#D3A84C"/>
+  <text x="600" y="700" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#151515">PRADA ETERNAL GOLD</text>
+  <text x="600" y="746" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#8A6D2D">FINE JEWELRY</text>
+</svg>

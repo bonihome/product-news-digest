@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "brand": "Arc'teryx",
+  "slug": "arc-teryx",
+  "categories": [
+    "sports"
+  ],
+  "officialDomains": [
+    "arcteryx.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "gallery_asset_download",
+      "official_product_page_screenshot",
+      "local_mirror"
+    ],
+    "notes": [
+      "Arc'teryx localized product pages can mix icons, detail shots, and product imagery.",
+      "Prefer Sanity-hosted official gallery assets when they show the jacket body or construction details clearly.",
+      "Use a localized page screenshot only as a fallback when the page does not expose a usable product image."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "arcteryx-alpha-sv",
+      "title": "Arc'teryx 推出新一代 Alpha SV Jacket，户外硬壳线继续升级",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "Alpha SV Jacket",
+        "100D GORE-TEX PRO ePE",
+        "高山硬壳夹克"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://arcteryx.com/us/zh/shop/mens/alpha-sv-jacket-9899",
+      "currentImage": "/news/sports/arcteryx-alpha-sv-hanging.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/arcteryx-alpha-sv-hanging.jpg",
+        "candidateImageUrl": "https://cdn.sanity.io/images/inkbj32c/production/7a649d6f8f0ee59bd267191e4d08009dc30afddf-600x600.jpg?auto=format&q=75",
+        "candidateImageHost": "cdn.sanity.io",
+        "notes": [
+          "The current local mirror uses an official Arc'teryx gallery asset mirrored to local storage.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "arcteryx-alpha-sv-detail",
+      "title": "Arc'teryx 持续强化 Alpha SV Jacket，高山硬壳细节继续升级",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "Alpha SV Jacket",
+        "高山攀登",
+        "耐候防护细节"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://arcteryx.com/us/zh/shop/mens/alpha-sv-jacket-9899",
+      "currentImage": "/news/sports/arcteryx-alpha-sv-detail.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/arcteryx-alpha-sv-detail.jpg",
+        "candidateImageUrl": "https://cdn.sanity.io/images/inkbj32c/production/e5a16a928380d0c5c9e0f083bc2fe8133714d98d-600x600.jpg?auto=format&q=75",
+        "candidateImageHost": "cdn.sanity.io",
+        "notes": [
+          "The current local mirror uses an official Arc'teryx gallery asset mirrored to local storage.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

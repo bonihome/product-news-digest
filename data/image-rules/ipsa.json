@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "IPSA",
+  "slug": "ipsa",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.ipsa.com.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "ipsa-home",
+      "title": "IPSA 推出流金水与自律乳组合，护肤线持续升级",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "流金岁月凝润美肤水",
+        "自律美肌液",
+        "密集弹力精华面霜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ipsa.com.cn/",
+      "currentImage": "/news/beauty/ipsa-home.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/ipsa-home.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "ipsa-products",
+      "title": "IPSA 推出底妆与遮瑕主力单品，彩妆线同步扩展",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "光透持妆粉底液",
+        "光透无瑕修饰遮瑕膏",
+        "晶透菁华粉底霜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ipsa.com.cn/Products",
+      "currentImage": "/news/beauty/ipsa-products.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/ipsa-products.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

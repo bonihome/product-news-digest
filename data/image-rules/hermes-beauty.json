@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "brand": "Hermès Beauty",
+  "slug": "hermes-beauty",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.hermes.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 0,
+    "partialCount": 3,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "hermes-beauty-terre-dhermes",
+      "title": "Hermès Beauty 推出大地馥郁香根草香型香水，木质香调继续扩展男士香氛线",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "爱马仕大地馥郁香根草香型香水",
+        "Terre d’Hermès 淡香水",
+        "Terre d’Hermès 须后润肤露"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%A4%A7%E5%9C%B0%E9%A6%A5%E9%83%81%E9%A6%99%E6%A0%B9%E8%8D%89%E9%A6%99%E5%9E%8B%E9%A6%99%E6%B0%B4-V40946/",
+      "currentImage": "/news/beauty/hermes-terre-dhermes.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/hermes-terre-dhermes.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-beauty-twilly-ginger",
+      "title": "Hermès Beauty 推出丝意荔韵淡香精，花香辛调继续拓展女士香氛主线",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "爱马仕丝意荔韵淡香精",
+        "Twilly d’Hermès 淡香精",
+        "Twilly d’Hermès 润体乳"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E4%B8%9D%E6%84%8F%E8%8D%94%E9%9F%B5%E6%B7%A1%E9%A6%99%E7%B2%BE-V110826VN/",
+      "currentImage": "/news/beauty/hermes-twilly-ginger.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/hermes-twilly-ginger.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-beauty-nil-garden",
+      "title": "Hermès Beauty 推出尼罗河花园香水，花园系列持续扩展清新香氛版图",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "爱马仕尼罗河花园香水",
+        "爱马仕李先生的花园香水",
+        "爱马仕地中海花园香水"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%B0%BC%E7%BD%97%E6%B2%B3%E8%8A%B1%E5%9B%AD%E9%A6%99%E6%B0%B4-V26993/",
+      "currentImage": "/news/beauty/hermes-nil-garden.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/hermes-nil-garden.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

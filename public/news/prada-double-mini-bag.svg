@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#EEE9E4"/>
+  <path d="M352 462C352 388 412 328 486 328H714C788 328 848 388 848 462V592C848 624 822 650 790 650H410C378 650 352 624 352 592V462Z" fill="#D6C4B5"/>
+  <path d="M470 338C470 276 520 226 582 226H618C680 226 730 276 730 338" stroke="#A98F7D" stroke-width="24" stroke-linecap="round"/>
+  <rect x="528" y="438" width="144" height="108" rx="8" fill="#CBB8A8"/>
+  <text x="600" y="708" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#1A1714">PRADA DOUBLE</text>
+  <text x="600" y="754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#7E6A5D">SAFFIANO BAG</text>
+</svg>

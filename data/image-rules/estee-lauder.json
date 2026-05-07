@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "brand": "Estée Lauder",
+  "slug": "estee-lauder",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.esteelauder.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "cn_product_page_asset_download",
+      "cn_series_page_asset_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "The global Estee Lauder media/export hotlinks can return 403 in server-side fetches.",
+      "Prefer official China product or series pages, then download the visible product asset with a browser-like user agent and referer.",
+      "Mirror the asset locally after download so the frontend does not depend on blocked hotlinks."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "estee",
+      "title": "Estée Lauder 推出 Supreme+ 与 DayWear Glow Boost，护肤线迎来新作",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "Revitalizing Supreme+ Sculpting Face Serum",
+        "DayWear Glow Boost Gel Cleanser",
+        "Advanced Night Repair Overnight Treatment"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.esteelauder.com/whats-new-skincare",
+      "currentImage": "/news/beauty/estee-anr-official.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/estee-anr-official.jpg",
+        "candidateImageUrl": "https://www.esteelauder.com.cn/media/export/cms/products/308x424/el_sku_G37B01_308x424_0.jpg?w=3840",
+        "candidateImageHost": "www.esteelauder.com.cn",
+        "notes": [
+          "If the old global media/export image URL returns 403, reacquire from the China product or series page with referer headers, then mirror locally.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "estee-makeup",
+      "title": "Estée Lauder 推出新版 Double Wear，彩妆线迎来重点更新",
+      "category": "beauty",
+      "subcategory": "彩妆",
+      "products": [
+        "Double Wear Foundation",
+        "Double Wear Foundation Pump",
+        "InCharge Blush Stick"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.esteelauder.com/products/708/product-catalog/whats-new",
+      "currentImage": "/news/beauty/estee-doublewear-local.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/estee-doublewear-local.png",
+        "candidateImageUrl": "https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg",
+        "candidateImageHost": "www.esteelauder.com",
+        "notes": [
+          "If the old global media/export image URL returns 403, reacquire from the China product or series page with referer headers, then mirror locally.",
+          "The current local mirror was captured from the official product image page in a real browser session because direct server-side fetch was blocked.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

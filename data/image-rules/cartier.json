@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "brand": "Cartier",
+  "slug": "cartier",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.cartier.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 9,
+    "readyCount": 0,
+    "partialCount": 9,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "cartier",
+      "title": "Cartier 推出新一轮珠宝作品，经典系列与高珠并进",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "LOVE bracelet",
+        "Trinity ring",
+        "Clash de Cartier ring"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/B6067517",
+      "currentImage": "/news/luxury/cartier.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-watch",
+      "title": "Cartier 推出新一轮腕表作品，经典表款持续焕新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Santos de Cartier",
+        "Tank",
+        "Panthère de Cartier"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/WSPN0013",
+      "currentImage": "/news/luxury/cartier-watch.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-watch.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-bag",
+      "title": "Cartier 推出 Must 系列黑色小牛皮手拿包，皮具线再添新作",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Must系列大号款手拿包",
+        "黑色小牛皮",
+        "镀钯装饰"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/L1002260",
+      "currentImage": "/news/luxury/cartier-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-bag.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-love-necklace",
+      "title": "Cartier 推出 LOVE 项链新作，经典珠宝系列继续延展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "LOVE 项链",
+        "18K 金材质",
+        "螺丝图腾设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/B6067517",
+      "currentImage": "/news/luxury/cartier-love-necklace.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-love-necklace.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-clash-ring",
+      "title": "Cartier 推出 Clash de Cartier 戒指，珠宝线再添辨识度单品",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Clash de Cartier 戒指",
+        "钉珠结构",
+        "叠戴设计"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/B6067517",
+      "currentImage": "/news/luxury/cartier-clash-ring.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-clash-ring.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-panthere-watch",
+      "title": "Cartier 推出 Panthère de Cartier 腕表，珠宝腕表线继续焕新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Panthère de Cartier",
+        "链节表链",
+        "珠宝化表壳比例"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/WSPN0013",
+      "currentImage": "/news/luxury/cartier-panthere-watch.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-panthere-watch.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-tank-watch",
+      "title": "Cartier 推出 Tank 新作，经典方形表壳再迎更新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Tank 腕表",
+        "方形表壳",
+        "罗马数字表盘"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/WSPN0013",
+      "currentImage": "/news/luxury/cartier-tank-watch.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-tank-watch.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-must-shoulder-bag",
+      "title": "Cartier 推出 Must 系列肩背包，皮具线扩展日常通勤选择",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Must 系列肩背包",
+        "皮革翻盖结构",
+        "金属细节"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/L1002260",
+      "currentImage": "/news/luxury/cartier-must-shoulder-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-must-shoulder-bag.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "cartier-must-wallet",
+      "title": "Cartier 推出 Must 系列小皮具，完善皮具线产品层次",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Must 系列小皮具",
+        "卡夹",
+        "拉链钱包"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.cartier.cn/creation/L1002260",
+      "currentImage": "/news/luxury/cartier-must-wallet.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/cartier-must-wallet.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

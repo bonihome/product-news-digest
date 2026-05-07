@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "brand": "Prada",
+  "slug": "prada",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.prada.cn"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 12,
+    "readyCount": 12,
+    "partialCount": 0,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "resolved_browser_image",
+      "reconstructed_dam_path",
+      "local_mirror"
+    ],
+    "notes": [
+      "Prada bag, ready-to-wear, and jewelry pages can fail in browser with HTTP2 errors.",
+      "When browser extraction fails, reconstruct the DAM path from productCode, material, color, and variant.",
+      "Prefer SLF front-view assets and mirror them locally for stable server delivery."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "prada-passage-bag",
+      "title": "Prada 推出 Passage 中号皮革手袋，皮具线延续标志性都市廓形",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Passage中号皮革手袋",
+        "Re-Nylon翻盖",
+        "皮革肩背结构"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO",
+      "currentImage": "/news/luxury/prada-passage-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-passage-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA495/2G52F0201/1BA495_2G52_F0201_V_OPO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-lace-dress",
+      "title": "Prada 推出蕾丝连衣裙，成衣线延续精致剪裁与轻盈材质表达",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "蕾丝连衣裙",
+        "轻盈蕾丝材质",
+        "Prada 女装成衣系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO",
+      "currentImage": "/news/luxury/prada-lace-dress.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-lace-dress.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/P/P3Q/P3Q17/17VMF0002/P3Q17_17VM_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-eternal-gold-necklace",
+      "title": "Prada 推出 Eternal Gold 项链作品，珠宝线延续极简几何语汇",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Eternal Gold中号吊坠项链",
+        "黄金材质",
+        "Prada Fine Jewelry"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html",
+      "currentImage": "/news/luxury/prada-eternal-gold.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-eternal-gold.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1JC/1JCA06/2DA5F0056/1JCA06_2DA5_F0056_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-reedition-2005-bag",
+      "title": "Prada 推出 Re-Edition 2005 绒面皮革迷你手袋，经典 Hobo 轮廓持续焕新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Re-Edition 2005 绒面皮革迷你手袋",
+        "Hobo 廓形",
+        "涂珐琅三角形金属徽标"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-re-edition-2005-suede-mini-bag/1N204W_2G64_F0003",
+      "currentImage": "/news/luxury/prada-reedition-2005-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-reedition-2005-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1N2/1N204W/2G64F0003/1N204W_2G64_F0003_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-double-mini-bag",
+      "title": "Prada 推出 Double 小号 Saffiano 皮革手袋，经典商务包线延续精致比例",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Double 小号 Saffiano 皮革手袋",
+        "可拆卸肩带",
+        "双提手结构"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/women/bags/totes/products.Prada_Double_Saffiano_%E7%9A%AE%E9%9D%A9%E8%BF%B7%E4%BD%A0%E6%89%8B%E8%A2%8B.1BG443_2A4A_F0G3Z_V_XOO.html",
+      "currentImage": "/news/luxury/prada-double-mini-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-double-mini-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BG/1BG443/2A4AF0G3Z/1BG443_2A4A_F0G3Z_V_XOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-renylon-skirt",
+      "title": "Prada 推出 Re-Nylon 半身裙，成衣线继续强化功能与优雅结合",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "Re-Nylon 半身裙",
+        "A字版型",
+        "徽标雕刻扣腰带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/re-nylon-skirt/21H015_1WQ8_F0002_S_OOO",
+      "currentImage": "/news/luxury/prada-renylon-skirt.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-renylon-skirt.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/2/21H/21H015/1WQ8F0002/21H015_1WQ8_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-chino-circle-skirt",
+      "title": "Prada 推出斜纹棉布中长半身伞裙，极简剪裁延续成衣线节奏",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "斜纹棉布中长半身伞裙",
+        "皮革腰带",
+        "涂珐琅三角形金属徽标"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/chino-circle-midi-skirt/P132JE_10YP_F0002_S_OOO",
+      "currentImage": "/news/luxury/prada-chino-skirt.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-chino-skirt.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/P/P13/P132JE/10YPF0002/P132JE_10YP_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-symbole-necklace",
+      "title": "Prada 推出 Symbole 项链，徽标珠宝线继续拓展日常佩戴场景",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Prada Symbole 项链",
+        "925银和珐琅吊坠",
+        "三角形徽标"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-symbole-necklace/1JCA43_2DSP_F0002",
+      "currentImage": "/news/luxury/prada-symbole-necklace.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-symbole-necklace.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1JC/1JCA43/2DSPF0002/1JCA43_2DSP_F0002_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-bonnie-medium-bag",
+      "title": "Prada 推出 Bonnie 中号印花亚麻皮革拼接手提包，夏季包袋线继续扩展",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Bonnie 中号印花亚麻皮革拼接手提包",
+        "印花亚麻材质",
+        "皮革提手结构"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-bonnie-medium-printed-linen-and-leather-handbag/1BA426_2FPT_F0009_V_OTM",
+      "currentImage": "/news/luxury/prada-bonnie-medium-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-bonnie-medium-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA426/2FPTF0009/1BA426_2FPT_F0009_V_OTM_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-route-large-bag",
+      "title": "Prada 推出 Route 大号皮革手袋，秀场包袋线继续强化结构感",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Route 大号皮革手袋",
+        "顶部提手结构",
+        "秀场包袋线"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-route-large-leather-top-handle-bag/1BB162_2HFQ_F0002_V_OOO",
+      "currentImage": "/news/luxury/prada-route-large-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-route-large-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BB/1BB162/2HFQF0002/1BB162_2HFQ_F0002_V_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-carry-mini-bag",
+      "title": "Prada 推出 Carry 迷你皮革手袋，小尺寸包袋线继续增长",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Carry 迷你皮革手袋",
+        "迷你尺寸结构",
+        "多色皮革版本"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-carry-mini-leather-handbag/1BA496_2C6A_F0002_V_OOO",
+      "currentImage": "/news/luxury/prada-carry-mini-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-carry-mini-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA496/2C6AF0002/1BA496_2C6A_F0002_V_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "prada-jardiniere-mini-bag",
+      "title": "Prada 推出 Jardinière 棉帆布迷你手袋，轻盈材质丰富夏季包袋线",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Prada Jardinière 棉帆布迷你手袋",
+        "棉帆布材质",
+        "迷你手袋结构"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.prada.cn/cn/zh/p/prada-jardiniere-cotton-canvas-mini-bag/1BA038_RCYA_F0018_V_8OK",
+      "currentImage": "/news/luxury/prada-jardiniere-mini-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "reconstructed_dam_path_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/prada-jardiniere-mini-bag.jpg",
+        "candidateImageUrl": "https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA038/RCYAF0018/1BA038_RCYA_F0018_V_8OK_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+        "candidateImageHost": "www.prada.com",
+        "notes": [
+          "If live page access fails, use the DAM reconstruction pattern stored in the Prada brand rule.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    }
+  ]
+}

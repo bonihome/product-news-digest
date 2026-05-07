@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "brand": "PROYA",
+  "slug": "proya",
+  "categories": [
+    "beauty"
+  ],
+  "officialDomains": [
+    "www.proya.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "proya-redruby",
+      "title": "珀莱雅推出红宝石淡纹紧致精华 2.0，继续主打抗皱修护",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "红宝石淡纹紧致精华2.0",
+        "肌源修护优效精华露",
+        "赋能鲜颜淡纹紧致眼霜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.proya.com/",
+      "currentImage": "/news/beauty/proya-redruby.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/proya-redruby.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "proya-dualkang",
+      "title": "珀莱雅推出双抗精华 2.0，持续加码抗氧抗糖护理",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "弹润透亮青春精华液 双抗精华2.0",
+        "双抗面膜",
+        "红宝石面膜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.proya.com/",
+      "currentImage": "/news/beauty/proya-dualkang.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/proya-dualkang.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}
