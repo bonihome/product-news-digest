@@ -65,7 +65,7 @@
 ### 1. 克隆项目
 
 ```bash
-git clone <your-github-repo-url>
+git clone https://github.com/bonihome/product-news-digest.git
 cd 2026-04-27-new-chat
 ```
 

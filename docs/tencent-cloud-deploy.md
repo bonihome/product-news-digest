@@ -15,6 +15,22 @@
 /srv/product-news-digest
 ```
 
+当前 GitHub 仓库：
+
+```bash
+https://github.com/bonihome/product-news-digest.git
+```
+
+首次拉取推荐命令：
+
+```bash
+sudo mkdir -p /srv
+cd /srv
+sudo git clone https://github.com/bonihome/product-news-digest.git
+sudo chown -R $USER:$USER /srv/product-news-digest
+cd /srv/product-news-digest
+```
+
 部署后目录中至少包含：
 
 - 项目代码
