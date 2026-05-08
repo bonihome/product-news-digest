@@ -157,14 +157,31 @@ function inferImageStrategy(story: Story): BrandSourceRule['imageStrategy'] {
 }
 
 function buildRuleFromStory(story: Story): BrandSourceRule {
+  let listUrl = story.sourceUrl
+  let sourceLabel = story.sourceLabel
+
+  if (story.brand === 'Bobbi Brown') {
+    listUrl = 'https://www.bobbibrown.com.cn/'
+    sourceLabel = 'Bobbi Brown 中国官网首页'
+  } else if (story.brand === 'Clinique') {
+    listUrl = 'https://www.clinique.com.cn/'
+    sourceLabel = 'Clinique 中国官网首页'
+  } else if (story.brand === 'Estée Lauder') {
+    listUrl = 'https://www.esteelauder.com.cn/'
+    sourceLabel = 'Estée Lauder 中国官网首页'
+  } else if (story.brand === 'La Mer') {
+    listUrl = 'https://www.lamer.com.cn/'
+    sourceLabel = 'La Mer 中国官网首页'
+  }
+
   return {
     brand: story.brand,
     category: story.category,
     subcategory: story.subcategory,
     region: 'cn',
     sourceType: story.sourceType,
-    listUrl: story.sourceUrl,
-    sourceLabel: story.sourceLabel,
+    listUrl,
+    sourceLabel,
     fetchMode: inferFetchMode(story),
     products: story.products,
     keywords: uniqueKeywords(story),
