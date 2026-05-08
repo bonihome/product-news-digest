@@ -172,6 +172,18 @@ function buildRuleFromStory(story: Story): BrandSourceRule {
   } else if (story.brand === 'La Mer') {
     listUrl = 'https://www.lamer.com.cn/'
     sourceLabel = 'La Mer 中国官网首页'
+  } else if (story.brand === 'Chanel' && story.subcategory === '腕表') {
+    listUrl = 'https://www.chanel.cn/cn/watches/'
+    sourceLabel = '香奈儿中国官网腕表频道'
+  } else if (story.brand === 'DESCENTE') {
+    listUrl = 'https://allterrain.descente.com/'
+    sourceLabel = 'DESCENTE ALLTERRAIN 官方网站'
+  } else if (story.brand === 'ASICS') {
+    listUrl = 'https://www.asics.com.cn/'
+    sourceLabel = 'ASICS 中国官网首页'
+  } else if (story.brand === 'Wilson') {
+    listUrl = 'https://www.wilson.com/en-us/tennis'
+    sourceLabel = 'Wilson Tennis'
   }
 
   return {
