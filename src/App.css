@@ -44,7 +44,8 @@
 
 .logo-block strong {
   color: var(--text-strong);
-  font-size: 1rem;
+  font-size: 1.38rem;
+  line-height: 1.08;
 }
 
 .logo-block span,

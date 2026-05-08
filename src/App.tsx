@@ -266,7 +266,7 @@ function App() {
     <main className="site-shell">
       <header className="topbar">
         <a className="logo-block logo-link" href="#/">
-          <strong>Product News Digest</strong>
+          <strong>News of Your Next Premium Gifts</strong>
           <span>新品新闻聚合</span>
           <small className="contact-line">商业合作联系 boni.sah@gmail.com</small>
         </a>
