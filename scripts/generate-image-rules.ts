@@ -156,6 +156,20 @@ const brandStrategyOverrides: Record<
       'Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.',
     ],
   },
+  ASICS: {
+    methods: ['official_cms_asset_download', 'homepage_or_collection_asset_download', 'local_mirror'],
+    notes: [
+      'ASICS China product pages can be inconsistent, but official cms-static.asics.com media library assets are stable once identified from the page source.',
+      'Prefer the square product image for tennis shoe stories, then mirror it locally.',
+    ],
+  },
+  Wilson: {
+    methods: ['official_blog_asset_download', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'Wilson official blog pages expose stable article media URLs that can be mirrored locally.',
+      'For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed.',
+    ],
+  },
 }
 
 const storyCandidateImageUrls: Record<string, string> = {
@@ -213,6 +227,12 @@ const storyCandidateImageUrls: Record<string, string> = {
     'https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg',
   'on-cloudmonster-2':
     'https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp',
+  'asics-tennis':
+    'https://cms-static.asics.com/media-libraries/115463/file.jpg',
+  'wilson-tennis':
+    'https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium',
+  'wilson-tennis-shoe':
+    'https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium',
   'arcteryx-alpha-sv':
     'https://cdn.sanity.io/images/inkbj32c/production/7a649d6f8f0ee59bd267191e4d08009dc30afddf-600x600.jpg?auto=format&q=75',
   'arcteryx-alpha-sv-detail':
@@ -313,7 +333,7 @@ function inferAutomationStatus(story: Story, brand: string): AutomationStatus {
     return 'ready'
   }
 
-  if (['Prada', 'Van Cleef & Arpels', 'Lancôme', 'SHISEIDO'].includes(brand)) {
+  if (['Prada', 'Van Cleef & Arpels', 'Lancôme', 'SHISEIDO', 'ASICS', 'Wilson'].includes(brand)) {
     return 'ready'
   }
 
@@ -339,6 +359,14 @@ function inferPriority(story: Story, brand: string) {
 
   if (brand === 'SHISEIDO') {
     return ['product_detail_packshot_download', 'homepage_product_card_capture', 'local_mirror']
+  }
+
+  if (brand === 'ASICS') {
+    return ['official_cms_asset_download', 'local_mirror']
+  }
+
+  if (brand === 'Wilson') {
+    return ['official_blog_asset_download', 'official_product_page_image_download', 'local_mirror']
   }
 
   if (!isLocalImage(story.image)) {
@@ -388,6 +416,14 @@ function inferStoryNotes(story: Story, brand: string) {
 
   if (brand === 'DESCENTE') {
     notes.push('The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset or page screenshot due to Cloudflare protection on commerce pages.')
+  }
+
+  if (brand === 'ASICS') {
+    notes.push('The current local mirror is backed by a verified official ASICS CMS asset and can be refreshed from candidateImageUrl if the local file needs replacement.')
+  }
+
+  if (brand === 'Wilson') {
+    notes.push('The current local mirror is backed by a verified Wilson official blog media asset and can be refreshed from candidateImageUrl if the local file needs replacement.')
   }
 
   if (story.image.endsWith('.svg')) {

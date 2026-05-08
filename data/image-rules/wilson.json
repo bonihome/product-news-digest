@@ -11,17 +11,19 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 2,
-    "readyCount": 0,
+    "readyCount": 2,
     "partialCount": 0,
-    "needsReplacementCount": 2
+    "needsReplacementCount": 0
   },
   "strategy": {
     "brandLevelMethods": [
+      "official_blog_asset_download",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Wilson official blog pages expose stable article media URLs that can be mirrored locally.",
+      "For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed."
     ]
   },
   "stories": [
@@ -37,21 +39,23 @@
       ],
       "sourceType": "Official News",
       "sourcePage": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe",
-      "currentImage": "/news/wilson-tennis.svg",
+      "currentImage": "/news/sports/wilson-rush-pro-4-5.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "needs_replacement",
+      "automationStatus": "ready",
       "acquisition": {
-        "method": "manual_editorial_placeholder",
+        "method": "local_mirror_of_official_asset",
         "priority": [
+          "official_blog_asset_download",
+          "official_product_page_image_download",
           "local_mirror"
         ],
-        "localMirrorPath": "/news/wilson-tennis.svg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/wilson-rush-pro-4-5.jpg",
+        "candidateImageUrl": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium",
+        "candidateImageHost": "www.wilson.com",
         "notes": [
-          "Current asset is an editorial placeholder and should be replaced with a real official product image later.",
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror is backed by a verified Wilson official blog media asset and can be refreshed from candidateImageUrl if the local file needs replacement.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -67,21 +71,23 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.wilson.com/en-us/product/rush-pro-4-5-wrs00868",
-      "currentImage": "/news/wilson-tennis.svg",
+      "currentImage": "/news/sports/wilson-rush-pro-4-5.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "needs_replacement",
+      "automationStatus": "ready",
       "acquisition": {
-        "method": "manual_editorial_placeholder",
+        "method": "local_mirror_of_official_asset",
         "priority": [
+          "official_blog_asset_download",
+          "official_product_page_image_download",
           "local_mirror"
         ],
-        "localMirrorPath": "/news/wilson-tennis.svg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/wilson-rush-pro-4-5.jpg",
+        "candidateImageUrl": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium",
+        "candidateImageHost": "www.wilson.com",
         "notes": [
-          "Current asset is an editorial placeholder and should be replaced with a real official product image later.",
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror is backed by a verified Wilson official blog media asset and can be refreshed from candidateImageUrl if the local file needs replacement.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

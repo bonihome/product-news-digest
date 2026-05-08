@@ -78,7 +78,7 @@ export const sportsNews: Story[] = [
     sourceType: 'Official News',
     sourceLabel: 'Wilson Tennis Blog',
     sourceUrl: 'https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe',
-    image: '/news/wilson-tennis.svg',
+    image: '/news/sports/wilson-rush-pro-4-5.jpg',
     summary:
       'Rush Pro 4.5 围绕舒适性、稳定性与场上爆发力做出升级，成为 Wilson 近期网球鞋新品中的核心单品。',
     products: ['Rush Pro 4.5', 'Rush Pro 4.0', '4D Support Chassis 2.0'],
@@ -94,7 +94,7 @@ export const sportsNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: "Rush Pro 4.5 Men's Tennis Shoe",
     sourceUrl: 'https://www.wilson.com/en-us/product/rush-pro-4-5-wrs00868',
-    image: '/news/wilson-tennis.svg',
+    image: '/news/sports/wilson-rush-pro-4-5.jpg',
     summary:
       '随着 Rush Pro 4.5 持续铺开，Wilson 也同步强化高性能网球鞋布局，进一步丰富品牌在专业网球鞋市场的产品选择。',
     products: ['Rush Pro 4.5 Men’s', 'Tennis Shoe', 'Performance outsole'],
@@ -126,7 +126,7 @@ export const sportsNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: 'ASICS 中国官网',
     sourceUrl: 'https://www.asics.com.cn/gel-resolution-8/p/0020009531-103',
-    image: '/news/sports/asics-tennis.jpg',
+    image: '/news/sports/asics-gel-resolution-8.jpg',
     summary:
       'GEL-RESOLUTION 8 继续承担 ASICS 网球鞋线的核心角色，并与特别版本一同完善品牌在专业网球鞋市场的布局。',
     products: ['GEL-RESOLUTION 8', 'GEL-RESOLUTION 8 L.E.', '网球鞋款'],

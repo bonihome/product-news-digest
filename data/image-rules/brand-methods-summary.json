@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T12:58:37.458Z",
+  "generatedAt": "2026-05-08T13:21:44.130Z",
   "brandCount": 51,
   "brands": [
     {
@@ -179,16 +179,18 @@
       "storyCount": 1,
       "status": {
         "storyCount": 1,
-        "readyCount": 0,
-        "partialCount": 1,
+        "readyCount": 1,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
+        "official_cms_asset_download",
+        "homepage_or_collection_asset_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "ASICS China product pages can be inconsistent, but official cms-static.asics.com media library assets are stable once identified from the page source.",
+        "Prefer the square product image for tennis shoe stories, then mirror it locally."
       ],
       "stories": [
         {
@@ -197,11 +199,12 @@
           "sourcePage": "https://www.asics.com.cn/gel-resolution-8/p/0020009531-103",
           "method": "local_mirror_of_official_asset",
           "priority": [
+            "official_cms_asset_download",
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/asics-tennis.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/asics-gel-resolution-8.jpg",
+          "candidateImageUrl": "https://cms-static.asics.com/media-libraries/115463/file.jpg",
+          "automationStatus": "ready"
         }
       ]
     },
@@ -3118,41 +3121,47 @@
       "storyCount": 2,
       "status": {
         "storyCount": 2,
-        "readyCount": 0,
+        "readyCount": 2,
         "partialCount": 0,
-        "needsReplacementCount": 2
+        "needsReplacementCount": 0
       },
       "methods": [
+        "official_blog_asset_download",
+        "official_product_page_image_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "Wilson official blog pages expose stable article media URLs that can be mirrored locally.",
+        "For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed."
       ],
       "stories": [
         {
           "storyId": "wilson-tennis",
           "subcategory": "网球",
           "sourcePage": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe",
-          "method": "manual_editorial_placeholder",
+          "method": "local_mirror_of_official_asset",
           "priority": [
+            "official_blog_asset_download",
+            "official_product_page_image_download",
             "local_mirror"
           ],
-          "localMirrorPath": "/news/wilson-tennis.svg",
-          "candidateImageUrl": null,
-          "automationStatus": "needs_replacement"
+          "localMirrorPath": "/news/sports/wilson-rush-pro-4-5.jpg",
+          "candidateImageUrl": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium",
+          "automationStatus": "ready"
         },
         {
           "storyId": "wilson-tennis-shoe",
           "subcategory": "网球",
           "sourcePage": "https://www.wilson.com/en-us/product/rush-pro-4-5-wrs00868",
-          "method": "manual_editorial_placeholder",
+          "method": "local_mirror_of_official_asset",
           "priority": [
+            "official_blog_asset_download",
+            "official_product_page_image_download",
             "local_mirror"
           ],
-          "localMirrorPath": "/news/wilson-tennis.svg",
-          "candidateImageUrl": null,
-          "automationStatus": "needs_replacement"
+          "localMirrorPath": "/news/sports/wilson-rush-pro-4-5.jpg",
+          "candidateImageUrl": "https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium",
+          "automationStatus": "ready"
         }
       ]
     },

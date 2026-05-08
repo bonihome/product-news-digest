@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-07T12:58:37.458Z
+Generated at: 2026-05-08T13:21:44.130Z
 Brand count: 51
 
 ## Adidas
@@ -52,11 +52,11 @@ Brand count: 51
 - Categories: sports
 - Official domains: www.asics.com.cn
 - Story count: 1
-- Status: ready 0, partial 1, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Status: ready 1, partial 0, needs replacement 0
+- Brand methods: official_cms_asset_download -> homepage_or_collection_asset_download -> local_mirror
+- Notes: ASICS China product pages can be inconsistent, but official cms-static.asics.com media library assets are stable once identified from the page source. Prefer the square product image for tennis shoe stories, then mirror it locally.
 - Stories:
-  - `asics-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/asics-tennis.jpg` | candidate: none stored | status: partial
+  - `asics-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: official_cms_asset_download -> local_mirror | local: `/news/sports/asics-gel-resolution-8.jpg` | candidate: https://cms-static.asics.com/media-libraries/115463/file.jpg | status: ready
 
 ## Bobbi Brown
 
@@ -690,12 +690,12 @@ Brand count: 51
 - Categories: sports
 - Official domains: www.wilson.com
 - Story count: 2
-- Status: ready 0, partial 0, needs replacement 2
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Status: ready 2, partial 0, needs replacement 0
+- Brand methods: official_blog_asset_download -> official_product_page_image_download -> local_mirror
+- Notes: Wilson official blog pages expose stable article media URLs that can be mirrored locally. For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed.
 - Stories:
-  - `wilson-tennis` | 网球 | method: `manual_editorial_placeholder` | priority: local_mirror | local: `/news/wilson-tennis.svg` | candidate: none stored | status: needs_replacement
-  - `wilson-tennis-shoe` | 网球 | method: `manual_editorial_placeholder` | priority: local_mirror | local: `/news/wilson-tennis.svg` | candidate: none stored | status: needs_replacement
+  - `wilson-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: official_blog_asset_download -> official_product_page_image_download -> local_mirror | local: `/news/sports/wilson-rush-pro-4-5.jpg` | candidate: https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium | status: ready
+  - `wilson-tennis-shoe` | 网球 | method: `local_mirror_of_official_asset` | priority: official_blog_asset_download -> official_product_page_image_download -> local_mirror | local: `/news/sports/wilson-rush-pro-4-5.jpg` | candidate: https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium | status: ready
 
 ## Winona
 

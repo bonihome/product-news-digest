@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T12:58:37.457Z",
+  "generatedAt": "2026-05-08T13:21:44.130Z",
   "brandCount": 51,
   "brands": [
     {
@@ -34,8 +34,8 @@
       "slug": "asics",
       "file": "data/image-rules/asics.json",
       "storyCount": 1,
-      "readyCount": 0,
-      "partialCount": 1,
+      "readyCount": 1,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -439,9 +439,9 @@
       "slug": "wilson",
       "file": "data/image-rules/wilson.json",
       "storyCount": 2,
-      "readyCount": 0,
+      "readyCount": 2,
       "partialCount": 0,
-      "needsReplacementCount": 2
+      "needsReplacementCount": 0
     },
     {
       "brand": "Winona",

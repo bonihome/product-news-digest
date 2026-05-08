@@ -193,12 +193,30 @@ This project uses brand-official images first. When direct hotlinking is unstabl
     - Use the `LM1` front-view image from `images.kolonmall.com`.
     - Mirror locally after download.
 
+- `ASICS`
+  - Region/site used now: `asics.com.cn`
+  - Best source: official `cms-static.asics.com` media library assets exposed from the China product page source.
+  - Pattern:
+    - Open the China product page or homepage in a browser-like request.
+    - Extract the `cms-static.asics.com/media-libraries/...` image URL from the page source.
+    - Prefer the square product image when available for tennis shoe stories.
+    - Mirror the downloaded image locally.
+
 - `DESCENTE`
   - Region/site used now: `allterrain.descente.com`
   - Best source: official ALLTERRAIN line assets or official page screenshots.
   - Pattern:
     - Commerce pages on `my.descente.com` may be Cloudflare-blocked.
     - Prefer accessible official ALLTERRAIN line visuals, then mirror locally.
+
+- `Wilson`
+  - Region/site used now: `wilson.com`
+  - Best source: official Wilson Tennis blog hero assets first, then the product page.
+  - Pattern:
+    - Open the Wilson Tennis blog article or tennis section page in a browser-like request.
+    - Prefer the large article media URL under the official `wilson.com` blog asset path.
+    - Reuse the blog hero image for Rush Pro 4.5 stories when the product page is harder to access.
+    - Mirror the image locally after download.
 
 ## Fallback Rules
 
