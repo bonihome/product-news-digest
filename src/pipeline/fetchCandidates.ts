@@ -75,6 +75,80 @@ async function fetchHtml(url: string) {
   return response.text()
 }
 
+function makeAbsoluteUrl(url: string, baseUrl: string) {
+  try {
+    return new URL(url, baseUrl).toString()
+  } catch {
+    return url
+  }
+}
+
+function extractTitleFromHtml(html: string) {
+  const rawTitle =
+    extractMatch(html, /property="og:title" content="([^"]+)"/i) ??
+    extractMatch(html, /name="twitter:title" content="([^"]+)"/i) ??
+    extractMatch(html, /<meta[^>]+name="title"[^>]+content="([^"]+)"/i) ??
+    extractMatch(html, /<title>([^<]+)<\/title>/i) ??
+    extractMatch(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i)
+
+  return rawTitle ? collapseWhitespace(decodeHtmlEntities(rawTitle.replace(/<[^>]+>/g, ' '))) : null
+}
+
+function extractImageFromHtml(html: string, baseUrl: string) {
+  const directImage =
+    extractMatch(html, /property="og:image" content="([^"]+)"/i) ??
+    extractMatch(html, /name="twitter:image" content="([^"]+)"/i) ??
+    extractMatch(html, /<meta[^>]+itemprop="image"[^>]+content="([^"]+)"/i)
+
+  if (directImage) {
+    return decodeHtmlEntities(makeAbsoluteUrl(directImage, baseUrl))
+  }
+
+  const imageMatches = [
+    ...html.matchAll(
+      /(https?:\/\/[^"' )]+\.(?:jpg|jpeg|png|webp)(?:\?[^"' )]+)?)/gi,
+    ),
+  ].map((match) => decodeHtmlEntities(match[1]))
+
+  const preferredImage = imageMatches.find((url) =>
+    /(dior|prada|gucci|cartier|burberry|vancleefarpels|louisvuitton|hermes|shiseido|lancome|estee|clinique|lamer|adidas|nike|yonex|asics|mizuno|on\.com|arcteryx|kolon|descente|wilson|apple|microsoft)/i.test(
+      url,
+    ),
+  )
+
+  return preferredImage ? makeAbsoluteUrl(preferredImage, baseUrl) : null
+}
+
+function extractPublishedAtFromHtml(html: string, checkedAt: string) {
+  const directValue =
+    extractMatch(html, /property="article:published_time" content="([^"]+)"/i) ??
+    extractMatch(html, /name="date" content="([^"]+)"/i) ??
+    extractMatch(html, /"datePublished":"([^"]+)"/i) ??
+    extractMatch(html, /(\d{4}-\d{2}-\d{2})/) ??
+    extractMatch(html, /(\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日)/)
+
+  return (
+    normalizeIsoDate(directValue ?? '') ??
+    normalizeChineseDate(directValue ?? '') ??
+    normalizeCheckedAt(checkedAt)
+  )
+}
+
+async function fetchGenericCandidate(rule: BrandSourceRule, checkedAt: string) {
+  const html = await fetchHtml(rule.listUrl)
+  const sourceTitle =
+    extractTitleFromHtml(html) ?? `${rule.brand} ${rule.subcategory} 新品检索`
+  const image = extractImageFromHtml(html, rule.listUrl) ?? ''
+  const publishedAt = extractPublishedAtFromHtml(html, checkedAt)
+
+  return buildCandidate(rule, checkedAt, {
+    sourceTitle,
+    sourceSummary: `${rule.brand} ${rule.sourceLabel} 当前可抓取到 ${rule.subcategory} 页面内容，已按产品与分类规则生成候选新闻。`,
+    image,
+    publishedAt,
+  })
+}
+
 function buildFallbackSummary(rule: BrandSourceRule) {
   return `${rule.brand} ${rule.subcategory}入口页检索到与 ${rule.products.join('、')} 相关的新品线索，等待进入真实抓取阶段补齐页面解析。`
 }
@@ -294,7 +368,7 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
     case 'Microsoft Surface':
       return fetchMicrosoftSurfaceCandidate(rule, checkedAt)
     default:
-      return null
+      return fetchGenericCandidate(rule, checkedAt)
   }
 }
 

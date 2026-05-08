@@ -174,29 +174,35 @@ function buildRuleFromStory(story: Story): BrandSourceRule {
   }
 }
 
-function pickLatestStoryPerBrand(stories: Story[]) {
-  const latestByBrand = new Map<string, Story>()
+function pickLatestStoryPerBrandAndSubcategory(stories: Story[]) {
+  const latestByKey = new Map<string, Story>()
 
   for (const story of stories) {
-    const existing = latestByBrand.get(story.brand)
+    const key = `${story.brand}::${story.subcategory}`
+    const existing = latestByKey.get(key)
     if (!existing || story.publishedAt > existing.publishedAt) {
-      latestByBrand.set(story.brand, story)
+      latestByKey.set(key, story)
     }
   }
 
-  return latestByBrand
+  return latestByKey
 }
 
 const staticStories = [...luxuryNews, ...beautyNews, ...sportsNews]
-const explicitBrands = new Set(coreBrandSources.map((source) => source.brand))
-const latestStoriesByBrand = pickLatestStoryPerBrand(staticStories)
+const explicitBrandKeys = new Set(coreBrandSources.map((source) => `${source.brand}::${source.subcategory}`))
+const latestStoriesByBrandAndSubcategory = pickLatestStoryPerBrandAndSubcategory(staticStories)
 
-const derivedBrandSources = Array.from(latestStoriesByBrand.values())
-  .filter((story) => !explicitBrands.has(story.brand))
+const derivedBrandSources = Array.from(latestStoriesByBrandAndSubcategory.values())
+  .filter((story) => !explicitBrandKeys.has(`${story.brand}::${story.subcategory}`))
   .map(buildRuleFromStory)
   .sort((left, right) => {
     if (left.category === right.category) {
-      return left.brand.localeCompare(right.brand)
+      const brandCompare = left.brand.localeCompare(right.brand)
+      if (brandCompare !== 0) {
+        return brandCompare
+      }
+
+      return left.subcategory.localeCompare(right.subcategory)
     }
 
     return left.category.localeCompare(right.category)
