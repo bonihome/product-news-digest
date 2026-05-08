@@ -1,6 +1,10 @@
+import { beautyNews } from '../data/beautyNews'
+import { luxuryNews } from '../data/luxuryNews'
+import { sportsNews } from '../data/sportsNews'
+import type { Story } from '../data/types'
 import type { BrandSourceRule } from './types'
 
-export const brandSources: BrandSourceRule[] = [
+const coreBrandSources: BrandSourceRule[] = [
   {
     brand: 'Louis Vuitton',
     category: 'luxury',
@@ -122,6 +126,83 @@ export const brandSources: BrandSourceRule[] = [
     enabled: true,
   },
 ]
+
+function uniqueKeywords(story: Story) {
+  return Array.from(new Set([story.subcategory, ...story.products.slice(0, 3)])).slice(0, 4)
+}
+
+function inferFetchMode(story: Story): BrandSourceRule['fetchMode'] {
+  if (
+    story.brand === "Arc'teryx" ||
+    story.brand === 'Hermes' ||
+    story.brand === 'Wilson' ||
+    story.brand === 'Microsoft Surface'
+  ) {
+    return 'browser'
+  }
+
+  return 'html'
+}
+
+function inferImageStrategy(story: Story): BrandSourceRule['imageStrategy'] {
+  if (story.sourceType === 'Official News') {
+    return 'page-screenshot'
+  }
+
+  if (story.sourceUrl === 'https://www.shiseido.com.cn/' || story.sourceUrl.endsWith('.com.cn/')) {
+    return 'homepage-module'
+  }
+
+  return 'product-page'
+}
+
+function buildRuleFromStory(story: Story): BrandSourceRule {
+  return {
+    brand: story.brand,
+    category: story.category,
+    subcategory: story.subcategory,
+    region: 'cn',
+    sourceType: story.sourceType,
+    listUrl: story.sourceUrl,
+    sourceLabel: story.sourceLabel,
+    fetchMode: inferFetchMode(story),
+    products: story.products,
+    keywords: uniqueKeywords(story),
+    imageStrategy: inferImageStrategy(story),
+    cadence: 'wed-sun-twice',
+    enabled: true,
+  }
+}
+
+function pickLatestStoryPerBrand(stories: Story[]) {
+  const latestByBrand = new Map<string, Story>()
+
+  for (const story of stories) {
+    const existing = latestByBrand.get(story.brand)
+    if (!existing || story.publishedAt > existing.publishedAt) {
+      latestByBrand.set(story.brand, story)
+    }
+  }
+
+  return latestByBrand
+}
+
+const staticStories = [...luxuryNews, ...beautyNews, ...sportsNews]
+const explicitBrands = new Set(coreBrandSources.map((source) => source.brand))
+const latestStoriesByBrand = pickLatestStoryPerBrand(staticStories)
+
+const derivedBrandSources = Array.from(latestStoriesByBrand.values())
+  .filter((story) => !explicitBrands.has(story.brand))
+  .map(buildRuleFromStory)
+  .sort((left, right) => {
+    if (left.category === right.category) {
+      return left.brand.localeCompare(right.brand)
+    }
+
+    return left.category.localeCompare(right.category)
+  })
+
+export const brandSources: BrandSourceRule[] = [...coreBrandSources, ...derivedBrandSources]
 
 export function getEnabledBrandSources() {
   return brandSources.filter((source) => source.enabled)
