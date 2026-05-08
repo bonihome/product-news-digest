@@ -17,11 +17,13 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "official_products_page_download",
+      "official_homepage_banner_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Kiehl’s China about/products page exposes stable official product-collage images on res-wxec-unipt.lorealchina.com.",
+      "Prefer the products-page collages that clearly show Calendula toner, dark spot serum, cream, or mask, then mirror locally."
     ]
   },
   "stories": [
@@ -37,7 +39,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.kiehls.com.cn/",
-      "currentImage": "/news/kiehls-home-real.png",
+      "currentImage": "/news/beauty/kiehls-calendula-darkspot.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -46,11 +48,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/kiehls-home-real.png",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/beauty/kiehls-calendula-darkspot.jpg",
+        "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/2.jpg",
+        "candidateImageHost": "res-wxec-unipt.lorealchina.com",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified Kiehl’s China products-page collage that clearly shows the featured skincare products.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -66,7 +69,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.kiehls.com.cn/about/products/",
-      "currentImage": "/news/beauty/kiehls-home.png",
+      "currentImage": "/news/beauty/kiehls-cream-mask.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -75,11 +78,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/beauty/kiehls-home.png",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/beauty/kiehls-cream-mask.jpg",
+        "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/1.jpg",
+        "candidateImageHost": "res-wxec-unipt.lorealchina.com",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified Kiehl’s China products-page collage that clearly shows the featured skincare products.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

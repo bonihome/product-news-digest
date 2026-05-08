@@ -17,11 +17,13 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "official_catalog_product_image_download",
+      "official_collection_asset_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Bvlgari China watch listing pages embed stable catalog product PNG assets under /media/catalog/product/cache/.",
+      "Prefer exact watch packshots from the watch listing payload for Serpenti and Octo stories, then mirror locally."
     ]
   },
   "stories": [
@@ -50,6 +52,7 @@
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [
+          "The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.",
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
         ]
       }
@@ -79,6 +82,7 @@
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [
+          "The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.",
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
         ]
       }
@@ -108,6 +112,7 @@
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [
+          "The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.",
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
         ]
       }
@@ -124,7 +129,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.bulgari.cn/zh-cn/products/102678-e",
-      "currentImage": "/news/luxury/bulgari-serpenti-sedu-watch.jpg",
+      "currentImage": "/news/luxury/bulgari-serpenti-sedu-watch.png",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -133,11 +138,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.png",
+        "candidateImageUrl": "https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/103902-001.png",
+        "candidateImageHost": "www.bulgari.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -153,7 +159,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.bulgari.cn/zh-cn/watches",
-      "currentImage": "/news/luxury/bulgari-octo-watch.jpg",
+      "currentImage": "/news/luxury/bulgari-octo-watch.png",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -162,11 +168,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/luxury/bulgari-octo-watch.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/luxury/bulgari-octo-watch.png",
+        "candidateImageUrl": "https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/104299-E-001.png",
+        "candidateImageHost": "www.bulgari.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -195,6 +202,7 @@
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [
+          "The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.",
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
         ]
       }

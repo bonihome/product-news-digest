@@ -31,6 +31,19 @@ This project uses brand-official images first. When direct hotlinking is unstabl
   - Collection pages preserve current China assortment and are more stable than old product slugs.
   - Match the story to the first visible product card when the exact old SKU no longer resolves.
 
+## Bvlgari China
+
+- Region/site: `bulgari.cn`
+- Best source: China watch listing pages and their embedded catalog packshots.
+- Pattern:
+  - Open the China watches listing or the relevant product listing block.
+  - Prefer official packshot assets under:
+    - `https://www.bulgari.cn/media/catalog/product/cache/...`
+  - For watch stories, use the exact catalog PNG or JPG tied to the visible Serpenti or Octo product card.
+- Notes:
+  - Some Bvlgari detail routes are less stable than the catalog asset URLs.
+  - For `Serpenti Seduttori` and `Octo Finissimo`, the China catalog packshot is cleaner and more reliable than placeholder detail-page images.
+
 ## Dior Beauty
 
 - Region/site used for image extraction: `dior.com` beauty product pages.
@@ -108,6 +121,30 @@ This project uses brand-official images first. When direct hotlinking is unstabl
   - `public/news/beauty/lamer-skincolor.jpg`
 - Notes:
 - For La Mer, local crops from official homepage artwork are preferred over unstable third-party hotlinks.
+
+## Shu Uemura China
+
+- Region/site: `shuuemura.com.cn`
+- Best source: official homepage or campaign banner assets on the China site CDN.
+- Pattern:
+  - Prefer product-focused homepage banners hosted on:
+    - `https://res-wxec-unipt.lorealchina.com/...`
+  - Use a banner that clearly shows the featured product family, such as `Ultime8` cleansing oil, instead of a full-page homepage screenshot.
+- Notes:
+  - Full-page screenshots often include founder portraits or large text blocks and are too editorial for product-news cards.
+  - Product-led hero banners are the best fallback when stable direct PDP packshots are not exposed.
+
+## Kiehl's China
+
+- Region/site: `kiehls.com.cn`
+- Best source: official products/about page collage assets and homepage modules.
+- Pattern:
+  - Prefer official product-collage images served from:
+    - `https://res-wxec-unipt.lorealchina.com/...`
+  - Use the products-page collages that clearly show the specific skincare lineup, such as Calendula toner, dark spot serum, cream, or mask.
+- Notes:
+  - Product collage assets are more informative than homepage screenshots and remain stable for local mirroring.
+  - Mirror the selected official collage locally after download.
 
 ## Prada China
 
@@ -207,7 +244,10 @@ This project uses brand-official images first. When direct hotlinking is unstabl
   - Best source: official ALLTERRAIN line assets or official page screenshots.
   - Pattern:
     - Commerce pages on `my.descente.com` may be Cloudflare-blocked.
-    - Prefer accessible official ALLTERRAIN line visuals, then mirror locally.
+    - Prefer accessible official ALLTERRAIN line visuals such as:
+      - `26ss_index_allterrain_head_pc.jpg`
+      - `26ss_index_81_head_pc.jpg`
+    - Mirror those official line assets locally instead of using Cloudflare-gated commerce screenshots.
 
 - `Wilson`
   - Region/site used now: `wilson.com`
@@ -217,6 +257,15 @@ This project uses brand-official images first. When direct hotlinking is unstabl
     - Prefer the large article media URL under the official `wilson.com` blog asset path.
     - Reuse the blog hero image for Rush Pro 4.5 stories when the product page is harder to access.
     - Mirror the image locally after download.
+
+- `Chanel` watches
+  - Region/site used now: `chanel.cn`
+  - Best source: official watch category packshots and editorial watch hero assets.
+  - Pattern:
+    - Use the watch category or collection page first, not an unstable direct PDP when that PDP returns `503`.
+    - For `Premiere`, prefer the clean packshot exposed from the category/product asset path.
+    - For `J12 BLEU`, prefer the official editorial hero asset tied to `H10288` or the `J12 BLEU` collection page.
+    - Mirror the selected image locally so future runs do not fall back to mismatched black J12 or unrelated watch imagery.
 
 ## Fallback Rules
 

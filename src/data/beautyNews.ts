@@ -236,7 +236,7 @@ export const beautyNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: '植村秀中国官网',
     sourceUrl: 'https://www.shuuemura.com.cn/',
-    image: '/news/shuuemura-home-real.png',
+    image: '/news/beauty/shuuemura-ultime8-oil.png',
     summary:
       '植村秀继续围绕洁颜油、砍刀眉笔、泡沫隔离霜和无色限唇膏推进品牌明星产品组合，覆盖清洁与彩妆两条主线。',
     products: ['洁颜油', '砍刀眉笔', '泡沫隔离霜'],
@@ -364,7 +364,7 @@ export const beautyNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: "Kiehl's 中国官网",
     sourceUrl: 'https://www.kiehls.com.cn/',
-    image: '/news/kiehls-home-real.png',
+    image: '/news/beauty/kiehls-calendula-darkspot.jpg',
     summary:
       "Kiehl's 本季继续围绕金盏花爽肤水、高保湿面霜与安白瓶淡斑精华展开更新，维持品牌明星护肤线的稳定热度。",
     products: ['金盏花植物精华爽肤水', '高保湿清爽面霜', '安白瓶淡斑精华'],
@@ -380,7 +380,7 @@ export const beautyNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: "Kiehl's 明星产品",
     sourceUrl: 'https://www.kiehls.com.cn/about/products/',
-    image: '/news/beauty/kiehls-home.png',
+    image: '/news/beauty/kiehls-cream-mask.jpg',
     summary:
       "Kiehl's 继续以白泥清洁面膜、高保湿面霜和安白瓶淡斑精华完善明星产品矩阵，覆盖清洁、保湿与功效护肤需求。",
     products: ['白泥清洁面膜', '高保湿面霜', '安白瓶淡斑精华'],

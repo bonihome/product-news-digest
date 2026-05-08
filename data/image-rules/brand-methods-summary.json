@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T13:21:44.130Z",
+  "generatedAt": "2026-05-08T16:58:45.776Z",
   "brandCount": 51,
   "brands": [
     {
@@ -373,11 +373,13 @@
         "needsReplacementCount": 0
       },
       "methods": [
+        "official_catalog_product_image_download",
+        "official_collection_asset_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "Bvlgari China watch listing pages embed stable catalog product PNG assets under /media/catalog/product/cache/.",
+        "Prefer exact watch packshots from the watch listing payload for Serpenti and Octo stories, then mirror locally."
       ],
       "stories": [
         {
@@ -424,8 +426,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.jpg",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.png",
+          "candidateImageUrl": "https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/103902-001.png",
           "automationStatus": "partial"
         },
         {
@@ -436,8 +438,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/luxury/bulgari-octo-watch.jpg",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/luxury/bulgari-octo-watch.png",
+          "candidateImageUrl": "https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/104299-E-001.png",
           "automationStatus": "partial"
         },
         {
@@ -658,11 +660,13 @@
         "needsReplacementCount": 0
       },
       "methods": [
+        "official_category_packshot_download",
+        "official_editorial_asset_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML.",
+        "Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally."
       ],
       "stories": [
         {
@@ -697,8 +701,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/luxury/chanel-j12-bleu.webp",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/luxury/chanel-j12-bleu-watch.webp",
+          "candidateImageUrl": "https://www.chanel.cn/puls-img/c_limit,w_1920/f_webp,q_90,dpr_1.1/1774968766103-mspp-j12-bleue-h10288-cover-mobile-4-3_2500x4443.jpg",
           "automationStatus": "partial"
         },
         {
@@ -769,8 +773,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/luxury/chanel-premiere-watch.webp",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/luxury/chanel-premiere-watch.png",
+          "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg",
           "automationStatus": "partial"
         }
       ]
@@ -1045,7 +1049,7 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/descente-allterrain.jpg",
+          "localMirrorPath": "/news/sports/descente-allterrain-hero.jpg",
           "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg",
           "automationStatus": "partial"
         },
@@ -1057,8 +1061,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/descente-allterrain-page.png",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/sports/descente-allterrain-81-hero.jpg",
+          "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg",
           "automationStatus": "partial"
         }
       ]
@@ -1714,11 +1718,13 @@
         "needsReplacementCount": 0
       },
       "methods": [
+        "official_products_page_download",
+        "official_homepage_banner_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "Kiehl’s China about/products page exposes stable official product-collage images on res-wxec-unipt.lorealchina.com.",
+        "Prefer the products-page collages that clearly show Calendula toner, dark spot serum, cream, or mask, then mirror locally."
       ],
       "stories": [
         {
@@ -1729,8 +1735,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/kiehls-home-real.png",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/beauty/kiehls-calendula-darkspot.jpg",
+          "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/2.jpg",
           "automationStatus": "partial"
         },
         {
@@ -1741,8 +1747,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/beauty/kiehls-home.png",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/beauty/kiehls-cream-mask.jpg",
+          "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/1.jpg",
           "automationStatus": "partial"
         }
       ]
@@ -2922,11 +2928,13 @@
         "needsReplacementCount": 0
       },
       "methods": [
+        "official_homepage_banner_download",
+        "official_collection_asset_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "Shu Uemura China homepage exposes stable hero banner assets on res-wxec-unipt.lorealchina.com.",
+        "Prefer a banner that clearly shows the featured product, such as the Ultime8 cleansing oil visual, then mirror locally."
       ],
       "stories": [
         {
@@ -2937,8 +2945,8 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/shuuemura-home-real.png",
-          "candidateImageUrl": null,
+          "localMirrorPath": "/news/beauty/shuuemura-ultime8-oil.png",
+          "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png",
           "automationStatus": "partial"
         }
       ]

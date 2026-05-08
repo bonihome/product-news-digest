@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-08T13:21:44.130Z
+Generated at: 2026-05-08T16:58:45.776Z
 Brand count: 51
 
 ## Adidas
@@ -95,14 +95,14 @@ Brand count: 51
 - Official domains: www.bulgari.cn
 - Story count: 6
 - Status: ready 0, partial 6, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: official_catalog_product_image_download -> official_collection_asset_download -> local_mirror
+- Notes: Bvlgari China watch listing pages embed stable catalog product PNG assets under /media/catalog/product/cache/. Prefer exact watch packshots from the watch listing payload for Serpenti and Octo stories, then mirror locally.
 - Stories:
   - `bulgari-serpenti-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-watch.png` | candidate: none stored | status: partial
   - `bulgari-serpenti-bag-grey` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-bag-grey.png` | candidate: none stored | status: partial
   - `bulgari-serpenti-bag-green` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-bag-green.png` | candidate: none stored | status: partial
-  - `bulgari-serpenti-sedu-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-sedu-watch.jpg` | candidate: none stored | status: partial
-  - `bulgari-octo-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-octo-watch.jpg` | candidate: none stored | status: partial
+  - `bulgari-serpenti-sedu-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-sedu-watch.png` | candidate: https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/103902-001.png | status: partial
+  - `bulgari-octo-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-octo-watch.png` | candidate: https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/104299-E-001.png | status: partial
   - `bulgari-serpenti-top-handle` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-top-handle.png` | candidate: none stored | status: partial
 
 ## Cartier
@@ -145,18 +145,18 @@ Brand count: 51
 - Official domains: www.chanel.cn
 - Story count: 9
 - Status: ready 0, partial 9, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: official_category_packshot_download -> official_editorial_asset_download -> local_mirror
+- Notes: Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML. Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally.
 - Stories:
   - `chanel-25-bag` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-25-bag.webp` | candidate: none stored | status: partial
   - `chanel-coco-crush` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-coco-crush.webp` | candidate: none stored | status: partial
-  - `chanel-j12-bleu` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-j12-bleu.webp` | candidate: none stored | status: partial
+  - `chanel-j12-bleu` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-j12-bleu-watch.webp` | candidate: https://www.chanel.cn/puls-img/c_limit,w_1920/f_webp,q_90,dpr_1.1/1774968766103-mspp-j12-bleue-h10288-cover-mobile-4-3_2500x4443.jpg | status: partial
   - `chanel-25-mini` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-25-mini.webp` | candidate: none stored | status: partial
   - `chanel-flap-bag` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-flap-bag.webp` | candidate: none stored | status: partial
   - `chanel-coco-crush-necklace` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-coco-crush-necklace.webp` | candidate: none stored | status: partial
   - `chanel-camelia-ring` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-camelia-ring.webp` | candidate: none stored | status: partial
   - `chanel-j12-black` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-j12-black.webp` | candidate: none stored | status: partial
-  - `chanel-premiere-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-premiere-watch.webp` | candidate: none stored | status: partial
+  - `chanel-premiere-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-premiere-watch.png` | candidate: https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg | status: partial
 
 ## CHANEL Beauty
 
@@ -223,8 +223,8 @@ Brand count: 51
 - Brand methods: official_collection_asset_download -> official_page_screenshot -> local_mirror
 - Notes: DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches. Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.
 - Stories:
-  - `descente-allterrain` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg | status: partial
-  - `descente-allterrain-81` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-page.png` | candidate: none stored | status: partial
+  - `descente-allterrain` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-hero.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg | status: partial
+  - `descente-allterrain-81` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-81-hero.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg | status: partial
 
 ## Dior
 
@@ -365,11 +365,11 @@ Brand count: 51
 - Official domains: www.kiehls.com.cn
 - Story count: 2
 - Status: ready 0, partial 2, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: official_products_page_download -> official_homepage_banner_download -> local_mirror
+- Notes: Kiehl’s China about/products page exposes stable official product-collage images on res-wxec-unipt.lorealchina.com. Prefer the products-page collages that clearly show Calendula toner, dark spot serum, cream, or mask, then mirror locally.
 - Stories:
-  - `kiehls-home` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/kiehls-home-real.png` | candidate: none stored | status: partial
-  - `kiehls-best-sellers` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/kiehls-home.png` | candidate: none stored | status: partial
+  - `kiehls-home` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/kiehls-calendula-darkspot.jpg` | candidate: https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/2.jpg | status: partial
+  - `kiehls-best-sellers` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/kiehls-cream-mask.jpg` | candidate: https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/1.jpg | status: partial
 
 ## KOLON SPORT
 
@@ -639,10 +639,10 @@ Brand count: 51
 - Official domains: www.shuuemura.com.cn
 - Story count: 1
 - Status: ready 0, partial 1, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: official_homepage_banner_download -> official_collection_asset_download -> local_mirror
+- Notes: Shu Uemura China homepage exposes stable hero banner assets on res-wxec-unipt.lorealchina.com. Prefer a banner that clearly shows the featured product, such as the Ultime8 cleansing oil visual, then mirror locally.
 - Stories:
-  - `shu-home` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/shuuemura-home-real.png` | candidate: none stored | status: partial
+  - `shu-home` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/shuuemura-ultime8-oil.png` | candidate: https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png | status: partial
 
 ## Tiffany & Co.
 

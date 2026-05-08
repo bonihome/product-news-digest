@@ -206,7 +206,7 @@ export const sportsNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: 'DESCENTE ALLTERRAIN 官方网站',
     sourceUrl: 'https://allterrain.descente.com/products_en/DU5FJKI2M/',
-    image: '/news/sports/descente-allterrain.jpg',
+    image: '/news/sports/descente-allterrain-hero.jpg',
     summary:
       'DESCENTE 在 ALLTERRAIN 页面继续突出高规格机能服装与户外生活方式，并联动 ALLTERRAIN 81 与 MIZUSAWA DOWN 系列，强化品牌在机能户外方向的产品叙事。',
     products: ['ALLTERRAIN', 'ALLTERRAIN 81', 'MIZUSAWA DOWN'],
@@ -270,7 +270,7 @@ export const sportsNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: 'DESCENTE ALLTERRAIN 官方网站',
     sourceUrl: 'https://allterrain.descente.com/products_en/DU5FJKI2M/',
-    image: '/news/sports/descente-allterrain-page.png',
+    image: '/news/sports/descente-allterrain-81-hero.jpg',
     summary:
       '在主线 ALLTERRAIN 之外，DESCENTE 页面也同步突出 ALLTERRAIN 81 与 MIZUSAWA DOWN，进一步丰富品牌在城市机能与专业户外之间的产品层次。',
     products: ['ALLTERRAIN 81', 'MIZUSAWA DOWN', 'urban outdoor line'],

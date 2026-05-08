@@ -17,11 +17,13 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "official_category_packshot_download",
+      "official_editorial_asset_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML.",
+      "Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally."
     ]
   },
   "stories": [
@@ -95,7 +97,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.chanel.cn/cn/watches/p/H10288/j12-bleu-38-mm-sapphires-watch/",
-      "currentImage": "/news/luxury/chanel-j12-bleu.webp",
+      "currentImage": "/news/luxury/chanel-j12-bleu-watch.webp",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -104,11 +106,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/luxury/chanel-j12-bleu.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/luxury/chanel-j12-bleu-watch.webp",
+        "candidateImageUrl": "https://www.chanel.cn/puls-img/c_limit,w_1920/f_webp,q_90,dpr_1.1/1774968766103-mspp-j12-bleue-h10288-cover-mobile-4-3_2500x4443.jpg",
+        "candidateImageHost": "www.chanel.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified Chanel watches category packshot or editorial watch asset and should not fall back to mismatched watch imagery.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -253,6 +256,7 @@
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [
+          "The current local mirror uses a verified Chanel watches category packshot or editorial watch asset and should not fall back to mismatched watch imagery.",
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
         ]
       }
@@ -269,7 +273,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.chanel.cn/cn/watches/",
-      "currentImage": "/news/luxury/chanel-premiere-watch.webp",
+      "currentImage": "/news/luxury/chanel-premiere-watch.png",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -278,11 +282,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/luxury/chanel-premiere-watch.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/luxury/chanel-premiere-watch.png",
+        "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg",
+        "candidateImageHost": "www.chanel.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified Chanel watches category packshot or editorial watch asset and should not fall back to mismatched watch imagery.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

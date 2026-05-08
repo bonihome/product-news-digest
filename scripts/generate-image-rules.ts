@@ -156,6 +156,34 @@ const brandStrategyOverrides: Record<
       'Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.',
     ],
   },
+  Bvlgari: {
+    methods: ['official_catalog_product_image_download', 'official_collection_asset_download', 'local_mirror'],
+    notes: [
+      'Bvlgari China watch listing pages embed stable catalog product PNG assets under /media/catalog/product/cache/.',
+      'Prefer exact watch packshots from the watch listing payload for Serpenti and Octo stories, then mirror locally.',
+    ],
+  },
+  Chanel: {
+    methods: ['official_category_packshot_download', 'official_editorial_asset_download', 'local_mirror'],
+    notes: [
+      'Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML.',
+      'Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally.',
+    ],
+  },
+  'Shu Uemura': {
+    methods: ['official_homepage_banner_download', 'official_collection_asset_download', 'local_mirror'],
+    notes: [
+      'Shu Uemura China homepage exposes stable hero banner assets on res-wxec-unipt.lorealchina.com.',
+      'Prefer a banner that clearly shows the featured product, such as the Ultime8 cleansing oil visual, then mirror locally.',
+    ],
+  },
+  "Kiehl's": {
+    methods: ['official_products_page_download', 'official_homepage_banner_download', 'local_mirror'],
+    notes: [
+      'Kiehl’s China about/products page exposes stable official product-collage images on res-wxec-unipt.lorealchina.com.',
+      'Prefer the products-page collages that clearly show Calendula toner, dark spot serum, cream, or mask, then mirror locally.',
+    ],
+  },
   ASICS: {
     methods: ['official_cms_asset_download', 'homepage_or_collection_asset_download', 'local_mirror'],
     notes: [
@@ -225,8 +253,24 @@ const storyCandidateImageUrls: Record<string, string> = {
     'https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4TX26010BLK_LM1.jpg',
   'descente-allterrain':
     'https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg',
+  'descente-allterrain-81':
+    'https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg',
   'on-cloudmonster-2':
     'https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp',
+  'shu-home':
+    'https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png',
+  'kiehls-home':
+    'https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/2.jpg',
+  'kiehls-best-sellers':
+    'https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/1.jpg',
+  'bulgari-serpenti-sedu-watch':
+    'https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/103902-001.png',
+  'bulgari-octo-watch':
+    'https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/104299-E-001.png',
+  'chanel-j12-bleu':
+    'https://www.chanel.cn/puls-img/c_limit,w_1920/f_webp,q_90,dpr_1.1/1774968766103-mspp-j12-bleue-h10288-cover-mobile-4-3_2500x4443.jpg',
+  'chanel-premiere-watch':
+    'https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg',
   'asics-tennis':
     'https://cms-static.asics.com/media-libraries/115463/file.jpg',
   'wilson-tennis':
@@ -415,7 +459,23 @@ function inferStoryNotes(story: Story, brand: string) {
   }
 
   if (brand === 'DESCENTE') {
-    notes.push('The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset or page screenshot due to Cloudflare protection on commerce pages.')
+    notes.push('The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset instead of a Cloudflare-blocked commerce screenshot.')
+  }
+
+  if (brand === 'Bvlgari') {
+    notes.push('The current local mirror uses a verified official Bvlgari catalog watch asset or local mirror refreshed from the watch listing payload.')
+  }
+
+  if (brand === 'Chanel' && story.subcategory === '腕表') {
+    notes.push('The current local mirror uses a verified Chanel watches category packshot or editorial watch asset and should not fall back to mismatched watch imagery.')
+  }
+
+  if (brand === 'Shu Uemura') {
+    notes.push('The current local mirror uses a verified Shu Uemura China homepage product banner rather than a full-page screenshot.')
+  }
+
+  if (brand === "Kiehl's") {
+    notes.push('The current local mirror uses a verified Kiehl’s China products-page collage that clearly shows the featured skincare products.')
   }
 
   if (brand === 'ASICS') {

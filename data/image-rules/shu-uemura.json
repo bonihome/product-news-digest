@@ -17,11 +17,13 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "official_homepage_banner_download",
+      "official_collection_asset_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Shu Uemura China homepage exposes stable hero banner assets on res-wxec-unipt.lorealchina.com.",
+      "Prefer a banner that clearly shows the featured product, such as the Ultime8 cleansing oil visual, then mirror locally."
     ]
   },
   "stories": [
@@ -37,7 +39,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.shuuemura.com.cn/",
-      "currentImage": "/news/shuuemura-home-real.png",
+      "currentImage": "/news/beauty/shuuemura-ultime8-oil.png",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -46,11 +48,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/shuuemura-home-real.png",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/beauty/shuuemura-ultime8-oil.png",
+        "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png",
+        "candidateImageHost": "res-wxec-unipt.lorealchina.com",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses a verified Shu Uemura China homepage product banner rather than a full-page screenshot.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

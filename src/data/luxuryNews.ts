@@ -609,7 +609,7 @@ export const luxuryNews: Story[] = [
     sourceLabel: '香奈儿中国官网',
     sourceUrl: 'https://www.chanel.cn/cn/watches/p/H10288/j12-bleu-38-mm-sapphires-watch/',
     image:
-      '/news/luxury/chanel-j12-bleu.webp',
+      '/news/luxury/chanel-j12-bleu-watch.webp',
     summary:
       'J12 BLEU 蓝宝石腕表以蓝色哑光精密陶瓷、蓝宝石表圈与 Caliber 12.1 自动上链机械机芯，继续扩展 Chanel 高级制表系列。',
     products: ['J12 BLEU蓝宝石腕表', '38毫米', 'Caliber 12.1机芯'],
@@ -828,7 +828,7 @@ export const luxuryNews: Story[] = [
     sourceLabel: 'Bvlgari 中国官网',
     sourceUrl: 'https://www.bulgari.cn/zh-cn/products/102678-e',
     image:
-      '/news/luxury/bulgari-serpenti-sedu-watch.jpg',
+      '/news/luxury/bulgari-serpenti-sedu-watch.png',
     summary:
       'Serpenti Seduttori 腕表延续蛇首造型与珠宝化链带设计，为 Bvlgari 高级腕表线带来更强烈的女性化风格。',
     products: ['Serpenti Seduttori', '蛇首表壳', '珠宝式表链'],
@@ -845,7 +845,7 @@ export const luxuryNews: Story[] = [
     sourceLabel: 'Bvlgari 中国官网',
     sourceUrl: 'https://www.bulgari.cn/zh-cn/watches',
     image:
-      '/news/luxury/bulgari-octo-watch.jpg',
+      '/news/luxury/bulgari-octo-watch.png',
     summary:
       'Octo 腕表新作以几何表壳和纤薄制表语言，为 Bvlgari 腕表线带来与 Serpenti 并行的另一种设计方向。',
     products: ['Octo 腕表', '几何表壳', '纤薄机芯设计'],
@@ -1116,7 +1116,7 @@ export const luxuryNews: Story[] = [
     sourceType: 'Official Site',
     sourceLabel: '香奈儿中国官网',
     sourceUrl: 'https://www.chanel.cn/cn/watches/',
-    image: '/news/luxury/chanel-premiere-watch.webp',
+    image: '/news/luxury/chanel-premiere-watch.png',
     summary:
       'Première 腕表新作以八角形表壳和链条表带延续 Chanel 标志性的优雅制表风格，补足女性腕表线的多样化表达。',
     products: ['Première 腕表', '八角形表壳', '链条表带'],

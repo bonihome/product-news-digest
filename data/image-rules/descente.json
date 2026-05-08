@@ -39,7 +39,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://allterrain.descente.com/products_en/DU5FJKI2M/",
-      "currentImage": "/news/sports/descente-allterrain.jpg",
+      "currentImage": "/news/sports/descente-allterrain-hero.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -48,11 +48,11 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/descente-allterrain.jpg",
+        "localMirrorPath": "/news/sports/descente-allterrain-hero.jpg",
         "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg",
         "candidateImageHost": "allterrain.descente.com",
         "notes": [
-          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset or page screenshot due to Cloudflare protection on commerce pages.",
+          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset instead of a Cloudflare-blocked commerce screenshot.",
           "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
@@ -69,7 +69,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://allterrain.descente.com/products_en/DU5FJKI2M/",
-      "currentImage": "/news/sports/descente-allterrain-page.png",
+      "currentImage": "/news/sports/descente-allterrain-81-hero.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -78,12 +78,12 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/descente-allterrain-page.png",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/descente-allterrain-81-hero.jpg",
+        "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg",
+        "candidateImageHost": "allterrain.descente.com",
         "notes": [
-          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset or page screenshot due to Cloudflare protection on commerce pages.",
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset instead of a Cloudflare-blocked commerce screenshot.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }
