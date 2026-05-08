@@ -18,6 +18,7 @@
 GitHub 交接和服务器拉取说明见：
 
 - [docs/github-project-handoff.md](./docs/github-project-handoff.md)
+- [docs/server-bootstrap.md](./docs/server-bootstrap.md)
 
 ## 当前前端能力
 
@@ -214,6 +215,7 @@ npm run ai:smoke
 服务器部署和定时执行模板见：
 
 - [docs/tencent-cloud-deploy.md](./docs/tencent-cloud-deploy.md)
+- [docs/server-bootstrap.md](./docs/server-bootstrap.md)
 - [scripts/run-scheduled-pipeline.sh](./scripts/run-scheduled-pipeline.sh)
 - [deploy/cron/pipeline.cron.example](./deploy/cron/pipeline.cron.example)
 - [deploy/systemd/product-news-digest-pipeline.service](./deploy/systemd/product-news-digest-pipeline.service)

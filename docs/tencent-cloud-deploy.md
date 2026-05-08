@@ -21,6 +21,16 @@
 https://github.com/bonihome/product-news-digest.git
 ```
 
+如果是全新服务器，先做基础环境安装：
+
+```bash
+sudo bash deploy/server/bootstrap-server.sh
+```
+
+基础环境说明见：
+
+- [Server Bootstrap](./server-bootstrap.md)
+
 首次拉取推荐命令：
 
 ```bash

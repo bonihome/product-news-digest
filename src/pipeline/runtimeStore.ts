@@ -1,6 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { DatabaseSync } from 'node:sqlite'
 
 import type { PublishedFeed } from '../data/types'
 import type {
@@ -29,30 +28,8 @@ const publishedFeedPath = path.join(runtimeDir, 'published-feed.json')
 const publicRuntimeDir = path.resolve(process.cwd(), 'public/runtime')
 const publicPublishedFeedPath = path.join(publicRuntimeDir, 'published-feed.json')
 
-let database: DatabaseSync | null = null
-
 async function ensureRuntimeDir() {
   await mkdir(runtimeDir, { recursive: true })
-}
-
-function ensureDatabase() {
-  if (database) {
-    return database
-  }
-
-  const db = new DatabaseSync(databasePath)
-  db.exec(`
-    CREATE TABLE IF NOT EXISTS brand_snapshots (
-      brand TEXT PRIMARY KEY,
-      snapshot_key TEXT NOT NULL,
-      candidate_count INTEGER NOT NULL,
-      checked_at TEXT NOT NULL,
-      source_urls TEXT NOT NULL,
-      published_at_values TEXT NOT NULL
-    );
-  `)
-  database = db
-  return db
 }
 
 async function readJsonFile<T>(filePath: string, fallback: T): Promise<T> {
@@ -67,24 +44,6 @@ async function readJsonFile<T>(filePath: string, fallback: T): Promise<T> {
 async function writeJsonFile(filePath: string, value: unknown) {
   await ensureRuntimeDir()
   await writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
-}
-
-function rowToSnapshot(row: {
-  brand: string
-  snapshot_key: string
-  candidate_count: number
-  checked_at: string
-  source_urls: string
-  published_at_values: string
-}): BrandSnapshotRecord {
-  return {
-    brand: row.brand,
-    snapshotKey: row.snapshot_key,
-    candidateCount: row.candidate_count,
-    checkedAt: row.checked_at,
-    sourceUrls: JSON.parse(row.source_urls) as string[],
-    publishedAtValues: JSON.parse(row.published_at_values) as string[],
-  }
 }
 
 export async function readStoredStories() {
@@ -110,54 +69,10 @@ export async function writeImageAssets(imageAssets: ImageAssetRecord[]) {
 }
 
 export async function readBrandSnapshots() {
-  await ensureRuntimeDir()
-  const db = ensureDatabase()
-  const rows = db
-    .prepare(
-      `
-        SELECT brand, snapshot_key, candidate_count, checked_at, source_urls, published_at_values
-        FROM brand_snapshots
-        ORDER BY brand ASC
-      `,
-    )
-    .all() as Array<{
-    brand: string
-    snapshot_key: string
-    candidate_count: number
-    checked_at: string
-    source_urls: string
-    published_at_values: string
-  }>
-
-  if (rows.length > 0) {
-    return rows.map(rowToSnapshot)
-  }
-
   return readJsonFile<BrandSnapshotRecord[]>(snapshotsPath, [])
 }
 
 export async function writeBrandSnapshots(snapshots: BrandSnapshotRecord[]) {
-  await ensureRuntimeDir()
-  const db = ensureDatabase()
-  db.exec('DELETE FROM brand_snapshots')
-
-  const statement = db.prepare(`
-    INSERT INTO brand_snapshots (
-      brand, snapshot_key, candidate_count, checked_at, source_urls, published_at_values
-    ) VALUES (?, ?, ?, ?, ?, ?)
-  `)
-
-  for (const snapshot of snapshots) {
-    statement.run(
-      snapshot.brand,
-      snapshot.snapshotKey,
-      snapshot.candidateCount,
-      snapshot.checkedAt,
-      JSON.stringify(snapshot.sourceUrls),
-      JSON.stringify(snapshot.publishedAtValues),
-    )
-  }
-
   await writeJsonFile(snapshotsPath, snapshots)
 }
 
