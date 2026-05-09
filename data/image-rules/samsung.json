@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 3,
+    "storyCount": 4,
     "readyCount": 0,
-    "partialCount": 3,
+    "partialCount": 4,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -105,6 +105,35 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/digital/samsung-phone.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "samsung-galaxy-ecosystem",
+      "title": "Samsung 持续补强 Galaxy 生态配件，手机平板与耳机组合保持更新",
+      "category": "digital",
+      "subcategory": "配件",
+      "products": [
+        "Galaxy Buds",
+        "Galaxy Tab S11 Ultra",
+        "Galaxy S26 Ultra"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.samsung.com/cn/",
+      "currentImage": "/news/digital/samsung-tablet.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/samsung-tablet.jpg",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

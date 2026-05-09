@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 5,
+    "storyCount": 16,
     "readyCount": 0,
-    "partialCount": 5,
+    "partialCount": 16,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -164,6 +164,325 @@
         ],
         "localMirrorPath": "/news/sports/nike-pegasus-42.png",
         "candidateImageUrl": "https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/11552a29-a08e-4019-8501-3eaae4f4a2cf/AIR%2BZOOM%2BPEGASUS%2B42.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-running-family",
+      "title": "Nike 继续扩展 Pegasus 跑鞋家族，公路跑步矩阵进一步补强",
+      "category": "sports",
+      "subcategory": "跑步",
+      "products": [
+        "Nike Pegasus 42",
+        "Nike Pegasus 42 SE",
+        "Nike Pegasus Premium"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/w/gym-running-pegasus-22fovz8nexh",
+      "currentImage": "/news/sports/nike-pegasus-42.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-pegasus-42.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-pegasus42-se",
+      "title": "Nike 推出 Pegasus 42 SE，女子夜跑系列继续补强飞马跑鞋阵容",
+      "category": "sports",
+      "subcategory": "跑步",
+      "products": [
+        "Nike Pegasus 42 SE",
+        "耐克女子夜跑系列飞马女子公路跑步鞋",
+        "Nike Pegasus 42"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/pegasus-42-se-耐克女子夜跑系列飞马女子公路跑步鞋-fjFLN1cs/IO8251-600",
+      "currentImage": "/news/sports/nike-pegasus-42-se.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-pegasus-42-se.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/95c1c635-3904-475e-921a-2b605e0850a5/W+AIR+ZOOM+PEGASUS+42+SE.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-acg-zegama",
+      "title": "Nike 推出 ACG Zegama，ACG 户外系列以越野跑鞋补强机能线",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "Nike ACG Zegama",
+        "男子越野跑步鞋",
+        "ACG户外系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/acg-zegama-男子越野跑步鞋-WyOUK92m/HV8113-103",
+      "currentImage": "/news/sports/nike-acg-zegama.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-acg-zegama.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ae4293b0-205b-42a0-be3c-cf1f6f405e95/NIKE+ACG+ZEGAMA+TRAIL.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-gt-cut-4-ep",
+      "title": "Nike 推出 G.T. Cut 4 EP，篮球新品页首款鞋型继续聚焦实战性能",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "Nike G.T. Cut 4 EP",
+        "男/女篮球鞋",
+        "耐高超新星篮球系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/g-t-cut-4-ep-男-女篮球鞋-NhuCYtch/IU2030-084",
+      "currentImage": "/news/sports/nike-gt-cut-4-ep.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-gt-cut-4-ep.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/83730b18-631b-4dda-bdfb-a4bc2ec329a5/G.T.+CUT+4+LX+EP.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-china-tech-jacket",
+      "title": "Nike 推出中国队 Tech 足球梭织夹克，国家队系列继续扩展赛事装备",
+      "category": "sports",
+      "subcategory": "足球",
+      "products": [
+        "中国队 Tech 男子足球梭织夹克",
+        "国家队系列",
+        "Nike 足球"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/中国队-tech-男子足球梭织夹克-obCbaI9V/IV3269-635",
+      "currentImage": "/news/sports/nike-china-tech-jacket.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-china-tech-jacket.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3fe95a2-797f-4c2f-b286-6c13647938c6/AS+CFA+M+TECH+WOVEN+TOP.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-kobe-9-low-protro",
+      "title": "Nike 推出 Kobe 9 Low Protro，篮球新品首屏继续强化科比鞋线",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "Kobe 9 Low Protro",
+        "科比男/女篮球鞋",
+        "耐克篮球新品"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/kobe-9-low-protro-科比男-女篮球鞋-dR2TkHH0/IM6119-800",
+      "currentImage": "/news/sports/nike-kobe-9-low-protro.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-kobe-9-low-protro.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/377c9460-7632-443f-b465-764ba5f7d236/KOBE+IX+ELITE+LOW+EM+PROTRO.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-lebron-23-ep",
+      "title": "Nike 推出 LeBron XXIII EP，LeBron 系列首款产品继续强化旗舰篮球鞋阵容",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "LeBron XXIII EP",
+        "詹姆斯男子篮球鞋",
+        "Lebron系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/lebron-23-ep-詹姆斯男子篮球鞋-r5qCF1Ew/IB9563-103",
+      "currentImage": "/news/sports/nike-lebron-23-ep.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-lebron-23-ep.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5eaa709b-cfe0-4ef5-b706-f90b952ac3cb/LEBRON+XXIII+EP.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-ja-3-jp-ep",
+      "title": "Nike 推出 Ja 3 EP 侏罗纪公园特别版，Ja 系列继续拉高签名鞋热度",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "Ja 3 EP",
+        "侏罗纪公园特别版莫兰特男子篮球鞋",
+        "Ja系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/ja-3-ep-侏罗纪公园特别版莫兰特男子篮球鞋-Prkb3I4D/IU7239-002",
+      "currentImage": "/news/sports/nike-ja-3-jp-ep.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-ja-3-jp-ep.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/38b2ca41-20ea-40a8-837c-5a80ef20f066/JA+3+JP+EP.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-shenhua-top",
+      "title": "Nike 推出 2026 赛季上海申花速干赛前上衣，中超系列继续扩展俱乐部装备线",
+      "category": "sports",
+      "subcategory": "足球",
+      "products": [
+        "2026 赛季上海申花足球俱乐部上衣",
+        "Nike Dri-FIT Academy Pro",
+        "中超系列"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/2026-赛季上海申花足球俱乐部-dri-fit-academy-pro-男子速干赛前上衣-YnHELVfn/IQ0621-100",
+      "currentImage": "/news/sports/nike-shenhua-top.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-shenhua-top.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/516a2e3a-5b77-40d1-b7fe-3ca6a0d378b3/AS+SGS+M+NK+DF+ACD+SS+TOP+G.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-england-home-jersey",
+      "title": "Nike 推出 2026 赛季英格兰队主场球迷版球衣，Football Club 持续扩展国家队装备线",
+      "category": "sports",
+      "subcategory": "足球",
+      "products": [
+        "2026 赛季英格兰队主场球迷版球衣",
+        "Nike Dri-FIT 男子速干足球球衣",
+        "Football Club"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/2026-赛季英格兰队主场球迷版-dri-fit-男子速干足球球衣-UqGiW7Kb/IB5290-100",
+      "currentImage": "/news/sports/nike-england-2026-home-jersey.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-england-2026-home-jersey.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0bb0368e-cb48-4dfc-9b59-7325d7a9c181/ENT+M+NK+DF+JSY+SS+STAD+HM.png",
+        "candidateImageHost": "static.nike.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "nike-swim-hydrastrong",
+      "title": "Nike 推出 Swim HydraStrong Essential，游泳专区首款产品补强水上装备线",
+      "category": "sports",
+      "subcategory": "游泳",
+      "products": [
+        "Nike Swim HydraStrong Essential",
+        "男子紧身泳裤",
+        "游泳专区"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.nike.com.cn/t/swim-hydrastrong-essential-男子紧身泳裤-bG6XUJlD/CZ3024-010",
+      "currentImage": "/news/sports/nike-swim-hydrastrong.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/nike-swim-hydrastrong.png",
+        "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3523998-276e-4882-b8d4-48e25afc3525/NK+PLY+SLD+JAMMER+WITH+GUSSET.png",
         "candidateImageHost": "static.nike.com.cn",
         "notes": [
           "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."

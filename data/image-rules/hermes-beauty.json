@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 3,
+    "storyCount": 4,
     "readyCount": 0,
-    "partialCount": 3,
+    "partialCount": 4,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -105,6 +105,35 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/beauty/hermes-nil-garden.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-beauty-jardin-monsieur-li",
+      "title": "Hermès Beauty 推出 李先生的花园香水，花园系列继续扩展东方花香表达",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "李先生的花园香水",
+        "尼罗河花园香水",
+        "丝意荔韵淡香精"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/category/perfume/",
+      "currentImage": "/news/beauty/hermes-jardin-monsieur-li.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/beauty/hermes-jardin-monsieur-li.png",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

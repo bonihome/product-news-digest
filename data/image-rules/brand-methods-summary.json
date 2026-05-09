@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T09:27:22.159Z",
+  "generatedAt": "2026-05-09T12:37:23.804Z",
   "brandCount": 51,
   "brands": [
     {
@@ -11,11 +11,11 @@
       "officialDomains": [
         "www.adidas.com.cn"
       ],
-      "storyCount": 4,
+      "storyCount": 10,
       "status": {
-        "storyCount": 4,
+        "storyCount": 10,
         "readyCount": 0,
-        "partialCount": 4,
+        "partialCount": 10,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -73,6 +73,78 @@
           "localMirrorPath": "/news/sports/adidas-football.webp",
           "candidateImageUrl": null,
           "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-anthony-edwards-2-blue",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=JQ9501",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-anthony-edwards-2-blue.jpg",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3ODE0NzAyNjE0OWMwM2NiNWE3LTkxN2UtNGYwYS1hMzc5.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-freehiker-sandal",
+          "subcategory": "户外",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=LA4706",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-freehiker-sandal.jpg",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzU1MDUzMTQ0M2RhMWVkOTU0LWFhM2EtNDUyNC1hZDcw.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-refined-luxe-trench",
+          "subcategory": "运动休闲",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KU8902",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-refined-luxe-trench.jpg",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NDMzMjg3MjIzM2NjZTYwZWFkLTYxYWEtNDU1NC1hNDJl.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-city-tech-jacket",
+          "subcategory": "户外",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KS3529",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-city-tech-jacket.png",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3MDI3NTU4NzM1NzUxMDg2M2Y1LWFjZGYtNDk3ZC05MDEx.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-soft-lux-jacket",
+          "subcategory": "运动休闲",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KH2676",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-soft-lux-jacket.jpg",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NjY3MTc1MTc3NjM1NjcxYWVhLWRjZWItNGQwNi04MTY2.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "adidas-f50-fastline",
+          "subcategory": "足球",
+          "sourcePage": "https://www.adidas.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/adidas-football-boots.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
         }
       ]
     },
@@ -85,11 +157,11 @@
       "officialDomains": [
         "www.apple.com.cn"
       ],
-      "storyCount": 5,
+      "storyCount": 6,
       "status": {
-        "storyCount": 5,
+        "storyCount": 6,
         "readyCount": 0,
-        "partialCount": 5,
+        "partialCount": 6,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -157,6 +229,18 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/digital/apple-airpods-family.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "apple-audio-family",
+          "subcategory": "配件",
+          "sourcePage": "https://www.apple.com.cn/airpods/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/apple-accessories.jpg",
           "candidateImageUrl": null,
           "automationStatus": "partial"
         }
@@ -700,11 +784,11 @@
       "officialDomains": [
         "www.chanel.cn"
       ],
-      "storyCount": 9,
+      "storyCount": 11,
       "status": {
-        "storyCount": 9,
+        "storyCount": 11,
         "readyCount": 0,
-        "partialCount": 9,
+        "partialCount": 11,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -824,6 +908,30 @@
           "localMirrorPath": "/news/luxury/chanel-premiere-watch.png",
           "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg",
           "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-ss26-readytowear",
+          "subcategory": "服装",
+          "sourcePage": "https://www.chanel.cn/cn/fashion/collection/spring-summer-2026-products/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-ss26-readytowear.jpg",
+          "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1268/FSH-1771418302737-desktop-product_1.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-handbag-story",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.chanel.cn/cn/fashion/handbags/the-chanel-handbag/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/chanel-handbag-story.jpg",
+          "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1024/FSH-1742141327919-desktop-1112.jpg",
+          "automationStatus": "partial"
         }
       ]
     },
@@ -836,11 +944,11 @@
       "officialDomains": [
         "www.chanel.cn"
       ],
-      "storyCount": 3,
+      "storyCount": 4,
       "status": {
-        "storyCount": 3,
+        "storyCount": 4,
         "readyCount": 0,
-        "partialCount": 3,
+        "partialCount": 4,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -885,6 +993,18 @@
           ],
           "localMirrorPath": "/news/beauty/chanel-coco-mademoiselle.png",
           "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "chanel-beauty-chance-splendide",
+          "subcategory": "香水",
+          "sourcePage": "https://www.chanel.cn/cn/fragrance/p/136210/chance-eau-splendide-eau-de-parfum-spray/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/chanel-chance-splendide.jpg",
+          "candidateImageUrl": "https://www.chanel.cn/images/t_one/w_0.45,h_0.45,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1240/chance-eau-splendide-eau-de-parfum-spray-1-7fl-oz--packshot-default-136210-9561648758814.jpg",
           "automationStatus": "partial"
         }
       ]
@@ -1136,11 +1256,11 @@
       "officialDomains": [
         "www.dior.cn"
       ],
-      "storyCount": 6,
+      "storyCount": 7,
       "status": {
-        "storyCount": 6,
+        "storyCount": 7,
         "readyCount": 0,
-        "partialCount": 6,
+        "partialCount": 7,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1220,6 +1340,18 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/dior-oui-ring.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "dior-lady-d-joy",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion/bags",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dior-lady-d-joy.jpg",
           "candidateImageUrl": null,
           "automationStatus": "partial"
         }
@@ -1319,13 +1451,14 @@
         "beauty"
       ],
       "officialDomains": [
-        "www.esteelauder.com"
+        "www.esteelauder.com",
+        "www.esteelauder.com.cn"
       ],
-      "storyCount": 2,
+      "storyCount": 3,
       "status": {
-        "storyCount": 2,
+        "storyCount": 3,
         "readyCount": 0,
-        "partialCount": 2,
+        "partialCount": 3,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1361,6 +1494,18 @@
           ],
           "localMirrorPath": "/news/beauty/estee-doublewear-local.png",
           "candidateImageUrl": "https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "estee-re-nutriv",
+          "subcategory": "护肤",
+          "sourcePage": "https://www.esteelauder.com.cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/estee-re-nutriv-official.jpg",
+          "candidateImageUrl": null,
           "automationStatus": "partial"
         }
       ]
@@ -1436,11 +1581,11 @@
       "officialDomains": [
         "www.hermes.cn"
       ],
-      "storyCount": 9,
+      "storyCount": 14,
       "status": {
-        "storyCount": 9,
+        "storyCount": 14,
         "readyCount": 0,
-        "partialCount": 9,
+        "partialCount": 14,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1512,6 +1657,42 @@
           "automationStatus": "partial"
         },
         {
+          "storyId": "hermes-constance-slim",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/constance-slim%E9%92%B1%E5%8C%85-H085259CC1H/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-constance-slim.jpg",
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/constance-slim%E9%92%B1%E5%8C%85--085259CC1H-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-le-petit-sac",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85-H087968CC55/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-le-petit-sac.jpg",
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85--087968CC55-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-zipengo",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85-H084321CC8L/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-zipengo.jpg",
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85--084321CC8L-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "partial"
+        },
+        {
           "storyId": "hermes-farandole",
           "subcategory": "珠宝",
           "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
@@ -1533,6 +1714,18 @@
           ],
           "localMirrorPath": "/news/luxury/hermes-collier-de-chien.webp",
           "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-mini-clic-chaine-dancre",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF-H209000FP19GM/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-mini-clic-chaine-dancre.jpg",
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF--209000FP19-worn-1-0-0-1000-1000_g.jpg",
           "automationStatus": "partial"
         },
         {
@@ -1558,6 +1751,18 @@
           "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
           "candidateImageUrl": null,
           "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-cape-cod-watch",
+          "subcategory": "腕表",
+          "sourcePage": "https://www.hermes.cn/cn/zh/category/watches/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
         }
       ]
     },
@@ -1570,11 +1775,11 @@
       "officialDomains": [
         "www.hermes.cn"
       ],
-      "storyCount": 3,
+      "storyCount": 4,
       "status": {
-        "storyCount": 3,
+        "storyCount": 4,
         "readyCount": 0,
-        "partialCount": 3,
+        "partialCount": 4,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1618,6 +1823,18 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/beauty/hermes-nil-garden.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "hermes-beauty-jardin-monsieur-li",
+          "subcategory": "香水",
+          "sourcePage": "https://www.hermes.cn/cn/zh/category/perfume/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/beauty/hermes-jardin-monsieur-li.png",
           "candidateImageUrl": null,
           "automationStatus": "partial"
         }
@@ -2101,11 +2318,11 @@
       "officialDomains": [
         "www.louisvuitton.cn"
       ],
-      "storyCount": 6,
+      "storyCount": 13,
       "status": {
-        "storyCount": 6,
+        "storyCount": 13,
         "readyCount": 0,
-        "partialCount": 6,
+        "partialCount": 13,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2150,6 +2367,90 @@
           ],
           "localMirrorPath": "/news/luxury/lv-my-capucines.webp",
           "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-sneakerina",
+          "subcategory": "服装",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-sneakerina.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-sneakerina-%E9%9C%B2%E8%B7%9F%E9%9E%8B--AWU024MI01_PM2_Front%20view.png?wid=1440&hei=1440",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-keepall-bandouliere-25",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/keepall-bandouliere-25-monogram-other-nvprod7540326v/M29272",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-keepall-bandouliere-25.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-keepall-bandouliere-25-%E6%89%8B%E8%A2%8B--M29272_PM2_Front%20view.png?wid=1440&hei=1440",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-speedy-bandouliere-20",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/speedy-bandouliere-20-autres-toiles-monogram-nvprod7670106v/M29459",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-speedy-bandouliere-20.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-20-%E6%89%8B%E8%A2%8B--M29459_PM2_Front%20view.png?wid=1440&hei=1440",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-hobo-pm",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/low-key-hobo-pm-h31-nvprod7540221v/M29068",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-hobo-pm.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-hobo-%E5%B0%8F%E5%8F%B7%E6%89%8B%E8%A2%8B--M29068_PM2_Front%20view.png?wid=1440&hei=1440",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-baggy",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/baggy-monogram-denim-nvprod7570045v/M27329",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-baggy.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-baggy-%E6%89%8B%E8%A2%8B--M27329_PM2_Front%20view.png?wid=1440&hei=1440",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-multipass",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/multipass-other-leathers-nvprod7150031v/M29094",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-multipass.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-multipass-%E6%89%8B%E8%A2%8B--M29094_PM2_Front%20view.png?wid=1440&hei=1440",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-x-tm-neverfull-mm",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/lv-x-tm-neverfull-mm-autres-toiles-monogram-nvprod7270007v/M27787",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-x-tm-neverfull-mm.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-tm-neverfull-%E4%B8%AD%E5%8F%B7%E6%89%8B%E8%A2%8B--M27787_PM2_Front%20view.png?wid=1440&hei=1440",
           "automationStatus": "partial"
         },
         {
@@ -2387,11 +2688,11 @@
       "officialDomains": [
         "www.nike.com.cn"
       ],
-      "storyCount": 5,
+      "storyCount": 16,
       "status": {
-        "storyCount": 5,
+        "storyCount": 16,
         "readyCount": 0,
-        "partialCount": 5,
+        "partialCount": 16,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2460,6 +2761,138 @@
           ],
           "localMirrorPath": "/news/sports/nike-pegasus-42.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/11552a29-a08e-4019-8501-3eaae4f4a2cf/AIR%2BZOOM%2BPEGASUS%2B42.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-running-family",
+          "subcategory": "跑步",
+          "sourcePage": "https://www.nike.com.cn/w/gym-running-pegasus-22fovz8nexh",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-pegasus-42.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-pegasus42-se",
+          "subcategory": "跑步",
+          "sourcePage": "https://www.nike.com.cn/t/pegasus-42-se-耐克女子夜跑系列飞马女子公路跑步鞋-fjFLN1cs/IO8251-600",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-pegasus-42-se.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/95c1c635-3904-475e-921a-2b605e0850a5/W+AIR+ZOOM+PEGASUS+42+SE.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-acg-zegama",
+          "subcategory": "户外",
+          "sourcePage": "https://www.nike.com.cn/t/acg-zegama-男子越野跑步鞋-WyOUK92m/HV8113-103",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-acg-zegama.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ae4293b0-205b-42a0-be3c-cf1f6f405e95/NIKE+ACG+ZEGAMA+TRAIL.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-gt-cut-4-ep",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.nike.com.cn/t/g-t-cut-4-ep-男-女篮球鞋-NhuCYtch/IU2030-084",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-gt-cut-4-ep.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/83730b18-631b-4dda-bdfb-a4bc2ec329a5/G.T.+CUT+4+LX+EP.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-china-tech-jacket",
+          "subcategory": "足球",
+          "sourcePage": "https://www.nike.com.cn/t/中国队-tech-男子足球梭织夹克-obCbaI9V/IV3269-635",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-china-tech-jacket.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3fe95a2-797f-4c2f-b286-6c13647938c6/AS+CFA+M+TECH+WOVEN+TOP.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-kobe-9-low-protro",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.nike.com.cn/t/kobe-9-low-protro-科比男-女篮球鞋-dR2TkHH0/IM6119-800",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-kobe-9-low-protro.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/377c9460-7632-443f-b465-764ba5f7d236/KOBE+IX+ELITE+LOW+EM+PROTRO.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-lebron-23-ep",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.nike.com.cn/t/lebron-23-ep-詹姆斯男子篮球鞋-r5qCF1Ew/IB9563-103",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-lebron-23-ep.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5eaa709b-cfe0-4ef5-b706-f90b952ac3cb/LEBRON+XXIII+EP.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-ja-3-jp-ep",
+          "subcategory": "篮球",
+          "sourcePage": "https://www.nike.com.cn/t/ja-3-ep-侏罗纪公园特别版莫兰特男子篮球鞋-Prkb3I4D/IU7239-002",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-ja-3-jp-ep.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/38b2ca41-20ea-40a8-837c-5a80ef20f066/JA+3+JP+EP.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-shenhua-top",
+          "subcategory": "足球",
+          "sourcePage": "https://www.nike.com.cn/t/2026-赛季上海申花足球俱乐部-dri-fit-academy-pro-男子速干赛前上衣-YnHELVfn/IQ0621-100",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-shenhua-top.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/516a2e3a-5b77-40d1-b7fe-3ca6a0d378b3/AS+SGS+M+NK+DF+ACD+SS+TOP+G.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-england-home-jersey",
+          "subcategory": "足球",
+          "sourcePage": "https://www.nike.com.cn/t/2026-赛季英格兰队主场球迷版-dri-fit-男子速干足球球衣-UqGiW7Kb/IB5290-100",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-england-2026-home-jersey.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0bb0368e-cb48-4dfc-9b59-7325d7a9c181/ENT+M+NK+DF+JSY+SS+STAD+HM.png",
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "nike-swim-hydrastrong",
+          "subcategory": "游泳",
+          "sourcePage": "https://www.nike.com.cn/t/swim-hydrastrong-essential-男子紧身泳裤-bG6XUJlD/CZ3024-010",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/sports/nike-swim-hydrastrong.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3523998-276e-4882-b8d4-48e25afc3525/NK+PLY+SLD+JAMMER+WITH+GUSSET.png",
           "automationStatus": "partial"
         }
       ]
@@ -2933,11 +3366,11 @@
       "officialDomains": [
         "www.samsung.com"
       ],
-      "storyCount": 3,
+      "storyCount": 4,
       "status": {
-        "storyCount": 3,
+        "storyCount": 4,
         "readyCount": 0,
-        "partialCount": 3,
+        "partialCount": 4,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2981,6 +3414,18 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/digital/samsung-phone.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "samsung-galaxy-ecosystem",
+          "subcategory": "配件",
+          "sourcePage": "https://www.samsung.com/cn/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/digital/samsung-tablet.jpg",
           "candidateImageUrl": null,
           "automationStatus": "partial"
         }

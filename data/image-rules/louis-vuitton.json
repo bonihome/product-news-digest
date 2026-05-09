@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 6,
+    "storyCount": 13,
     "readyCount": 0,
-    "partialCount": 6,
+    "partialCount": 13,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -109,6 +109,209 @@
         "candidateImageHost": null,
         "notes": [
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-sneakerina",
+      "title": "Louis Vuitton 以 LV Sneakerina 露跟鞋带动女士新品系列更新",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "LV Sneakerina",
+        "露跟鞋",
+        "女士新品系列"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5",
+      "currentImage": "/news/luxury/lv-sneakerina.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-sneakerina.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-sneakerina-%E9%9C%B2%E8%B7%9F%E9%9E%8B--AWU024MI01_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-keepall-bandouliere-25",
+      "title": "Louis Vuitton 以 Keepall Bandoulière 25 带动男士新品系列更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Keepall Bandoulière 25",
+        "手袋",
+        "男士新品系列"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/keepall-bandouliere-25-monogram-other-nvprod7540326v/M29272",
+      "currentImage": "/news/luxury/lv-keepall-bandouliere-25.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-keepall-bandouliere-25.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-keepall-bandouliere-25-%E6%89%8B%E8%A2%8B--M29272_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-speedy-bandouliere-20",
+      "title": "Louis Vuitton 以 Speedy Bandoulière 20 带动 LV Resort 系列新品更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Speedy Bandoulière 20",
+        "LV Resort 系列",
+        "手袋"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/speedy-bandouliere-20-autres-toiles-monogram-nvprod7670106v/M29459",
+      "currentImage": "/news/luxury/lv-speedy-bandouliere-20.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-speedy-bandouliere-20.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-20-%E6%89%8B%E8%A2%8B--M29459_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-hobo-pm",
+      "title": "Louis Vuitton 以 Hobo 小号手袋带动 Flight Mode 系列更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Hobo 小号手袋",
+        "Flight Mode 系列",
+        "Low Key Hobo PM"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/low-key-hobo-pm-h31-nvprod7540221v/M29068",
+      "currentImage": "/news/luxury/lv-hobo-pm.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-hobo-pm.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-hobo-%E5%B0%8F%E5%8F%B7%E6%89%8B%E8%A2%8B--M29068_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-baggy",
+      "title": "Louis Vuitton 以 Baggy 手袋带动 Nautical 系列更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Baggy 手袋",
+        "Nautical 系列",
+        "Monogram Denim"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/baggy-monogram-denim-nvprod7570045v/M27329",
+      "currentImage": "/news/luxury/lv-baggy.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-baggy.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-baggy-%E6%89%8B%E8%A2%8B--M27329_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-multipass",
+      "title": "Louis Vuitton 以 Multipass 手袋带动春夏女装系列新品更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Multipass 手袋",
+        "春夏女装系列",
+        "多功能包袋"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/multipass-other-leathers-nvprod7150031v/M29094",
+      "currentImage": "/news/luxury/lv-multipass.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-multipass.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-multipass-%E6%89%8B%E8%A2%8B--M29094_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-x-tm-neverfull-mm",
+      "title": "Louis Vuitton 以 LV x TM Neverfull 中号手袋带动村上隆合作系列更新",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "LV x TM Neverfull 中号手袋",
+        "路易威登 × 村上隆合作系列",
+        "Neverfull MM"
+      ],
+      "sourceType": "New Arrivals",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/lv-x-tm-neverfull-mm-autres-toiles-monogram-nvprod7270007v/M27787",
+      "currentImage": "/news/luxury/lv-x-tm-neverfull-mm.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-x-tm-neverfull-mm.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-tm-neverfull-%E4%B8%AD%E5%8F%B7%E6%89%8B%E8%A2%8B--M27787_PM2_Front%20view.png?wid=1440&hei=1440",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },

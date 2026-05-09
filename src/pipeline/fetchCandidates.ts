@@ -4,6 +4,43 @@ import { findBrandImageRule, findImageRuleForCandidate } from './imageRules'
 const APPLE_NEWSROOM_BASE = 'https://www.apple.com.cn'
 const LOUIS_VUITTON_CAPUCINES_URL =
   'https://www.louisvuitton.cn/zhs-cn/products/capucines-mini-capucines-nvprod7540209v/M28548'
+const LOUIS_VUITTON_LATEST_PAGES = [
+  {
+    label: '女士新品',
+    subcategory: '服装',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5',
+  },
+  {
+    label: '男士新品',
+    subcategory: '皮包',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9',
+  },
+  {
+    label: 'LV Resort 系列',
+    subcategory: '皮包',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2',
+  },
+  {
+    label: 'Flight Mode 系列',
+    subcategory: '皮包',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk',
+  },
+  {
+    label: 'Nautical 系列',
+    subcategory: '皮包',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc',
+  },
+  {
+    label: '春夏女装系列',
+    subcategory: '皮包',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1',
+  },
+  {
+    label: '路易威登 × 村上隆合作系列',
+    subcategory: '皮包',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9',
+  },
+] as const
 const SHISEIDO_ULTIMUNE_URL =
   'https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums'
 const HERMES_H08_URL = 'https://www.hermes.cn/cn/zh/product/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3-W049430WW00/'
@@ -12,6 +49,95 @@ const DIOR_FOREVER_GLOW_IMAGE =
   'https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640'
 const WILSON_RUSH_PRO_ARTICLE_URL =
   'https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe'
+const ADIDAS_HOME_FEED_PAGES = [
+  {
+    label: '极速蓝调',
+    subcategory: '篮球',
+    listingUrl: 'https://www.adidas.com.cn/splp?contentId=SPLP_IGbhLTTi',
+  },
+  {
+    label: '自由人系列',
+    subcategory: '户外',
+    listingUrl: 'https://www.adidas.com.cn/plp/campaign_25Aug_freehiker',
+  },
+  {
+    label: '静奢甄选',
+    subcategory: '运动休闲',
+    listingUrl: 'https://www.adidas.com.cn/plp/homefeed_26Mar_refine_lux',
+  },
+  {
+    label: '城市机能风',
+    subcategory: '户外',
+    listingUrl: 'https://www.adidas.com.cn/splp?contentId=SPLP_XHMibwZg',
+  },
+  {
+    label: '东方柔雅风',
+    subcategory: '运动休闲',
+    listingUrl: 'https://www.adidas.com.cn/splp?contentId=SPLP_KrbvhObt',
+  },
+  {
+    label: '三条纹舞动系列',
+    subcategory: '运动休闲',
+    listingUrl: 'https://www.adidas.com.cn/splp?contentId=SPLP_b4IzzDUp',
+  },
+] as const
+const NIKE_TREND_PAGES = [
+  {
+    label: '耐克飞马42',
+    subcategory: '跑步',
+    url: 'https://www.nike.com.cn/w/pegasus-40-present-running-shoes-2yknpz37v7jzy7ok',
+  },
+  {
+    label: '耐克女子夜跑系列',
+    subcategory: '跑步',
+    url: 'https://www.nike.com.cn/w/womens-running-essentials-4xmgfz5e1x6',
+  },
+  {
+    label: 'ACG户外系列',
+    subcategory: '户外',
+    url: 'https://www.nike.com.cn/w/acg-trail-running-75jcnz93bsd',
+  },
+  {
+    label: '耐高超新星篮球系列',
+    subcategory: '篮球',
+    url: 'https://www.nike.com.cn/w/chbl-4lx21',
+  },
+  {
+    label: 'Lebron系列',
+    subcategory: '篮球',
+    url: 'https://www.nike.com.cn/w/lebron-james-7y57x',
+  },
+  {
+    label: 'Ja系列',
+    subcategory: '篮球',
+    url: 'https://www.nike.com.cn/w/ja-morant-4m5h1',
+  },
+  {
+    label: '耐克篮球新品',
+    subcategory: '篮球',
+    url: 'https://www.nike.com.cn/w/basketball-3glsm',
+  },
+  {
+    label: '国家队系列',
+    subcategory: '足球',
+    url: 'https://www.nike.com.cn/w/national-team-av9de',
+  },
+  {
+    label: '中超系列',
+    subcategory: '足球',
+    url: 'https://www.nike.com.cn/w/nike-fc-a4rvy',
+  },
+  {
+    label: 'Football Club',
+    subcategory: '足球',
+    url: 'https://www.nike.com.cn/w/football-club-6iait',
+  },
+  {
+    label: '游泳专区',
+    subcategory: '游泳',
+    url: 'https://www.nike.com.cn/w/swimming-3c2dj',
+  },
+] as const
 
 function detectMatchedKeywords(rule: BrandSourceRule) {
   return rule.keywords.slice(0, Math.min(rule.keywords.length, 4))
@@ -117,6 +243,130 @@ function extractImageFromHtml(html: string, baseUrl: string) {
   )
 
   return preferredImage ? makeAbsoluteUrl(preferredImage, baseUrl) : null
+}
+
+type NikeTrendProduct = {
+  label: string
+  subcategory: string
+  sourceUrl: string
+  title: string
+  subtitle: string
+  image: string
+  listingUrl: string
+}
+
+type AdidasListingProduct = {
+  label: string
+  subcategory: string
+  listingUrl: string
+  articleId: string
+  articleName: string
+}
+
+type LouisVuittonLatestProduct = {
+  label: string
+  subcategory: string
+  listingUrl: string
+  sourceUrl: string
+  title: string
+  image: string
+}
+
+function extractNikeFirstProductFromListing(
+  html: string,
+  listingUrl: string,
+  label: string,
+  subcategory: string,
+): NikeTrendProduct | null {
+  const match = html.match(
+    /"products":\[\{"groupKey":"[^"]+"[\s\S]*?"copy":\{"title":"([^"]+)","subTitle":"([^"]*)"\}[\s\S]*?"colorwayImages":\{"portraitURL":"([^"]+)"[\s\S]*?"pdpUrl":\{"url":"([^"]+)"/,
+  )
+
+  if (!match) {
+    return null
+  }
+
+  return {
+    label,
+    subcategory,
+    listingUrl,
+    title: decodeHtmlEntities(match[1]),
+    subtitle: decodeHtmlEntities(match[2]),
+    image: decodeHtmlEntities(match[3]),
+    sourceUrl: decodeHtmlEntities(match[4]),
+  }
+}
+
+function extractAdidasFirstProductFromListing(
+  html: string,
+  listingUrl: string,
+  label: string,
+  subcategory: string,
+): AdidasListingProduct | null {
+  const match = html.match(/articleId:"([^"]+)",articleName:"([^"]+)"/)
+
+  if (!match) {
+    return null
+  }
+
+  return {
+    label,
+    subcategory,
+    listingUrl,
+    articleId: decodeHtmlEntities(match[1]),
+    articleName: collapseWhitespace(decodeHtmlEntities(match[2])),
+  }
+}
+
+function normalizeLouisVuittonTitleFromImage(imageUrl: string) {
+  const match = imageUrl.match(/louis-vuitton-([^?]+)--/i)
+  if (!match) {
+    return 'Louis Vuitton 新品'
+  }
+
+  const decoded = decodeURIComponent(match[1])
+    .replace(/-/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  return decoded
+    .split(' ')
+    .map((part) => (/^[a-z0-9]+$/i.test(part) ? part.charAt(0).toUpperCase() + part.slice(1) : part))
+    .join(' ')
+}
+
+function extractLouisVuittonLatestProduct(
+  html: string,
+  listingUrl: string,
+  label: string,
+  subcategory: string,
+): LouisVuittonLatestProduct | null {
+  const image = extractMatch(
+    html,
+    /(https:\/\/www\.louisvuitton\.cn\/images\/is\/image\/lv\/1\/PP_VP_L\/[^"' )]+\.(?:png|jpg|jpeg|webp)\?wid=\d+&hei=\d+)/i,
+  )
+
+  if (!image) {
+    return null
+  }
+
+  const articleCodeMatch = image.match(/--([A-Z0-9]+)_PM2_/i)
+  const articleCode = articleCodeMatch?.[1] ?? ''
+  const relativeProductUrl = articleCode
+    ? extractMatch(
+        html,
+        new RegExp(`(\\/zhs-cn\\/products\\/[^"' )]+\\/${articleCode})`, 'i'),
+      ) ?? extractMatch(html, new RegExp(`(\\/products\\/[^"' )]+\\/${articleCode})`, 'i'))
+    : null
+
+  return {
+    label,
+    subcategory,
+    listingUrl,
+    sourceUrl: relativeProductUrl ? makeAbsoluteUrl(relativeProductUrl, 'https://www.louisvuitton.cn') : listingUrl,
+    title: normalizeLouisVuittonTitleFromImage(image),
+    image,
+  }
 }
 
 function extractPublishedAtFromHtml(html: string, checkedAt: string) {
@@ -271,6 +521,39 @@ async function fetchAdidasCandidate(rule: BrandSourceRule, checkedAt: string) {
   })
 }
 
+async function fetchAdidasPdpCandidate(
+  rule: BrandSourceRule,
+  checkedAt: string,
+  articleId: string,
+  sectionLabel?: string,
+  sourceTitleOverride?: string,
+) {
+  const sourceUrl = `https://www.adidas.com.cn/pdp?articleId=${articleId}`
+  const html = await fetchHtml(sourceUrl)
+  const sourceTitle =
+    sourceTitleOverride ??
+    extractMatch(html, /<title>([^<]+)<\/title>/) ??
+    extractMatch(html, /(adidas-[^<"]+)/)
+  const image =
+    extractMatch(html, /(https:\/\/static1\.adidas\.com\.cn\/t395\/[^"' )]+\.(?:jpg|jpeg|png|webp))/i) ?? ''
+
+  return buildCandidate(rule, checkedAt, {
+    sourceUrl,
+    sourceLabel: sectionLabel ? `adidas 中国官网·${sectionLabel}` : rule.sourceLabel,
+    sourceTitle: collapseWhitespace(
+      decodeHtmlEntities(
+        (sourceTitle ?? 'adidas 中国官网产品页')
+          .replace(/^阿迪达斯-/, '')
+          .replace(/\s*\|\s*adidas.*$/i, ''),
+      ),
+    ),
+    sourceSummary: sectionLabel
+      ? `adidas 中国官网“${sectionLabel}”专题页当前第一个产品已提取为 ${rule.subcategory} 新品候选，可直接生成产品新闻。`
+      : 'adidas 中国官网当前产品页可稳定抓到标题与主图，适合用于生成新品新闻。',
+    image,
+  })
+}
+
 async function fetchLouisVuittonCandidate(rule: BrandSourceRule, checkedAt: string) {
   const html = await fetchHtml(LOUIS_VUITTON_CAPUCINES_URL)
   const sourceTitle = extractMatch(html, /<title>([^<]+)<\/title>/)
@@ -333,6 +616,102 @@ async function fetchWilsonCandidate(rule: BrandSourceRule, checkedAt: string) {
   })
 }
 
+async function fetchNikeTrendProducts(subcategory: string) {
+  const pages = NIKE_TREND_PAGES.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractNikeFirstProductFromListing(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is NikeTrendProduct => Boolean(product))
+}
+
+async function fetchAdidasSectionProducts(subcategory: string) {
+  const pages = ADIDAS_HOME_FEED_PAGES.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.listingUrl)
+      return extractAdidasFirstProductFromListing(html, page.listingUrl, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is AdidasListingProduct => Boolean(product))
+}
+
+async function fetchLouisVuittonLatestProducts(subcategory: string) {
+  const pages = LOUIS_VUITTON_LATEST_PAGES.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.listingUrl)
+      return extractLouisVuittonLatestProduct(html, page.listingUrl, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is LouisVuittonLatestProduct => Boolean(product))
+}
+
+async function fetchAdidasCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const products = await fetchAdidasSectionProducts(rule.subcategory)
+
+  if (products.length === 0) {
+    return [await fetchAdidasCandidate(rule, checkedAt)]
+  }
+
+  return Promise.all(
+    products.map((product) =>
+      fetchAdidasPdpCandidate(
+        rule,
+        checkedAt,
+        product.articleId,
+        product.label,
+        product.articleName,
+      ),
+    ),
+  )
+}
+
+async function fetchLouisVuittonLatestCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const products = await fetchLouisVuittonLatestProducts(rule.subcategory)
+
+  if (products.length === 0) {
+    return [await fetchLouisVuittonCandidate(rule, checkedAt)]
+  }
+
+  return products.map((product) =>
+    buildCandidate(rule, checkedAt, {
+      sourceLabel: `Louis Vuitton 中国官网·${product.label}`,
+      sourceUrl: product.sourceUrl,
+      sourceTitle: product.title,
+      sourceSummary: `Louis Vuitton 中国官网“${product.label}”页当前首个新品为 ${product.title}，已作为 ${product.subcategory} 新品候选写入抓取流程。`,
+      products: [product.title, product.label, ...rule.products.slice(0, 1)],
+      image: product.image,
+      matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+    }),
+  )
+}
+
+async function fetchNikeCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const products = await fetchNikeTrendProducts(rule.subcategory)
+
+  if (products.length === 0) {
+    return [buildCandidate(rule, checkedAt, {})]
+  }
+
+  return products.map((product) =>
+    buildCandidate(rule, checkedAt, {
+      sourceLabel: `Nike 中国官网·${product.label}`,
+      sourceUrl: product.sourceUrl,
+      sourceTitle: `${product.title} ${product.subtitle}`.trim(),
+      sourceSummary: `Nike 中国官网“新品&潮流”下的“${product.label}”页面当前第一个产品为 ${product.title}，已作为 ${product.subcategory} 新品候选写入抓取流程。`,
+      products: [product.title, product.subtitle, product.label],
+      image: product.image,
+      matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+    }),
+  )
+}
+
 async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: string) {
   const html = await fetchHtml(rule.listUrl)
   const sourceTitle =
@@ -351,6 +730,12 @@ async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: 
 
 async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
   switch (rule.brand) {
+    case 'Nike':
+      return (await fetchNikeCandidates(rule, checkedAt))[0]
+    case 'Adidas':
+      return (await fetchAdidasCandidates(rule, checkedAt))[0]
+    case 'Louis Vuitton':
+      return (await fetchLouisVuittonLatestCandidates(rule, checkedAt))[0]
     case 'Apple':
       return fetchAppleCandidate(rule, checkedAt)
     case 'Hermes':
@@ -359,12 +744,8 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
       return fetchDiorBeautyCandidate(rule, checkedAt)
     case 'SHISEIDO':
       return fetchShiseidoCandidate(rule, checkedAt)
-    case 'Adidas':
-      return fetchAdidasCandidate(rule, checkedAt)
     case 'Wilson':
       return fetchWilsonCandidate(rule, checkedAt)
-    case 'Louis Vuitton':
-      return fetchLouisVuittonCandidate(rule, checkedAt)
     case 'Microsoft Surface':
       return fetchMicrosoftSurfaceCandidate(rule, checkedAt)
     default:
@@ -373,6 +754,21 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
 }
 
 async function fetchRealProbe(rule: BrandSourceRule, checkedAt: string): Promise<BrandProbe[] | null> {
+  if (rule.brand === 'Nike') {
+    const candidates = await fetchNikeCandidates(rule, checkedAt)
+    return candidates.map(toProbe)
+  }
+
+  if (rule.brand === 'Adidas') {
+    const candidates = await fetchAdidasCandidates(rule, checkedAt)
+    return candidates.map(toProbe)
+  }
+
+  if (rule.brand === 'Louis Vuitton') {
+    const candidates = await fetchLouisVuittonLatestCandidates(rule, checkedAt)
+    return candidates.map(toProbe)
+  }
+
   if (rule.brand === 'Apple') {
     const listHtml = await fetchHtml(rule.listUrl)
     const relativeUrl =
@@ -424,6 +820,21 @@ export async function probeBrandSource(rule: BrandSourceRule): Promise<BrandProb
 
 export async function fetchCandidatesForBrand(rule: BrandSourceRule, probes?: BrandProbe[]): Promise<CrawlCandidate[]> {
   const checkedAt = new Date().toISOString()
+  if (rule.brand === 'Nike') {
+    const candidates = await fetchNikeCandidates(rule, checkedAt)
+    return Promise.all(candidates.map((candidate) => applyImageRuleHints(rule, candidate)))
+  }
+
+  if (rule.brand === 'Adidas') {
+    const candidates = await fetchAdidasCandidates(rule, checkedAt)
+    return Promise.all(candidates.map((candidate) => applyImageRuleHints(rule, candidate)))
+  }
+
+  if (rule.brand === 'Louis Vuitton') {
+    const candidates = await fetchLouisVuittonLatestCandidates(rule, checkedAt)
+    return Promise.all(candidates.map((candidate) => applyImageRuleHints(rule, candidate)))
+  }
+
   const realCandidate = await fetchRealCandidate(rule, checkedAt)
 
   if (realCandidate) {

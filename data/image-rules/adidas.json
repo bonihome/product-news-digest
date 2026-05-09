@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 4,
+    "storyCount": 10,
     "readyCount": 0,
-    "partialCount": 4,
+    "partialCount": 10,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -134,6 +134,180 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/sports/adidas-football.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-anthony-edwards-2-blue",
+      "title": "Adidas 推出 ANTHONY EDWARDS 2「极速蓝调」，聚焦热点继续强化篮球鞋阵容",
+      "category": "sports",
+      "subcategory": "篮球",
+      "products": [
+        "ANTHONY EDWARDS 2",
+        "极速蓝调",
+        "爱德华兹2代篮球运动鞋"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/pdp?articleId=JQ9501",
+      "currentImage": "/news/sports/adidas-anthony-edwards-2-blue.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-anthony-edwards-2-blue.jpg",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3ODE0NzAyNjE0OWMwM2NiNWE3LTkxN2UtNGYwYS1hMzc5.jpg",
+        "candidateImageHost": "static1.adidas.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-freehiker-sandal",
+      "title": "Adidas 推出 TERREX FH LT SANDAL，自由人系列扩展轻户外鞋履更新",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "TERREX FH LT SANDAL",
+        "自由人系列",
+        "户外超轻速干缓震回弹轻徒步凉鞋"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/pdp?articleId=LA4706",
+      "currentImage": "/news/sports/adidas-freehiker-sandal.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-freehiker-sandal.jpg",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzU1MDUzMTQ0M2RhMWVkOTU0LWFhM2EtNDUyNC1hZDcw.jpg",
+        "candidateImageHost": "static1.adidas.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-refined-luxe-trench",
+      "title": "Adidas 以 REFINED LUXE 风衣扩展新品推荐，静奢甄选延伸运动休闲内容",
+      "category": "sports",
+      "subcategory": "运动休闲",
+      "products": [
+        "REFINED LUXE DLXC U TRENCH",
+        "静奢甄选",
+        "中长款收腰风衣外套"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KU8902",
+      "currentImage": "/news/sports/adidas-refined-luxe-trench.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-refined-luxe-trench.jpg",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NDMzMjg3MjIzM2NjZTYwZWFkLTYxYWEtNDU1NC1hNDJl.jpg",
+        "candidateImageHost": "static1.adidas.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-city-tech-jacket",
+      "title": "Adidas 推出 MT WR JKT，城市机能风延展户外防晒夹克更新",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "MT WR JKT",
+        "城市机能风",
+        "防晒UPF50+防风运动连帽夹克外套"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KS3529",
+      "currentImage": "/news/sports/adidas-city-tech-jacket.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-city-tech-jacket.png",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3MDI3NTU4NzM1NzUxMDg2M2Y1LWFjZGYtNDk3ZC05MDEx.png",
+        "candidateImageHost": "static1.adidas.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-soft-lux-jacket",
+      "title": "Adidas 以 SOFT LUX SLIM JKT 推进东方柔雅风，运动休闲新品继续扩展",
+      "category": "sports",
+      "subcategory": "运动休闲",
+      "products": [
+        "SOFT LUX SLIM JKT",
+        "东方柔雅风",
+        "轻柔雅凉感运动休闲夹克"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KH2676",
+      "currentImage": "/news/sports/adidas-soft-lux-jacket.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-soft-lux-jacket.jpg",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NjY3MTc1MTc3NjM1NjcxYWVhLWRjZWItNGQwNi04MTY2.jpg",
+        "candidateImageHost": "static1.adidas.com.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-f50-fastline",
+      "title": "Adidas 持续加码 F50 速度战靴线，足球鞋新品保持高频更新",
+      "category": "sports",
+      "subcategory": "足球",
+      "products": [
+        "F50 足球鞋",
+        "F50 Messi Elite FG",
+        "F50 League AG"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/",
+      "currentImage": "/news/sports/adidas-football-boots.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-football-boots.webp",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

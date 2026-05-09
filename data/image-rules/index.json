@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-09T09:27:22.156Z",
+  "generatedAt": "2026-05-09T12:37:23.803Z",
   "brandCount": 51,
   "brands": [
     {
       "brand": "Adidas",
       "slug": "adidas",
       "file": "data/image-rules/adidas.json",
-      "storyCount": 4,
+      "storyCount": 10,
       "readyCount": 0,
-      "partialCount": 4,
+      "partialCount": 10,
       "needsReplacementCount": 0
     },
     {
       "brand": "Apple",
       "slug": "apple",
       "file": "data/image-rules/apple.json",
-      "storyCount": 5,
+      "storyCount": 6,
       "readyCount": 0,
-      "partialCount": 5,
+      "partialCount": 6,
       "needsReplacementCount": 0
     },
     {
@@ -87,18 +87,18 @@
       "brand": "Chanel",
       "slug": "chanel",
       "file": "data/image-rules/chanel.json",
-      "storyCount": 9,
+      "storyCount": 11,
       "readyCount": 0,
-      "partialCount": 9,
+      "partialCount": 11,
       "needsReplacementCount": 0
     },
     {
       "brand": "CHANEL Beauty",
       "slug": "chanel-beauty",
       "file": "data/image-rules/chanel-beauty.json",
-      "storyCount": 3,
+      "storyCount": 4,
       "readyCount": 0,
-      "partialCount": 3,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
@@ -141,9 +141,9 @@
       "brand": "Dior",
       "slug": "dior",
       "file": "data/image-rules/dior.json",
-      "storyCount": 6,
+      "storyCount": 7,
       "readyCount": 0,
-      "partialCount": 6,
+      "partialCount": 7,
       "needsReplacementCount": 0
     },
     {
@@ -159,9 +159,9 @@
       "brand": "Estée Lauder",
       "slug": "estee-lauder",
       "file": "data/image-rules/estee-lauder.json",
-      "storyCount": 2,
+      "storyCount": 3,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {
@@ -177,18 +177,18 @@
       "brand": "Hermes",
       "slug": "hermes",
       "file": "data/image-rules/hermes.json",
-      "storyCount": 9,
+      "storyCount": 14,
       "readyCount": 0,
-      "partialCount": 9,
+      "partialCount": 14,
       "needsReplacementCount": 0
     },
     {
       "brand": "Hermès Beauty",
       "slug": "hermes-beauty",
       "file": "data/image-rules/hermes-beauty.json",
-      "storyCount": 3,
+      "storyCount": 4,
       "readyCount": 0,
-      "partialCount": 3,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
@@ -276,9 +276,9 @@
       "brand": "Louis Vuitton",
       "slug": "louis-vuitton",
       "file": "data/image-rules/louis-vuitton.json",
-      "storyCount": 6,
+      "storyCount": 13,
       "readyCount": 0,
-      "partialCount": 6,
+      "partialCount": 13,
       "needsReplacementCount": 0
     },
     {
@@ -321,9 +321,9 @@
       "brand": "Nike",
       "slug": "nike",
       "file": "data/image-rules/nike.json",
-      "storyCount": 5,
+      "storyCount": 16,
       "readyCount": 0,
-      "partialCount": 5,
+      "partialCount": 16,
       "needsReplacementCount": 0
     },
     {
@@ -384,9 +384,9 @@
       "brand": "Samsung",
       "slug": "samsung",
       "file": "data/image-rules/samsung.json",
-      "storyCount": 3,
+      "storyCount": 4,
       "readyCount": 0,
-      "partialCount": 3,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {

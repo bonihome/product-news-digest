@@ -17,14 +17,14 @@ export const categoryLabels: Record<CategoryId, string> = {
 export const categoryDescriptions: Record<ContentCategory, string> = {
   luxury: '围绕腕表、珠宝、皮包、服装四条线，持续追踪奢侈品牌官网最新发布。',
   beauty: '按护肤、彩妆与香水三条线整理品牌新品，把最值得关注的官方更新汇总成一页频道。',
-  sports: '聚焦足球、篮球、网球、跑步与户外五类运动产品，把品牌发售与新品系列做成可浏览的新闻频道。',
+  sports: '聚焦足球、篮球、网球、跑步、户外、游泳与运动休闲七类运动产品，把品牌发售与新品系列做成可浏览的新闻频道。',
   digital: '围绕手机、平板、电脑、配件四个方向，收录科技品牌近期最重要的新品新闻。',
 }
 
 export const subcategories: Record<ContentCategory, string[]> = {
   luxury: ['腕表', '珠宝', '皮包', '服装'],
   beauty: ['护肤', '彩妆', '香水'],
-  sports: ['足球', '篮球', '网球', '跑步', '户外'],
+  sports: ['足球', '篮球', '网球', '跑步', '户外', '游泳', '运动休闲'],
   digital: ['手机', '平板', '电脑', '配件'],
 }
 

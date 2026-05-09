@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 9,
+    "storyCount": 14,
     "readyCount": 0,
-    "partialCount": 9,
+    "partialCount": 14,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -171,6 +171,93 @@
       }
     },
     {
+      "storyId": "hermes-constance-slim",
+      "title": "Hermes 推出 Constance Slim 钱包，继续扩展紧凑皮具线",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Constance Slim 钱包",
+        "H 锁扣",
+        "紧凑皮具线"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/constance-slim%E9%92%B1%E5%8C%85-H085259CC1H/",
+      "currentImage": "/news/luxury/hermes-constance-slim.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-constance-slim.jpg",
+        "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/constance-slim%E9%92%B1%E5%8C%85--085259CC1H-front-wm-1-0-0-1000-1000_g.jpg",
+        "candidateImageHost": "assets.hermes.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-le-petit-sac",
+      "title": "Hermes 推出 Le Petit Sac 手提包，迷你包袋线继续加深",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Le Petit Sac 手提包",
+        "迷你包袋",
+        "手提包"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85-H087968CC55/",
+      "currentImage": "/news/luxury/hermes-le-petit-sac.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-le-petit-sac.jpg",
+        "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85--087968CC55-front-wm-1-0-0-1000-1000_g.jpg",
+        "candidateImageHost": "assets.hermes.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-zipengo",
+      "title": "Hermes 推出 Zipengo Chaine d’Ancre 小号手包，皮具线继续延展链条元素",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Zipengo Chaine d’Ancre 小号手包",
+        "锚链元素",
+        "手拿包"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85-H084321CC8L/",
+      "currentImage": "/news/luxury/hermes-zipengo.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-zipengo.jpg",
+        "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85--084321CC8L-front-wm-1-0-0-1000-1000_g.jpg",
+        "candidateImageHost": "assets.hermes.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
       "storyId": "hermes-farandole",
       "title": "Hermes 推出 Farandole 项链，珠宝配饰线持续延展",
       "category": "luxury",
@@ -229,6 +316,35 @@
       }
     },
     {
+      "storyId": "hermes-mini-clic-chaine-dancre",
+      "title": "Hermes 推出 Mini Clic Chaine d’Ancre 手镯，珠宝配饰线继续延展锚链元素",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Mini Clic Chaine d’Ancre 手镯",
+        "锚链元素",
+        "珐琅手镯"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/product/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF-H209000FP19GM/",
+      "currentImage": "/news/luxury/hermes-mini-clic-chaine-dancre.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-mini-clic-chaine-dancre.jpg",
+        "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF--209000FP19-worn-1-0-0-1000-1000_g.jpg",
+        "candidateImageHost": "assets.hermes.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
       "storyId": "hermes-h08-watch",
       "title": "Hermes 推出 H08 腕表新作，男士制表线持续扩展",
       "category": "luxury",
@@ -269,6 +385,35 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+      "currentImage": "/news/luxury/hermes-cape-cod-watch.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "hermes-cape-cod-watch",
+      "title": "Hermes 推出 Cape Cod 腕表新作，经典表款继续补强腕表阵容",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Cape Cod 腕表",
+        "Hermès H08",
+        "Arceau 腕表"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.hermes.cn/cn/zh/category/watches/",
       "currentImage": "/news/luxury/hermes-cape-cod-watch.webp",
       "currentImageMode": "local",
       "currentImageHost": null,

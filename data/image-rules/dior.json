@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 6,
+    "storyCount": 7,
     "readyCount": 0,
-    "partialCount": 6,
+    "partialCount": 7,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -192,6 +192,35 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/luxury/dior-oui-ring.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-lady-d-joy",
+      "title": "Dior 推出 Lady D-Joy 手袋，经典包型继续延展当季皮具线",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Lady D-Joy 手袋",
+        "Dior Book Tote",
+        "Lady Dior"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion/bags",
+      "currentImage": "/news/luxury/dior-lady-d-joy.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-lady-d-joy.jpg",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

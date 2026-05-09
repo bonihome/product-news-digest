@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-09T09:27:22.159Z
+Generated at: 2026-05-09T12:37:23.804Z
 Brand count: 51
 
 ## Adidas
@@ -11,8 +11,8 @@ Brand count: 51
 - Slug: `adidas`
 - Categories: sports
 - Official domains: www.adidas.com.cn
-- Story count: 4
-- Status: ready 0, partial 4, needs replacement 0
+- Story count: 10
+- Status: ready 0, partial 10, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
@@ -20,14 +20,20 @@ Brand count: 51
   - `adidas-football-boots` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football-boots.webp` | candidate: none stored | status: partial
   - `adidas-f50-club` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football-boots.webp` | candidate: none stored | status: partial
   - `adidas-boston13` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football.webp` | candidate: none stored | status: partial
+  - `adidas-anthony-edwards-2-blue` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-anthony-edwards-2-blue.jpg` | candidate: https://static1.adidas.com.cn/t395/MTc3ODE0NzAyNjE0OWMwM2NiNWE3LTkxN2UtNGYwYS1hMzc5.jpg | status: partial
+  - `adidas-freehiker-sandal` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-freehiker-sandal.jpg` | candidate: https://static1.adidas.com.cn/t395/MTc3NzU1MDUzMTQ0M2RhMWVkOTU0LWFhM2EtNDUyNC1hZDcw.jpg | status: partial
+  - `adidas-refined-luxe-trench` | 运动休闲 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-refined-luxe-trench.jpg` | candidate: https://static1.adidas.com.cn/t395/MTc3NDMzMjg3MjIzM2NjZTYwZWFkLTYxYWEtNDU1NC1hNDJl.jpg | status: partial
+  - `adidas-city-tech-jacket` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-city-tech-jacket.png` | candidate: https://static1.adidas.com.cn/t395/MTc3MDI3NTU4NzM1NzUxMDg2M2Y1LWFjZGYtNDk3ZC05MDEx.png | status: partial
+  - `adidas-soft-lux-jacket` | 运动休闲 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-soft-lux-jacket.jpg` | candidate: https://static1.adidas.com.cn/t395/MTc3NjY3MTc1MTc3NjM1NjcxYWVhLWRjZWItNGQwNi04MTY2.jpg | status: partial
+  - `adidas-f50-fastline` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football-boots.webp` | candidate: none stored | status: partial
 
 ## Apple
 
 - Slug: `apple`
 - Categories: digital
 - Official domains: www.apple.com.cn
-- Story count: 5
-- Status: ready 0, partial 5, needs replacement 0
+- Story count: 6
+- Status: ready 0, partial 6, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
@@ -36,6 +42,7 @@ Brand count: 51
   - `apple-accessories` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-accessories.jpg` | candidate: none stored | status: partial
   - `apple-iphone-pro` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-iphone-family.png` | candidate: none stored | status: partial
   - `apple-accessories-audio` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-airpods-family.png` | candidate: none stored | status: partial
+  - `apple-audio-family` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-accessories.jpg` | candidate: none stored | status: partial
 
 ## Arc'teryx
 
@@ -147,8 +154,8 @@ Brand count: 51
 - Slug: `chanel`
 - Categories: luxury
 - Official domains: www.chanel.cn
-- Story count: 9
-- Status: ready 0, partial 9, needs replacement 0
+- Story count: 11
+- Status: ready 0, partial 11, needs replacement 0
 - Brand methods: official_category_packshot_download -> official_editorial_asset_download -> local_mirror
 - Notes: Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML. Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally.
 - Stories:
@@ -161,20 +168,23 @@ Brand count: 51
   - `chanel-camelia-ring` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-camelia-ring.webp` | candidate: none stored | status: partial
   - `chanel-j12-black` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-j12-black.webp` | candidate: none stored | status: partial
   - `chanel-premiere-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-premiere-watch.png` | candidate: https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg | status: partial
+  - `chanel-ss26-readytowear` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-ss26-readytowear.jpg` | candidate: https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1268/FSH-1771418302737-desktop-product_1.jpg | status: partial
+  - `chanel-handbag-story` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-handbag-story.jpg` | candidate: https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1024/FSH-1742141327919-desktop-1112.jpg | status: partial
 
 ## CHANEL Beauty
 
 - Slug: `chanel-beauty`
 - Categories: beauty
 - Official domains: www.chanel.cn
-- Story count: 3
-- Status: ready 0, partial 3, needs replacement 0
+- Story count: 4
+- Status: ready 0, partial 4, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `chanel-beauty-n5-fragrance` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-n5.png` | candidate: none stored | status: partial
   - `chanel-beauty-chance-tendre` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-chance-tendre.png` | candidate: none stored | status: partial
   - `chanel-beauty-coco-mademoiselle` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-coco-mademoiselle.png` | candidate: none stored | status: partial
+  - `chanel-beauty-chance-splendide` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-chance-splendide.jpg` | candidate: https://www.chanel.cn/images/t_one/w_0.45,h_0.45,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1240/chance-eau-splendide-eau-de-parfum-spray-1-7fl-oz--packshot-default-136210-9561648758814.jpg | status: partial
 
 ## Charlotte Tilbury
 
@@ -236,8 +246,8 @@ Brand count: 51
 - Slug: `dior`
 - Categories: luxury
 - Official domains: www.dior.cn
-- Story count: 6
-- Status: ready 0, partial 6, needs replacement 0
+- Story count: 7
+- Status: ready 0, partial 7, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
@@ -247,6 +257,7 @@ Brand count: 51
   - `dior-lady-d-joy` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-lady-d-joy.jpg` | candidate: none stored | status: partial
   - `dior-rose-des-vents` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-rose-des-vents.webp` | candidate: none stored | status: partial
   - `dior-oui-ring` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-oui-ring.jpg` | candidate: none stored | status: partial
+  - `dior-lady-d-joy` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-lady-d-joy.jpg` | candidate: none stored | status: partial
 
 ## Dior Beauty
 
@@ -268,14 +279,15 @@ Brand count: 51
 
 - Slug: `estee-lauder`
 - Categories: beauty
-- Official domains: www.esteelauder.com
-- Story count: 2
-- Status: ready 0, partial 2, needs replacement 0
+- Official domains: www.esteelauder.com, www.esteelauder.com.cn
+- Story count: 3
+- Status: ready 0, partial 3, needs replacement 0
 - Brand methods: cn_product_page_asset_download -> cn_series_page_asset_download -> local_mirror
 - Notes: The global Estee Lauder media/export hotlinks can return 403 in server-side fetches. Prefer official China product or series pages, then download the visible product asset with a browser-like user agent and referer. Mirror the asset locally after download so the frontend does not depend on blocked hotlinks.
 - Stories:
   - `estee` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-anr-official.jpg` | candidate: https://www.esteelauder.com.cn/media/export/cms/products/308x424/el_sku_G37B01_308x424_0.jpg?w=3840 | status: partial
   - `estee-makeup` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-doublewear-local.png` | candidate: https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg | status: partial
+  - `estee-re-nutriv` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-re-nutriv-official.jpg` | candidate: none stored | status: partial
 
 ## Gucci
 
@@ -296,8 +308,8 @@ Brand count: 51
 - Slug: `hermes`
 - Categories: luxury
 - Official domains: www.hermes.cn
-- Story count: 9
-- Status: ready 0, partial 9, needs replacement 0
+- Story count: 14
+- Status: ready 0, partial 14, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
@@ -306,9 +318,14 @@ Brand count: 51
   - `hermes-arceau-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-arceau-watch.webp` | candidate: none stored | status: partial
   - `hermes-garden-party` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-garden-party.webp` | candidate: none stored | status: partial
   - `hermes-kelly-pocket` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-kelly-pocket.webp` | candidate: none stored | status: partial
+  - `hermes-constance-slim` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-constance-slim.jpg` | candidate: https://assets.hermes.cn/is/image/hermesproduct/constance-slim%E9%92%B1%E5%8C%85--085259CC1H-front-wm-1-0-0-1000-1000_g.jpg | status: partial
+  - `hermes-le-petit-sac` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-le-petit-sac.jpg` | candidate: https://assets.hermes.cn/is/image/hermesproduct/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85--087968CC55-front-wm-1-0-0-1000-1000_g.jpg | status: partial
+  - `hermes-zipengo` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-zipengo.jpg` | candidate: https://assets.hermes.cn/is/image/hermesproduct/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85--084321CC8L-front-wm-1-0-0-1000-1000_g.jpg | status: partial
   - `hermes-farandole` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-farandole.webp` | candidate: none stored | status: partial
   - `hermes-collier-de-chien` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-collier-de-chien.webp` | candidate: none stored | status: partial
+  - `hermes-mini-clic-chaine-dancre` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-mini-clic-chaine-dancre.jpg` | candidate: https://assets.hermes.cn/is/image/hermesproduct/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF--209000FP19-worn-1-0-0-1000-1000_g.jpg | status: partial
   - `hermes-h08-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-h08-watch.webp` | candidate: none stored | status: partial
+  - `hermes-cape-cod-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-cape-cod-watch.webp` | candidate: none stored | status: partial
   - `hermes-cape-cod-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-cape-cod-watch.webp` | candidate: none stored | status: partial
 
 ## Hermès Beauty
@@ -316,14 +333,15 @@ Brand count: 51
 - Slug: `hermes-beauty`
 - Categories: beauty
 - Official domains: www.hermes.cn
-- Story count: 3
-- Status: ready 0, partial 3, needs replacement 0
+- Story count: 4
+- Status: ready 0, partial 4, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `hermes-beauty-terre-dhermes` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-terre-dhermes.jpg` | candidate: none stored | status: partial
   - `hermes-beauty-twilly-ginger` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-twilly-ginger.jpg` | candidate: none stored | status: partial
   - `hermes-beauty-nil-garden` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-nil-garden.jpg` | candidate: none stored | status: partial
+  - `hermes-beauty-jardin-monsieur-li` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-jardin-monsieur-li.png` | candidate: none stored | status: partial
 
 ## HONOR
 
@@ -448,14 +466,21 @@ Brand count: 51
 - Slug: `louis-vuitton`
 - Categories: luxury
 - Official domains: www.louisvuitton.cn
-- Story count: 6
-- Status: ready 0, partial 6, needs replacement 0
+- Story count: 13
+- Status: ready 0, partial 13, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `lv` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv.webp` | candidate: none stored | status: partial
   - `lv-readywear` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-readywear.webp` | candidate: none stored | status: partial
   - `lv-my-capucines` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-my-capucines.webp` | candidate: none stored | status: partial
+  - `lv-sneakerina` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-sneakerina.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-sneakerina-%E9%9C%B2%E8%B7%9F%E9%9E%8B--AWU024MI01_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
+  - `lv-keepall-bandouliere-25` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-keepall-bandouliere-25.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-keepall-bandouliere-25-%E6%89%8B%E8%A2%8B--M29272_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
+  - `lv-speedy-bandouliere-20` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-speedy-bandouliere-20.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-20-%E6%89%8B%E8%A2%8B--M29459_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
+  - `lv-hobo-pm` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-hobo-pm.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-hobo-%E5%B0%8F%E5%8F%B7%E6%89%8B%E8%A2%8B--M29068_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
+  - `lv-baggy` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-baggy.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-baggy-%E6%89%8B%E8%A2%8B--M27329_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
+  - `lv-multipass` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-multipass.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-multipass-%E6%89%8B%E8%A2%8B--M29094_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
+  - `lv-x-tm-neverfull-mm` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-x-tm-neverfull-mm.png` | candidate: https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-tm-neverfull-%E4%B8%AD%E5%8F%B7%E6%89%8B%E8%A2%8B--M27787_PM2_Front%20view.png?wid=1440&hei=1440 | status: partial
   - `lv-capucines-bb` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-capucines-bb.webp` | candidate: none stored | status: partial
   - `lv-tweed-jacket` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-tweed-jacket.webp` | candidate: none stored | status: partial
   - `lv-silk-dress` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-silk-dress.webp` | candidate: none stored | status: partial
@@ -516,8 +541,8 @@ Brand count: 51
 - Slug: `nike`
 - Categories: sports
 - Official domains: www.nike.com.cn
-- Story count: 5
-- Status: ready 0, partial 5, needs replacement 0
+- Story count: 16
+- Status: ready 0, partial 16, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
@@ -526,6 +551,17 @@ Brand count: 51
   - `nike-ja3` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-ja3.jpg` | candidate: none stored | status: partial
   - `nike-phantom6` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-basketball.png` | candidate: none stored | status: partial
   - `nike-pegasus42` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-pegasus-42.png` | candidate: https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/11552a29-a08e-4019-8501-3eaae4f4a2cf/AIR%2BZOOM%2BPEGASUS%2B42.png | status: partial
+  - `nike-running-family` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-pegasus-42.png` | candidate: none stored | status: partial
+  - `nike-pegasus42-se` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-pegasus-42-se.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/95c1c635-3904-475e-921a-2b605e0850a5/W+AIR+ZOOM+PEGASUS+42+SE.png | status: partial
+  - `nike-acg-zegama` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-acg-zegama.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ae4293b0-205b-42a0-be3c-cf1f6f405e95/NIKE+ACG+ZEGAMA+TRAIL.png | status: partial
+  - `nike-gt-cut-4-ep` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-gt-cut-4-ep.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/83730b18-631b-4dda-bdfb-a4bc2ec329a5/G.T.+CUT+4+LX+EP.png | status: partial
+  - `nike-china-tech-jacket` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-china-tech-jacket.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3fe95a2-797f-4c2f-b286-6c13647938c6/AS+CFA+M+TECH+WOVEN+TOP.png | status: partial
+  - `nike-kobe-9-low-protro` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-kobe-9-low-protro.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/377c9460-7632-443f-b465-764ba5f7d236/KOBE+IX+ELITE+LOW+EM+PROTRO.png | status: partial
+  - `nike-lebron-23-ep` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-lebron-23-ep.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5eaa709b-cfe0-4ef5-b706-f90b952ac3cb/LEBRON+XXIII+EP.png | status: partial
+  - `nike-ja-3-jp-ep` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-ja-3-jp-ep.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/38b2ca41-20ea-40a8-837c-5a80ef20f066/JA+3+JP+EP.png | status: partial
+  - `nike-shenhua-top` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-shenhua-top.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/516a2e3a-5b77-40d1-b7fe-3ca6a0d378b3/AS+SGS+M+NK+DF+ACD+SS+TOP+G.png | status: partial
+  - `nike-england-home-jersey` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-england-2026-home-jersey.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0bb0368e-cb48-4dfc-9b59-7325d7a9c181/ENT+M+NK+DF+JSY+SS+STAD+HM.png | status: partial
+  - `nike-swim-hydrastrong` | 游泳 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-swim-hydrastrong.png` | candidate: https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3523998-276e-4882-b8d4-48e25afc3525/NK+PLY+SLD+JAMMER+WITH+GUSSET.png | status: partial
 
 ## OMEGA
 
@@ -621,14 +657,15 @@ Brand count: 51
 - Slug: `samsung`
 - Categories: digital
 - Official domains: www.samsung.com
-- Story count: 3
-- Status: ready 0, partial 3, needs replacement 0
+- Story count: 4
+- Status: ready 0, partial 4, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `samsung-tablet` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-tablet.jpg` | candidate: none stored | status: partial
   - `samsung-phone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial
   - `samsung-buds` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial
+  - `samsung-galaxy-ecosystem` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-tablet.jpg` | candidate: none stored | status: partial
 
 ## SHISEIDO
 
