@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 2,
+    "storyCount": 3,
     "readyCount": 0,
-    "partialCount": 2,
+    "partialCount": 3,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -76,6 +76,35 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/digital/honor-tablets.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "honor-magicbook",
+      "title": "HONOR 持续扩展 MagicBook 笔记本线，AI PC 阵容继续铺开",
+      "category": "digital",
+      "subcategory": "电脑",
+      "products": [
+        "HONOR MagicBook",
+        "AI PC",
+        "轻薄笔记本"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.honor.com/cn/laptops/",
+      "currentImage": "/news/digital/honor-magicbook-pro16.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/honor-magicbook-pro16.png",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

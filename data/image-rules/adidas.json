@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 2,
+    "storyCount": 4,
     "readyCount": 0,
-    "partialCount": 2,
+    "partialCount": 4,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -76,6 +76,64 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/sports/adidas-football-boots.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-f50-club",
+      "title": "Adidas 继续加码 F50 足球鞋线，F50 CLUB VEL TF J 加入本季更新",
+      "category": "sports",
+      "subcategory": "足球",
+      "products": [
+        "F50 CLUB VEL TF J",
+        "F50 Messi Elite FG",
+        "F50 League TF"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/",
+      "currentImage": "/news/sports/adidas-football-boots.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-football-boots.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "adidas-boston13",
+      "title": "Adidas 推出 ADIZERO BOSTON 13，竞训跑鞋阵容继续升级",
+      "category": "sports",
+      "subcategory": "跑步",
+      "products": [
+        "ADIZERO BOSTON 13",
+        "ADIZERO EVO SL",
+        "AGRAVIC SPEED ULTRA"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.adidas.com.cn/",
+      "currentImage": "/news/sports/adidas-football.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/adidas-football.webp",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

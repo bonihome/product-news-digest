@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-08T16:58:45.776Z
+Generated at: 2026-05-09T09:27:22.159Z
 Brand count: 51
 
 ## Adidas
@@ -11,27 +11,31 @@ Brand count: 51
 - Slug: `adidas`
 - Categories: sports
 - Official domains: www.adidas.com.cn
-- Story count: 2
-- Status: ready 0, partial 2, needs replacement 0
+- Story count: 4
+- Status: ready 0, partial 4, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `adidas-football` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football.webp` | candidate: none stored | status: partial
   - `adidas-football-boots` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football-boots.webp` | candidate: none stored | status: partial
+  - `adidas-f50-club` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football-boots.webp` | candidate: none stored | status: partial
+  - `adidas-boston13` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football.webp` | candidate: none stored | status: partial
 
 ## Apple
 
 - Slug: `apple`
 - Categories: digital
 - Official domains: www.apple.com.cn
-- Story count: 3
-- Status: ready 0, partial 3, needs replacement 0
+- Story count: 5
+- Status: ready 0, partial 5, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `apple-iphone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-iphone.jpg` | candidate: none stored | status: partial
   - `apple-ipad` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-ipad.jpg` | candidate: none stored | status: partial
   - `apple-accessories` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-accessories.jpg` | candidate: none stored | status: partial
+  - `apple-iphone-pro` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-iphone-family.png` | candidate: none stored | status: partial
+  - `apple-accessories-audio` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-airpods-family.png` | candidate: none stored | status: partial
 
 ## Arc'teryx
 
@@ -56,7 +60,7 @@ Brand count: 51
 - Brand methods: official_cms_asset_download -> homepage_or_collection_asset_download -> local_mirror
 - Notes: ASICS China product pages can be inconsistent, but official cms-static.asics.com media library assets are stable once identified from the page source. Prefer the square product image for tennis shoe stories, then mirror it locally.
 - Stories:
-  - `asics-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: official_cms_asset_download -> local_mirror | local: `/news/sports/asics-gel-resolution-8.jpg` | candidate: https://cms-static.asics.com/media-libraries/115463/file.jpg | status: ready
+  - `asics-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: official_cms_asset_download -> local_mirror | local: `/news/sports/asics-gel-resolution-8-fixed.jpg` | candidate: https://images.asics.com/is/image/asics/1042A072_103_SR_RT_GLB-1?$product$ | status: ready
 
 ## Bobbi Brown
 
@@ -218,13 +222,14 @@ Brand count: 51
 - Slug: `descente`
 - Categories: sports
 - Official domains: allterrain.descente.com
-- Story count: 2
-- Status: ready 0, partial 2, needs replacement 0
+- Story count: 3
+- Status: ready 0, partial 3, needs replacement 0
 - Brand methods: official_collection_asset_download -> official_page_screenshot -> local_mirror
 - Notes: DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches. Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.
 - Stories:
   - `descente-allterrain` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-hero.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg | status: partial
   - `descente-allterrain-81` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-81-hero.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg | status: partial
+  - `descente-allterrain-shell` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-81-hero.jpg` | candidate: none stored | status: partial
 
 ## Dior
 
@@ -325,25 +330,27 @@ Brand count: 51
 - Slug: `honor`
 - Categories: digital
 - Official domains: www.honor.com
-- Story count: 2
-- Status: ready 0, partial 2, needs replacement 0
+- Story count: 3
+- Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `honor-magic8` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/honor-magic8.png` | candidate: none stored | status: partial
   - `honor-tablets` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/honor-tablets.png` | candidate: none stored | status: partial
+  - `honor-magicbook` | 电脑 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/honor-magicbook-pro16.png` | candidate: none stored | status: partial
 
 ## Huawei
 
 - Slug: `huawei`
 - Categories: digital
 - Official domains: consumer.huawei.com
-- Story count: 1
-- Status: ready 0, partial 1, needs replacement 0
+- Story count: 2
+- Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `huawei-pura90` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/huawei-pura90.png` | candidate: none stored | status: partial
+  - `huawei-matepad` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/huawei-matepad.jpg` | candidate: none stored | status: partial
 
 ## IPSA
 
@@ -413,13 +420,14 @@ Brand count: 51
 
 - Slug: `lenovo`
 - Categories: digital
-- Official domains: item.lenovo.com.cn
-- Story count: 1
-- Status: ready 0, partial 1, needs replacement 0
+- Official domains: item.lenovo.com.cn, www.lenovo.com.cn
+- Story count: 2
+- Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `lenovo-yoga-air14` | 电脑 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/lenovo-yoga-air14.jpg` | candidate: none stored | status: partial
+  - `lenovo-yoga-family` | 电脑 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/lenovo-yoga-air14.jpg` | candidate: none stored | status: partial
 
 ## Longines
 
@@ -508,13 +516,16 @@ Brand count: 51
 - Slug: `nike`
 - Categories: sports
 - Official domains: www.nike.com.cn
-- Story count: 2
-- Status: ready 0, partial 2, needs replacement 0
+- Story count: 5
+- Status: ready 0, partial 5, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `nike-basketball` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-basketball.png` | candidate: none stored | status: partial
   - `nike-basketball-feed` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-basketball-feed.png` | candidate: none stored | status: partial
+  - `nike-ja3` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-ja3.jpg` | candidate: none stored | status: partial
+  - `nike-phantom6` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-basketball.png` | candidate: none stored | status: partial
+  - `nike-pegasus42` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-pegasus-42.png` | candidate: https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/11552a29-a08e-4019-8501-3eaae4f4a2cf/AIR%2BZOOM%2BPEGASUS%2B42.png | status: partial
 
 ## OMEGA
 
@@ -610,13 +621,14 @@ Brand count: 51
 - Slug: `samsung`
 - Categories: digital
 - Official domains: www.samsung.com
-- Story count: 2
-- Status: ready 0, partial 2, needs replacement 0
+- Story count: 3
+- Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
 - Stories:
   - `samsung-tablet` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-tablet.jpg` | candidate: none stored | status: partial
   - `samsung-phone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial
+  - `samsung-buds` | 配件 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial
 
 ## SHISEIDO
 

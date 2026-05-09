@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 1,
+    "storyCount": 2,
     "readyCount": 0,
-    "partialCount": 1,
+    "partialCount": 2,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -47,6 +47,35 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/digital/huawei-pura90.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "huawei-matepad",
+      "title": "Huawei 持续更新 MatePad 平板线，生产力平板阵容继续扩展",
+      "category": "digital",
+      "subcategory": "平板",
+      "products": [
+        "HUAWEI MatePad",
+        "HUAWEI M-Pencil",
+        "平板生态"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://consumer.huawei.com/cn/tablets/",
+      "currentImage": "/news/digital/huawei-matepad.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/huawei-matepad.jpg",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

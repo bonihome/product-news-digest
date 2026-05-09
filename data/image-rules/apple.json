@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 3,
+    "storyCount": 5,
     "readyCount": 0,
-    "partialCount": 3,
+    "partialCount": 5,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -105,6 +105,64 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/digital/apple-accessories.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "apple-iphone-pro",
+      "title": "Apple 持续扩展 iPhone 17 系列，高端手机阵容进一步完善",
+      "category": "digital",
+      "subcategory": "手机",
+      "products": [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max",
+        "iPhone 17e"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.apple.com.cn/iphone/",
+      "currentImage": "/news/digital/apple-iphone-family.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/apple-iphone-family.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "apple-accessories-audio",
+      "title": "Apple 继续扩展音频配件线，AirPods 与充电盒组合保持更新",
+      "category": "digital",
+      "subcategory": "配件",
+      "products": [
+        "AirPods 4",
+        "AirPods 4 主动降噪款",
+        "USB-C 充电盒"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.apple.com.cn/airpods/",
+      "currentImage": "/news/digital/apple-airpods-family.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/apple-airpods-family.png",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [

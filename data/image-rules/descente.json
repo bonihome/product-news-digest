@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 2,
+    "storyCount": 3,
     "readyCount": 0,
-    "partialCount": 2,
+    "partialCount": 3,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -84,6 +84,36 @@
         "notes": [
           "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset instead of a Cloudflare-blocked commerce screenshot.",
           "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "descente-allterrain-shell",
+      "title": "DESCENTE 持续扩展 ALLTERRAIN 户外机能线，强化多场景穿着叙事",
+      "category": "sports",
+      "subcategory": "户外",
+      "products": [
+        "ALLTERRAIN 81",
+        "Shell Jacket",
+        "MIZUSAWA DOWN"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://allterrain.descente.com/",
+      "currentImage": "/news/sports/descente-allterrain-81-hero.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/sports/descente-allterrain-81-hero.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "The current local mirror uses an accessible official DESCENTE ALLTERRAIN line asset instead of a Cloudflare-blocked commerce screenshot.",
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
         ]
       }
     }

@@ -39,7 +39,7 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.asics.com.cn/gel-resolution-8/p/0020009531-103",
-      "currentImage": "/news/sports/asics-gel-resolution-8.jpg",
+      "currentImage": "/news/sports/asics-gel-resolution-8-fixed.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "ready",
@@ -49,9 +49,9 @@
           "official_cms_asset_download",
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/asics-gel-resolution-8.jpg",
-        "candidateImageUrl": "https://cms-static.asics.com/media-libraries/115463/file.jpg",
-        "candidateImageHost": "cms-static.asics.com",
+        "localMirrorPath": "/news/sports/asics-gel-resolution-8-fixed.jpg",
+        "candidateImageUrl": "https://images.asics.com/is/image/asics/1042A072_103_SR_RT_GLB-1?$product$",
+        "candidateImageHost": "images.asics.com",
         "notes": [
           "The current local mirror is backed by a verified official ASICS CMS asset and can be refreshed from candidateImageUrl if the local file needs replacement.",
           "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."

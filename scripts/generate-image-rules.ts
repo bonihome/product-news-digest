@@ -257,6 +257,8 @@ const storyCandidateImageUrls: Record<string, string> = {
     'https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg',
   'on-cloudmonster-2':
     'https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp',
+  'nike-pegasus42':
+    'https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/11552a29-a08e-4019-8501-3eaae4f4a2cf/AIR%2BZOOM%2BPEGASUS%2B42.png',
   'shu-home':
     'https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png',
   'kiehls-home':
@@ -272,7 +274,7 @@ const storyCandidateImageUrls: Record<string, string> = {
   'chanel-premiere-watch':
     'https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg',
   'asics-tennis':
-    'https://cms-static.asics.com/media-libraries/115463/file.jpg',
+    'https://images.asics.com/is/image/asics/1042A072_103_SR_RT_GLB-1?$product$',
   'wilson-tennis':
     'https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium',
   'wilson-tennis-shoe':

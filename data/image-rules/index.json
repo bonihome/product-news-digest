@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-08T16:58:45.775Z",
+  "generatedAt": "2026-05-09T09:27:22.156Z",
   "brandCount": 51,
   "brands": [
     {
       "brand": "Adidas",
       "slug": "adidas",
       "file": "data/image-rules/adidas.json",
-      "storyCount": 2,
+      "storyCount": 4,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
       "brand": "Apple",
       "slug": "apple",
       "file": "data/image-rules/apple.json",
-      "storyCount": 3,
+      "storyCount": 5,
       "readyCount": 0,
-      "partialCount": 3,
+      "partialCount": 5,
       "needsReplacementCount": 0
     },
     {
@@ -132,9 +132,9 @@
       "brand": "DESCENTE",
       "slug": "descente",
       "file": "data/image-rules/descente.json",
-      "storyCount": 2,
+      "storyCount": 3,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {
@@ -195,18 +195,18 @@
       "brand": "HONOR",
       "slug": "honor",
       "file": "data/image-rules/honor.json",
-      "storyCount": 2,
+      "storyCount": 3,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {
       "brand": "Huawei",
       "slug": "huawei",
       "file": "data/image-rules/huawei.json",
-      "storyCount": 1,
+      "storyCount": 2,
       "readyCount": 0,
-      "partialCount": 1,
+      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {
@@ -258,9 +258,9 @@
       "brand": "Lenovo",
       "slug": "lenovo",
       "file": "data/image-rules/lenovo.json",
-      "storyCount": 1,
+      "storyCount": 2,
       "readyCount": 0,
-      "partialCount": 1,
+      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {
@@ -321,9 +321,9 @@
       "brand": "Nike",
       "slug": "nike",
       "file": "data/image-rules/nike.json",
-      "storyCount": 2,
+      "storyCount": 5,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 5,
       "needsReplacementCount": 0
     },
     {
@@ -384,9 +384,9 @@
       "brand": "Samsung",
       "slug": "samsung",
       "file": "data/image-rules/samsung.json",
-      "storyCount": 2,
+      "storyCount": 3,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {

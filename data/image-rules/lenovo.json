@@ -6,13 +6,14 @@
     "digital"
   ],
   "officialDomains": [
-    "item.lenovo.com.cn"
+    "item.lenovo.com.cn",
+    "www.lenovo.com.cn"
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 1,
+    "storyCount": 2,
     "readyCount": 0,
-    "partialCount": 1,
+    "partialCount": 2,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -37,6 +38,35 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://item.lenovo.com.cn/product/1045787.html",
+      "currentImage": "/news/digital/lenovo-yoga-air14.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/lenovo-yoga-air14.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lenovo-yoga-family",
+      "title": "Lenovo 持续扩展 YOGA 家族，轻薄本与 AI PC 阵容继续补强",
+      "category": "digital",
+      "subcategory": "电脑",
+      "products": [
+        "YOGA Air 14 Aura AI元启版",
+        "YOGA 系列",
+        "AI PC"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.lenovo.com.cn/",
       "currentImage": "/news/digital/lenovo-yoga-air14.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
