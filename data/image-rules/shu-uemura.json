@@ -26,6 +26,22 @@
       "Prefer a banner that clearly shows the featured product, such as the Ultime8 cleansing oil visual, then mirror locally."
     ]
   },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "Shu Uemura 默认入口",
+        "subcategory": "彩妆",
+        "url": "https://www.shuuemura.com.cn/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.shuuemura.com.cn/",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+    ]
+  },
   "stories": [
     {
       "storyId": "shu-home",

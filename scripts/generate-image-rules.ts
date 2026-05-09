@@ -48,6 +48,22 @@ type BrandRule = {
     brandLevelMethods: string[]
     notes: string[]
   }
+  crawl: {
+    mode:
+      | 'generic_html'
+      | 'single_product_page'
+      | 'nike_trend_pages'
+      | 'adidas_home_feed_pages'
+      | 'louis_vuitton_latest_pages'
+    entryPages: Array<{
+      label: string
+      subcategory: string
+      url: string
+      extraction: 'first_product'
+    }>
+    fallbackUrl: string | null
+    notes: string[]
+  }
   stories: StoryRule[]
 }
 
@@ -60,6 +76,14 @@ type BrandMethodSummary = {
   status: BrandRule['summary']
   methods: string[]
   notes: string[]
+  crawlMode: BrandRule['crawl']['mode']
+  crawlNotes: string[]
+  crawlEntries: Array<{
+    label: string
+    subcategory: string
+    url: string
+    extraction: 'first_product'
+  }>
   stories: Array<{
     storyId: string
     subcategory: string
@@ -80,6 +104,7 @@ const brandStrategyOverrides: Record<
   {
     methods: string[]
     notes: string[]
+    crawl?: BrandRule['crawl']
   }
 > = {
   Prada: {
@@ -149,25 +174,11 @@ const brandStrategyOverrides: Record<
       'Prefer the LM1 front-view product image for the lead card, then mirror locally.',
     ],
   },
-  DESCENTE: {
-    methods: ['official_collection_asset_download', 'official_page_screenshot', 'local_mirror'],
-    notes: [
-      'DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches.',
-      'Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.',
-    ],
-  },
   Bvlgari: {
     methods: ['official_catalog_product_image_download', 'official_collection_asset_download', 'local_mirror'],
     notes: [
       'Bvlgari China watch listing pages embed stable catalog product PNG assets under /media/catalog/product/cache/.',
       'Prefer exact watch packshots from the watch listing payload for Serpenti and Octo stories, then mirror locally.',
-    ],
-  },
-  Chanel: {
-    methods: ['official_category_packshot_download', 'official_editorial_asset_download', 'local_mirror'],
-    notes: [
-      'Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML.',
-      'Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally.',
     ],
   },
   'Shu Uemura': {
@@ -190,6 +201,22 @@ const brandStrategyOverrides: Record<
       'ASICS China product pages can be inconsistent, but official cms-static.asics.com media library assets are stable once identified from the page source.',
       'Prefer the square product image for tennis shoe stories, then mirror it locally.',
     ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        {
+          label: 'ASICS 中国官网首页',
+          subcategory: '网球',
+          url: 'https://www.asics.com.cn/',
+          extraction: 'first_product',
+        },
+      ],
+      fallbackUrl: 'https://www.asics.com.cn/',
+      notes: [
+        'ASICS currently uses the China homepage as the stable discovery entry for tennis shoes.',
+        'When the homepage cannot resolve a product card, fall back to the stored story image and existing product-specific source pages.',
+      ],
+    },
   },
   Wilson: {
     methods: ['official_blog_asset_download', 'official_product_page_image_download', 'local_mirror'],
@@ -197,6 +224,176 @@ const brandStrategyOverrides: Record<
       'Wilson official blog pages expose stable article media URLs that can be mirrored locally.',
       'For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed.',
     ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        {
+          label: 'Wilson Tennis',
+          subcategory: '网球',
+          url: 'https://www.wilson.com/en-us/tennis',
+          extraction: 'first_product',
+        },
+      ],
+      fallbackUrl: 'https://www.wilson.com/en-us/tennis',
+      notes: [
+        'Wilson uses the tennis entry page as the stable brand landing page, with blog or product pages as story-specific fallbacks.',
+      ],
+    },
+  },
+  Nike: {
+    methods: ['listing_first_product', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'Nike China should start from 新品&潮流 under 潮流趋势 and then select the first product card from each themed listing page.',
+      'Mirror the chosen product image locally after extracting the first product from each listing.',
+    ],
+    crawl: {
+      mode: 'nike_trend_pages',
+      entryPages: [
+        { label: '耐克飞马42', subcategory: '跑步', url: 'https://www.nike.com.cn/w/pegasus-40-present-running-shoes-2yknpz37v7jzy7ok', extraction: 'first_product' },
+        { label: '耐克女子夜跑系列', subcategory: '跑步', url: 'https://www.nike.com.cn/w/womens-running-essentials-4xmgfz5e1x6', extraction: 'first_product' },
+        { label: 'ACG户外系列', subcategory: '户外', url: 'https://www.nike.com.cn/w/acg-trail-running-75jcnz93bsd', extraction: 'first_product' },
+        { label: '耐高超新星篮球系列', subcategory: '篮球', url: 'https://www.nike.com.cn/w/chbl-4lx21', extraction: 'first_product' },
+        { label: 'Lebron系列', subcategory: '篮球', url: 'https://www.nike.com.cn/w/lebron-james-7y57x', extraction: 'first_product' },
+        { label: 'Ja系列', subcategory: '篮球', url: 'https://www.nike.com.cn/w/ja-morant-4m5h1', extraction: 'first_product' },
+        { label: '耐克篮球新品', subcategory: '篮球', url: 'https://www.nike.com.cn/w/basketball-3glsm', extraction: 'first_product' },
+        { label: '国家队系列', subcategory: '足球', url: 'https://www.nike.com.cn/w/national-team-av9de', extraction: 'first_product' },
+        { label: '中超系列', subcategory: '足球', url: 'https://www.nike.com.cn/w/nike-fc-a4rvy', extraction: 'first_product' },
+        { label: 'Football Club', subcategory: '足球', url: 'https://www.nike.com.cn/w/football-club-6iait', extraction: 'first_product' },
+        { label: '游泳专区', subcategory: '游泳', url: 'https://www.nike.com.cn/w/swimming-3c2dj', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.nike.com.cn/',
+      notes: [
+        'Each configured listing page should yield the first visible product card as a news candidate.',
+      ],
+    },
+  },
+  Adidas: {
+    methods: ['home_module_first_product', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'Adidas China should use 聚焦热点 and 新品推荐 modules as the entry surface for new products.',
+      'Each module topic resolves to a listing or SPLP page, where the first product is used as the news candidate.',
+    ],
+    crawl: {
+      mode: 'adidas_home_feed_pages',
+      entryPages: [
+        { label: '极速蓝调', subcategory: '篮球', url: 'https://www.adidas.com.cn/splp?contentId=SPLP_IGbhLTTi', extraction: 'first_product' },
+        { label: '自由人系列', subcategory: '户外', url: 'https://www.adidas.com.cn/plp/campaign_25Aug_freehiker', extraction: 'first_product' },
+        { label: '静奢甄选', subcategory: '运动休闲', url: 'https://www.adidas.com.cn/plp/homefeed_26Mar_refine_lux', extraction: 'first_product' },
+        { label: '城市机能风', subcategory: '户外', url: 'https://www.adidas.com.cn/splp?contentId=SPLP_XHMibwZg', extraction: 'first_product' },
+        { label: '东方柔雅风', subcategory: '运动休闲', url: 'https://www.adidas.com.cn/splp?contentId=SPLP_KrbvhObt', extraction: 'first_product' },
+        { label: '三条纹舞动系列', subcategory: '运动休闲', url: 'https://www.adidas.com.cn/splp?contentId=SPLP_b4IzzDUp', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.adidas.com.cn/',
+      notes: [
+        'When a home module listing no longer exposes a parseable first product, fall back to homepage-specific static stories and stored image rules.',
+      ],
+    },
+  },
+  'Louis Vuitton': {
+    methods: ['latest_page_first_product', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'Louis Vuitton China should use 新品系列 for women and men, plus current seasonal topic pages.',
+      'Each configured latest or topic page yields the first visible product image and its associated product link as the news candidate.',
+    ],
+    crawl: {
+      mode: 'louis_vuitton_latest_pages',
+      entryPages: [
+        { label: '女士新品', subcategory: '服装', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5', extraction: 'first_product' },
+        { label: '男士新品', subcategory: '皮包', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9', extraction: 'first_product' },
+        { label: 'LV Resort 系列', subcategory: '皮包', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2', extraction: 'first_product' },
+        { label: 'Flight Mode 系列', subcategory: '皮包', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk', extraction: 'first_product' },
+        { label: 'Nautical 系列', subcategory: '皮包', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc', extraction: 'first_product' },
+        { label: '春夏女装系列', subcategory: '皮包', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1', extraction: 'first_product' },
+        { label: '路易威登 × 村上隆合作系列', subcategory: '皮包', url: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.louisvuitton.cn/zhs-cn/new',
+      notes: [
+        'Use the first LV product image in each topic page and derive the product detail URL from the article code when possible.',
+      ],
+    },
+  },
+  Hermes: {
+    methods: ['single_official_product_page', 'official_category_page_fallback', 'local_mirror'],
+    notes: [
+      'Hermes can continue to use stable official product or category pages for watches, leather goods, jewelry, and fragrance.',
+      'When broader category automation is added later, preserve the exact official product pages already verified in the story rules as fallbacks.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: '爱马仕中国官网腕表', subcategory: '腕表', url: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.hermes.cn/cn/zh/',
+      notes: [
+        'Hermes currently uses verified product/category pages rather than topic-feed extraction.',
+      ],
+    },
+  },
+  Chanel: {
+    methods: ['single_official_category_page', 'official_editorial_asset_download', 'local_mirror'],
+    notes: [
+      'Chanel luxury stories currently work best from verified category or editorial landing pages rather than deep dynamic navigation.',
+      'For watches, keep the category page as the stable source of truth and use editorials or packshots as product-image fallbacks.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: '香奈儿中国官网腕表频道', subcategory: '腕表', url: 'https://www.chanel.cn/cn/watches/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.chanel.cn/cn/watches/',
+      notes: [
+        'Chanel watch automation should prefer the watch category page instead of brittle deep product links.',
+      ],
+    },
+  },
+  'CHANEL Beauty': {
+    methods: ['single_official_product_page', 'official_editorial_asset_download', 'local_mirror'],
+    notes: [
+      'CHANEL Beauty stories currently rely on stable product or fragrance pages and mirrored official product imagery.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: 'CHANEL Beauty 中国官网香氛', subcategory: '香水', url: 'https://www.chanel.cn/cn/fragrance/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.chanel.cn/cn/beauty/',
+      notes: [
+        'Beauty automation can begin from category pages, then use verified product pages in the story rule set.',
+      ],
+    },
+  },
+  'Hermès Beauty': {
+    methods: ['single_official_product_page', 'official_category_page_fallback', 'local_mirror'],
+    notes: [
+      'Hermès Beauty fragrance stories currently use stable category or product pages with mirrored local assets.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: 'Hermès Beauty 香氛', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/category/fragrances/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.hermes.cn/cn/zh/category/beauty/',
+      notes: [
+        'Hermès Beauty remains product-page led until broader category extraction is added.',
+      ],
+    },
+  },
+  DESCENTE: {
+    methods: ['official_collection_asset_download', 'official_page_screenshot', 'local_mirror'],
+    notes: [
+      'DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches.',
+      'Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: 'DESCENTE ALLTERRAIN 官方网站', subcategory: '户外', url: 'https://allterrain.descente.com/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://allterrain.descente.com/',
+      notes: [
+        'DESCENTE should use the ALLTERRAIN landing page as the stable crawl entry and recover through stored story rules when a direct PDP disappears.',
+      ],
+    },
   },
 }
 
@@ -559,6 +756,29 @@ function inferStoryNotes(story: Story, brand: string) {
   return notes
 }
 
+function buildDefaultCrawlStrategy(brand: string, stories: Story[], storyRules: StoryRule[]) {
+  const primaryStory = stories[0]
+
+  return {
+    mode: 'generic_html' as const,
+    entryPages: primaryStory
+      ? [
+          {
+            label: `${brand} 默认入口`,
+            subcategory: primaryStory.subcategory,
+            url: primaryStory.sourceUrl,
+            extraction: 'first_product' as const,
+          },
+        ]
+      : [],
+    fallbackUrl: primaryStory?.sourceUrl ?? null,
+    notes: [
+      'This brand currently falls back to the default source page recorded from the existing story dataset.',
+      `When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: ${storyRules.filter((story) => story.automationStatus === 'ready').length}.`,
+    ],
+  }
+}
+
 async function buildBrandRules() {
   const grouped = new Map<string, Story[]>()
 
@@ -632,6 +852,7 @@ async function buildBrandRules() {
             'For remote official assets, the server can download and mirror the current image URL directly.',
           ],
       },
+      crawl: override?.crawl ?? buildDefaultCrawlStrategy(brand, stories, storyRules),
       stories: storyRules,
     })
   }
@@ -649,6 +870,9 @@ function buildMethodSummary(brandRules: BrandRule[]) {
     status: rule.summary,
     methods: rule.strategy.brandLevelMethods,
     notes: rule.strategy.notes,
+    crawlMode: rule.crawl.mode,
+    crawlNotes: rule.crawl.notes,
+    crawlEntries: rule.crawl.entryPages,
     stories: rule.stories.map((story) => ({
       storyId: story.storyId,
       subcategory: story.subcategory,
@@ -692,6 +916,14 @@ function toMarkdownSummary(summary: ReturnType<typeof buildMethodSummary>) {
     )
     lines.push(`- Brand methods: ${brand.methods.join(' -> ')}`)
     lines.push(`- Notes: ${brand.notes.join(' ')}`)
+    lines.push(`- Crawl mode: ${brand.crawlMode}`)
+    lines.push(`- Crawl notes: ${brand.crawlNotes.join(' ')}`)
+    if (brand.crawlEntries.length > 0) {
+      lines.push('- Crawl entries:')
+      for (const entry of brand.crawlEntries) {
+        lines.push(`  - \`${entry.label}\` | ${entry.subcategory} | ${entry.url} | extraction: ${entry.extraction}`)
+      }
+    }
     lines.push('- Stories:')
 
     for (const story of brand.stories) {

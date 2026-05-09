@@ -1,15 +1,15 @@
 # Image Rules
 
-This directory stores the server-facing image acquisition rules for every brand currently used by the site.
+This directory stores the server-facing image acquisition rules and brand-specific crawl rules for every brand currently used by the site.
 
 ## Files
 
 - `index.json`
   - Summary index of all generated brand rule files.
 - `brand-methods-summary.json`
-  - Machine-readable brand-wide method summary for server workflows.
+  - Machine-readable brand-wide summary for image reacquisition and brand-specific crawl behavior.
 - `brand-methods-summary.md`
-  - Human-readable lookup table of every brand's image acquisition path.
+  - Human-readable lookup table of every brand's image acquisition path and crawl strategy.
 - `<brand-slug>.json`
   - One rule file per brand.
 
@@ -27,7 +27,8 @@ For each brand:
 
 1. Read `brand-methods-summary.json` or `brand-methods-summary.md`.
 2. Confirm the preferred brand-wide method order in `methods`.
-3. Use the per-story `method` and `priority` values as the final execution path.
+3. Read `crawl.mode`, `crawl.entryPages`, and `crawl.notes` to determine how to fetch future news candidates for that brand.
+4. Use the per-story `method` and `priority` values as the final execution path for image reacquisition.
 
 ## Important Fields
 
@@ -39,6 +40,14 @@ For each brand:
   - Official site domains currently used by stories from this brand.
 - `strategy.brandLevelMethods`
   - Preferred brand-wide acquisition methods.
+- `crawl.mode`
+  - Brand-specific news-fetch mode used by the pipeline, such as `nike_trend_pages`, `adidas_home_feed_pages`, or `single_product_page`.
+- `crawl.entryPages`
+  - The official entry pages that the pipeline should use for future news discovery.
+- `crawl.fallbackUrl`
+  - Stable brand fallback entry when a configured page disappears or becomes brittle.
+- `crawl.notes`
+  - Human-readable explanation of the brand-specific news-fetch workflow.
 - `stories[].sourcePage`
   - Official page that should be treated as the source of truth.
 - `stories[].currentImage`
@@ -67,6 +76,7 @@ For each brand:
 - Prefer brand-region official sites already used by the story.
 - Mirror images locally after acquisition so the website does not rely on unstable hotlinks.
 - Keep `sourcePage` and `candidateImageUrl` together so the server has both a direct path and a recovery path.
+- Keep brand-specific crawl behavior in the same generated rules so future pipeline updates can reuse the already verified fetch path for each brand.
 
 ## Regeneration
 
@@ -82,4 +92,5 @@ npm run image-rules:generate
 
 - `candidateImageUrl` may be empty for some brands when only a local mirror is currently verified.
 - In those cases, the server should use `sourcePage` plus `acquisition.method` to reacquire the official product image.
+- Some brands still use `generic_html` crawl mode. Those are valid fallbacks, but they should be upgraded to brand-specific crawl modes as more stable site patterns are confirmed.
 - Regenerate the full rule set whenever stories or image sources change so the JSON and Markdown summaries stay aligned.

@@ -90,6 +90,11 @@ export async function findBrandImageRule(brand: string) {
   return rules.find((rule) => rule.brand === brand) ?? null
 }
 
+export async function findBrandCrawlRule(brand: string) {
+  const brandRule = await findBrandImageRule(brand)
+  return brandRule?.crawl ?? null
+}
+
 export async function findImageRuleForCandidate(
   candidate: Pick<CrawlCandidate, 'brand' | 'category' | 'subcategory' | 'sourceUrl' | 'products'>,
 ) {

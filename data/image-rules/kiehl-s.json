@@ -26,6 +26,22 @@
       "Prefer the products-page collages that clearly show Calendula toner, dark spot serum, cream, or mask, then mirror locally."
     ]
   },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "Kiehl's 默认入口",
+        "subcategory": "护肤",
+        "url": "https://www.kiehls.com.cn/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.kiehls.com.cn/",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+    ]
+  },
   "stories": [
     {
       "storyId": "kiehls-home",

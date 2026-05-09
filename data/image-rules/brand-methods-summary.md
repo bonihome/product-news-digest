@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-09T12:37:23.804Z
+Generated at: 2026-05-09T12:56:59.979Z
 Brand count: 51
 
 ## Adidas
@@ -13,8 +13,17 @@ Brand count: 51
 - Official domains: www.adidas.com.cn
 - Story count: 10
 - Status: ready 0, partial 10, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: home_module_first_product -> official_product_page_image_download -> local_mirror
+- Notes: Adidas China should use 聚焦热点 and 新品推荐 modules as the entry surface for new products. Each module topic resolves to a listing or SPLP page, where the first product is used as the news candidate.
+- Crawl mode: adidas_home_feed_pages
+- Crawl notes: When a home module listing no longer exposes a parseable first product, fall back to homepage-specific static stories and stored image rules.
+- Crawl entries:
+  - `极速蓝调` | 篮球 | https://www.adidas.com.cn/splp?contentId=SPLP_IGbhLTTi | extraction: first_product
+  - `自由人系列` | 户外 | https://www.adidas.com.cn/plp/campaign_25Aug_freehiker | extraction: first_product
+  - `静奢甄选` | 运动休闲 | https://www.adidas.com.cn/plp/homefeed_26Mar_refine_lux | extraction: first_product
+  - `城市机能风` | 户外 | https://www.adidas.com.cn/splp?contentId=SPLP_XHMibwZg | extraction: first_product
+  - `东方柔雅风` | 运动休闲 | https://www.adidas.com.cn/splp?contentId=SPLP_KrbvhObt | extraction: first_product
+  - `三条纹舞动系列` | 运动休闲 | https://www.adidas.com.cn/splp?contentId=SPLP_b4IzzDUp | extraction: first_product
 - Stories:
   - `adidas-football` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football.webp` | candidate: none stored | status: partial
   - `adidas-football-boots` | 足球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/adidas-football-boots.webp` | candidate: none stored | status: partial
@@ -36,6 +45,10 @@ Brand count: 51
 - Status: ready 0, partial 6, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Apple 默认入口` | 手机 | https://www.apple.com.cn/cn/newsroom/2026/03/apple-introduces-iphone-17e/ | extraction: first_product
 - Stories:
   - `apple-iphone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-iphone.jpg` | candidate: none stored | status: partial
   - `apple-ipad` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/apple-ipad.jpg` | candidate: none stored | status: partial
@@ -53,6 +66,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: gallery_asset_download -> official_product_page_screenshot -> local_mirror
 - Notes: Arc'teryx localized product pages can mix icons, detail shots, and product imagery. Prefer Sanity-hosted official gallery assets when they show the jacket body or construction details clearly. Use a localized page screenshot only as a fallback when the page does not expose a usable product image.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Arc'teryx 默认入口` | 户外 | https://arcteryx.com/us/zh/shop/mens/alpha-sv-jacket-9899 | extraction: first_product
 - Stories:
   - `arcteryx-alpha-sv` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/arcteryx-alpha-sv-hanging.jpg` | candidate: https://cdn.sanity.io/images/inkbj32c/production/7a649d6f8f0ee59bd267191e4d08009dc30afddf-600x600.jpg?auto=format&q=75 | status: partial
   - `arcteryx-alpha-sv-detail` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/arcteryx-alpha-sv-detail.jpg` | candidate: https://cdn.sanity.io/images/inkbj32c/production/e5a16a928380d0c5c9e0f083bc2fe8133714d98d-600x600.jpg?auto=format&q=75 | status: partial
@@ -66,6 +83,10 @@ Brand count: 51
 - Status: ready 1, partial 0, needs replacement 0
 - Brand methods: official_cms_asset_download -> homepage_or_collection_asset_download -> local_mirror
 - Notes: ASICS China product pages can be inconsistent, but official cms-static.asics.com media library assets are stable once identified from the page source. Prefer the square product image for tennis shoe stories, then mirror it locally.
+- Crawl mode: single_product_page
+- Crawl notes: ASICS currently uses the China homepage as the stable discovery entry for tennis shoes. When the homepage cannot resolve a product card, fall back to the stored story image and existing product-specific source pages.
+- Crawl entries:
+  - `ASICS 中国官网首页` | 网球 | https://www.asics.com.cn/ | extraction: first_product
 - Stories:
   - `asics-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: official_cms_asset_download -> local_mirror | local: `/news/sports/asics-gel-resolution-8-fixed.jpg` | candidate: https://images.asics.com/is/image/asics/1042A072_103_SR_RT_GLB-1?$product$ | status: ready
 
@@ -78,6 +99,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Bobbi Brown 默认入口` | 彩妆 | https://www.bobbibrown.com.cn/product/25706/104102/wechat/carousel1/intensive-serum-foundation-spf-40 | extraction: first_product
 - Stories:
   - `bobbibrown-serum-foundation` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/bobbibrown-home-real.png` | candidate: none stored | status: partial
   - `bobbibrown-highlighter` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/bobbibrown-home.png` | candidate: none stored | status: partial
@@ -91,6 +116,10 @@ Brand count: 51
 - Status: ready 0, partial 6, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Burberry 默认入口` | 服装 | https://www.burberry.cn/l/womens-clothing/new-arrivals/ | extraction: first_product
 - Stories:
   - `burberry` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/burberry.webp` | candidate: none stored | status: partial
   - `burberry-rider` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/burberry-rider.webp` | candidate: none stored | status: partial
@@ -108,6 +137,10 @@ Brand count: 51
 - Status: ready 0, partial 6, needs replacement 0
 - Brand methods: official_catalog_product_image_download -> official_collection_asset_download -> local_mirror
 - Notes: Bvlgari China watch listing pages embed stable catalog product PNG assets under /media/catalog/product/cache/. Prefer exact watch packshots from the watch listing payload for Serpenti and Octo stories, then mirror locally.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Bvlgari 默认入口` | 腕表 | https://www.bulgari.cn/zh-cn/products/102678-e | extraction: first_product
 - Stories:
   - `bulgari-serpenti-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-watch.png` | candidate: none stored | status: partial
   - `bulgari-serpenti-bag-grey` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/bulgari-serpenti-bag-grey.png` | candidate: none stored | status: partial
@@ -125,6 +158,10 @@ Brand count: 51
 - Status: ready 0, partial 9, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Cartier 默认入口` | 珠宝 | https://www.cartier.cn/creation/B6067517 | extraction: first_product
 - Stories:
   - `cartier` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/cartier.jpg` | candidate: none stored | status: partial
   - `cartier-watch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/cartier-watch.jpg` | candidate: none stored | status: partial
@@ -145,6 +182,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: browser_product_image_download -> official_product_card_download -> local_mirror
 - Notes: CHANDO product images can be blocked when fetched without a referer and user agent. Use the official product detail page in a browser session or send the page as referer when downloading product images from chandowebprd.chandogroup.com. Mirror the verified product image locally after download.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `CHANDO 默认入口` | 护肤 | https://www.chando-himalaya.com/product_detail_1241756158335782912.html | extraction: first_product
 - Stories:
   - `chando-purple` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chando-purple-real.png` | candidate: https://chandowebprd.chandogroup.com/images/aa434f1dafda4fdfa4fe30e2f75166ff.1776224329550.png | status: partial
   - `chando-foundation` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chando-foundation-real.png` | candidate: https://chandowebprd.chandogroup.com/images/d1c85c4d6616409192aea01aed1b3c50.1713838299550.png | status: partial
@@ -156,8 +197,12 @@ Brand count: 51
 - Official domains: www.chanel.cn
 - Story count: 11
 - Status: ready 0, partial 11, needs replacement 0
-- Brand methods: official_category_packshot_download -> official_editorial_asset_download -> local_mirror
-- Notes: Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML. Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally.
+- Brand methods: single_official_category_page -> official_editorial_asset_download -> local_mirror
+- Notes: Chanel luxury stories currently work best from verified category or editorial landing pages rather than deep dynamic navigation. For watches, keep the category page as the stable source of truth and use editorials or packshots as product-image fallbacks.
+- Crawl mode: single_product_page
+- Crawl notes: Chanel watch automation should prefer the watch category page instead of brittle deep product links.
+- Crawl entries:
+  - `香奈儿中国官网腕表频道` | 腕表 | https://www.chanel.cn/cn/watches/ | extraction: first_product
 - Stories:
   - `chanel-25-bag` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-25-bag.webp` | candidate: none stored | status: partial
   - `chanel-coco-crush` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/chanel-coco-crush.webp` | candidate: none stored | status: partial
@@ -178,8 +223,12 @@ Brand count: 51
 - Official domains: www.chanel.cn
 - Story count: 4
 - Status: ready 0, partial 4, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: single_official_product_page -> official_editorial_asset_download -> local_mirror
+- Notes: CHANEL Beauty stories currently rely on stable product or fragrance pages and mirrored official product imagery.
+- Crawl mode: single_product_page
+- Crawl notes: Beauty automation can begin from category pages, then use verified product pages in the story rule set.
+- Crawl entries:
+  - `CHANEL Beauty 中国官网香氛` | 香水 | https://www.chanel.cn/cn/fragrance/ | extraction: first_product
 - Stories:
   - `chanel-beauty-n5-fragrance` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-n5.png` | candidate: none stored | status: partial
   - `chanel-beauty-chance-tendre` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-chance-tendre.png` | candidate: none stored | status: partial
@@ -195,6 +244,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Charlotte Tilbury 默认入口` | 彩妆 | https://www.charlottetilbury.com/us/products/new | extraction: first_product
 - Stories:
   - `ct` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/ct-pillowtalk.png` | candidate: none stored | status: partial
   - `ct-pillowtalk` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/ct.png` | candidate: none stored | status: partial
@@ -208,6 +261,10 @@ Brand count: 51
 - Status: ready 0, partial 4, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Clé de Peau Beauté 默认入口` | 彩妆 | https://www.cledepeau-beaute.com.cn/ | extraction: first_product
 - Stories:
   - `cpb-home` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/cpb-home-local.jpg` | candidate: https://www.cledepeau-beaute.com.cn/on/demandware.static/-/Sites-cpb_cn-Library/default/dw4fcc2ecc/CPB/2024KV/KV1-PC-20241104.jpg | status: partial
   - `cpb-foundation` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/cpb-foundation.png` | candidate: none stored | status: partial
@@ -223,6 +280,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Clinique 默认入口` | 护肤 | https://www.clinique.com.cn/products/26195 | extraction: first_product
 - Stories:
   - `clinique-yellow-moisturizer` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/clinique-yellow-moisturizer.jpg` | candidate: none stored | status: partial
   - `clinique-eb-milky-lotion` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/clinique-eb-milky-lotion.jpg` | candidate: none stored | status: partial
@@ -236,6 +297,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: official_collection_asset_download -> official_page_screenshot -> local_mirror
 - Notes: DESCENTE commerce pages can be blocked by Cloudflare in headless or server-side fetches. Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally.
+- Crawl mode: single_product_page
+- Crawl notes: DESCENTE should use the ALLTERRAIN landing page as the stable crawl entry and recover through stored story rules when a direct PDP disappears.
+- Crawl entries:
+  - `DESCENTE ALLTERRAIN 官方网站` | 户外 | https://allterrain.descente.com/ | extraction: first_product
 - Stories:
   - `descente-allterrain` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-hero.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg | status: partial
   - `descente-allterrain-81` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/descente-allterrain-81-hero.jpg` | candidate: https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg | status: partial
@@ -250,6 +315,10 @@ Brand count: 51
 - Status: ready 0, partial 7, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Dior 默认入口` | 皮包 | https://www.dior.cn/zh_cn/fashion/products/M1324OWHP_M51U | extraction: first_product
 - Stories:
   - `dior-book-tote` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-book-tote.jpg` | candidate: none stored | status: partial
   - `dior-dioramour-book-tote` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-dioramour-book-tote.jpg` | candidate: none stored | status: partial
@@ -268,6 +337,10 @@ Brand count: 51
 - Status: ready 0, partial 5, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Dior Beauty 默认入口` | 彩妆 | https://www.dior.com/en_us/beauty/page/whats-new.html | extraction: first_product
 - Stories:
   - `dior-beauty` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/dior-forever-new.jpg` | candidate: https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640 | status: partial
   - `dior-beauty-lips` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/dior-addict-new.jpg` | candidate: https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw9831c51b/Y0319000/Y0319000_C031900038_E01_RHC.jpg?sw=640 | status: partial
@@ -284,6 +357,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: cn_product_page_asset_download -> cn_series_page_asset_download -> local_mirror
 - Notes: The global Estee Lauder media/export hotlinks can return 403 in server-side fetches. Prefer official China product or series pages, then download the visible product asset with a browser-like user agent and referer. Mirror the asset locally after download so the frontend does not depend on blocked hotlinks.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Estée Lauder 默认入口` | 护肤 | https://www.esteelauder.com/whats-new-skincare | extraction: first_product
 - Stories:
   - `estee` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-anr-official.jpg` | candidate: https://www.esteelauder.com.cn/media/export/cms/products/308x424/el_sku_G37B01_308x424_0.jpg?w=3840 | status: partial
   - `estee-makeup` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-doublewear-local.png` | candidate: https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg | status: partial
@@ -298,6 +375,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Gucci 默认入口` | 皮包 | https://www.gucci.cn/zh/pr/760253AAA7G1000 | extraction: first_product
 - Stories:
   - `gucci-horsebit` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/gucci-horsebit.webp` | candidate: none stored | status: partial
   - `gucci-marmont` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/gucci-marmont.webp` | candidate: none stored | status: partial
@@ -310,8 +391,12 @@ Brand count: 51
 - Official domains: www.hermes.cn
 - Story count: 14
 - Status: ready 0, partial 14, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: single_official_product_page -> official_category_page_fallback -> local_mirror
+- Notes: Hermes can continue to use stable official product or category pages for watches, leather goods, jewelry, and fragrance. When broader category automation is added later, preserve the exact official product pages already verified in the story rules as fallbacks.
+- Crawl mode: single_product_page
+- Crawl notes: Hermes currently uses verified product/category pages rather than topic-feed extraction.
+- Crawl entries:
+  - `爱马仕中国官网腕表` | 腕表 | https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/ | extraction: first_product
 - Stories:
   - `hermes-hacademi` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-hacademi.webp` | candidate: none stored | status: partial
   - `hermes-mini-clic-kelly` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/hermes-mini-clic-kelly.webp` | candidate: none stored | status: partial
@@ -335,8 +420,12 @@ Brand count: 51
 - Official domains: www.hermes.cn
 - Story count: 4
 - Status: ready 0, partial 4, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: single_official_product_page -> official_category_page_fallback -> local_mirror
+- Notes: Hermès Beauty fragrance stories currently use stable category or product pages with mirrored local assets.
+- Crawl mode: single_product_page
+- Crawl notes: Hermès Beauty remains product-page led until broader category extraction is added.
+- Crawl entries:
+  - `Hermès Beauty 香氛` | 香水 | https://www.hermes.cn/cn/zh/category/fragrances/ | extraction: first_product
 - Stories:
   - `hermes-beauty-terre-dhermes` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-terre-dhermes.jpg` | candidate: none stored | status: partial
   - `hermes-beauty-twilly-ginger` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-twilly-ginger.jpg` | candidate: none stored | status: partial
@@ -352,6 +441,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `HONOR 默认入口` | 手机 | https://www.honor.com/cn/phones/honor-magic8-pro/ | extraction: first_product
 - Stories:
   - `honor-magic8` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/honor-magic8.png` | candidate: none stored | status: partial
   - `honor-tablets` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/honor-tablets.png` | candidate: none stored | status: partial
@@ -366,6 +459,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Huawei 默认入口` | 手机 | https://consumer.huawei.com/cn/phones/pura90-pro-max/ | extraction: first_product
 - Stories:
   - `huawei-pura90` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/huawei-pura90.png` | candidate: none stored | status: partial
   - `huawei-matepad` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/huawei-matepad.jpg` | candidate: none stored | status: partial
@@ -379,6 +476,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `IPSA 默认入口` | 护肤 | https://www.ipsa.com.cn/ | extraction: first_product
 - Stories:
   - `ipsa-home` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/ipsa-home.jpg` | candidate: none stored | status: partial
   - `ipsa-products` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/ipsa-products.png` | candidate: none stored | status: partial
@@ -392,6 +493,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: official_products_page_download -> official_homepage_banner_download -> local_mirror
 - Notes: Kiehl’s China about/products page exposes stable official product-collage images on res-wxec-unipt.lorealchina.com. Prefer the products-page collages that clearly show Calendula toner, dark spot serum, cream, or mask, then mirror locally.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Kiehl's 默认入口` | 护肤 | https://www.kiehls.com.cn/ | extraction: first_product
 - Stories:
   - `kiehls-home` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/kiehls-calendula-darkspot.jpg` | candidate: https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/2.jpg | status: partial
   - `kiehls-best-sellers` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/kiehls-cream-mask.jpg` | candidate: https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/1.jpg | status: partial
@@ -405,6 +510,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: product_gallery_download -> local_mirror
 - Notes: KOLON SPORT product pages expose stable gallery assets on images.kolonmall.com. Prefer the LM1 front-view product image for the lead card, then mirror locally.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `KOLON SPORT 默认入口` | 跑步 | https://www.kolonsport.com/Product/FE4TX26010BLK | extraction: first_product
 - Stories:
   - `kolon-hyperleap-tlx` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/kolon-hyperleap-tlx.jpg` | candidate: https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4TX26010BLK_LM1.jpg | status: partial
   - `kolon-hawk-rise-gtx` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/kolon-hawk-rise-page.png` | candidate: https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4KX26310GRY_LM1.jpg | status: partial
@@ -418,6 +527,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `La Mer 默认入口` | 护肤 | https://www.lamer.com.cn/product/24587/128775/the-protecting-veil | extraction: first_product
 - Stories:
   - `lamer-protecting-veil` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/lamer-protecting-veil.jpg` | candidate: none stored | status: partial
   - `lamer-skincolor` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/lamer-skincolor.jpg` | candidate: none stored | status: partial
@@ -431,6 +544,10 @@ Brand count: 51
 - Status: ready 1, partial 0, needs replacement 0
 - Brand methods: homepage_product_card_capture -> local_crop
 - Notes: Lancôme China is heavily front-end rendered and product links are not consistently exposed in HTML. For homepage-led stories, capture the visible product card or module image and mirror locally.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 1.
+- Crawl entries:
+  - `Lancôme 默认入口` | 护肤 | https://www.lancome.com.cn/ | extraction: first_product
 - Stories:
   - `lancome-home` | 护肤 | method: `homepage_product_card_capture_to_local_mirror` | priority: homepage_product_card_capture -> local_crop -> local_mirror | local: `/news/beauty/lancome-genifique-packshot-clean.jpg` | candidate: https://res-wxec-unipt.lorealchina.com/prod/lan/20250326/759cf952-d649-4834-af54-d1f665b2fea0.jpg | status: ready
 
@@ -443,6 +560,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Lenovo 默认入口` | 电脑 | https://item.lenovo.com.cn/product/1045787.html | extraction: first_product
 - Stories:
   - `lenovo-yoga-air14` | 电脑 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/lenovo-yoga-air14.jpg` | candidate: none stored | status: partial
   - `lenovo-yoga-family` | 电脑 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/lenovo-yoga-air14.jpg` | candidate: none stored | status: partial
@@ -456,6 +577,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Longines 默认入口` | 腕表 | https://www.longines.cn/watch-hydroconquest-l3-840-4-96-6 | extraction: first_product
 - Stories:
   - `longines-hydroconquest` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/longines-hydroconquest.png` | candidate: none stored | status: partial
   - `longines-conquest` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/longines-conquest.png` | candidate: none stored | status: partial
@@ -468,8 +593,18 @@ Brand count: 51
 - Official domains: www.louisvuitton.cn
 - Story count: 13
 - Status: ready 0, partial 13, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: latest_page_first_product -> official_product_page_image_download -> local_mirror
+- Notes: Louis Vuitton China should use 新品系列 for women and men, plus current seasonal topic pages. Each configured latest or topic page yields the first visible product image and its associated product link as the news candidate.
+- Crawl mode: louis_vuitton_latest_pages
+- Crawl notes: Use the first LV product image in each topic page and derive the product detail URL from the article code when possible.
+- Crawl entries:
+  - `女士新品` | 服装 | https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5 | extraction: first_product
+  - `男士新品` | 皮包 | https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9 | extraction: first_product
+  - `LV Resort 系列` | 皮包 | https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2 | extraction: first_product
+  - `Flight Mode 系列` | 皮包 | https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk | extraction: first_product
+  - `Nautical 系列` | 皮包 | https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc | extraction: first_product
+  - `春夏女装系列` | 皮包 | https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1 | extraction: first_product
+  - `路易威登 × 村上隆合作系列` | 皮包 | https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9 | extraction: first_product
 - Stories:
   - `lv` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv.webp` | candidate: none stored | status: partial
   - `lv-readywear` | 服装 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/lv-readywear.webp` | candidate: none stored | status: partial
@@ -494,6 +629,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `MAOGEPING 默认入口` | 彩妆 | https://www.maogepingbeauty.com/makeup/light-shadow/Light-Highlighting/41.html | extraction: first_product
 - Stories:
   - `mgp-highlight` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/maogeping-highlight.png` | candidate: none stored | status: partial
   - `mgp-cushion` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/maogeping-cushion.png` | candidate: none stored | status: partial
@@ -507,6 +646,10 @@ Brand count: 51
 - Status: ready 0, partial 0, needs replacement 2
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Microsoft Surface 默认入口` | 电脑 | https://www.microsoft.com/zh-cn/surface/business/surface-laptop-6 | extraction: first_product
 - Stories:
   - `microsoft-laptop` | 电脑 | method: `manual_editorial_placeholder` | priority: local_mirror | local: `/news/microsoft-surface.svg` | candidate: none stored | status: needs_replacement
   - `microsoft-laptop-family` | 电脑 | method: `manual_editorial_placeholder` | priority: local_mirror | local: `/news/microsoft-surface.svg` | candidate: none stored | status: needs_replacement
@@ -520,6 +663,10 @@ Brand count: 51
 - Status: ready 0, partial 1, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Mizuno 默认入口` | 网球 | https://www.mizuno.com.cn/qiuxie/538.html | extraction: first_product
 - Stories:
   - `mizuno-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/mizuno-tennis.jpg` | candidate: none stored | status: partial
 
@@ -532,6 +679,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `NARS 默认入口` | 彩妆 | https://www.narscosmetics.com.cn/soft-velvet-pdr-34101428.html | extraction: first_product
 - Stories:
   - `nars-soft-velvet` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/nars-soft.jpg` | candidate: none stored | status: partial
   - `nars-light-reflecting` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/nars-light.jpg` | candidate: none stored | status: partial
@@ -543,8 +694,22 @@ Brand count: 51
 - Official domains: www.nike.com.cn
 - Story count: 16
 - Status: ready 0, partial 16, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Brand methods: listing_first_product -> official_product_page_image_download -> local_mirror
+- Notes: Nike China should start from 新品&潮流 under 潮流趋势 and then select the first product card from each themed listing page. Mirror the chosen product image locally after extracting the first product from each listing.
+- Crawl mode: nike_trend_pages
+- Crawl notes: Each configured listing page should yield the first visible product card as a news candidate.
+- Crawl entries:
+  - `耐克飞马42` | 跑步 | https://www.nike.com.cn/w/pegasus-40-present-running-shoes-2yknpz37v7jzy7ok | extraction: first_product
+  - `耐克女子夜跑系列` | 跑步 | https://www.nike.com.cn/w/womens-running-essentials-4xmgfz5e1x6 | extraction: first_product
+  - `ACG户外系列` | 户外 | https://www.nike.com.cn/w/acg-trail-running-75jcnz93bsd | extraction: first_product
+  - `耐高超新星篮球系列` | 篮球 | https://www.nike.com.cn/w/chbl-4lx21 | extraction: first_product
+  - `Lebron系列` | 篮球 | https://www.nike.com.cn/w/lebron-james-7y57x | extraction: first_product
+  - `Ja系列` | 篮球 | https://www.nike.com.cn/w/ja-morant-4m5h1 | extraction: first_product
+  - `耐克篮球新品` | 篮球 | https://www.nike.com.cn/w/basketball-3glsm | extraction: first_product
+  - `国家队系列` | 足球 | https://www.nike.com.cn/w/national-team-av9de | extraction: first_product
+  - `中超系列` | 足球 | https://www.nike.com.cn/w/nike-fc-a4rvy | extraction: first_product
+  - `Football Club` | 足球 | https://www.nike.com.cn/w/football-club-6iait | extraction: first_product
+  - `游泳专区` | 游泳 | https://www.nike.com.cn/w/swimming-3c2dj | extraction: first_product
 - Stories:
   - `nike-basketball` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-basketball.png` | candidate: none stored | status: partial
   - `nike-basketball-feed` | 篮球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/nike-basketball-feed.png` | candidate: none stored | status: partial
@@ -572,6 +737,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `OMEGA 默认入口` | 腕表 | https://www.omegawatches.cn/watches/speedmaster/moonwatch-professional/product | extraction: first_product
 - Stories:
   - `omega-moonwatch` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/omega-moonwatch.jpg` | candidate: none stored | status: partial
   - `omega-speedmaster-38` | 腕表 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/omega-speedmaster-38.png` | candidate: none stored | status: partial
@@ -586,6 +755,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: product_gallery_currentSrc_download -> local_mirror
 - Notes: On product pages expose stable product gallery assets through currentSrc values on brand CDN images. Prefer the first hero gallery image and mirror it locally for product cards.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `On 默认入口` | 跑步 | https://www.on.com/en-us/products/cloudsurfer-max-m-3mf3043/mens | extraction: first_product
 - Stories:
   - `on-cloudsurfer-max` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/on-cloudsurfer-max.webp` | candidate: https://images.ctfassets.net/hnk2vsx53n6l/1VGvF5KSK6shaFwdzgvKRu/5009bc69b19aeb617e0cbebb12e23c83/e23710a3d0ff66844466531dd9d7940b7b22540f.png?fm=webp | status: partial
   - `on-cloudmonster-2` | 跑步 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/on-cloudmonster-2-page.png` | candidate: https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp | status: partial
@@ -599,6 +772,10 @@ Brand count: 51
 - Status: ready 0, partial 1, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `OPPO 默认入口` | 手机 | https://www.oppo.com/cn/smartphones/series-find-x/find-x9/ | extraction: first_product
 - Stories:
   - `oppo-findx9` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/oppo-findx9.png` | candidate: none stored | status: partial
 
@@ -611,6 +788,10 @@ Brand count: 51
 - Status: ready 12, partial 0, needs replacement 0
 - Brand methods: resolved_browser_image -> reconstructed_dam_path -> local_mirror
 - Notes: Prada bag, ready-to-wear, and jewelry pages can fail in browser with HTTP2 errors. When browser extraction fails, reconstruct the DAM path from productCode, material, color, and variant. Prefer SLF front-view assets and mirror them locally for stable server delivery.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 12.
+- Crawl entries:
+  - `Prada 默认入口` | 皮包 | https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO | extraction: first_product
 - Stories:
   - `prada-passage-bag` | 皮包 | method: `reconstructed_dam_path_to_local_mirror` | priority: resolved_browser_image -> reconstructed_dam_path -> local_mirror | local: `/news/luxury/prada-passage-bag.jpg` | candidate: https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA495/2G52F0201/1BA495_2G52_F0201_V_OPO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg | status: ready
   - `prada-lace-dress` | 服装 | method: `reconstructed_dam_path_to_local_mirror` | priority: resolved_browser_image -> reconstructed_dam_path -> local_mirror | local: `/news/luxury/prada-lace-dress.jpg` | candidate: https://www.prada.com/content/dam/pradabkg_products/P/P3Q/P3Q17/17VMF0002/P3Q17_17VM_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg | status: ready
@@ -634,6 +815,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Prada Beauty 默认入口` | 香水 | https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030 | extraction: first_product
 - Stories:
   - `prada-beauty-paradoxe-radical` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/prada-paradoxe-radical-clean.png` | candidate: none stored | status: partial
   - `prada-beauty-paradoxe-virtual-flower` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/prada-paradoxe-virtual-flower-clean.png` | candidate: none stored | status: partial
@@ -648,6 +833,10 @@ Brand count: 51
 - Status: ready 0, partial 2, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `PROYA 默认入口` | 护肤 | https://www.proya.com/ | extraction: first_product
 - Stories:
   - `proya-redruby` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/proya-redruby.png` | candidate: none stored | status: partial
   - `proya-dualkang` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/proya-dualkang.png` | candidate: none stored | status: partial
@@ -661,6 +850,10 @@ Brand count: 51
 - Status: ready 0, partial 4, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Samsung 默认入口` | 平板 | https://www.samsung.com/cn/ | extraction: first_product
 - Stories:
   - `samsung-tablet` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-tablet.jpg` | candidate: none stored | status: partial
   - `samsung-phone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial
@@ -676,6 +869,10 @@ Brand count: 51
 - Status: ready 3, partial 0, needs replacement 0
 - Brand methods: product_detail_packshot_download -> homepage_product_card_capture -> local_mirror
 - Notes: For direct product stories, use the 1000x1000 itemmaster packshot from the product detail page. For homepage-led stories, prefer a product-card crop over a text-heavy hero banner.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 3.
+- Crawl entries:
+  - `SHISEIDO 默认入口` | 护肤 | https://www.shiseido.com.cn/ | extraction: first_product
 - Stories:
   - `shiseido-home` | 护肤 | method: `homepage_product_card_capture_to_local_mirror` | priority: product_detail_packshot_download -> homepage_product_card_capture -> local_mirror | local: `/news/beauty/shiseido-vital-perfection-packshot-2.png` | candidate: https://www.shiseido.com.cn/on/demandware.static/-/Sites-shiseido_global_cn-Library/default/dwe572840d/landingshi/2026/20260309/section-1/6.png | status: ready
   - `shiseido-ultimune` | 护肤 | method: `product_detail_packshot_download_to_local_mirror` | priority: product_detail_packshot_download -> homepage_product_card_capture -> local_mirror | local: `/news/beauty/shiseido-ultimune-packshot.jpg` | candidate: https://www.shiseido.com.cn/dw/image/v2/BCSK_PRD/on/demandware.static/-/Sites-itemmaster_shiseido/default/dw6a224066/images/chuchuangtu/baidi/baiditu-s17283-50.jpg?sw=1000&sh=1000&sm=fit | status: ready
@@ -690,6 +887,10 @@ Brand count: 51
 - Status: ready 0, partial 1, needs replacement 0
 - Brand methods: official_homepage_banner_download -> official_collection_asset_download -> local_mirror
 - Notes: Shu Uemura China homepage exposes stable hero banner assets on res-wxec-unipt.lorealchina.com. Prefer a banner that clearly shows the featured product, such as the Ultime8 cleansing oil visual, then mirror locally.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Shu Uemura 默认入口` | 彩妆 | https://www.shuuemura.com.cn/ | extraction: first_product
 - Stories:
   - `shu-home` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/shuuemura-ultime8-oil.png` | candidate: https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png | status: partial
 
@@ -702,6 +903,10 @@ Brand count: 51
 - Status: ready 0, partial 3, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Tiffany & Co. 默认入口` | 珠宝 | https://www.tiffany.cn/jewelry/items/tiffany-hardwear-link-necklace-38086766/ | extraction: first_product
 - Stories:
   - `tiffany-hardwear` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/tiffany-hardwear.jpg` | candidate: none stored | status: partial
   - `tiffany-smile-necklace` | 珠宝 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/tiffany-smile-necklace.jpg` | candidate: none stored | status: partial
@@ -716,6 +921,10 @@ Brand count: 51
 - Status: ready 3, partial 0, needs replacement 0
 - Brand methods: product_gallery_currentSrc -> local_mirror
 - Notes: Use the exact product page gallery and prefer the front or detail image from currentSrc. Local PNG mirrors are more stable than relying on live CN CDN responses.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 3.
+- Crawl entries:
+  - `Van Cleef & Arpels 默认入口` | 珠宝 | https://www.vancleefarpels.cn/cn/zh/collections/jewelry/alhambra/vcarp9xg00---vintage-alhambra-pendant.html | extraction: first_product
 - Stories:
   - `vca-alhambra` | 珠宝 | method: `product_gallery_currentSrc_to_local_mirror` | priority: product_gallery_currentSrc -> local_mirror | local: `/news/luxury/vca-vintage-pendant.png` | candidate: https://www.vancleefarpels.cn/content/dam/rcq/vca/Rz/4M/Ut/Vy/QD/-6/c6/13/zo/4v/6g/Rz4MUtVyQD-6c613zo4v6g.png.transform.vca-w820-1x.png | status: ready
   - `vca-bracelet` | 珠宝 | method: `product_gallery_currentSrc_to_local_mirror` | priority: product_gallery_currentSrc -> local_mirror | local: `/news/luxury/vca-vintage-bracelet.png` | candidate: https://www.vancleefarpels.cn/content/dam/rcq/vca/L8/7Y/Eh/oM/Sg/yH/yH/Od/Bq/iJ/vg/L87YEhoMSgyHyHOdBqiJvg.png.transform.vca-w820-1x.png | status: ready
@@ -730,6 +939,10 @@ Brand count: 51
 - Status: ready 0, partial 1, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `vivo 默认入口` | 手机 | https://www.vivo.com.cn/vivo/xfold/ | extraction: first_product
 - Stories:
   - `vivo-xfold` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/vivo-xfold.png` | candidate: none stored | status: partial
 
@@ -742,6 +955,10 @@ Brand count: 51
 - Status: ready 2, partial 0, needs replacement 0
 - Brand methods: official_blog_asset_download -> official_product_page_image_download -> local_mirror
 - Notes: Wilson official blog pages expose stable article media URLs that can be mirrored locally. For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed.
+- Crawl mode: single_product_page
+- Crawl notes: Wilson uses the tennis entry page as the stable brand landing page, with blog or product pages as story-specific fallbacks.
+- Crawl entries:
+  - `Wilson Tennis` | 网球 | https://www.wilson.com/en-us/tennis | extraction: first_product
 - Stories:
   - `wilson-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: official_blog_asset_download -> official_product_page_image_download -> local_mirror | local: `/news/sports/wilson-rush-pro-4-5.jpg` | candidate: https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium | status: ready
   - `wilson-tennis-shoe` | 网球 | method: `local_mirror_of_official_asset` | priority: official_blog_asset_download -> official_product_page_image_download -> local_mirror | local: `/news/sports/wilson-rush-pro-4-5.jpg` | candidate: https://www.wilson.com/en-us/blog/tennis/wilson-labs/media_10a32f00163d82889342fb3ad4b904cf0c0d886a6.jpeg?width=1200&format=pjpg&optimize=medium | status: ready
@@ -755,6 +972,10 @@ Brand count: 51
 - Status: ready 0, partial 1, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `Winona 默认入口` | 护肤 | https://www.winona.cn/product/110010.html | extraction: first_product
 - Stories:
   - `winona-cream` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/winona-cream.jpg` | candidate: none stored | status: partial
 
@@ -767,6 +988,10 @@ Brand count: 51
 - Status: ready 0, partial 1, needs replacement 0
 - Brand methods: local_mirror
 - Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
+- Crawl mode: generic_html
+- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Crawl entries:
+  - `YONEX 默认入口` | 网球 | https://www.yonex.cn/home/index/mall/id/1 | extraction: first_product
 - Stories:
   - `yonex-tennis` | 网球 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/yonex-tennis-page.png` | candidate: none stored | status: partial
 

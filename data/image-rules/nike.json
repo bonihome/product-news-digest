@@ -17,11 +17,88 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "listing_first_product",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Nike China should start from 新品&潮流 under 潮流趋势 and then select the first product card from each themed listing page.",
+      "Mirror the chosen product image locally after extracting the first product from each listing."
+    ]
+  },
+  "crawl": {
+    "mode": "nike_trend_pages",
+    "entryPages": [
+      {
+        "label": "耐克飞马42",
+        "subcategory": "跑步",
+        "url": "https://www.nike.com.cn/w/pegasus-40-present-running-shoes-2yknpz37v7jzy7ok",
+        "extraction": "first_product"
+      },
+      {
+        "label": "耐克女子夜跑系列",
+        "subcategory": "跑步",
+        "url": "https://www.nike.com.cn/w/womens-running-essentials-4xmgfz5e1x6",
+        "extraction": "first_product"
+      },
+      {
+        "label": "ACG户外系列",
+        "subcategory": "户外",
+        "url": "https://www.nike.com.cn/w/acg-trail-running-75jcnz93bsd",
+        "extraction": "first_product"
+      },
+      {
+        "label": "耐高超新星篮球系列",
+        "subcategory": "篮球",
+        "url": "https://www.nike.com.cn/w/chbl-4lx21",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Lebron系列",
+        "subcategory": "篮球",
+        "url": "https://www.nike.com.cn/w/lebron-james-7y57x",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Ja系列",
+        "subcategory": "篮球",
+        "url": "https://www.nike.com.cn/w/ja-morant-4m5h1",
+        "extraction": "first_product"
+      },
+      {
+        "label": "耐克篮球新品",
+        "subcategory": "篮球",
+        "url": "https://www.nike.com.cn/w/basketball-3glsm",
+        "extraction": "first_product"
+      },
+      {
+        "label": "国家队系列",
+        "subcategory": "足球",
+        "url": "https://www.nike.com.cn/w/national-team-av9de",
+        "extraction": "first_product"
+      },
+      {
+        "label": "中超系列",
+        "subcategory": "足球",
+        "url": "https://www.nike.com.cn/w/nike-fc-a4rvy",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Football Club",
+        "subcategory": "足球",
+        "url": "https://www.nike.com.cn/w/football-club-6iait",
+        "extraction": "first_product"
+      },
+      {
+        "label": "游泳专区",
+        "subcategory": "游泳",
+        "url": "https://www.nike.com.cn/w/swimming-3c2dj",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.nike.com.cn/",
+    "notes": [
+      "Each configured listing page should yield the first visible product card as a news candidate."
     ]
   },
   "stories": [

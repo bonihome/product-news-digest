@@ -17,11 +17,27 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "single_official_product_page",
+      "official_editorial_asset_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "CHANEL Beauty stories currently rely on stable product or fragrance pages and mirrored official product imagery."
+    ]
+  },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "CHANEL Beauty 中国官网香氛",
+        "subcategory": "香水",
+        "url": "https://www.chanel.cn/cn/fragrance/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.chanel.cn/cn/beauty/",
+    "notes": [
+      "Beauty automation can begin from category pages, then use verified product pages in the story rule set."
     ]
   },
   "stories": [

@@ -26,6 +26,21 @@
       "Use an accessible ALLTERRAIN official line asset or a clean official page screenshot, then mirror locally."
     ]
   },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "DESCENTE ALLTERRAIN 官方网站",
+        "subcategory": "户外",
+        "url": "https://allterrain.descente.com/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://allterrain.descente.com/",
+    "notes": [
+      "DESCENTE should use the ALLTERRAIN landing page as the stable crawl entry and recover through stored story rules when a direct PDP disappears."
+    ]
+  },
   "stories": [
     {
       "storyId": "descente-allterrain",

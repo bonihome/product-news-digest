@@ -1,5 +1,5 @@
 import type { BrandProbe, BrandSourceRule, CrawlCandidate } from './types'
-import { findBrandImageRule, findImageRuleForCandidate } from './imageRules'
+import { findBrandCrawlRule, findBrandImageRule, findImageRuleForCandidate } from './imageRules'
 
 const APPLE_NEWSROOM_BASE = 'https://www.apple.com.cn'
 const LOUIS_VUITTON_CAPUCINES_URL =
@@ -270,6 +270,27 @@ type LouisVuittonLatestProduct = {
   sourceUrl: string
   title: string
   image: string
+}
+
+async function getConfiguredBrandPages(
+  brand: string,
+  mode: 'nike_trend_pages' | 'adidas_home_feed_pages' | 'louis_vuitton_latest_pages',
+  fallbackPages: ReadonlyArray<{ label: string; subcategory: string; url?: string; listingUrl?: string }>,
+) {
+  const crawlRule = await findBrandCrawlRule(brand)
+  if (crawlRule && crawlRule.mode === mode && crawlRule.entryPages.length > 0) {
+    return crawlRule.entryPages.map((entry) => ({
+      label: entry.label,
+      subcategory: entry.subcategory,
+      url: entry.url,
+    }))
+  }
+
+  return fallbackPages.map((entry) => ({
+    label: entry.label,
+    subcategory: entry.subcategory,
+    url: 'url' in entry && entry.url ? entry.url : entry.listingUrl ?? '',
+  }))
 }
 
 function extractNikeFirstProductFromListing(
@@ -617,7 +638,8 @@ async function fetchWilsonCandidate(rule: BrandSourceRule, checkedAt: string) {
 }
 
 async function fetchNikeTrendProducts(subcategory: string) {
-  const pages = NIKE_TREND_PAGES.filter((page) => page.subcategory === subcategory)
+  const configuredPages = await getConfiguredBrandPages('Nike', 'nike_trend_pages', NIKE_TREND_PAGES)
+  const pages = configuredPages.filter((page) => page.subcategory === subcategory)
   const products = await Promise.all(
     pages.map(async (page) => {
       const html = await fetchHtml(page.url)
@@ -629,11 +651,12 @@ async function fetchNikeTrendProducts(subcategory: string) {
 }
 
 async function fetchAdidasSectionProducts(subcategory: string) {
-  const pages = ADIDAS_HOME_FEED_PAGES.filter((page) => page.subcategory === subcategory)
+  const configuredPages = await getConfiguredBrandPages('Adidas', 'adidas_home_feed_pages', ADIDAS_HOME_FEED_PAGES)
+  const pages = configuredPages.filter((page) => page.subcategory === subcategory)
   const products = await Promise.all(
     pages.map(async (page) => {
-      const html = await fetchHtml(page.listingUrl)
-      return extractAdidasFirstProductFromListing(html, page.listingUrl, page.label, page.subcategory)
+      const html = await fetchHtml(page.url)
+      return extractAdidasFirstProductFromListing(html, page.url, page.label, page.subcategory)
     }),
   )
 
@@ -641,11 +664,16 @@ async function fetchAdidasSectionProducts(subcategory: string) {
 }
 
 async function fetchLouisVuittonLatestProducts(subcategory: string) {
-  const pages = LOUIS_VUITTON_LATEST_PAGES.filter((page) => page.subcategory === subcategory)
+  const configuredPages = await getConfiguredBrandPages(
+    'Louis Vuitton',
+    'louis_vuitton_latest_pages',
+    LOUIS_VUITTON_LATEST_PAGES,
+  )
+  const pages = configuredPages.filter((page) => page.subcategory === subcategory)
   const products = await Promise.all(
     pages.map(async (page) => {
-      const html = await fetchHtml(page.listingUrl)
-      return extractLouisVuittonLatestProduct(html, page.listingUrl, page.label, page.subcategory)
+      const html = await fetchHtml(page.url)
+      return extractLouisVuittonLatestProduct(html, page.url, page.label, page.subcategory)
     }),
   )
 

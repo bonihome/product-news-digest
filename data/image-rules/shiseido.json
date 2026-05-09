@@ -26,6 +26,22 @@
       "For homepage-led stories, prefer a product-card crop over a text-heavy hero banner."
     ]
   },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "SHISEIDO 默认入口",
+        "subcategory": "护肤",
+        "url": "https://www.shiseido.com.cn/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.shiseido.com.cn/",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 3."
+    ]
+  },
   "stories": [
     {
       "storyId": "shiseido-home",

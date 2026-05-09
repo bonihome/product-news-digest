@@ -17,11 +17,28 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "single_official_product_page",
+      "official_category_page_fallback",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Hermes can continue to use stable official product or category pages for watches, leather goods, jewelry, and fragrance.",
+      "When broader category automation is added later, preserve the exact official product pages already verified in the story rules as fallbacks."
+    ]
+  },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "爱马仕中国官网腕表",
+        "subcategory": "腕表",
+        "url": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.hermes.cn/cn/zh/",
+    "notes": [
+      "Hermes currently uses verified product/category pages rather than topic-feed extraction."
     ]
   },
   "stories": [

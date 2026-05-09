@@ -24,6 +24,22 @@
       "For remote official assets, the server can download and mirror the current image URL directly."
     ]
   },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "Gucci 默认入口",
+        "subcategory": "皮包",
+        "url": "https://www.gucci.cn/zh/pr/760253AAA7G1000",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.gucci.cn/zh/pr/760253AAA7G1000",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+    ]
+  },
   "stories": [
     {
       "storyId": "gucci-horsebit",

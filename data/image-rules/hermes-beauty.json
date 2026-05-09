@@ -17,11 +17,27 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "single_official_product_page",
+      "official_category_page_fallback",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Hermès Beauty fragrance stories currently use stable category or product pages with mirrored local assets."
+    ]
+  },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "Hermès Beauty 香氛",
+        "subcategory": "香水",
+        "url": "https://www.hermes.cn/cn/zh/category/fragrances/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.hermes.cn/cn/zh/category/beauty/",
+    "notes": [
+      "Hermès Beauty remains product-page led until broader category extraction is added."
     ]
   },
   "stories": [

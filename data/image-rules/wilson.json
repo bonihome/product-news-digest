@@ -26,6 +26,21 @@
       "For Rush Pro stories, prefer the official blog hero image first, then fall back to the tennis product page if needed."
     ]
   },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "Wilson Tennis",
+        "subcategory": "网球",
+        "url": "https://www.wilson.com/en-us/tennis",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.wilson.com/en-us/tennis",
+    "notes": [
+      "Wilson uses the tennis entry page as the stable brand landing page, with blog or product pages as story-specific fallbacks."
+    ]
+  },
   "stories": [
     {
       "storyId": "wilson-tennis",

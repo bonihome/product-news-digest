@@ -24,6 +24,22 @@
       "For remote official assets, the server can download and mirror the current image URL directly."
     ]
   },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "Burberry 默认入口",
+        "subcategory": "服装",
+        "url": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.burberry.cn/l/womens-clothing/new-arrivals/",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+    ]
+  },
   "stories": [
     {
       "storyId": "burberry",

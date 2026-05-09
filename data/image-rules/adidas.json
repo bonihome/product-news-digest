@@ -17,11 +17,58 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "home_module_first_product",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Adidas China should use 聚焦热点 and 新品推荐 modules as the entry surface for new products.",
+      "Each module topic resolves to a listing or SPLP page, where the first product is used as the news candidate."
+    ]
+  },
+  "crawl": {
+    "mode": "adidas_home_feed_pages",
+    "entryPages": [
+      {
+        "label": "极速蓝调",
+        "subcategory": "篮球",
+        "url": "https://www.adidas.com.cn/splp?contentId=SPLP_IGbhLTTi",
+        "extraction": "first_product"
+      },
+      {
+        "label": "自由人系列",
+        "subcategory": "户外",
+        "url": "https://www.adidas.com.cn/plp/campaign_25Aug_freehiker",
+        "extraction": "first_product"
+      },
+      {
+        "label": "静奢甄选",
+        "subcategory": "运动休闲",
+        "url": "https://www.adidas.com.cn/plp/homefeed_26Mar_refine_lux",
+        "extraction": "first_product"
+      },
+      {
+        "label": "城市机能风",
+        "subcategory": "户外",
+        "url": "https://www.adidas.com.cn/splp?contentId=SPLP_XHMibwZg",
+        "extraction": "first_product"
+      },
+      {
+        "label": "东方柔雅风",
+        "subcategory": "运动休闲",
+        "url": "https://www.adidas.com.cn/splp?contentId=SPLP_KrbvhObt",
+        "extraction": "first_product"
+      },
+      {
+        "label": "三条纹舞动系列",
+        "subcategory": "运动休闲",
+        "url": "https://www.adidas.com.cn/splp?contentId=SPLP_b4IzzDUp",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.adidas.com.cn/",
+    "notes": [
+      "When a home module listing no longer exposes a parseable first product, fall back to homepage-specific static stories and stored image rules."
     ]
   },
   "stories": [

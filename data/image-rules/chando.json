@@ -27,6 +27,22 @@
       "Mirror the verified product image locally after download."
     ]
   },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "CHANDO 默认入口",
+        "subcategory": "护肤",
+        "url": "https://www.chando-himalaya.com/product_detail_1241756158335782912.html",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.chando-himalaya.com/product_detail_1241756158335782912.html",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+    ]
+  },
   "stories": [
     {
       "storyId": "chando-purple",

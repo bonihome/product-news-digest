@@ -26,6 +26,22 @@
       "Prefer the square product image for tennis shoe stories, then mirror it locally."
     ]
   },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "ASICS 中国官网首页",
+        "subcategory": "网球",
+        "url": "https://www.asics.com.cn/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.asics.com.cn/",
+    "notes": [
+      "ASICS currently uses the China homepage as the stable discovery entry for tennis shoes.",
+      "When the homepage cannot resolve a product card, fall back to the stored story image and existing product-specific source pages."
+    ]
+  },
   "stories": [
     {
       "storyId": "asics-tennis",

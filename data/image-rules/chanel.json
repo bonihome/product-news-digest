@@ -17,13 +17,28 @@
   },
   "strategy": {
     "brandLevelMethods": [
-      "official_category_packshot_download",
+      "single_official_category_page",
       "official_editorial_asset_download",
       "local_mirror"
     ],
     "notes": [
-      "Chanel watch category pages expose stable packshot assets and editorial hero assets directly in page HTML.",
-      "Use the Premiere category packshot for Premiere stories, the J12 BLEU editorial asset for H10288, and mirror all selected images locally."
+      "Chanel luxury stories currently work best from verified category or editorial landing pages rather than deep dynamic navigation.",
+      "For watches, keep the category page as the stable source of truth and use editorials or packshots as product-image fallbacks."
+    ]
+  },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "香奈儿中国官网腕表频道",
+        "subcategory": "腕表",
+        "url": "https://www.chanel.cn/cn/watches/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.chanel.cn/cn/watches/",
+    "notes": [
+      "Chanel watch automation should prefer the watch category page instead of brittle deep product links."
     ]
   },
   "stories": [

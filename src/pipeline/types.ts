@@ -98,6 +98,25 @@ export type ImageRuleStoryAcquisition = {
   notes: string[]
 }
 
+export type BrandCrawlRuleEntry = {
+  label: string
+  subcategory: string
+  url: string
+  extraction: 'first_product'
+}
+
+export type BrandCrawlRule = {
+  mode:
+    | 'generic_html'
+    | 'single_product_page'
+    | 'nike_trend_pages'
+    | 'adidas_home_feed_pages'
+    | 'louis_vuitton_latest_pages'
+  entryPages: BrandCrawlRuleEntry[]
+  fallbackUrl: string | null
+  notes: string[]
+}
+
 export type ImageRuleStory = {
   storyId: string
   title: string
@@ -130,6 +149,7 @@ export type BrandImageRule = {
     brandLevelMethods: string[]
     notes: string[]
   }
+  crawl: BrandCrawlRule
   stories: ImageRuleStory[]
 }
 

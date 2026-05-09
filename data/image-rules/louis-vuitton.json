@@ -17,11 +17,64 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "latest_page_first_product",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Louis Vuitton China should use 新品系列 for women and men, plus current seasonal topic pages.",
+      "Each configured latest or topic page yields the first visible product image and its associated product link as the news candidate."
+    ]
+  },
+  "crawl": {
+    "mode": "louis_vuitton_latest_pages",
+    "entryPages": [
+      {
+        "label": "女士新品",
+        "subcategory": "服装",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5",
+        "extraction": "first_product"
+      },
+      {
+        "label": "男士新品",
+        "subcategory": "皮包",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9",
+        "extraction": "first_product"
+      },
+      {
+        "label": "LV Resort 系列",
+        "subcategory": "皮包",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Flight Mode 系列",
+        "subcategory": "皮包",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Nautical 系列",
+        "subcategory": "皮包",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc",
+        "extraction": "first_product"
+      },
+      {
+        "label": "春夏女装系列",
+        "subcategory": "皮包",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1",
+        "extraction": "first_product"
+      },
+      {
+        "label": "路易威登 × 村上隆合作系列",
+        "subcategory": "皮包",
+        "url": "https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.louisvuitton.cn/zhs-cn/new",
+    "notes": [
+      "Use the first LV product image in each topic page and derive the product detail URL from the article code when possible."
     ]
   },
   "stories": [
