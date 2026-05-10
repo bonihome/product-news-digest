@@ -33,6 +33,18 @@
         "subcategory": "香水",
         "url": "https://www.hermes.cn/cn/zh/category/fragrances/",
         "extraction": "first_product"
+      },
+      {
+        "label": "Hermès Beauty Terre d’Hermès 产品页",
+        "subcategory": "香水",
+        "url": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%A4%A7%E5%9C%B0%E9%A6%A5%E9%83%81%E9%A6%99%E6%A0%B9%E8%8D%89%E9%A6%99%E5%9E%8B%E9%A6%99%E6%B0%B4-V40946/",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Hermès Beauty Twilly d’Hermès 产品页",
+        "subcategory": "香水",
+        "url": "https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E4%B8%9D%E6%84%8F%E8%8D%94%E9%9F%B5%E6%B7%A1%E9%A6%99%E7%B2%BE-V110826VN/",
+        "extraction": "first_product"
       }
     ],
     "fallbackUrl": "https://www.hermes.cn/cn/zh/category/beauty/",

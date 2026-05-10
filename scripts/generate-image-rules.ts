@@ -5,6 +5,7 @@ import { beautyNews } from '../src/data/beautyNews.ts'
 import { digitalNews } from '../src/data/digitalNews.ts'
 import { luxuryNews } from '../src/data/luxuryNews.ts'
 import { sportsNews } from '../src/data/sportsNews.ts'
+import { webgamesNews } from '../src/data/webgamesNews.ts'
 import type { Story } from '../src/data/types.ts'
 
 type AutomationStatus = 'ready' | 'partial' | 'needs_replacement'
@@ -52,6 +53,11 @@ type BrandRule = {
     mode:
       | 'generic_html'
       | 'single_product_page'
+      | 'prada_category_pages'
+      | 'samsung_buy_pages'
+      | 'poki_new_games'
+      | 'crazygames_new_games'
+      | 'arcadrome_home_games'
       | 'nike_trend_pages'
       | 'adidas_home_feed_pages'
       | 'louis_vuitton_latest_pages'
@@ -96,7 +102,7 @@ type BrandMethodSummary = {
   }>
 }
 
-const allStories = [...luxuryNews, ...beautyNews, ...sportsNews, ...digitalNews]
+const allStories = [...luxuryNews, ...beautyNews, ...sportsNews, ...digitalNews, ...webgamesNews]
 const outputDir = path.resolve('data/image-rules')
 
 const brandStrategyOverrides: Record<
@@ -115,16 +121,16 @@ const brandStrategyOverrides: Record<
       'Prefer SLF front-view assets and mirror them locally for stable server delivery.',
     ],
     crawl: {
-      mode: 'single_product_page',
+      mode: 'prada_category_pages',
       entryPages: [
-        { label: 'Prada 皮包已验证产品页', subcategory: '皮包', url: 'https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO', extraction: 'first_product' },
-        { label: 'Prada 成衣已验证产品页', subcategory: '服装', url: 'https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO', extraction: 'first_product' },
-        { label: 'Prada 珠宝已验证产品页', subcategory: '珠宝', url: 'https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html', extraction: 'first_product' },
+        { label: 'Prada 女士新品', subcategory: '皮包', url: 'https://www.prada.cn/cn/zh/womens/new-in/c/10111CN', extraction: 'first_product' },
+        { label: 'Prada 女士新品', subcategory: '服装', url: 'https://www.prada.cn/cn/zh/womens/new-in/c/10111CN', extraction: 'first_product' },
+        { label: 'Prada Eternal Gold 系列', subcategory: '珠宝', url: 'https://www.prada.cn/cn/zh/fine-jewelry/eternal-gold/c/10763CN', extraction: 'first_product' },
       ],
       fallbackUrl: 'https://www.prada.cn/cn/zh.html',
       notes: [
-        'Prada currently works best from verified product pages because many category pages are dynamically rendered and can fail under headless fetch.',
-        'Keep using verified product pages and the DAM reconstruction pattern until a stable Prada category-feed parser is added.',
+        'Prada now begins from the women new-in or Eternal Gold collection pages so the pipeline can follow fresher arrivals instead of a single fixed PDP.',
+        'If category extraction fails, keep using verified product pages and the DAM reconstruction pattern as fallbacks.',
       ],
     },
   },
@@ -192,12 +198,12 @@ const brandStrategyOverrides: Record<
     crawl: {
       mode: 'single_product_page',
       entryPages: [
-        { label: 'Dior 女士皮具已验证产品页', subcategory: '皮包', url: 'https://www.dior.cn/zh_cn/fashion/products/M1325OWHP_M030', extraction: 'first_product' },
-        { label: 'Dior 珠宝已验证产品页', subcategory: '珠宝', url: 'https://www.dior.com/zh_cn/fashion/products/JRDV95015_0000', extraction: 'first_product' },
+        { label: 'Dior Lady D-Joy 手袋系列页', subcategory: '皮包', url: 'https://www.dior.cn/zh_cn/fashion/bags/lady-d-joy', extraction: 'first_product' },
+        { label: 'Dior Rose des Vents 珠宝系列页', subcategory: '珠宝', url: 'https://www.dior.cn/zh_cn/fashion/jewelry-timepieces/rose-des-vents-home', extraction: 'first_product' },
       ],
       fallbackUrl: 'https://www.dior.cn/zh_cn/fashion',
       notes: [
-        'Dior luxury should continue using already verified bag and jewelry PDPs as crawl anchors.',
+        'Dior luxury now starts from Lady D-Joy and Rose des Vents series pages so the pipeline can follow current series-led merchandising.',
       ],
     },
   },
@@ -211,7 +217,9 @@ const brandStrategyOverrides: Record<
       mode: 'single_product_page',
       entryPages: [
         { label: "Dior Beauty What's New", subcategory: '彩妆', url: 'https://www.dior.com/en_us/beauty/page/whats-new.html', extraction: 'first_product' },
-        { label: 'Dior Beauty Miss Dior', subcategory: '香水', url: 'https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior', extraction: 'first_product' },
+        { label: 'Dior Beauty Miss Dior 系列', subcategory: '香水', url: 'https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior', extraction: 'first_product' },
+        { label: 'Dior Beauty J’adore 系列', subcategory: '香水', url: 'https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/jadore', extraction: 'first_product' },
+        { label: 'Dior Beauty Sauvage 产品页', subcategory: '香水', url: 'https://www.dior.cn/zh_cn/beauty/products/y0685240-sauvage-eau-de-toilette', extraction: 'first_product' },
       ],
       fallbackUrl: 'https://www.dior.cn/zh_cn/beauty',
       notes: [
@@ -422,6 +430,8 @@ const brandStrategyOverrides: Record<
       mode: 'single_product_page',
       entryPages: [
         { label: 'CHANEL Beauty 中国官网香氛', subcategory: '香水', url: 'https://www.chanel.cn/cn/fragrance/', extraction: 'first_product' },
+        { label: 'CHANEL Beauty N°5 产品页', subcategory: '香水', url: 'https://www.chanel.cn/cn/fragrance/p/125530/n5-eau-de-parfum-spray/', extraction: 'first_product' },
+        { label: 'CHANEL Beauty Chance 系列产品页', subcategory: '香水', url: 'https://www.chanel.cn/cn/fragrance/p/136210/chance-eau-splendide-eau-de-parfum-spray/', extraction: 'first_product' },
       ],
       fallbackUrl: 'https://www.chanel.cn/cn/beauty/',
       notes: [
@@ -438,6 +448,8 @@ const brandStrategyOverrides: Record<
       mode: 'single_product_page',
       entryPages: [
         { label: 'Hermès Beauty 香氛', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/category/fragrances/', extraction: 'first_product' },
+        { label: 'Hermès Beauty Terre d’Hermès 产品页', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%A4%A7%E5%9C%B0%E9%A6%A5%E9%83%81%E9%A6%99%E6%A0%B9%E8%8D%89%E9%A6%99%E5%9E%8B%E9%A6%99%E6%B0%B4-V40946/', extraction: 'first_product' },
+        { label: 'Hermès Beauty Twilly d’Hermès 产品页', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E4%B8%9D%E6%84%8F%E8%8D%94%E9%9F%B5%E6%B7%A1%E9%A6%99%E7%B2%BE-V110826VN/', extraction: 'first_product' },
       ],
       fallbackUrl: 'https://www.hermes.cn/cn/zh/category/beauty/',
       notes: [
@@ -452,15 +464,66 @@ const brandStrategyOverrides: Record<
       'When homepage modules shift, keep the mirrored official image assets and story-level PDP references as fallbacks.',
     ],
     crawl: {
-      mode: 'single_product_page',
+      mode: 'samsung_buy_pages',
       entryPages: [
-        { label: '三星中国官网首页', subcategory: '手机', url: 'https://www.samsung.com/cn/', extraction: 'first_product' },
-        { label: '三星中国官网首页', subcategory: '平板', url: 'https://www.samsung.com/cn/', extraction: 'first_product' },
-        { label: '三星中国官网首页', subcategory: '配件', url: 'https://www.samsung.com/cn/', extraction: 'first_product' },
+        { label: 'Galaxy S26 Ultra', subcategory: '手机', url: 'https://www.samsung.com.cn/smartphones/galaxy-s26-ultra/buy/', extraction: 'first_product' },
+        { label: 'Galaxy Tab S11', subcategory: '平板', url: 'https://www.samsung.com.cn/tablets/galaxy-tab-s11/buy/', extraction: 'first_product' },
+        { label: 'Galaxy Buds4 Pro', subcategory: '配件', url: 'https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/', extraction: 'first_product' },
       ],
-      fallbackUrl: 'https://www.samsung.com/cn/',
+      fallbackUrl: 'https://www.samsung.com.cn/',
       notes: [
-        'Samsung is homepage-led for now; future category-specific Galaxy parsers can replace this single_product_page-style fallback.',
+        'Samsung now uses product-category buy pages for phones, tablets, and accessories instead of only the homepage.',
+      ],
+    },
+  },
+  Poki: {
+    methods: ['new_games_listing_parse', 'detail_page_og_image_download', 'local_mirror'],
+    notes: [
+      'Poki exposes a structured New Games page and individual game detail pages with stable og:image assets.',
+      'Prefer the newest game tile from the New Games collection, then mirror the game logo locally.',
+    ],
+    crawl: {
+      mode: 'poki_new_games',
+      entryPages: [
+        { label: 'Poki New Games', subcategory: '新游', url: 'https://poki.com/en/new', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://poki.com/en/new',
+      notes: [
+        'Use Poki New Games as the primary discovery surface and fetch the first current game from the structured games feed.',
+      ],
+    },
+  },
+  CrazyGames: {
+    methods: ['new_games_listing_parse', 'detail_page_og_image_download', 'local_mirror'],
+    notes: [
+      'CrazyGames exposes a dedicated New page where the first game route can be extracted directly from the listing HTML.',
+      'After finding the game URL, fetch the detail page title and og:image as the stable news source.',
+    ],
+    crawl: {
+      mode: 'crazygames_new_games',
+      entryPages: [
+        { label: 'CrazyGames New', subcategory: '新游', url: 'https://www.crazygames.com/new', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.crazygames.com/new',
+      notes: [
+        'Use the CrazyGames New page and promote the first listed game into the webgame news feed.',
+      ],
+    },
+  },
+  Arcadrome: {
+    methods: ['homepage_new_game_parse', 'detail_page_og_image_download', 'local_mirror'],
+    notes: [
+      'Arcadrome homepage exposes its latest game links directly in HTML and each game detail page provides a stable title and og:image.',
+      'Use the homepage first visible game entry as the newest game signal.',
+    ],
+    crawl: {
+      mode: 'arcadrome_home_games',
+      entryPages: [
+        { label: 'Arcadrome 首页新游', subcategory: '新游', url: 'https://arcadrome.com/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://arcadrome.com/',
+      notes: [
+        'Use the Arcadrome homepage first game card as the current new-game source.',
       ],
     },
   },

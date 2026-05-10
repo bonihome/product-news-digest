@@ -272,9 +272,39 @@ type LouisVuittonLatestProduct = {
   image: string
 }
 
+type PradaCategoryProduct = {
+  label: string
+  subcategory: string
+  listingUrl: string
+  sourceUrl: string
+  title: string
+  image: string
+}
+
+type SamsungBuyPageProduct = {
+  label: string
+  subcategory: string
+  sourceUrl: string
+  title: string
+  image: string
+}
+
+type WebgamePortalProduct = {
+  label: string
+  subcategory: string
+  sourceUrl: string
+  title: string
+  image: string
+}
+
 async function getConfiguredBrandPages(
   brand: string,
-  mode: 'nike_trend_pages' | 'adidas_home_feed_pages' | 'louis_vuitton_latest_pages',
+  mode:
+    | 'nike_trend_pages'
+    | 'adidas_home_feed_pages'
+    | 'louis_vuitton_latest_pages'
+    | 'prada_category_pages'
+    | 'samsung_buy_pages',
   fallbackPages: ReadonlyArray<{ label: string; subcategory: string; url?: string; listingUrl?: string }>,
 ) {
   const crawlRule = await findBrandCrawlRule(brand)
@@ -291,6 +321,208 @@ async function getConfiguredBrandPages(
     subcategory: entry.subcategory,
     url: 'url' in entry && entry.url ? entry.url : entry.listingUrl ?? '',
   }))
+}
+
+function cleanGameTitle(rawTitle: string) {
+  return collapseWhitespace(
+    decodeHtmlEntities(rawTitle)
+      .replace(/\s*-\s*Play Online for Free!\s*\|\s*Poki$/i, '')
+      .replace(/\s*-\s*Play Online for Free!\s*\|\s*Arcadrome$/i, '')
+      .replace(/\s*🕹️\s*Play on CrazyGames$/i, '')
+      .replace(/\s*\|\s*CrazyGames$/i, ''),
+  )
+}
+
+function unique<T>(values: T[]) {
+  return Array.from(new Set(values))
+}
+
+function normalizeProductSlugTitle(slug: string) {
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((part) => {
+      if (/^(lv|tm|gt|acg)$/i.test(part)) {
+        return part.toUpperCase()
+      }
+
+      if (/^[a-z0-9]+$/i.test(part)) {
+        return part.charAt(0).toUpperCase() + part.slice(1)
+      }
+
+      return part
+    })
+    .join(' ')
+}
+
+function extractPradaTitleFromProductUrl(url: string) {
+  const match = url.match(/\/p\/([^/]+)\//i)
+  if (!match) {
+    return 'Prada 新品'
+  }
+
+  return normalizeProductSlugTitle(decodeURIComponent(match[1]))
+}
+
+function getPradaSubcategoryMatchers(subcategory: string) {
+  if (subcategory === '皮包') {
+    return ['handbag', 'tote-bag', 'tote', 'shoulder-bag', 'bag', 'pouch', 'wallet']
+  }
+
+  if (subcategory === '服装') {
+    return ['shirt', 'skirt', 'jacket', 'dress', 'coat', 'pants', 'shorts', 'top', 'sweater', 'cardigan']
+  }
+
+  if (subcategory === '珠宝') {
+    return ['necklace', 'bracelet', 'pendant', 'earrings', 'ring', 'brooch']
+  }
+
+  return []
+}
+
+function extractPradaCategoryProduct(
+  html: string,
+  listingUrl: string,
+  label: string,
+  subcategory: string,
+): PradaCategoryProduct | null {
+  const urls = unique(
+    [...html.matchAll(/https:\/\/www\.prada\.cn\/cn\/zh\/p\/[^"' )]+/gi)].map((match) =>
+      decodeHtmlEntities(match[0].replace(/,$/, '')),
+    ),
+  )
+  const imageUrls = unique(
+    [...html.matchAll(/https:\/\/www\.prada\.com\/content\/dam\/[^"' )]+_SLF\.jpg(?:\/_jcr_content\/renditions\/[^"' )]+)?/gi)].map(
+      (match) => decodeHtmlEntities(match[0].replace(/,$/, '')),
+    ),
+  )
+  const matchers = getPradaSubcategoryMatchers(subcategory)
+
+  let selectedIndex = urls.findIndex((url) =>
+    matchers.some((matcher) => url.toLowerCase().includes(matcher)),
+  )
+
+  if (selectedIndex < 0) {
+    selectedIndex = 0
+  }
+
+  const sourceUrl = urls[selectedIndex]
+  if (!sourceUrl) {
+    return null
+  }
+
+  return {
+    label,
+    subcategory,
+    listingUrl,
+    sourceUrl,
+    title: extractPradaTitleFromProductUrl(sourceUrl),
+    image: imageUrls[selectedIndex] ?? imageUrls[0] ?? '',
+  }
+}
+
+function extractSamsungBuyPageProduct(
+  html: string,
+  pageUrl: string,
+  label: string,
+  subcategory: string,
+): SamsungBuyPageProduct | null {
+  const title =
+    extractMatch(html, /"groupName":"([^"]+)"/) ??
+    extractMatch(html, /"displayModelName":"([^"]+)"/) ??
+    extractMatch(html, /"displayName":"(Galaxy[^"]+)"/)
+  const image =
+    extractMatch(html, /<link rel="preload" as="image" media="\(min-width:768px\)" href="([^"]+)"/i) ??
+    extractMatch(html, /"largeImage":"(\/\/images\.samsung\.com\.cn\/[^"]+)"/i)
+
+  if (!title) {
+    return null
+  }
+
+  return {
+    label,
+    subcategory,
+    sourceUrl: pageUrl,
+    title: collapseWhitespace(decodeHtmlEntities(title)),
+    image: image ? makeAbsoluteUrl(decodeHtmlEntities(image), 'https://www.samsung.com.cn') : '',
+  }
+}
+
+function extractPokiNewGameProduct(
+  html: string,
+  _pageUrl: string,
+  label: string,
+  subcategory: string,
+): WebgamePortalProduct | null {
+  const match = html.match(
+    /"games":\[\{"id":\d+,[\s\S]*?"title":"([^"]+)"[\s\S]*?"image":\{"path":"([^"]+)"\}[\s\S]*?"url":"([^"]+)"/,
+  )
+
+  if (!match) {
+    return null
+  }
+
+  const title = cleanGameTitle(match[1])
+  const imagePath = decodeHtmlEntities(match[2]).replace(/\\u002F/g, '/')
+  const relativeUrl = decodeHtmlEntities(match[3]).replace(/\\u002F/g, '/')
+
+  return {
+    label,
+    subcategory,
+    sourceUrl: makeAbsoluteUrl(relativeUrl, 'https://poki.com'),
+    title,
+    image: `https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/${imagePath}`,
+  }
+}
+
+async function fetchGameDetailProduct(
+  detailUrl: string,
+  label: string,
+  subcategory: string,
+): Promise<WebgamePortalProduct | null> {
+  const html = await fetchHtml(detailUrl)
+  const sourceTitle = extractTitleFromHtml(html)
+  const image = extractImageFromHtml(html, detailUrl) ?? ''
+
+  if (!sourceTitle) {
+    return null
+  }
+
+  return {
+    label,
+    subcategory,
+    sourceUrl: detailUrl,
+    title: cleanGameTitle(sourceTitle),
+    image,
+  }
+}
+
+async function extractCrazyGamesNewGameProduct(
+  html: string,
+  _pageUrl: string,
+  label: string,
+  subcategory: string,
+): Promise<WebgamePortalProduct | null> {
+  const relativeUrl = extractMatch(html, /(\/game\/[a-z0-9-]+)/i)
+  if (!relativeUrl) {
+    return null
+  }
+
+  return fetchGameDetailProduct(makeAbsoluteUrl(relativeUrl, 'https://www.crazygames.com'), label, subcategory)
+}
+
+async function extractArcadromeHomeGameProduct(
+  html: string,
+  _pageUrl: string,
+  label: string,
+  subcategory: string,
+): Promise<WebgamePortalProduct | null> {
+  const relativeUrl = extractMatch(html, /(\/en\/games\/[a-z0-9-]+)/i)
+  if (!relativeUrl) {
+    return null
+  }
+
+  return fetchGameDetailProduct(makeAbsoluteUrl(relativeUrl, 'https://arcadrome.com'), label, subcategory)
 }
 
 function extractNikeFirstProductFromListing(
@@ -680,6 +912,91 @@ async function fetchLouisVuittonLatestProducts(subcategory: string) {
   return products.filter((product): product is LouisVuittonLatestProduct => Boolean(product))
 }
 
+async function fetchPradaCategoryProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('Prada')
+  if (!crawlRule || crawlRule.mode !== 'prada_category_pages') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractPradaCategoryProduct(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is PradaCategoryProduct => Boolean(product))
+}
+
+async function fetchSamsungBuyPageProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('Samsung')
+  if (!crawlRule || crawlRule.mode !== 'samsung_buy_pages') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractSamsungBuyPageProduct(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is SamsungBuyPageProduct => Boolean(product))
+}
+
+async function fetchPokiNewGameProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('Poki')
+  if (!crawlRule || crawlRule.mode !== 'poki_new_games') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractPokiNewGameProduct(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is WebgamePortalProduct => Boolean(product))
+}
+
+async function fetchCrazyGamesNewProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('CrazyGames')
+  if (!crawlRule || crawlRule.mode !== 'crazygames_new_games') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractCrazyGamesNewGameProduct(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is WebgamePortalProduct => Boolean(product))
+}
+
+async function fetchArcadromeHomeProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('Arcadrome')
+  if (!crawlRule || crawlRule.mode !== 'arcadrome_home_games') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractArcadromeHomeGameProduct(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is WebgamePortalProduct => Boolean(product))
+}
+
 async function fetchAdidasCandidates(rule: BrandSourceRule, checkedAt: string) {
   const products = await fetchAdidasSectionProducts(rule.subcategory)
 
@@ -713,6 +1030,68 @@ async function fetchLouisVuittonLatestCandidates(rule: BrandSourceRule, checkedA
       sourceUrl: product.sourceUrl,
       sourceTitle: product.title,
       sourceSummary: `Louis Vuitton 中国官网“${product.label}”页当前首个新品为 ${product.title}，已作为 ${product.subcategory} 新品候选写入抓取流程。`,
+      products: [product.title, product.label, ...rule.products.slice(0, 1)],
+      image: product.image,
+      matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+    }),
+  )
+}
+
+async function fetchPradaCategoryCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const products = await fetchPradaCategoryProducts(rule.subcategory)
+
+  if (products.length === 0) {
+    return [await fetchGenericCandidate(rule, checkedAt)]
+  }
+
+  return products.map((product) =>
+    buildCandidate(rule, checkedAt, {
+      sourceLabel: `Prada 中国官网·${product.label}`,
+      sourceUrl: product.sourceUrl,
+      sourceTitle: product.title,
+      sourceSummary: `Prada 中国官网“${product.label}”页当前首个 ${product.subcategory} 产品为 ${product.title}，已作为新品候选写入抓取流程。`,
+      products: [product.title, product.label, ...rule.products.slice(0, 1)],
+      image: product.image,
+      matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+    }),
+  )
+}
+
+async function fetchSamsungBuyPageCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const products = await fetchSamsungBuyPageProducts(rule.subcategory)
+
+  if (products.length === 0) {
+    return [await fetchGenericCandidate(rule, checkedAt)]
+  }
+
+  return products.map((product) =>
+    buildCandidate(rule, checkedAt, {
+      sourceLabel: `Samsung 中国官网·${product.label}`,
+      sourceUrl: product.sourceUrl,
+      sourceTitle: product.title,
+      sourceSummary: `Samsung 中国官网“${product.label}”买页当前首个可售型号为 ${product.title}，已作为 ${product.subcategory} 新品候选写入抓取流程。`,
+      products: [product.title, product.label, ...rule.products.slice(0, 1)],
+      image: product.image,
+      matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+    }),
+  )
+}
+
+async function fetchWebgameCandidates(
+  rule: BrandSourceRule,
+  checkedAt: string,
+  products: WebgamePortalProduct[],
+) {
+  if (products.length === 0) {
+    return [await fetchGenericCandidate(rule, checkedAt)]
+  }
+
+  return products.map((product) =>
+    buildCandidate(rule, checkedAt, {
+      sourceLabel: `${rule.brand} 官方来源·${product.label}`,
+      sourceUrl: product.sourceUrl,
+      sourceTitle: product.title,
+      sourceSummary: `${rule.brand} 当前按“${product.label}”入口页抓取到首个新游戏 ${product.title}，已作为网页游戏新品候选写入抓取流程。`,
       products: [product.title, product.label, ...rule.products.slice(0, 1)],
       image: product.image,
       matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
@@ -774,6 +1153,30 @@ async function fetchConfiguredSinglePageCandidates(rule: BrandSourceRule, checke
   return candidates
 }
 
+async function fetchConfiguredRuleCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const crawlRule = await findBrandCrawlRule(rule.brand)
+  if (!crawlRule) {
+    return null
+  }
+
+  switch (crawlRule.mode) {
+    case 'prada_category_pages':
+      return fetchPradaCategoryCandidates(rule, checkedAt)
+    case 'samsung_buy_pages':
+      return fetchSamsungBuyPageCandidates(rule, checkedAt)
+    case 'poki_new_games':
+      return fetchWebgameCandidates(rule, checkedAt, await fetchPokiNewGameProducts(rule.subcategory))
+    case 'crazygames_new_games':
+      return fetchWebgameCandidates(rule, checkedAt, await fetchCrazyGamesNewProducts(rule.subcategory))
+    case 'arcadrome_home_games':
+      return fetchWebgameCandidates(rule, checkedAt, await fetchArcadromeHomeProducts(rule.subcategory))
+    case 'single_product_page':
+      return fetchConfiguredSinglePageCandidates(rule, checkedAt)
+    default:
+      return null
+  }
+}
+
 async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: string) {
   const html = await fetchHtml(rule.listUrl)
   const sourceTitle =
@@ -791,9 +1194,9 @@ async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: 
 }
 
 async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
-  const configuredSinglePageCandidates = await fetchConfiguredSinglePageCandidates(rule, checkedAt)
-  if (configuredSinglePageCandidates && configuredSinglePageCandidates.length > 0) {
-    return configuredSinglePageCandidates[0]
+  const configuredRuleCandidates = await fetchConfiguredRuleCandidates(rule, checkedAt)
+  if (configuredRuleCandidates && configuredRuleCandidates.length > 0) {
+    return configuredRuleCandidates[0]
   }
 
   switch (rule.brand) {
@@ -821,9 +1224,9 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
 }
 
 async function fetchRealProbe(rule: BrandSourceRule, checkedAt: string): Promise<BrandProbe[] | null> {
-  const configuredSinglePageCandidates = await fetchConfiguredSinglePageCandidates(rule, checkedAt)
-  if (configuredSinglePageCandidates && configuredSinglePageCandidates.length > 0) {
-    return configuredSinglePageCandidates.map(toProbe)
+  const configuredRuleCandidates = await fetchConfiguredRuleCandidates(rule, checkedAt)
+  if (configuredRuleCandidates && configuredRuleCandidates.length > 0) {
+    return configuredRuleCandidates.map(toProbe)
   }
 
   if (rule.brand === 'Nike') {
@@ -892,9 +1295,9 @@ export async function probeBrandSource(rule: BrandSourceRule): Promise<BrandProb
 
 export async function fetchCandidatesForBrand(rule: BrandSourceRule, probes?: BrandProbe[]): Promise<CrawlCandidate[]> {
   const checkedAt = new Date().toISOString()
-  const configuredSinglePageCandidates = await fetchConfiguredSinglePageCandidates(rule, checkedAt)
-  if (configuredSinglePageCandidates && configuredSinglePageCandidates.length > 0) {
-    return Promise.all(configuredSinglePageCandidates.map((candidate) => applyImageRuleHints(rule, candidate)))
+  const configuredRuleCandidates = await fetchConfiguredRuleCandidates(rule, checkedAt)
+  if (configuredRuleCandidates && configuredRuleCandidates.length > 0) {
+    return Promise.all(configuredRuleCandidates.map((candidate) => applyImageRuleHints(rule, candidate)))
   }
 
   if (rule.brand === 'Nike') {

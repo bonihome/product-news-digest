@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "brand": "Poki",
+  "slug": "poki",
+  "categories": [
+    "webgames"
+  ],
+  "officialDomains": [
+    "poki.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "new_games_listing_parse",
+      "detail_page_og_image_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "Poki exposes a structured New Games page and individual game detail pages with stable og:image assets.",
+      "Prefer the newest game tile from the New Games collection, then mirror the game logo locally."
+    ]
+  },
+  "crawl": {
+    "mode": "poki_new_games",
+    "entryPages": [
+      {
+        "label": "Poki New Games",
+        "subcategory": "新游",
+        "url": "https://poki.com/en/new",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://poki.com/en/new",
+    "notes": [
+      "Use Poki New Games as the primary discovery surface and fetch the first current game from the structured games feed."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "poki-count-war",
+      "title": "Poki 上线 Count War，继续扩展轻策略与数字闯关类网页游戏",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Count War",
+        "轻策略闯关",
+        "Poki 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://poki.com/en/g/count-war",
+      "currentImage": "/news/webgames/poki-count-war.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/poki-count-war.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "poki-snacky-snake",
+      "title": "Poki 推出 Snacky Snake，休闲反应类新游继续补强平台新品池",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Snacky Snake",
+        "休闲反应玩法",
+        "Poki 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://poki.com/en/g/snacky-snake",
+      "currentImage": "/news/webgames/poki-snacky-snake.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/poki-snacky-snake.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

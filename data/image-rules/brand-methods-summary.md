@@ -3,8 +3,8 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-10T12:47:14.485Z
-Brand count: 51
+Generated at: 2026-05-10T13:59:13.503Z
+Brand count: 54
 
 ## Adidas
 
@@ -73,6 +73,23 @@ Brand count: 51
 - Stories:
   - `arcteryx-alpha-sv` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/arcteryx-alpha-sv-hanging.jpg` | candidate: https://cdn.sanity.io/images/inkbj32c/production/7a649d6f8f0ee59bd267191e4d08009dc30afddf-600x600.jpg?auto=format&q=75 | status: partial
   - `arcteryx-alpha-sv-detail` | 户外 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/sports/arcteryx-alpha-sv-detail.jpg` | candidate: https://cdn.sanity.io/images/inkbj32c/production/e5a16a928380d0c5c9e0f083bc2fe8133714d98d-600x600.jpg?auto=format&q=75 | status: partial
+
+## Arcadrome
+
+- Slug: `arcadrome`
+- Categories: webgames
+- Official domains: arcadrome.com
+- Story count: 2
+- Status: ready 0, partial 2, needs replacement 0
+- Brand methods: homepage_new_game_parse -> detail_page_og_image_download -> local_mirror
+- Notes: Arcadrome homepage exposes its latest game links directly in HTML and each game detail page provides a stable title and og:image. Use the homepage first visible game entry as the newest game signal.
+- Crawl mode: arcadrome_home_games
+- Crawl notes: Use the Arcadrome homepage first game card as the current new-game source.
+- Crawl entries:
+  - `Arcadrome 首页新游` | 新游 | https://arcadrome.com/ | extraction: first_product
+- Stories:
+  - `arcadrome-lunar-knight` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/arcadrome-lunar-knight.avif` | candidate: none stored | status: partial
+  - `arcadrome-idle-lumber-inc` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/arcadrome-idle-lumber-inc.png` | candidate: none stored | status: partial
 
 ## ASICS
 
@@ -229,6 +246,8 @@ Brand count: 51
 - Crawl notes: Beauty automation can begin from category pages, then use verified product pages in the story rule set.
 - Crawl entries:
   - `CHANEL Beauty 中国官网香氛` | 香水 | https://www.chanel.cn/cn/fragrance/ | extraction: first_product
+  - `CHANEL Beauty N°5 产品页` | 香水 | https://www.chanel.cn/cn/fragrance/p/125530/n5-eau-de-parfum-spray/ | extraction: first_product
+  - `CHANEL Beauty Chance 系列产品页` | 香水 | https://www.chanel.cn/cn/fragrance/p/136210/chance-eau-splendide-eau-de-parfum-spray/ | extraction: first_product
 - Stories:
   - `chanel-beauty-n5-fragrance` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-n5.png` | candidate: none stored | status: partial
   - `chanel-beauty-chance-tendre` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/chanel-chance-tendre.png` | candidate: none stored | status: partial
@@ -288,6 +307,23 @@ Brand count: 51
   - `clinique-yellow-moisturizer` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/clinique-yellow-moisturizer.jpg` | candidate: none stored | status: partial
   - `clinique-eb-milky-lotion` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/clinique-eb-milky-lotion.jpg` | candidate: none stored | status: partial
 
+## CrazyGames
+
+- Slug: `crazygames`
+- Categories: webgames
+- Official domains: www.crazygames.com
+- Story count: 2
+- Status: ready 0, partial 2, needs replacement 0
+- Brand methods: new_games_listing_parse -> detail_page_og_image_download -> local_mirror
+- Notes: CrazyGames exposes a dedicated New page where the first game route can be extracted directly from the listing HTML. After finding the game URL, fetch the detail page title and og:image as the stable news source.
+- Crawl mode: crazygames_new_games
+- Crawl notes: Use the CrazyGames New page and promote the first listed game into the webgame news feed.
+- Crawl entries:
+  - `CrazyGames New` | 新游 | https://www.crazygames.com/new | extraction: first_product
+- Stories:
+  - `crazygames-trash-master` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/crazygames-trash-master.jpg` | candidate: none stored | status: partial
+  - `crazygames-bills-must-be-paid` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/crazygames-bills-must-be-paid.jpg` | candidate: none stored | status: partial
+
 ## DESCENTE
 
 - Slug: `descente`
@@ -316,10 +352,10 @@ Brand count: 51
 - Brand methods: verified_product_page_download -> official_product_page_image_download -> local_mirror
 - Notes: Dior luxury stories currently use verified official product pages for bags and jewelry. Keep Dior luxury on verified product pages until a stable category or seasonal listing source is confirmed.
 - Crawl mode: single_product_page
-- Crawl notes: Dior luxury should continue using already verified bag and jewelry PDPs as crawl anchors.
+- Crawl notes: Dior luxury now starts from Lady D-Joy and Rose des Vents series pages so the pipeline can follow current series-led merchandising.
 - Crawl entries:
-  - `Dior 女士皮具已验证产品页` | 皮包 | https://www.dior.cn/zh_cn/fashion/products/M1325OWHP_M030 | extraction: first_product
-  - `Dior 珠宝已验证产品页` | 珠宝 | https://www.dior.com/zh_cn/fashion/products/JRDV95015_0000 | extraction: first_product
+  - `Dior Lady D-Joy 手袋系列页` | 皮包 | https://www.dior.cn/zh_cn/fashion/bags/lady-d-joy | extraction: first_product
+  - `Dior Rose des Vents 珠宝系列页` | 珠宝 | https://www.dior.cn/zh_cn/fashion/jewelry-timepieces/rose-des-vents-home | extraction: first_product
 - Stories:
   - `dior-book-tote` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-book-tote.jpg` | candidate: none stored | status: partial
   - `dior-dioramour-book-tote` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-dioramour-book-tote.jpg` | candidate: none stored | status: partial
@@ -342,7 +378,9 @@ Brand count: 51
 - Crawl notes: Use What’s New for beauty freshness, and keep fragrance/category pages as stable fallbacks.
 - Crawl entries:
   - `Dior Beauty What's New` | 彩妆 | https://www.dior.com/en_us/beauty/page/whats-new.html | extraction: first_product
-  - `Dior Beauty Miss Dior` | 香水 | https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior | extraction: first_product
+  - `Dior Beauty Miss Dior 系列` | 香水 | https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior | extraction: first_product
+  - `Dior Beauty J’adore 系列` | 香水 | https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/jadore | extraction: first_product
+  - `Dior Beauty Sauvage 产品页` | 香水 | https://www.dior.cn/zh_cn/beauty/products/y0685240-sauvage-eau-de-toilette | extraction: first_product
 - Stories:
   - `dior-beauty` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/dior-forever-new.jpg` | candidate: https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640 | status: partial
   - `dior-beauty-lips` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/dior-addict-new.jpg` | candidate: https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw9831c51b/Y0319000/Y0319000_C031900038_E01_RHC.jpg?sw=640 | status: partial
@@ -428,6 +466,8 @@ Brand count: 51
 - Crawl notes: Hermès Beauty remains product-page led until broader category extraction is added.
 - Crawl entries:
   - `Hermès Beauty 香氛` | 香水 | https://www.hermes.cn/cn/zh/category/fragrances/ | extraction: first_product
+  - `Hermès Beauty Terre d’Hermès 产品页` | 香水 | https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%A4%A7%E5%9C%B0%E9%A6%A5%E9%83%81%E9%A6%99%E6%A0%B9%E8%8D%89%E9%A6%99%E5%9E%8B%E9%A6%99%E6%B0%B4-V40946/ | extraction: first_product
+  - `Hermès Beauty Twilly d’Hermès 产品页` | 香水 | https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E4%B8%9D%E6%84%8F%E8%8D%94%E9%9F%B5%E6%B7%A1%E9%A6%99%E7%B2%BE-V110826VN/ | extraction: first_product
 - Stories:
   - `hermes-beauty-terre-dhermes` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-terre-dhermes.jpg` | candidate: none stored | status: partial
   - `hermes-beauty-twilly-ginger` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/hermes-twilly-ginger.jpg` | candidate: none stored | status: partial
@@ -781,6 +821,23 @@ Brand count: 51
 - Stories:
   - `oppo-findx9` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/oppo-findx9.png` | candidate: none stored | status: partial
 
+## Poki
+
+- Slug: `poki`
+- Categories: webgames
+- Official domains: poki.com
+- Story count: 2
+- Status: ready 0, partial 2, needs replacement 0
+- Brand methods: new_games_listing_parse -> detail_page_og_image_download -> local_mirror
+- Notes: Poki exposes a structured New Games page and individual game detail pages with stable og:image assets. Prefer the newest game tile from the New Games collection, then mirror the game logo locally.
+- Crawl mode: poki_new_games
+- Crawl notes: Use Poki New Games as the primary discovery surface and fetch the first current game from the structured games feed.
+- Crawl entries:
+  - `Poki New Games` | 新游 | https://poki.com/en/new | extraction: first_product
+- Stories:
+  - `poki-count-war` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/poki-count-war.png` | candidate: none stored | status: partial
+  - `poki-snacky-snake` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/poki-snacky-snake.png` | candidate: none stored | status: partial
+
 ## Prada
 
 - Slug: `prada`
@@ -790,12 +847,12 @@ Brand count: 51
 - Status: ready 12, partial 0, needs replacement 0
 - Brand methods: resolved_browser_image -> reconstructed_dam_path -> local_mirror
 - Notes: Prada bag, ready-to-wear, and jewelry pages can fail in browser with HTTP2 errors. When browser extraction fails, reconstruct the DAM path from productCode, material, color, and variant. Prefer SLF front-view assets and mirror them locally for stable server delivery.
-- Crawl mode: single_product_page
-- Crawl notes: Prada currently works best from verified product pages because many category pages are dynamically rendered and can fail under headless fetch. Keep using verified product pages and the DAM reconstruction pattern until a stable Prada category-feed parser is added.
+- Crawl mode: prada_category_pages
+- Crawl notes: Prada now begins from the women new-in or Eternal Gold collection pages so the pipeline can follow fresher arrivals instead of a single fixed PDP. If category extraction fails, keep using verified product pages and the DAM reconstruction pattern as fallbacks.
 - Crawl entries:
-  - `Prada 皮包已验证产品页` | 皮包 | https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO | extraction: first_product
-  - `Prada 成衣已验证产品页` | 服装 | https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO | extraction: first_product
-  - `Prada 珠宝已验证产品页` | 珠宝 | https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html | extraction: first_product
+  - `Prada 女士新品` | 皮包 | https://www.prada.cn/cn/zh/womens/new-in/c/10111CN | extraction: first_product
+  - `Prada 女士新品` | 服装 | https://www.prada.cn/cn/zh/womens/new-in/c/10111CN | extraction: first_product
+  - `Prada Eternal Gold 系列` | 珠宝 | https://www.prada.cn/cn/zh/fine-jewelry/eternal-gold/c/10763CN | extraction: first_product
 - Stories:
   - `prada-passage-bag` | 皮包 | method: `reconstructed_dam_path_to_local_mirror` | priority: resolved_browser_image -> reconstructed_dam_path -> local_mirror | local: `/news/luxury/prada-passage-bag.jpg` | candidate: https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA495/2G52F0201/1BA495_2G52_F0201_V_OPO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg | status: ready
   - `prada-lace-dress` | 服装 | method: `reconstructed_dam_path_to_local_mirror` | priority: resolved_browser_image -> reconstructed_dam_path -> local_mirror | local: `/news/luxury/prada-lace-dress.jpg` | candidate: https://www.prada.com/content/dam/pradabkg_products/P/P3Q/P3Q17/17VMF0002/P3Q17_17VM_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg | status: ready
@@ -855,12 +912,12 @@ Brand count: 51
 - Status: ready 0, partial 4, needs replacement 0
 - Brand methods: homepage_module_capture -> verified_official_page_download -> local_mirror
 - Notes: Samsung currently uses the China homepage as the stable discovery surface for phone, tablet, and accessory updates. When homepage modules shift, keep the mirrored official image assets and story-level PDP references as fallbacks.
-- Crawl mode: single_product_page
-- Crawl notes: Samsung is homepage-led for now; future category-specific Galaxy parsers can replace this single_product_page-style fallback.
+- Crawl mode: samsung_buy_pages
+- Crawl notes: Samsung now uses product-category buy pages for phones, tablets, and accessories instead of only the homepage.
 - Crawl entries:
-  - `三星中国官网首页` | 手机 | https://www.samsung.com/cn/ | extraction: first_product
-  - `三星中国官网首页` | 平板 | https://www.samsung.com/cn/ | extraction: first_product
-  - `三星中国官网首页` | 配件 | https://www.samsung.com/cn/ | extraction: first_product
+  - `Galaxy S26 Ultra` | 手机 | https://www.samsung.com.cn/smartphones/galaxy-s26-ultra/buy/ | extraction: first_product
+  - `Galaxy Tab S11` | 平板 | https://www.samsung.com.cn/tablets/galaxy-tab-s11/buy/ | extraction: first_product
+  - `Galaxy Buds4 Pro` | 配件 | https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/ | extraction: first_product
 - Stories:
   - `samsung-tablet` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-tablet.jpg` | candidate: none stored | status: partial
   - `samsung-phone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial

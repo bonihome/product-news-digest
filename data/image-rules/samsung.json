@@ -27,30 +27,30 @@
     ]
   },
   "crawl": {
-    "mode": "single_product_page",
+    "mode": "samsung_buy_pages",
     "entryPages": [
       {
-        "label": "三星中国官网首页",
+        "label": "Galaxy S26 Ultra",
         "subcategory": "手机",
-        "url": "https://www.samsung.com/cn/",
+        "url": "https://www.samsung.com.cn/smartphones/galaxy-s26-ultra/buy/",
         "extraction": "first_product"
       },
       {
-        "label": "三星中国官网首页",
+        "label": "Galaxy Tab S11",
         "subcategory": "平板",
-        "url": "https://www.samsung.com/cn/",
+        "url": "https://www.samsung.com.cn/tablets/galaxy-tab-s11/buy/",
         "extraction": "first_product"
       },
       {
-        "label": "三星中国官网首页",
+        "label": "Galaxy Buds4 Pro",
         "subcategory": "配件",
-        "url": "https://www.samsung.com/cn/",
+        "url": "https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/",
         "extraction": "first_product"
       }
     ],
-    "fallbackUrl": "https://www.samsung.com/cn/",
+    "fallbackUrl": "https://www.samsung.com.cn/",
     "notes": [
-      "Samsung is homepage-led for now; future category-specific Galaxy parsers can replace this single_product_page-style fallback."
+      "Samsung now uses product-category buy pages for phones, tablets, and accessories instead of only the homepage."
     ]
   },
   "stories": [

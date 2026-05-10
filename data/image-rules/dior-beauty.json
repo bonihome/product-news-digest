@@ -37,9 +37,21 @@
         "extraction": "first_product"
       },
       {
-        "label": "Dior Beauty Miss Dior",
+        "label": "Dior Beauty Miss Dior 系列",
         "subcategory": "香水",
         "url": "https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Dior Beauty J’adore 系列",
+        "subcategory": "香水",
+        "url": "https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/jadore",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Dior Beauty Sauvage 产品页",
+        "subcategory": "香水",
+        "url": "https://www.dior.cn/zh_cn/beauty/products/y0685240-sauvage-eau-de-toilette",
         "extraction": "first_product"
       }
     ],

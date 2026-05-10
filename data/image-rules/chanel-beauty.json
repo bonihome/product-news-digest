@@ -33,6 +33,18 @@
         "subcategory": "香水",
         "url": "https://www.chanel.cn/cn/fragrance/",
         "extraction": "first_product"
+      },
+      {
+        "label": "CHANEL Beauty N°5 产品页",
+        "subcategory": "香水",
+        "url": "https://www.chanel.cn/cn/fragrance/p/125530/n5-eau-de-parfum-spray/",
+        "extraction": "first_product"
+      },
+      {
+        "label": "CHANEL Beauty Chance 系列产品页",
+        "subcategory": "香水",
+        "url": "https://www.chanel.cn/cn/fragrance/p/136210/chance-eau-splendide-eau-de-parfum-spray/",
+        "extraction": "first_product"
       }
     ],
     "fallbackUrl": "https://www.chanel.cn/cn/beauty/",

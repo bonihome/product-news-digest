@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-10T12:47:14.484Z",
-  "brandCount": 51,
+  "generatedAt": "2026-05-10T13:59:13.502Z",
+  "brandCount": 54,
   "brands": [
     {
       "brand": "Adidas",
@@ -24,6 +24,15 @@
       "brand": "Arc'teryx",
       "slug": "arc-teryx",
       "file": "data/image-rules/arc-teryx.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Arcadrome",
+      "slug": "arcadrome",
+      "file": "data/image-rules/arcadrome.json",
       "storyCount": 2,
       "readyCount": 0,
       "partialCount": 2,
@@ -123,6 +132,15 @@
       "brand": "Clinique",
       "slug": "clinique",
       "file": "data/image-rules/clinique.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "CrazyGames",
+      "slug": "crazygames",
+      "file": "data/image-rules/crazygames.json",
       "storyCount": 2,
       "readyCount": 0,
       "partialCount": 2,
@@ -351,6 +369,15 @@
       "storyCount": 1,
       "readyCount": 0,
       "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Poki",
+      "slug": "poki",
+      "file": "data/image-rules/poki.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {

@@ -87,6 +87,8 @@ function getCategoryLabel(candidate: CrawlCandidate) {
       return `${candidate.subcategory}装备线`
     case 'digital':
       return `${candidate.subcategory}产品线`
+    case 'webgames':
+      return `${candidate.subcategory}阵列`
   }
 }
 
@@ -138,6 +140,8 @@ function buildRuleTitle(candidate: CrawlCandidate, facts: NewsFactSheet) {
       return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，${candidate.subcategory}装备继续更新`
     case 'digital':
       return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，${candidate.subcategory}产品阵容继续扩展`
+    case 'webgames':
+      return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，${candidate.subcategory}游戏继续上新`
   }
 }
 
@@ -161,6 +165,10 @@ function buildRuleSummary(candidate: CrawlCandidate, facts: NewsFactSheet) {
       return supportProducts
         ? `${candidate.brand} 本轮以 ${facts.leadProduct} 为核心推进新品发布，并借由 ${supportProducts} 进一步补全${candidate.subcategory}产品布局。`
         : `${candidate.brand} 本轮以 ${facts.leadProduct} 为核心推进新品发布，继续补全${candidate.subcategory}产品布局。`
+    case 'webgames':
+      return supportProducts
+        ? `${candidate.brand} 本轮将 ${facts.leadProduct} 作为新游更新焦点，并以 ${supportProducts} 继续丰富平台的${candidate.subcategory}可玩内容。`
+        : `${candidate.brand} 本轮将 ${facts.leadProduct} 作为新游更新焦点，继续丰富平台的${candidate.subcategory}可玩内容。`
   }
 }
 

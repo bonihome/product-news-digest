@@ -1,4 +1,4 @@
-export type CategoryId = 'all' | 'luxury' | 'beauty' | 'sports' | 'digital'
+export type CategoryId = 'all' | 'luxury' | 'beauty' | 'sports' | 'digital' | 'webgames'
 export type ContentCategory = Exclude<CategoryId, 'all'>
 export type SourceType = 'Official Site' | 'New Arrivals' | 'Official News'
 

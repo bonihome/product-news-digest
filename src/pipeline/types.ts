@@ -109,6 +109,11 @@ export type BrandCrawlRule = {
   mode:
     | 'generic_html'
     | 'single_product_page'
+    | 'prada_category_pages'
+    | 'samsung_buy_pages'
+    | 'poki_new_games'
+    | 'crazygames_new_games'
+    | 'arcadrome_home_games'
     | 'nike_trend_pages'
     | 'adidas_home_feed_pages'
     | 'louis_vuitton_latest_pages'

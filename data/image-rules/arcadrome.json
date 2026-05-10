@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "brand": "Arcadrome",
+  "slug": "arcadrome",
+  "categories": [
+    "webgames"
+  ],
+  "officialDomains": [
+    "arcadrome.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "homepage_new_game_parse",
+      "detail_page_og_image_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "Arcadrome homepage exposes its latest game links directly in HTML and each game detail page provides a stable title and og:image.",
+      "Use the homepage first visible game entry as the newest game signal."
+    ]
+  },
+  "crawl": {
+    "mode": "arcadrome_home_games",
+    "entryPages": [
+      {
+        "label": "Arcadrome 首页新游",
+        "subcategory": "新游",
+        "url": "https://arcadrome.com/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://arcadrome.com/",
+    "notes": [
+      "Use the Arcadrome homepage first game card as the current new-game source."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "arcadrome-lunar-knight",
+      "title": "Arcadrome 首页新作加入 Lunar Knight，动作冒险类网页游戏持续上新",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Lunar Knight",
+        "动作冒险",
+        "Arcadrome 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://arcadrome.com/en/games/lunar-knight",
+      "currentImage": "/news/webgames/arcadrome-lunar-knight.avif",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/arcadrome-lunar-knight.avif",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "arcadrome-idle-lumber-inc",
+      "title": "Arcadrome 推出 Idle Lumber Inc，模拟经营类网页新游继续扩容",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Idle Lumber Inc",
+        "模拟经营",
+        "Arcadrome 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://arcadrome.com/en/games/idle-lumber-inc",
+      "currentImage": "/news/webgames/arcadrome-idle-lumber-inc.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/arcadrome-idle-lumber-inc.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

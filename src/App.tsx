@@ -50,7 +50,7 @@ function parseHash(hash: string): Route {
   if (
     parts[0] === 'channel' &&
     parts[1] &&
-    ['luxury', 'beauty', 'sports', 'digital'].includes(parts[1])
+    ['luxury', 'beauty', 'sports', 'digital', 'webgames'].includes(parts[1])
   ) {
     return { view: 'channel', category: parts[1] as ContentCategory }
   }

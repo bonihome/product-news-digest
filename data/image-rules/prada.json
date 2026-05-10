@@ -28,31 +28,31 @@
     ]
   },
   "crawl": {
-    "mode": "single_product_page",
+    "mode": "prada_category_pages",
     "entryPages": [
       {
-        "label": "Prada 皮包已验证产品页",
+        "label": "Prada 女士新品",
         "subcategory": "皮包",
-        "url": "https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO",
+        "url": "https://www.prada.cn/cn/zh/womens/new-in/c/10111CN",
         "extraction": "first_product"
       },
       {
-        "label": "Prada 成衣已验证产品页",
+        "label": "Prada 女士新品",
         "subcategory": "服装",
-        "url": "https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO",
+        "url": "https://www.prada.cn/cn/zh/womens/new-in/c/10111CN",
         "extraction": "first_product"
       },
       {
-        "label": "Prada 珠宝已验证产品页",
+        "label": "Prada Eternal Gold 系列",
         "subcategory": "珠宝",
-        "url": "https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html",
+        "url": "https://www.prada.cn/cn/zh/fine-jewelry/eternal-gold/c/10763CN",
         "extraction": "first_product"
       }
     ],
     "fallbackUrl": "https://www.prada.cn/cn/zh.html",
     "notes": [
-      "Prada currently works best from verified product pages because many category pages are dynamically rendered and can fail under headless fetch.",
-      "Keep using verified product pages and the DAM reconstruction pattern until a stable Prada category-feed parser is added."
+      "Prada now begins from the women new-in or Eternal Gold collection pages so the pipeline can follow fresher arrivals instead of a single fixed PDP.",
+      "If category extraction fails, keep using verified product pages and the DAM reconstruction pattern as fallbacks."
     ]
   },
   "stories": [

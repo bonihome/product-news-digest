@@ -30,21 +30,21 @@
     "mode": "single_product_page",
     "entryPages": [
       {
-        "label": "Dior 女士皮具已验证产品页",
+        "label": "Dior Lady D-Joy 手袋系列页",
         "subcategory": "皮包",
-        "url": "https://www.dior.cn/zh_cn/fashion/products/M1325OWHP_M030",
+        "url": "https://www.dior.cn/zh_cn/fashion/bags/lady-d-joy",
         "extraction": "first_product"
       },
       {
-        "label": "Dior 珠宝已验证产品页",
+        "label": "Dior Rose des Vents 珠宝系列页",
         "subcategory": "珠宝",
-        "url": "https://www.dior.com/zh_cn/fashion/products/JRDV95015_0000",
+        "url": "https://www.dior.cn/zh_cn/fashion/jewelry-timepieces/rose-des-vents-home",
         "extraction": "first_product"
       }
     ],
     "fallbackUrl": "https://www.dior.cn/zh_cn/fashion",
     "notes": [
-      "Dior luxury should continue using already verified bag and jewelry PDPs as crawl anchors."
+      "Dior luxury now starts from Lady D-Joy and Rose des Vents series pages so the pipeline can follow current series-led merchandising."
     ]
   },
   "stories": [
