@@ -114,6 +114,19 @@ const brandStrategyOverrides: Record<
       'When browser extraction fails, reconstruct the DAM path from productCode, material, color, and variant.',
       'Prefer SLF front-view assets and mirror them locally for stable server delivery.',
     ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: 'Prada 皮包已验证产品页', subcategory: '皮包', url: 'https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO', extraction: 'first_product' },
+        { label: 'Prada 成衣已验证产品页', subcategory: '服装', url: 'https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO', extraction: 'first_product' },
+        { label: 'Prada 珠宝已验证产品页', subcategory: '珠宝', url: 'https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.prada.cn/cn/zh.html',
+      notes: [
+        'Prada currently works best from verified product pages because many category pages are dynamically rendered and can fail under headless fetch.',
+        'Keep using verified product pages and the DAM reconstruction pattern until a stable Prada category-feed parser is added.',
+      ],
+    },
   },
   'Van Cleef & Arpels': {
     methods: ['product_gallery_currentSrc', 'local_mirror'],
@@ -151,6 +164,60 @@ const brandStrategyOverrides: Record<
       'Prefer official China product or series pages, then download the visible product asset with a browser-like user agent and referer.',
       'Mirror the asset locally after download so the frontend does not depend on blocked hotlinks.',
     ],
+  },
+  'Prada Beauty': {
+    methods: ['verified_product_page_download', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'Prada Beauty fragrance stories currently work most reliably from verified perfume product pages.',
+      'Use the verified fragrance PDPs first, then mirror official product images locally.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: 'Prada Beauty Paradoxe', subcategory: '香水', url: 'https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030', extraction: 'first_product' },
+        { label: 'Prada Beauty Luna Rossa', subcategory: '香水', url: 'https://www.prada.cn/cn/zh/p/luna-rossa-ocean-edt-100-ml/2A1156_2D00_F0Z99_P_ML100', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.prada.cn/cn/zh/beauty.html',
+      notes: [
+        'Prada Beauty remains PDP-led until a stable China fragrance category parser is verified.',
+      ],
+    },
+  },
+  Dior: {
+    methods: ['verified_product_page_download', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'Dior luxury stories currently use verified official product pages for bags and jewelry.',
+      'Keep Dior luxury on verified product pages until a stable category or seasonal listing source is confirmed.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: 'Dior 女士皮具已验证产品页', subcategory: '皮包', url: 'https://www.dior.cn/zh_cn/fashion/products/M1325OWHP_M030', extraction: 'first_product' },
+        { label: 'Dior 珠宝已验证产品页', subcategory: '珠宝', url: 'https://www.dior.com/zh_cn/fashion/products/JRDV95015_0000', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.dior.cn/zh_cn/fashion',
+      notes: [
+        'Dior luxury should continue using already verified bag and jewelry PDPs as crawl anchors.',
+      ],
+    },
+  },
+  'Dior Beauty': {
+    methods: ['whats_new_listing', 'verified_product_page_download', 'local_mirror'],
+    notes: [
+      'Dior Beauty should begin from the official What’s New page and then fall back to verified beauty PDPs when needed.',
+      'This keeps the brand aligned with current Dior Beauty refreshes while preserving known-good product sources.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: "Dior Beauty What's New", subcategory: '彩妆', url: 'https://www.dior.com/en_us/beauty/page/whats-new.html', extraction: 'first_product' },
+        { label: 'Dior Beauty Miss Dior', subcategory: '香水', url: 'https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.dior.cn/zh_cn/beauty',
+      notes: [
+        'Use What’s New for beauty freshness, and keep fragrance/category pages as stable fallbacks.',
+      ],
+    },
   },
   On: {
     methods: ['product_gallery_currentSrc_download', 'local_mirror'],
@@ -375,6 +442,25 @@ const brandStrategyOverrides: Record<
       fallbackUrl: 'https://www.hermes.cn/cn/zh/category/beauty/',
       notes: [
         'Hermès Beauty remains product-page led until broader category extraction is added.',
+      ],
+    },
+  },
+  Samsung: {
+    methods: ['homepage_module_capture', 'verified_official_page_download', 'local_mirror'],
+    notes: [
+      'Samsung currently uses the China homepage as the stable discovery surface for phone, tablet, and accessory updates.',
+      'When homepage modules shift, keep the mirrored official image assets and story-level PDP references as fallbacks.',
+    ],
+    crawl: {
+      mode: 'single_product_page',
+      entryPages: [
+        { label: '三星中国官网首页', subcategory: '手机', url: 'https://www.samsung.com/cn/', extraction: 'first_product' },
+        { label: '三星中国官网首页', subcategory: '平板', url: 'https://www.samsung.com/cn/', extraction: 'first_product' },
+        { label: '三星中国官网首页', subcategory: '配件', url: 'https://www.samsung.com/cn/', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.samsung.com/cn/',
+      notes: [
+        'Samsung is homepage-led for now; future category-specific Galaxy parsers can replace this single_product_page-style fallback.',
       ],
     },
   },

@@ -17,27 +17,40 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "homepage_module_capture",
+      "verified_official_page_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Samsung currently uses the China homepage as the stable discovery surface for phone, tablet, and accessory updates.",
+      "When homepage modules shift, keep the mirrored official image assets and story-level PDP references as fallbacks."
     ]
   },
   "crawl": {
-    "mode": "generic_html",
+    "mode": "single_product_page",
     "entryPages": [
       {
-        "label": "Samsung 默认入口",
+        "label": "三星中国官网首页",
+        "subcategory": "手机",
+        "url": "https://www.samsung.com/cn/",
+        "extraction": "first_product"
+      },
+      {
+        "label": "三星中国官网首页",
         "subcategory": "平板",
+        "url": "https://www.samsung.com/cn/",
+        "extraction": "first_product"
+      },
+      {
+        "label": "三星中国官网首页",
+        "subcategory": "配件",
         "url": "https://www.samsung.com/cn/",
         "extraction": "first_product"
       }
     ],
     "fallbackUrl": "https://www.samsung.com/cn/",
     "notes": [
-      "This brand currently falls back to the default source page recorded from the existing story dataset.",
-      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+      "Samsung is homepage-led for now; future category-specific Galaxy parsers can replace this single_product_page-style fallback."
     ]
   },
   "stories": [

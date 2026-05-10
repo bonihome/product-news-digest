@@ -17,27 +17,34 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "verified_product_page_download",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Dior luxury stories currently use verified official product pages for bags and jewelry.",
+      "Keep Dior luxury on verified product pages until a stable category or seasonal listing source is confirmed."
     ]
   },
   "crawl": {
-    "mode": "generic_html",
+    "mode": "single_product_page",
     "entryPages": [
       {
-        "label": "Dior 默认入口",
+        "label": "Dior 女士皮具已验证产品页",
         "subcategory": "皮包",
-        "url": "https://www.dior.cn/zh_cn/fashion/products/M1324OWHP_M51U",
+        "url": "https://www.dior.cn/zh_cn/fashion/products/M1325OWHP_M030",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Dior 珠宝已验证产品页",
+        "subcategory": "珠宝",
+        "url": "https://www.dior.com/zh_cn/fashion/products/JRDV95015_0000",
         "extraction": "first_product"
       }
     ],
-    "fallbackUrl": "https://www.dior.cn/zh_cn/fashion/products/M1324OWHP_M51U",
+    "fallbackUrl": "https://www.dior.cn/zh_cn/fashion",
     "notes": [
-      "This brand currently falls back to the default source page recorded from the existing story dataset.",
-      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+      "Dior luxury should continue using already verified bag and jewelry PDPs as crawl anchors."
     ]
   },
   "stories": [

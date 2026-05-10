@@ -1,4 +1,5 @@
 import { beautyNews } from '../data/beautyNews'
+import { digitalNews } from '../data/digitalNews'
 import { luxuryNews } from '../data/luxuryNews'
 import { sportsNews } from '../data/sportsNews'
 import type { Story } from '../data/types'
@@ -280,6 +281,12 @@ function buildRuleFromStory(story: Story): BrandSourceRule {
   } else if (story.brand === 'Chanel' && story.subcategory === '腕表') {
     listUrl = 'https://www.chanel.cn/cn/watches/'
     sourceLabel = '香奈儿中国官网腕表频道'
+  } else if (story.brand === 'CHANEL Beauty') {
+    listUrl = 'https://www.chanel.cn/cn/fragrance/'
+    sourceLabel = 'CHANEL Beauty 中国官网香氛'
+  } else if (story.brand === 'Hermès Beauty') {
+    listUrl = 'https://www.hermes.cn/cn/zh/category/fragrances/'
+    sourceLabel = 'Hermès Beauty 香氛'
   } else if (story.brand === 'DESCENTE') {
     listUrl = 'https://allterrain.descente.com/'
     sourceLabel = 'DESCENTE ALLTERRAIN 官方网站'
@@ -289,6 +296,18 @@ function buildRuleFromStory(story: Story): BrandSourceRule {
   } else if (story.brand === 'Wilson') {
     listUrl = 'https://www.wilson.com/en-us/tennis'
     sourceLabel = 'Wilson Tennis'
+  } else if (story.brand === 'Prada') {
+    sourceLabel = 'Prada 中国官网已验证产品页'
+  } else if (story.brand === 'Prada Beauty') {
+    sourceLabel = 'Prada Beauty 中国官网已验证香氛页'
+  } else if (story.brand === 'Dior') {
+    sourceLabel = 'Dior 中国官网已验证产品页'
+  } else if (story.brand === 'Dior Beauty') {
+    listUrl = 'https://www.dior.com/en_us/beauty/page/whats-new.html'
+    sourceLabel = "Dior Beauty What's New"
+  } else if (story.brand === 'Samsung') {
+    listUrl = 'https://www.samsung.com/cn/'
+    sourceLabel = '三星中国官网首页'
   }
 
   return {
@@ -322,7 +341,7 @@ function pickLatestStoryPerBrandAndSubcategory(stories: Story[]) {
   return latestByKey
 }
 
-const staticStories = [...luxuryNews, ...beautyNews, ...sportsNews]
+const staticStories = [...luxuryNews, ...beautyNews, ...sportsNews, ...digitalNews]
 const explicitBrandKeys = new Set(coreBrandSources.map((source) => `${source.brand}::${source.subcategory}`))
 const latestStoriesByBrandAndSubcategory = pickLatestStoryPerBrandAndSubcategory(staticStories)
 

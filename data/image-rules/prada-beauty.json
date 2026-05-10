@@ -17,27 +17,34 @@
   },
   "strategy": {
     "brandLevelMethods": [
+      "verified_product_page_download",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "Prada Beauty fragrance stories currently work most reliably from verified perfume product pages.",
+      "Use the verified fragrance PDPs first, then mirror official product images locally."
     ]
   },
   "crawl": {
-    "mode": "generic_html",
+    "mode": "single_product_page",
     "entryPages": [
       {
-        "label": "Prada Beauty 默认入口",
+        "label": "Prada Beauty Paradoxe",
         "subcategory": "香水",
         "url": "https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030",
         "extraction": "first_product"
+      },
+      {
+        "label": "Prada Beauty Luna Rossa",
+        "subcategory": "香水",
+        "url": "https://www.prada.cn/cn/zh/p/luna-rossa-ocean-edt-100-ml/2A1156_2D00_F0Z99_P_ML100",
+        "extraction": "first_product"
       }
     ],
-    "fallbackUrl": "https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030",
+    "fallbackUrl": "https://www.prada.cn/cn/zh/beauty.html",
     "notes": [
-      "This brand currently falls back to the default source page recorded from the existing story dataset.",
-      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+      "Prada Beauty remains PDP-led until a stable China fragrance category parser is verified."
     ]
   },
   "stories": [

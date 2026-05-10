@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-09T12:56:59.979Z
+Generated at: 2026-05-10T12:34:14.698Z
 Brand count: 51
 
 ## Adidas
@@ -313,12 +313,13 @@ Brand count: 51
 - Official domains: www.dior.cn
 - Story count: 7
 - Status: ready 0, partial 7, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
-- Crawl mode: generic_html
-- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Brand methods: verified_product_page_download -> official_product_page_image_download -> local_mirror
+- Notes: Dior luxury stories currently use verified official product pages for bags and jewelry. Keep Dior luxury on verified product pages until a stable category or seasonal listing source is confirmed.
+- Crawl mode: single_product_page
+- Crawl notes: Dior luxury should continue using already verified bag and jewelry PDPs as crawl anchors.
 - Crawl entries:
-  - `Dior 默认入口` | 皮包 | https://www.dior.cn/zh_cn/fashion/products/M1324OWHP_M51U | extraction: first_product
+  - `Dior 女士皮具已验证产品页` | 皮包 | https://www.dior.cn/zh_cn/fashion/products/M1325OWHP_M030 | extraction: first_product
+  - `Dior 珠宝已验证产品页` | 珠宝 | https://www.dior.com/zh_cn/fashion/products/JRDV95015_0000 | extraction: first_product
 - Stories:
   - `dior-book-tote` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-book-tote.jpg` | candidate: none stored | status: partial
   - `dior-dioramour-book-tote` | 皮包 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/luxury/dior-dioramour-book-tote.jpg` | candidate: none stored | status: partial
@@ -335,12 +336,13 @@ Brand count: 51
 - Official domains: www.dior.com, www.dior.cn
 - Story count: 5
 - Status: ready 0, partial 5, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
-- Crawl mode: generic_html
-- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Brand methods: whats_new_listing -> verified_product_page_download -> local_mirror
+- Notes: Dior Beauty should begin from the official What’s New page and then fall back to verified beauty PDPs when needed. This keeps the brand aligned with current Dior Beauty refreshes while preserving known-good product sources.
+- Crawl mode: single_product_page
+- Crawl notes: Use What’s New for beauty freshness, and keep fragrance/category pages as stable fallbacks.
 - Crawl entries:
-  - `Dior Beauty 默认入口` | 彩妆 | https://www.dior.com/en_us/beauty/page/whats-new.html | extraction: first_product
+  - `Dior Beauty What's New` | 彩妆 | https://www.dior.com/en_us/beauty/page/whats-new.html | extraction: first_product
+  - `Dior Beauty Miss Dior` | 香水 | https://www.dior.cn/zh_cn/beauty/fragrance/womens_fragrance/miss-dior | extraction: first_product
 - Stories:
   - `dior-beauty` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/dior-forever-new.jpg` | candidate: https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640 | status: partial
   - `dior-beauty-lips` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/dior-addict-new.jpg` | candidate: https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw9831c51b/Y0319000/Y0319000_C031900038_E01_RHC.jpg?sw=640 | status: partial
@@ -788,10 +790,12 @@ Brand count: 51
 - Status: ready 12, partial 0, needs replacement 0
 - Brand methods: resolved_browser_image -> reconstructed_dam_path -> local_mirror
 - Notes: Prada bag, ready-to-wear, and jewelry pages can fail in browser with HTTP2 errors. When browser extraction fails, reconstruct the DAM path from productCode, material, color, and variant. Prefer SLF front-view assets and mirror them locally for stable server delivery.
-- Crawl mode: generic_html
-- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 12.
+- Crawl mode: single_product_page
+- Crawl notes: Prada currently works best from verified product pages because many category pages are dynamically rendered and can fail under headless fetch. Keep using verified product pages and the DAM reconstruction pattern until a stable Prada category-feed parser is added.
 - Crawl entries:
-  - `Prada 默认入口` | 皮包 | https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO | extraction: first_product
+  - `Prada 皮包已验证产品页` | 皮包 | https://www.prada.cn/cn/zh/p/prada-passage-medium-leather-bag-with-re-nylon-flap/1BA495_2G52_F0201_V_OPO | extraction: first_product
+  - `Prada 成衣已验证产品页` | 服装 | https://www.prada.cn/cn/zh/p/lace-dress/P3Q17_17VM_F0002_S_OOO | extraction: first_product
+  - `Prada 珠宝已验证产品页` | 珠宝 | https://www.prada.cn/cn/zh/women/jewelry/fine_jewelry_collection/products.Eternal_Gold_medium_pendant_necklace_in_yellow_gold.1JCA06_2DA5_F0056.html | extraction: first_product
 - Stories:
   - `prada-passage-bag` | 皮包 | method: `reconstructed_dam_path_to_local_mirror` | priority: resolved_browser_image -> reconstructed_dam_path -> local_mirror | local: `/news/luxury/prada-passage-bag.jpg` | candidate: https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA495/2G52F0201/1BA495_2G52_F0201_V_OPO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg | status: ready
   - `prada-lace-dress` | 服装 | method: `reconstructed_dam_path_to_local_mirror` | priority: resolved_browser_image -> reconstructed_dam_path -> local_mirror | local: `/news/luxury/prada-lace-dress.jpg` | candidate: https://www.prada.com/content/dam/pradabkg_products/P/P3Q/P3Q17/17VMF0002/P3Q17_17VM_F0002_S_OOO_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.1000.1000.crop.jpg | status: ready
@@ -813,12 +817,13 @@ Brand count: 51
 - Official domains: www.prada.cn
 - Story count: 3
 - Status: ready 0, partial 3, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
-- Crawl mode: generic_html
-- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Brand methods: verified_product_page_download -> official_product_page_image_download -> local_mirror
+- Notes: Prada Beauty fragrance stories currently work most reliably from verified perfume product pages. Use the verified fragrance PDPs first, then mirror official product images locally.
+- Crawl mode: single_product_page
+- Crawl notes: Prada Beauty remains PDP-led until a stable China fragrance category parser is verified.
 - Crawl entries:
-  - `Prada Beauty 默认入口` | 香水 | https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030 | extraction: first_product
+  - `Prada Beauty Paradoxe` | 香水 | https://www.prada.cn/cn/zh/p/paradoxe-radical-essence-30ml/1A1355_2H0P_F0Z99_P_ML030 | extraction: first_product
+  - `Prada Beauty Luna Rossa` | 香水 | https://www.prada.cn/cn/zh/p/luna-rossa-ocean-edt-100-ml/2A1156_2D00_F0Z99_P_ML100 | extraction: first_product
 - Stories:
   - `prada-beauty-paradoxe-radical` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/prada-paradoxe-radical-clean.png` | candidate: none stored | status: partial
   - `prada-beauty-paradoxe-virtual-flower` | 香水 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/prada-paradoxe-virtual-flower-clean.png` | candidate: none stored | status: partial
@@ -848,12 +853,14 @@ Brand count: 51
 - Official domains: www.samsung.com
 - Story count: 4
 - Status: ready 0, partial 4, needs replacement 0
-- Brand methods: local_mirror
-- Notes: Default rule file generated from the current story dataset. For remote official assets, the server can download and mirror the current image URL directly.
-- Crawl mode: generic_html
-- Crawl notes: This brand currently falls back to the default source page recorded from the existing story dataset. When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0.
+- Brand methods: homepage_module_capture -> verified_official_page_download -> local_mirror
+- Notes: Samsung currently uses the China homepage as the stable discovery surface for phone, tablet, and accessory updates. When homepage modules shift, keep the mirrored official image assets and story-level PDP references as fallbacks.
+- Crawl mode: single_product_page
+- Crawl notes: Samsung is homepage-led for now; future category-specific Galaxy parsers can replace this single_product_page-style fallback.
 - Crawl entries:
-  - `Samsung 默认入口` | 平板 | https://www.samsung.com/cn/ | extraction: first_product
+  - `三星中国官网首页` | 手机 | https://www.samsung.com/cn/ | extraction: first_product
+  - `三星中国官网首页` | 平板 | https://www.samsung.com/cn/ | extraction: first_product
+  - `三星中国官网首页` | 配件 | https://www.samsung.com/cn/ | extraction: first_product
 - Stories:
   - `samsung-tablet` | 平板 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-tablet.jpg` | candidate: none stored | status: partial
   - `samsung-phone` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/samsung-phone.jpg` | candidate: none stored | status: partial
