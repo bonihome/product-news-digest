@@ -740,6 +740,40 @@ async function fetchNikeCandidates(rule: BrandSourceRule, checkedAt: string) {
   )
 }
 
+async function fetchConfiguredSinglePageCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const crawlRule = await findBrandCrawlRule(rule.brand)
+  if (!crawlRule || crawlRule.mode !== 'single_product_page') {
+    return null
+  }
+
+  const pages = crawlRule.entryPages.filter((entry) => entry.subcategory === rule.subcategory)
+  if (pages.length === 0) {
+    return null
+  }
+
+  const candidates = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      const sourceTitle =
+        extractTitleFromHtml(html) ?? `${rule.brand} ${page.label}`
+      const image = extractImageFromHtml(html, page.url) ?? ''
+      const publishedAt = extractPublishedAtFromHtml(html, checkedAt)
+
+      return buildCandidate(rule, checkedAt, {
+        sourceLabel: `${rule.brand} 官方来源·${page.label}`,
+        sourceUrl: page.url,
+        sourceTitle,
+        sourceSummary: `${rule.brand} 当前按已记录规则从“${page.label}”入口页抓取 ${rule.subcategory} 内容，并以该入口页首个稳定产品来源生成候选新闻。`,
+        image,
+        publishedAt,
+        matchedKeywords: [page.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+      })
+    }),
+  )
+
+  return candidates
+}
+
 async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: string) {
   const html = await fetchHtml(rule.listUrl)
   const sourceTitle =
@@ -757,6 +791,11 @@ async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: 
 }
 
 async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
+  const configuredSinglePageCandidates = await fetchConfiguredSinglePageCandidates(rule, checkedAt)
+  if (configuredSinglePageCandidates && configuredSinglePageCandidates.length > 0) {
+    return configuredSinglePageCandidates[0]
+  }
+
   switch (rule.brand) {
     case 'Nike':
       return (await fetchNikeCandidates(rule, checkedAt))[0]
@@ -782,6 +821,11 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
 }
 
 async function fetchRealProbe(rule: BrandSourceRule, checkedAt: string): Promise<BrandProbe[] | null> {
+  const configuredSinglePageCandidates = await fetchConfiguredSinglePageCandidates(rule, checkedAt)
+  if (configuredSinglePageCandidates && configuredSinglePageCandidates.length > 0) {
+    return configuredSinglePageCandidates.map(toProbe)
+  }
+
   if (rule.brand === 'Nike') {
     const candidates = await fetchNikeCandidates(rule, checkedAt)
     return candidates.map(toProbe)
@@ -848,6 +892,11 @@ export async function probeBrandSource(rule: BrandSourceRule): Promise<BrandProb
 
 export async function fetchCandidatesForBrand(rule: BrandSourceRule, probes?: BrandProbe[]): Promise<CrawlCandidate[]> {
   const checkedAt = new Date().toISOString()
+  const configuredSinglePageCandidates = await fetchConfiguredSinglePageCandidates(rule, checkedAt)
+  if (configuredSinglePageCandidates && configuredSinglePageCandidates.length > 0) {
+    return Promise.all(configuredSinglePageCandidates.map((candidate) => applyImageRuleHints(rule, candidate)))
+  }
+
   if (rule.brand === 'Nike') {
     const candidates = await fetchNikeCandidates(rule, checkedAt)
     return Promise.all(candidates.map((candidate) => applyImageRuleHints(rule, candidate)))

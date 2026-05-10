@@ -3,7 +3,7 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-10T12:34:14.698Z
+Generated at: 2026-05-10T12:47:14.485Z
 Brand count: 51
 
 ## Adidas
