@@ -117,6 +117,36 @@ export async function localizeStoryImages(stories: StoredStory[]) {
       ruleStory?.acquisition.candidateImageUrl ??
       (!story.image.startsWith('/news/') && !story.image.startsWith('/runtime/news-images/') ? story.image : null)
 
+    // 兜底：对于 partial 状态的故事，如果 preferredImageUrl 无法获取
+    // 但 image-rules 中记录了 localMirrorPath 且本地文件存在，则直接复用
+    if (
+      !preferredImageUrl &&
+      ruleStory?.acquisition.localMirrorPath &&
+      !isPlaceholderVector(ruleStory.acquisition.localMirrorPath) &&
+      (await hasLocalMirror(ruleStory.acquisition.localMirrorPath))
+    ) {
+      story.image = ruleStory.acquisition.localMirrorPath
+
+      const existingLocalMirrorAsset = nextAssets.find(
+        (asset) => asset.fingerprint === story.fingerprint && asset.localPath === ruleStory.acquisition.localMirrorPath,
+      )
+
+      if (!existingLocalMirrorAsset) {
+        nextAssets.push({
+          fingerprint: story.fingerprint,
+          sourceUrl:
+            ruleStory.acquisition.candidateImageUrl ?? ruleStory.sourcePage ?? ruleStory.acquisition.localMirrorPath,
+          localPath: ruleStory.acquisition.localMirrorPath,
+          downloadedAt: new Date().toISOString(),
+          status: 'reused',
+        })
+      } else if (existingLocalMirrorAsset.status !== 'reused') {
+        existingLocalMirrorAsset.status = 'reused'
+      }
+
+      continue
+    }
+
     const existingAsset = nextAssets.find(
       (asset) =>
         asset.fingerprint === story.fingerprint &&

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "brand": "Rolex",
+  "slug": "rolex",
+  "categories": ["luxury"],
+  "officialDomains": ["www.rolex.cn"],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "single_official_product_page",
+      "local_mirror"
+    ],
+    "notes": [
+      "Rolex.cn returns 403 from curl and browser — WAF blocks automated requests.",
+      "Stories rely on pre-downloaded local mirror images under /news/luxury/.",
+      "The local mirror for rolex-datejust already exists and is reused."
+    ]
+  },
+  "crawl": {
+    "mode": "single_product_page",
+    "entryPages": [
+      {
+        "label": "Rolex 中国官网 Datejust 系列",
+        "subcategory": "腕表",
+        "url": "https://www.rolex.cn/zh-cn/watches/datejust",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.rolex.cn/zh-cn/watches/datejust",
+    "notes": [
+      "Rolex.cn has aggressive anti-bot protection (Akamai + GHost).",
+      "Generic fetch returns 403. Pipeline relies on seed-injected static stories with local mirrors."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "rolex-datejust",
+      "title": "Rolex 推出 Datejust 36 新款腕表，经典日志型系列持续焕新",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Datejust 36 腕表",
+        "三角坑纹外圈",
+        "Jubilee 表带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.rolex.cn/zh-cn/watches/datejust",
+      "currentImage": "/news/luxury/rolex-datejust.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": ["local_mirror"],
+        "localMirrorPath": "/news/luxury/rolex-datejust.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "Rolex.cn is not crawlable. Local mirror image already exists at /news/luxury/rolex-datejust.jpg"
+        ]
+      }
+    },
+    {
+      "storyId": "rolex-datejust-36",
+      "title": "Rolex 推出 Datejust 36 腕表，腕表新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "腕表",
+      "products": [
+        "Datejust 36 腕表",
+        "三角坑纹外圈",
+        "Jubilee 表带"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.rolex.cn/zh-cn/watches/datejust",
+      "currentImage": "",
+      "currentImageMode": "remote",
+      "currentImageHost": "www.rolex.cn",
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": ["local_mirror"],
+        "localMirrorPath": "/news/luxury/rolex-datejust.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "This story has no current image. Shares the same product as rolex-datejust; reuse its local mirror."
+        ]
+      }
+    }
+  ]
+}

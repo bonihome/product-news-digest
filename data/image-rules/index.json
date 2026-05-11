@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T14:54:24.369Z",
+  "generatedAt": "2026-05-11T15:14:06.328Z",
   "brandCount": 57,
   "brands": [
     {
@@ -504,6 +504,15 @@
       "storyCount": 4,
       "readyCount": 0,
       "partialCount": 4,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Rolex",
+      "slug": "rolex",
+      "file": "data/image-rules/rolex.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {

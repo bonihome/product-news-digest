@@ -63,7 +63,7 @@
           "local_mirror"
         ],
         "localMirrorPath": "/news/sports/yonex-tennis-page.png",
-        "candidateImageUrl": null,
+        "candidateImageUrl": "https://www.yonex.com/media/catalog/product/cache/1/small_image/295x295/beff4985b56e3afdbeabfc89641a4582/p/r/product_50268_20211018_0001.jpg",
         "candidateImageHost": null,
         "notes": [
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
