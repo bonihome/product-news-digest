@@ -326,9 +326,13 @@ async function getConfiguredBrandPages(
 function cleanGameTitle(rawTitle: string) {
   return collapseWhitespace(
     decodeHtmlEntities(rawTitle)
+      .replace(/\s*🕹️\s*Play Now on GamePix$/i, '')
+      .replace(/\s*\|\s*GamePix$/i, '')
       .replace(/\s*-\s*Play Online for Free!\s*\|\s*Poki$/i, '')
       .replace(/\s*-\s*Play Online for Free!\s*\|\s*Arcadrome$/i, '')
       .replace(/\s*🕹️\s*Play on CrazyGames$/i, '')
+      .replace(/\s*-\s*Play Now on Y8\.com$/i, '')
+      .replace(/\s*\|\s*Y8\.com$/i, '')
       .replace(/\s*\|\s*CrazyGames$/i, ''),
   )
 }
@@ -523,6 +527,30 @@ async function extractArcadromeHomeGameProduct(
   }
 
   return fetchGameDetailProduct(makeAbsoluteUrl(relativeUrl, 'https://arcadrome.com'), label, subcategory)
+}
+
+function extractGamePixNewGameUrls(html: string) {
+  return unique(
+    [...html.matchAll(/https:\/\/www\.gamepix\.com\/play\/[a-z0-9-]+/gi)]
+      .map((match) => match[0])
+      .filter(Boolean),
+  ).slice(0, 2)
+}
+
+function extractY8NewGameUrls(html: string) {
+  return unique(
+    [...html.matchAll(/"url":"(https:\/\/www\.y8\.com\/games\/[^"]+)"/gi)]
+      .map((match) => decodeHtmlEntities(match[1]))
+      .filter(Boolean),
+  ).slice(0, 2)
+}
+
+function extractPacoGamesLatestUrls(html: string) {
+  return unique(
+    [...html.matchAll(/href="(\/[a-z0-9-]+\/[a-z0-9-]+)"/gi)]
+      .map((match) => makeAbsoluteUrl(match[1], 'https://www.pacogames.com'))
+      .filter((url) => !/\/(blog|3d|action|sports|driving|strategy|girls|multiplayer|logic|casual|tags)$/i.test(url)),
+  ).slice(0, 2)
 }
 
 function extractNikeFirstProductFromListing(
@@ -963,6 +991,60 @@ async function fetchPokiNewGameProducts(subcategory: string) {
   return products.filter((product): product is WebgamePortalProduct => Boolean(product))
 }
 
+async function fetchGamePixNewProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('GamePix')
+  if (!crawlRule || crawlRule.mode !== 'gamepix_new_games') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.flatMap(async (page) => {
+      const html = await fetchHtml(page.url)
+      const detailUrls = extractGamePixNewGameUrls(html)
+      return Promise.all(detailUrls.map((url) => fetchGameDetailProduct(url, page.label, page.subcategory)))
+    }),
+  )
+
+  return products.flat().filter((product): product is WebgamePortalProduct => Boolean(product))
+}
+
+async function fetchPacoGamesLatestProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('PacoGames')
+  if (!crawlRule || crawlRule.mode !== 'pacogames_latest_games') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.flatMap(async (page) => {
+      const html = await fetchHtml(page.url)
+      const detailUrls = extractPacoGamesLatestUrls(html)
+      return Promise.all(detailUrls.map((url) => fetchGameDetailProduct(url, page.label, page.subcategory)))
+    }),
+  )
+
+  return products.flat().filter((product): product is WebgamePortalProduct => Boolean(product))
+}
+
+async function fetchY8NewProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('Y8')
+  if (!crawlRule || crawlRule.mode !== 'y8_new_games') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.flatMap(async (page) => {
+      const html = await fetchHtml(page.url)
+      const detailUrls = extractY8NewGameUrls(html)
+      return Promise.all(detailUrls.map((url) => fetchGameDetailProduct(url, page.label, page.subcategory)))
+    }),
+  )
+
+  return products.flat().filter((product): product is WebgamePortalProduct => Boolean(product))
+}
+
 async function fetchCrazyGamesNewProducts(subcategory: string) {
   const crawlRule = await findBrandCrawlRule('CrazyGames')
   if (!crawlRule || crawlRule.mode !== 'crazygames_new_games') {
@@ -1164,8 +1246,14 @@ async function fetchConfiguredRuleCandidates(rule: BrandSourceRule, checkedAt: s
       return fetchPradaCategoryCandidates(rule, checkedAt)
     case 'samsung_buy_pages':
       return fetchSamsungBuyPageCandidates(rule, checkedAt)
+    case 'pacogames_latest_games':
+      return fetchWebgameCandidates(rule, checkedAt, await fetchPacoGamesLatestProducts(rule.subcategory))
+    case 'gamepix_new_games':
+      return fetchWebgameCandidates(rule, checkedAt, await fetchGamePixNewProducts(rule.subcategory))
     case 'poki_new_games':
       return fetchWebgameCandidates(rule, checkedAt, await fetchPokiNewGameProducts(rule.subcategory))
+    case 'y8_new_games':
+      return fetchWebgameCandidates(rule, checkedAt, await fetchY8NewProducts(rule.subcategory))
     case 'crazygames_new_games':
       return fetchWebgameCandidates(rule, checkedAt, await fetchCrazyGamesNewProducts(rule.subcategory))
     case 'arcadrome_home_games':

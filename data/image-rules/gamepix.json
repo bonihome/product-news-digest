@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "brand": "GamePix",
+  "slug": "gamepix",
+  "categories": [
+    "webgames"
+  ],
+  "officialDomains": [
+    "www.gamepix.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 4,
+    "readyCount": 0,
+    "partialCount": 4,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "new_games_listing_parse",
+      "detail_page_og_image_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "GamePix exposes a dedicated New Games page with stable /play/ detail links in ordered listing HTML.",
+      "After finding the first current game URLs, fetch the detail pages and mirror the official cover images locally."
+    ]
+  },
+  "crawl": {
+    "mode": "gamepix_new_games",
+    "entryPages": [
+      {
+        "label": "GamePix New Games",
+        "subcategory": "新游",
+        "url": "https://www.gamepix.com/new",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.gamepix.com/",
+    "notes": [
+      "Use the GamePix New Games page and promote the first current game entries into the webgame news feed."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "gamepix-the-crossing-master",
+      "title": "GamePix 上线 The Crossing Master，平台新游页继续扩充轻操作闯关作品",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "The Crossing Master",
+        "轻操作闯关",
+        "GamePix 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.gamepix.com/play/the-crossing-master",
+      "currentImage": "/news/webgames/gamepix-the-crossing-master.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/gamepix-the-crossing-master.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "gamepix-hill-survival-shooting-game",
+      "title": "GamePix 收录 Hill Survival Shooting Game，平台新品继续补入射击题材",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Hill Survival Shooting Game",
+        "第一人称射击",
+        "GamePix 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.gamepix.com/play/hill-survival-shooting-game",
+      "currentImage": "/news/webgames/gamepix-hill-survival-shooting-game.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/gamepix-hill-survival-shooting-game.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "gamepix-slide-strike",
+      "title": "GamePix 新增 Slide & Strike，益智滑动题材继续进入最新游戏序列",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Slide & Strike",
+        "滑动益智",
+        "GamePix 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.gamepix.com/play/slide-strike",
+      "currentImage": "/news/webgames/gamepix-slide-strike.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/gamepix-slide-strike.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "gamepix-klondike-kings-solitaire",
+      "title": "GamePix 收录 Klondike Kings Solitaire，纸牌类新作继续扩充平台新品池",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Klondike Kings Solitaire",
+        "纸牌休闲",
+        "GamePix 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.gamepix.com/play/klondike-kings-solitaire",
+      "currentImage": "/news/webgames/gamepix-klondike-kings-solitaire.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/gamepix-klondike-kings-solitaire.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-10T13:59:13.502Z",
-  "brandCount": 54,
+  "generatedAt": "2026-05-11T14:54:24.369Z",
+  "brandCount": 57,
   "brands": [
     {
       "brand": "Adidas",
@@ -180,6 +180,15 @@
       "storyCount": 3,
       "readyCount": 0,
       "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "GamePix",
+      "slug": "gamepix",
+      "file": "data/image-rules/gamepix.json",
+      "storyCount": 4,
+      "readyCount": 0,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
@@ -372,6 +381,15 @@
       "needsReplacementCount": 0
     },
     {
+      "brand": "PacoGames",
+      "slug": "pacogames",
+      "file": "data/image-rules/pacogames.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
       "brand": "Poki",
       "slug": "poki",
       "file": "data/image-rules/poki.json",
@@ -477,6 +495,15 @@
       "storyCount": 1,
       "readyCount": 0,
       "partialCount": 1,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Y8",
+      "slug": "y8",
+      "file": "data/image-rules/y8.json",
+      "storyCount": 4,
+      "readyCount": 0,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {

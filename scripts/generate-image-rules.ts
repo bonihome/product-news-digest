@@ -55,7 +55,10 @@ type BrandRule = {
       | 'single_product_page'
       | 'prada_category_pages'
       | 'samsung_buy_pages'
+      | 'pacogames_latest_games'
+      | 'gamepix_new_games'
       | 'poki_new_games'
+      | 'y8_new_games'
       | 'crazygames_new_games'
       | 'arcadrome_home_games'
       | 'nike_trend_pages'
@@ -132,6 +135,36 @@ const brandStrategyOverrides: Record<
         'Prada now begins from the women new-in or Eternal Gold collection pages so the pipeline can follow fresher arrivals instead of a single fixed PDP.',
         'If category extraction fails, keep using verified product pages and the DAM reconstruction pattern as fallbacks.',
       ],
+    },
+  },
+  PacoGames: {
+    methods: ['latest_games_listing_parse', 'detail_page_og_image_download', 'local_mirror'],
+    notes: [
+      'PacoGames exposes a Latest Games page whose first visible game entries can be parsed directly from HTML.',
+      'After finding the first latest-game routes, fetch the detail page title and og:image as the stable news source and mirror locally.',
+    ],
+    crawl: {
+      mode: 'pacogames_latest_games',
+      entryPages: [
+        { label: 'PacoGames Latest Games', subcategory: '新游', url: 'https://www.pacogames.com/latest-games', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.pacogames.com/',
+      notes: ['Use the PacoGames Latest Games page and promote the first current entries into the webgame news feed.'],
+    },
+  },
+  GamePix: {
+    methods: ['new_games_listing_parse', 'detail_page_og_image_download', 'local_mirror'],
+    notes: [
+      'GamePix exposes a dedicated New Games page with stable /play/ detail links in ordered listing HTML.',
+      'After finding the first current game URLs, fetch the detail pages and mirror the official cover images locally.',
+    ],
+    crawl: {
+      mode: 'gamepix_new_games',
+      entryPages: [
+        { label: 'GamePix New Games', subcategory: '新游', url: 'https://www.gamepix.com/new', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.gamepix.com/',
+      notes: ['Use the GamePix New Games page and promote the first current game entries into the webgame news feed.'],
     },
   },
   'Van Cleef & Arpels': {
@@ -491,6 +524,21 @@ const brandStrategyOverrides: Record<
       notes: [
         'Use Poki New Games as the primary discovery surface and fetch the first current game from the structured games feed.',
       ],
+    },
+  },
+  Y8: {
+    methods: ['new_games_itemlist_parse', 'detail_page_og_image_download', 'local_mirror'],
+    notes: [
+      'Y8 exposes a structured New Games ItemList payload directly in the page HTML.',
+      'Use the first current game URLs from the ItemList, then fetch the detail page title and og:image for a stable news source.',
+    ],
+    crawl: {
+      mode: 'y8_new_games',
+      entryPages: [
+        { label: 'Y8 New Games', subcategory: '新游', url: 'https://www.y8.com/new/games', extraction: 'first_product' },
+      ],
+      fallbackUrl: 'https://www.y8.com/',
+      notes: ['Use the Y8 New Games listing and promote the first current entries from the ItemList into the webgame news feed.'],
     },
   },
   CrazyGames: {

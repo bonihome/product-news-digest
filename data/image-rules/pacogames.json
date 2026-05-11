@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "brand": "PacoGames",
+  "slug": "pacogames",
+  "categories": [
+    "webgames"
+  ],
+  "officialDomains": [
+    "www.pacogames.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "latest_games_listing_parse",
+      "detail_page_og_image_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "PacoGames exposes a Latest Games page whose first visible game entries can be parsed directly from HTML.",
+      "After finding the first latest-game routes, fetch the detail page title and og:image as the stable news source and mirror locally."
+    ]
+  },
+  "crawl": {
+    "mode": "pacogames_latest_games",
+    "entryPages": [
+      {
+        "label": "PacoGames Latest Games",
+        "subcategory": "新游",
+        "url": "https://www.pacogames.com/latest-games",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.pacogames.com/",
+    "notes": [
+      "Use the PacoGames Latest Games page and promote the first current entries into the webgame news feed."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "pacogames-pong",
+      "title": "PacoGames 最新游戏页加入 Pong，经典街机玩法以新版网页作品回归",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Pong",
+        "街机经典",
+        "PacoGames 最新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.pacogames.com/casual/pong",
+      "currentImage": "/news/webgames/pacogames-pong.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/pacogames-pong.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "pacogames-tetris",
+      "title": "PacoGames 收录新版 Tetris，方块消除类作品进入最新游戏区",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Tetris",
+        "方块消除",
+        "PacoGames 最新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.pacogames.com/logic/tetris",
+      "currentImage": "/news/webgames/pacogames-tetris.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/pacogames-tetris.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

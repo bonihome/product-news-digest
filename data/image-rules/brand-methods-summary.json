@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-10T13:59:13.503Z",
-  "brandCount": 54,
+  "generatedAt": "2026-05-11T14:54:24.370Z",
+  "brandCount": 57,
   "brands": [
     {
       "brand": "Adidas",
@@ -1940,6 +1940,94 @@
       ]
     },
     {
+      "brand": "GamePix",
+      "slug": "gamepix",
+      "categories": [
+        "webgames"
+      ],
+      "officialDomains": [
+        "www.gamepix.com"
+      ],
+      "storyCount": 4,
+      "status": {
+        "storyCount": 4,
+        "readyCount": 0,
+        "partialCount": 4,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "new_games_listing_parse",
+        "detail_page_og_image_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "GamePix exposes a dedicated New Games page with stable /play/ detail links in ordered listing HTML.",
+        "After finding the first current game URLs, fetch the detail pages and mirror the official cover images locally."
+      ],
+      "crawlMode": "gamepix_new_games",
+      "crawlNotes": [
+        "Use the GamePix New Games page and promote the first current game entries into the webgame news feed."
+      ],
+      "crawlEntries": [
+        {
+          "label": "GamePix New Games",
+          "subcategory": "新游",
+          "url": "https://www.gamepix.com/new",
+          "extraction": "first_product"
+        }
+      ],
+      "stories": [
+        {
+          "storyId": "gamepix-the-crossing-master",
+          "subcategory": "新游",
+          "sourcePage": "https://www.gamepix.com/play/the-crossing-master",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/gamepix-the-crossing-master.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "gamepix-hill-survival-shooting-game",
+          "subcategory": "新游",
+          "sourcePage": "https://www.gamepix.com/play/hill-survival-shooting-game",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/gamepix-hill-survival-shooting-game.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "gamepix-slide-strike",
+          "subcategory": "新游",
+          "sourcePage": "https://www.gamepix.com/play/slide-strike",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/gamepix-slide-strike.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "gamepix-klondike-kings-solitaire",
+          "subcategory": "新游",
+          "sourcePage": "https://www.gamepix.com/play/klondike-kings-solitaire",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/gamepix-klondike-kings-solitaire.png",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
       "brand": "Gucci",
       "slug": "gucci",
       "categories": [
@@ -3862,6 +3950,70 @@
       ]
     },
     {
+      "brand": "PacoGames",
+      "slug": "pacogames",
+      "categories": [
+        "webgames"
+      ],
+      "officialDomains": [
+        "www.pacogames.com"
+      ],
+      "storyCount": 2,
+      "status": {
+        "storyCount": 2,
+        "readyCount": 0,
+        "partialCount": 2,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "latest_games_listing_parse",
+        "detail_page_og_image_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "PacoGames exposes a Latest Games page whose first visible game entries can be parsed directly from HTML.",
+        "After finding the first latest-game routes, fetch the detail page title and og:image as the stable news source and mirror locally."
+      ],
+      "crawlMode": "pacogames_latest_games",
+      "crawlNotes": [
+        "Use the PacoGames Latest Games page and promote the first current entries into the webgame news feed."
+      ],
+      "crawlEntries": [
+        {
+          "label": "PacoGames Latest Games",
+          "subcategory": "新游",
+          "url": "https://www.pacogames.com/latest-games",
+          "extraction": "first_product"
+        }
+      ],
+      "stories": [
+        {
+          "storyId": "pacogames-pong",
+          "subcategory": "新游",
+          "sourcePage": "https://www.pacogames.com/casual/pong",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/pacogames-pong.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "pacogames-tetris",
+          "subcategory": "新游",
+          "sourcePage": "https://www.pacogames.com/logic/tetris",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/pacogames-tetris.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
       "brand": "Poki",
       "slug": "poki",
       "categories": [
@@ -4847,6 +4999,94 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/beauty/winona-cream.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        }
+      ]
+    },
+    {
+      "brand": "Y8",
+      "slug": "y8",
+      "categories": [
+        "webgames"
+      ],
+      "officialDomains": [
+        "www.y8.com"
+      ],
+      "storyCount": 4,
+      "status": {
+        "storyCount": 4,
+        "readyCount": 0,
+        "partialCount": 4,
+        "needsReplacementCount": 0
+      },
+      "methods": [
+        "new_games_itemlist_parse",
+        "detail_page_og_image_download",
+        "local_mirror"
+      ],
+      "notes": [
+        "Y8 exposes a structured New Games ItemList payload directly in the page HTML.",
+        "Use the first current game URLs from the ItemList, then fetch the detail page title and og:image for a stable news source."
+      ],
+      "crawlMode": "y8_new_games",
+      "crawlNotes": [
+        "Use the Y8 New Games listing and promote the first current entries from the ItemList into the webgame news feed."
+      ],
+      "crawlEntries": [
+        {
+          "label": "Y8 New Games",
+          "subcategory": "新游",
+          "url": "https://www.y8.com/new/games",
+          "extraction": "first_product"
+        }
+      ],
+      "stories": [
+        {
+          "storyId": "y8-cat-rescue",
+          "subcategory": "新游",
+          "sourcePage": "https://www.y8.com/games/cat_rescue_",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/y8-cat-rescue.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "y8-foc-drag-street",
+          "subcategory": "新游",
+          "sourcePage": "https://www.y8.com/games/foc_drag_street",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/y8-foc-drag-street.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "y8-pvz-fusion-cheats",
+          "subcategory": "新游",
+          "sourcePage": "https://www.y8.com/games/pvz_fusion_cheats",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/y8-pvz-fusion-cheats.webp",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "y8-football-legends-2026",
+          "subcategory": "新游",
+          "sourcePage": "https://www.y8.com/games/football_legends_2026",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/webgames/y8-football-legends-2026.webp",
           "candidateImageUrl": null,
           "automationStatus": "partial"
         }

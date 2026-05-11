@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "brand": "Y8",
+  "slug": "y8",
+  "categories": [
+    "webgames"
+  ],
+  "officialDomains": [
+    "www.y8.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 4,
+    "readyCount": 0,
+    "partialCount": 4,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "new_games_itemlist_parse",
+      "detail_page_og_image_download",
+      "local_mirror"
+    ],
+    "notes": [
+      "Y8 exposes a structured New Games ItemList payload directly in the page HTML.",
+      "Use the first current game URLs from the ItemList, then fetch the detail page title and og:image for a stable news source."
+    ]
+  },
+  "crawl": {
+    "mode": "y8_new_games",
+    "entryPages": [
+      {
+        "label": "Y8 New Games",
+        "subcategory": "新游",
+        "url": "https://www.y8.com/new/games",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.y8.com/",
+    "notes": [
+      "Use the Y8 New Games listing and promote the first current entries from the ItemList into the webgame news feed."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "y8-cat-rescue",
+      "title": "Y8 新游页收录 Cat Rescue，益智救援题材补入平台最新列表",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Cat Rescue",
+        "益智救援",
+        "Y8 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.y8.com/games/cat_rescue_",
+      "currentImage": "/news/webgames/y8-cat-rescue.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/y8-cat-rescue.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "y8-foc-drag-street",
+      "title": "Y8 推出 Foc Drag Street，竞速题材新作继续补强最新游戏区",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Foc Drag Street",
+        "竞速新作",
+        "Y8 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.y8.com/games/foc_drag_street",
+      "currentImage": "/news/webgames/y8-foc-drag-street.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/y8-foc-drag-street.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "y8-pvz-fusion-cheats",
+      "title": "Y8 新游页加入 PVZ Fusion Cheats，策略防守题材继续出现在新品区",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "PVZ Fusion Cheats",
+        "策略防守",
+        "Y8 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.y8.com/games/pvz_fusion_cheats",
+      "currentImage": "/news/webgames/y8-pvz-fusion-cheats.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/y8-pvz-fusion-cheats.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "y8-football-legends-2026",
+      "title": "Y8 收录 Football Legends，新版足球对战网页游戏进入最新列表",
+      "category": "webgames",
+      "subcategory": "新游",
+      "products": [
+        "Football Legends",
+        "足球对战",
+        "Y8 新游戏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.y8.com/games/football_legends_2026",
+      "currentImage": "/news/webgames/y8-football-legends-2026.webp",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/webgames/y8-football-legends-2026.webp",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

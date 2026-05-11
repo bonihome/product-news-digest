@@ -3,8 +3,8 @@
 This file is the human-readable companion to the JSON rule files in `data/image-rules/`.
 Use it when updating the website or debugging server-side image reacquisition.
 
-Generated at: 2026-05-10T13:59:13.503Z
-Brand count: 54
+Generated at: 2026-05-11T14:54:24.370Z
+Brand count: 57
 
 ## Adidas
 
@@ -405,6 +405,25 @@ Brand count: 54
   - `estee` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-anr-official.jpg` | candidate: https://www.esteelauder.com.cn/media/export/cms/products/308x424/el_sku_G37B01_308x424_0.jpg?w=3840 | status: partial
   - `estee-makeup` | 彩妆 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-doublewear-local.png` | candidate: https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg | status: partial
   - `estee-re-nutriv` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/estee-re-nutriv-official.jpg` | candidate: none stored | status: partial
+
+## GamePix
+
+- Slug: `gamepix`
+- Categories: webgames
+- Official domains: www.gamepix.com
+- Story count: 4
+- Status: ready 0, partial 4, needs replacement 0
+- Brand methods: new_games_listing_parse -> detail_page_og_image_download -> local_mirror
+- Notes: GamePix exposes a dedicated New Games page with stable /play/ detail links in ordered listing HTML. After finding the first current game URLs, fetch the detail pages and mirror the official cover images locally.
+- Crawl mode: gamepix_new_games
+- Crawl notes: Use the GamePix New Games page and promote the first current game entries into the webgame news feed.
+- Crawl entries:
+  - `GamePix New Games` | 新游 | https://www.gamepix.com/new | extraction: first_product
+- Stories:
+  - `gamepix-the-crossing-master` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/gamepix-the-crossing-master.png` | candidate: none stored | status: partial
+  - `gamepix-hill-survival-shooting-game` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/gamepix-hill-survival-shooting-game.png` | candidate: none stored | status: partial
+  - `gamepix-slide-strike` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/gamepix-slide-strike.png` | candidate: none stored | status: partial
+  - `gamepix-klondike-kings-solitaire` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/gamepix-klondike-kings-solitaire.png` | candidate: none stored | status: partial
 
 ## Gucci
 
@@ -821,6 +840,23 @@ Brand count: 54
 - Stories:
   - `oppo-findx9` | 手机 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/digital/oppo-findx9.png` | candidate: none stored | status: partial
 
+## PacoGames
+
+- Slug: `pacogames`
+- Categories: webgames
+- Official domains: www.pacogames.com
+- Story count: 2
+- Status: ready 0, partial 2, needs replacement 0
+- Brand methods: latest_games_listing_parse -> detail_page_og_image_download -> local_mirror
+- Notes: PacoGames exposes a Latest Games page whose first visible game entries can be parsed directly from HTML. After finding the first latest-game routes, fetch the detail page title and og:image as the stable news source and mirror locally.
+- Crawl mode: pacogames_latest_games
+- Crawl notes: Use the PacoGames Latest Games page and promote the first current entries into the webgame news feed.
+- Crawl entries:
+  - `PacoGames Latest Games` | 新游 | https://www.pacogames.com/latest-games | extraction: first_product
+- Stories:
+  - `pacogames-pong` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/pacogames-pong.webp` | candidate: none stored | status: partial
+  - `pacogames-tetris` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/pacogames-tetris.webp` | candidate: none stored | status: partial
+
 ## Poki
 
 - Slug: `poki`
@@ -1042,6 +1078,25 @@ Brand count: 54
   - `Winona 默认入口` | 护肤 | https://www.winona.cn/product/110010.html | extraction: first_product
 - Stories:
   - `winona-cream` | 护肤 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/beauty/winona-cream.jpg` | candidate: none stored | status: partial
+
+## Y8
+
+- Slug: `y8`
+- Categories: webgames
+- Official domains: www.y8.com
+- Story count: 4
+- Status: ready 0, partial 4, needs replacement 0
+- Brand methods: new_games_itemlist_parse -> detail_page_og_image_download -> local_mirror
+- Notes: Y8 exposes a structured New Games ItemList payload directly in the page HTML. Use the first current game URLs from the ItemList, then fetch the detail page title and og:image for a stable news source.
+- Crawl mode: y8_new_games
+- Crawl notes: Use the Y8 New Games listing and promote the first current entries from the ItemList into the webgame news feed.
+- Crawl entries:
+  - `Y8 New Games` | 新游 | https://www.y8.com/new/games | extraction: first_product
+- Stories:
+  - `y8-cat-rescue` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/y8-cat-rescue.webp` | candidate: none stored | status: partial
+  - `y8-foc-drag-street` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/y8-foc-drag-street.webp` | candidate: none stored | status: partial
+  - `y8-pvz-fusion-cheats` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/y8-pvz-fusion-cheats.webp` | candidate: none stored | status: partial
+  - `y8-football-legends-2026` | 新游 | method: `local_mirror_of_official_asset` | priority: local_mirror | local: `/news/webgames/y8-football-legends-2026.webp` | candidate: none stored | status: partial
 
 ## YONEX
 
