@@ -37,3 +37,8 @@ tmp-*.png
 tmp-*.jpg
 tmp-*.jpeg
 tmp-*.webp
+
+# AI assistant chat histories
+.aider*
+.aider.chat.history.md
+.aider.input.history
