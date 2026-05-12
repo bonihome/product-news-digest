@@ -598,6 +598,9 @@ function BrandDetailView({
       : brandStories.filter((story) => story.subcategory === activeBrandSubcategory)
   const latestFiltered = filteredBrandStories[0]
   const olderStories = filteredBrandStories.slice(1)
+  const highlightedProducts = Array.from(
+    new Set(filteredBrandStories.flatMap((story) => story.products)),
+  ).slice(0, 10)
 
   return (
     <section className="detail-layout">
@@ -648,7 +651,7 @@ function BrandDetailView({
         <aside className="detail-panel">
           <h2>当前重点产品</h2>
           <div className="detail-tag-list">
-            {filteredBrandStories.flatMap((story) => story.products).map((product) => (
+            {highlightedProducts.map((product) => (
               <span key={`${brand}-${product}`}>{product}</span>
             ))}
           </div>

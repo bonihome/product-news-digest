@@ -347,12 +347,15 @@
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.8fr);
   gap: 18px;
+  align-items: start;
 }
 
 .detail-panel {
   padding: 24px;
   display: grid;
   gap: 16px;
+  align-content: start;
+  align-self: start;
 }
 
 .detail-story-list,
@@ -380,6 +383,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.detail-grid .detail-tag-list {
+  align-content: start;
 }
 
 .detail-tag-list span {
