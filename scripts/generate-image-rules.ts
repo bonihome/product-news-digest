@@ -55,6 +55,7 @@ type BrandRule = {
       | 'single_product_page'
       | 'prada_category_pages'
       | 'samsung_buy_pages'
+      | 'yonex_mall_pages'
       | 'pacogames_latest_games'
       | 'gamepix_new_games'
       | 'poki_new_games'
@@ -348,6 +349,29 @@ const brandStrategyOverrides: Record<
       ],
     },
   },
+  YONEX: {
+    methods: ['mall_listing_first_product_card', 'official_product_page_image_download', 'local_mirror'],
+    notes: [
+      'YONEX China tennis now starts from the mall landing page and extracts the first visible product card instead of reusing a full-page screenshot.',
+      'Prefer the first mall product image and keep the mall detail page as the stable refresh source for tennis-product stories.',
+    ],
+    crawl: {
+      mode: 'yonex_mall_pages',
+      entryPages: [
+        {
+          label: 'YONEX 网球系列新品',
+          subcategory: '网球',
+          url: 'https://www.yonex.cn/home/index/mall/id/1',
+          extraction: 'first_product',
+        },
+      ],
+      fallbackUrl: 'https://www.yonex.cn/home/index/mall/id/1',
+      notes: [
+        'Use the tennis mall landing page and promote the first visible product card into the sports news feed.',
+        'If the page layout changes, refresh the parser against the z-pro product list instead of falling back to a full-page screenshot.',
+      ],
+    },
+  },
   Nike: {
     methods: ['listing_first_product', 'official_product_page_image_download', 'local_mirror'],
     notes: [
@@ -429,11 +453,11 @@ const brandStrategyOverrides: Record<
     crawl: {
       mode: 'single_product_page',
       entryPages: [
-        { label: '爱马仕中国官网腕表', subcategory: '腕表', url: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/', extraction: 'first_product' },
+        { label: '爱马仕中国官网 H08 腕表专题', subcategory: '腕表', url: 'https://www.hermes.cn/cn/zh/content/322394-hermes-h08/', extraction: 'first_product' },
       ],
       fallbackUrl: 'https://www.hermes.cn/cn/zh/',
       notes: [
-        'Hermes currently uses verified product/category pages rather than topic-feed extraction.',
+        'Hermes watch automation should prefer stable editorial or product-led watch pages instead of brittle watch-category routes.',
       ],
     },
   },
@@ -480,13 +504,13 @@ const brandStrategyOverrides: Record<
     crawl: {
       mode: 'single_product_page',
       entryPages: [
-        { label: 'Hermès Beauty 香氛', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/category/fragrances/', extraction: 'first_product' },
+        { label: 'Hermès Beauty 香氛', subcategory: '香水', url: 'https://www.hermes.cn/cn/en/category/fragrances/', extraction: 'first_product' },
         { label: 'Hermès Beauty Terre d’Hermès 产品页', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%A4%A7%E5%9C%B0%E9%A6%A5%E9%83%81%E9%A6%99%E6%A0%B9%E8%8D%89%E9%A6%99%E5%9E%8B%E9%A6%99%E6%B0%B4-V40946/', extraction: 'first_product' },
         { label: 'Hermès Beauty Twilly d’Hermès 产品页', subcategory: '香水', url: 'https://www.hermes.cn/cn/zh/product/%E7%88%B1%E9%A9%AC%E4%BB%95%E4%B8%9D%E6%84%8F%E8%8D%94%E9%9F%B5%E6%B7%A1%E9%A6%99%E7%B2%BE-V110826VN/', extraction: 'first_product' },
       ],
-      fallbackUrl: 'https://www.hermes.cn/cn/zh/category/beauty/',
+      fallbackUrl: 'https://www.hermes.cn/cn/en/category/fragrances-and-make-up/',
       notes: [
-        'Hermès Beauty remains product-page led until broader category extraction is added.',
+        'Hermès Beauty remains product-page led until broader category extraction is added, and should use the working cn/en fragrance category paths when category-level freshness is needed.',
       ],
     },
   },
@@ -609,20 +633,78 @@ const storyCandidateImageUrls: Record<string, string> = {
     'https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-multipass-%E6%89%8B%E8%A2%8B--M29094_PM2_Front%20view.png?wid=1440&hei=1440',
   'lv-x-tm-neverfull-mm':
     'https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-tm-neverfull-%E4%B8%AD%E5%8F%B7%E6%89%8B%E8%A2%8B--M27787_PM2_Front%20view.png?wid=1440&hei=1440',
+  'lv-nano-madeleine':
+    'https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/%E8%B7%AF%E6%98%93%E5%A8%81%E7%99%BB-nano-madeleine-%E6%89%8B%E8%A2%8B-monogram-empreinte-%E5%B0%8F%E5%9E%8B%E7%9A%AE%E5%85%B7--M29380_PM2_Front%20view.png?wid=730&hei=730',
+  'lv-all-in-bb':
+    'https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/%E8%B7%AF%E6%98%93%E5%A8%81%E7%99%BB-all-in-bb-%E6%89%8B%E8%A2%8B-%E5%85%B6%E4%BB%96monogram-%E5%B8%86%E5%B8%83-%E6%97%B6%E5%B0%9A%E6%89%8B%E8%A2%8B--M29067_PM2_Front%20view.png?wid=730&hei=730',
+  'hermes-hacademi':
+    'https://assets.hermes.cn/is/image/hermesproduct/hacademi手包--086976CK37-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-mini-clic-kelly':
+    'https://assets.hermes.cn/is/image/hermesproduct/mini-clic-kelly手镯--200004F%2094-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-arceau-watch':
+    'https://assets.hermes.cn/is/image/hermesproduct/arceau-le-temps-voyageur腕表41毫米--057198WW00-front-wm-1-0-0-1000-1000_g.jpg',
   'hermes-constance-slim':
     'https://assets.hermes.cn/is/image/hermesproduct/constance-slim%E9%92%B1%E5%8C%85--085259CC1H-front-wm-1-0-0-1000-1000_g.jpg',
   'hermes-le-petit-sac':
     'https://assets.hermes.cn/is/image/hermesproduct/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85--087968CC55-front-wm-1-0-0-1000-1000_g.jpg',
   'hermes-zipengo':
     'https://assets.hermes.cn/is/image/hermesproduct/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85--084321CC8L-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-garden-party':
+    'https://assets.hermes.cn/is/image/hermesproduct/garden-party%E5%A4%9A%E5%8F%A3%E8%A2%8B%E7%AB%96%E6%AC%BE%E6%89%8B%E6%8F%90%E5%8C%85--084260CKAA-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-kelly-pocket':
+    'https://assets.hermes.cn/is/image/hermesproduct/kelly-pocket%E9%95%BF%E9%92%B1%E5%8C%85--084940CC88-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-farandole':
+    'https://assets.hermes.cn/is/image/hermesproduct/farandole%E6%89%8B%E9%93%BE--104567B%2000-worn-1-0-0-1000-1000_g.jpg',
+  'hermes-collier-de-chien':
+    'https://assets.hermes.cn/is/image/hermesproduct/collier-de-chien%E6%89%8B%E9%95%AF%E5%B0%8F%E5%8F%B7--108112B%2000-worn-1-0-0-1000-1000_g.jpg',
   'hermes-mini-clic-chaine-dancre':
     'https://assets.hermes.cn/is/image/hermesproduct/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF--209000FP19-worn-1-0-0-1000-1000_g.jpg',
+  'hermes-h08-watch':
+    'https://assets.hermes.cn/is/image/hermesproduct/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3--049433WW00-front-1-300-0-1000-1000_g.jpg',
+  'hermes-cape-cod-watch':
+    'https://assets.hermes.cn/is/image/hermesproduct/cape-cod%E8%85%95%E8%A1%A8%E5%B0%8F%E5%8F%B731%E6%AF%AB%E7%B1%B3--044221WW00-front-1-300-0-1000-1000_g.jpg',
+  'hermes-rodeo-charm':
+    'https://assets.hermes.cn/is/image/hermesproduct/rodeo%E5%B0%8F%E5%8F%B7%E5%90%8A%E9%A5%B0--073422CAAF-worn-1-0-0-1000-1000_g.jpg',
+  'hermes-magsafe-cardholder':
+    'https://assets.hermes.cn/is/image/hermesproduct/%E9%94%9A%E9%93%BE%E5%9B%BE%E6%A1%88magsafe%E5%8D%A1%E5%8C%85--0003611%201A-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-beauty-terre-dhermes':
+    'https://assets.hermes.cn/is/image/hermesproduct/爱马仕大地馥郁香根草香型香水--40946-front-wm-1-0-0-1000-1000_g.jpg',
+  'hermes-beauty-twilly-ginger':
+    'https://assets.hermes.cn/is/image/hermesproduct/爱马仕丝意荔韵淡香精--110826VN-worn-2-0-0-1000-1000_g.jpg',
+  'dioramour-my-dior-mini-bag':
+    'https://assets.christiandior.cn/is/image/diorprod/S0984PHJJM933_SBG_E01?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80',
+  'dioramour-mitzah':
+    'https://assets.christiandior.cn/is/image/diorprod/62ART106I677C082_SBG_E01?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80',
   'chanel-beauty-chance-splendide':
     'https://www.chanel.cn/images/t_one/w_0.45,h_0.45,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1240/chance-eau-splendide-eau-de-parfum-spray-1-7fl-oz--packshot-default-136210-9561648758814.jpg',
   'chanel-ss26-readytowear':
     'https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1268/FSH-1771418302737-desktop-product_1.jpg',
   'chanel-handbag-story':
     'https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1024/FSH-1742141327919-desktop-1112.jpg',
+  'nike-phantom6':
+    'https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b042e92e-9f86-4c33-8505-a4c4fb447fb7/REACTX+PHANTOM+6+LOW+PRO+TF.png',
+  'nike-basketball':
+    'https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5eaa709b-cfe0-4ef5-b706-f90b952ac3cb/LEBRON+XXIII+EP.png',
+  'nike-running-family':
+    'https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/93706731-f694-4c81-b5e1-9cdaea9ad43d/NIKE+PEGASUS+PREMIUM+RR.png',
+  'adidas-football':
+    'https://static1.adidas.com.cn/t395/MTc3NTAwNzQwNTAxMDI0OGU5NTk3LWQ4MDItNDIyOC1hMzM0.jpg?im=Resize=(500,500)',
+  'adidas-football-boots':
+    'https://static1.adidas.com.cn/t395/MTc3NzAxNzYyNjc2NDlmOTlkMDM0LTdjMzctNDIzMy1iNzFi.jpg?im=Resize=(500,500)',
+  'adidas-boston13':
+    'https://assets.adidas.com/images/w_600%2Cf_auto%2Cq_auto/6b870278f58d4d1eb23c405e9c16963b_9366/Adizero_Boston_13_Shoes_Purple_JS4955_HM1.jpg',
+  'adidas-f50-club':
+    'https://static1.adidas.com.cn/t395/MTc3NzAxNzYyNjc2NDlmOTlkMDM0LTdjMzctNDIzMy1iNzFi.jpg?im=Resize=(500,500)',
+  'adidas-f50-fastline':
+    'https://static1.adidas.com.cn/t395/MTc3NzAxNzYwMDE4MjA3ZDY0ODg0LTQ5ODYtNDg1NS04YTU4.jpg?im=Resize=(500,500)',
+  'samsung-phone':
+    'https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0401/S26-Ultra_720X480.jpg?imbypass=true',
+  'samsung-tablet':
+    'https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Tab-S11-ultra_720X480.jpg?imbypass=true',
+  'samsung-buds':
+    'https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Bud4-pro_720X480.jpg?imbypass=true',
+  'samsung-galaxy-ecosystem':
+    'https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Bud4-pro_720X480.jpg?imbypass=true',
   'prada-passage-bag':
     'https://www.prada.com/content/dam/pradabkg_products/1/1BA/1BA495/2G52F0201/1BA495_2G52_F0201_V_OPO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg',
   'prada-lace-dress':
@@ -711,6 +793,8 @@ const storyCandidateImageUrls: Record<string, string> = {
     'https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0bb0368e-cb48-4dfc-9b59-7325d7a9c181/ENT+M+NK+DF+JSY+SS+STAD+HM.png',
   'nike-swim-hydrastrong':
     'https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3523998-276e-4882-b8d4-48e25afc3525/NK+PLY+SLD+JAMMER+WITH+GUSSET.png',
+  'yonex-tennis':
+    'https://www.yonex.cn/public/uploads/20260416/bee3bd81f35350fa43d142fba5d0c684.jpg',
   'shu-home':
     'https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png',
   'kiehls-home':
@@ -788,6 +872,10 @@ function inferGenericMethod(story: Story, brand: string) {
     return 'product_detail_packshot_download_to_local_mirror'
   }
 
+  if (brand === 'YONEX') {
+    return 'mall_listing_first_product_card_to_local_mirror'
+  }
+
   if (story.image.endsWith('.svg')) {
     return 'manual_editorial_placeholder'
   }
@@ -831,7 +919,11 @@ function inferAutomationStatus(story: Story, brand: string): AutomationStatus {
     return 'ready'
   }
 
-  if (['Prada', 'Van Cleef & Arpels', 'Lancôme', 'SHISEIDO', 'ASICS', 'Wilson'].includes(brand)) {
+  if (storyCandidateImageUrls[story.id]) {
+    return 'ready'
+  }
+
+  if (['Prada', 'Van Cleef & Arpels', 'Lancôme', 'SHISEIDO', 'ASICS', 'Wilson', 'YONEX', 'Hermes', 'Samsung'].includes(brand)) {
     return 'ready'
   }
 
@@ -865,6 +957,10 @@ function inferPriority(story: Story, brand: string) {
 
   if (brand === 'Wilson') {
     return ['official_blog_asset_download', 'official_product_page_image_download', 'local_mirror']
+  }
+
+  if (brand === 'YONEX') {
+    return ['mall_listing_first_product_card', 'official_product_page_image_download', 'local_mirror']
   }
 
   if (!isLocalImage(story.image)) {
@@ -938,6 +1034,10 @@ function inferStoryNotes(story: Story, brand: string) {
 
   if (brand === 'Wilson') {
     notes.push('The current local mirror is backed by a verified Wilson official blog media asset and can be refreshed from candidateImageUrl if the local file needs replacement.')
+  }
+
+  if (brand === 'YONEX') {
+    notes.push('The current local mirror is backed by the first YONEX tennis mall product-card image and should be refreshed from the tennis mall landing page instead of a full-page screenshot.')
   }
 
   if (story.image.endsWith('.svg')) {

@@ -94,10 +94,10 @@ export const digitalNews: Story[] = [
     publishedAt: '2026-04-24',
     checkedAt: '官网核对：2026-04-27',
     sourceType: 'Official Site',
-    sourceLabel: '三星中国官网',
-    sourceUrl: 'https://www.samsung.com/cn/',
+    sourceLabel: '三星中国官网 Galaxy Tab S11',
+    sourceUrl: 'https://www.samsung.com.cn/tablets/galaxy-tab-s11/buy/',
     image:
-      '/news/digital/samsung-tablet.jpg',
+      '/news/digital/samsung-tab-s11-ultra.jpg',
     summary:
       'Galaxy Tab S11 Ultra 作为三星平板线的最新旗舰亮相，延续大屏生产力与 S Pen 生态叙事，并与 Galaxy Tab S11 共同构成新一轮平板更新。',
     products: ['Galaxy Tab S11 Ultra', 'Galaxy Tab S11', 'S Pen'],
@@ -111,10 +111,10 @@ export const digitalNews: Story[] = [
     publishedAt: '2026-04-14',
     checkedAt: '官网核对：2026-04-27',
     sourceType: 'Official Site',
-    sourceLabel: '三星中国官网',
-    sourceUrl: 'https://www.samsung.com/cn/',
+    sourceLabel: '三星中国官网 Galaxy S26 Ultra',
+    sourceUrl: 'https://www.samsung.com.cn/smartphones/galaxy-s26-ultra/buy/',
     image:
-      '/news/digital/samsung-phone.jpg',
+      '/news/digital/samsung-s26-ultra.jpg',
     summary:
       'Galaxy S26 系列以 Galaxy S26 Ultra 为核心，延续高端影像与 Galaxy AI 叙事，成为三星本轮手机新品中的主力阵容。',
     products: ['Galaxy S26', 'Galaxy S26+', 'Galaxy S26 Ultra'],
@@ -128,9 +128,9 @@ export const digitalNews: Story[] = [
     publishedAt: '2026-05-09',
     checkedAt: '官网核对：2026-05-09',
     sourceType: 'Official Site',
-    sourceLabel: '三星中国官网',
-    sourceUrl: 'https://www.samsung.com/cn/',
-    image: '/news/digital/samsung-phone.jpg',
+    sourceLabel: '三星中国官网 Galaxy Buds4 Pro',
+    sourceUrl: 'https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/',
+    image: '/news/digital/samsung-buds4-pro.jpg',
     summary:
       '在 Galaxy 手机与平板新品之外，Samsung 官网也继续强化耳机与移动生态配件的整体露出，维持手机、平板与穿戴设备之间的组合销售节奏。',
     products: ['Galaxy Buds', 'Galaxy S26 Ultra', 'Galaxy Tab S11 Ultra'],
@@ -341,9 +341,9 @@ export const digitalNews: Story[] = [
     publishedAt: '2026-05-09',
     checkedAt: '官网核对：2026-05-09',
     sourceType: 'Official Site',
-    sourceLabel: '三星中国官网',
-    sourceUrl: 'https://www.samsung.com/cn/',
-    image: '/news/digital/samsung-tablet.jpg',
+    sourceLabel: '三星中国官网 Galaxy 生态配件',
+    sourceUrl: 'https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/',
+    image: '/news/digital/samsung-buds4-pro.jpg',
     summary:
       '在 Galaxy S26 系列与 Tab S11 之外，Samsung 官网也继续强化耳机、平板与手机之间的生态联动，维持 Galaxy 多终端组合销售的更新节奏。',
     products: ['Galaxy Buds', 'Galaxy Tab S11 Ultra', 'Galaxy S26 Ultra'],

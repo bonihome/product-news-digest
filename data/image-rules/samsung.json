@@ -6,13 +6,13 @@
     "digital"
   ],
   "officialDomains": [
-    "www.samsung.com"
+    "www.samsung.com.cn"
   ],
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 4,
-    "readyCount": 0,
-    "partialCount": 4,
+    "readyCount": 4,
+    "partialCount": 0,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -65,21 +65,21 @@
         "S Pen"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.samsung.com/cn/",
-      "currentImage": "/news/digital/samsung-tablet.jpg",
+      "sourcePage": "https://www.samsung.com.cn/tablets/galaxy-tab-s11/buy/",
+      "currentImage": "/news/digital/samsung-tab-s11-ultra.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/digital/samsung-tablet.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/digital/samsung-tab-s11-ultra.jpg",
+        "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Tab-S11-ultra_720X480.jpg?imbypass=true",
+        "candidateImageHost": "images.samsung.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -94,21 +94,21 @@
         "Galaxy S26 Ultra"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.samsung.com/cn/",
-      "currentImage": "/news/digital/samsung-phone.jpg",
+      "sourcePage": "https://www.samsung.com.cn/smartphones/galaxy-s26-ultra/buy/",
+      "currentImage": "/news/digital/samsung-s26-ultra.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/digital/samsung-phone.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/digital/samsung-s26-ultra.jpg",
+        "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0401/S26-Ultra_720X480.jpg?imbypass=true",
+        "candidateImageHost": "images.samsung.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -123,21 +123,21 @@
         "Galaxy Tab S11 Ultra"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.samsung.com/cn/",
-      "currentImage": "/news/digital/samsung-phone.jpg",
+      "sourcePage": "https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/",
+      "currentImage": "/news/digital/samsung-buds4-pro.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/digital/samsung-phone.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/digital/samsung-buds4-pro.jpg",
+        "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Bud4-pro_720X480.jpg?imbypass=true",
+        "candidateImageHost": "images.samsung.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -152,21 +152,21 @@
         "Galaxy S26 Ultra"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.samsung.com/cn/",
-      "currentImage": "/news/digital/samsung-tablet.jpg",
+      "sourcePage": "https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/",
+      "currentImage": "/news/digital/samsung-buds4-pro.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/digital/samsung-tablet.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/digital/samsung-buds4-pro.jpg",
+        "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Bud4-pro_720X480.jpg?imbypass=true",
+        "candidateImageHost": "images.samsung.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

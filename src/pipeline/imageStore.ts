@@ -42,7 +42,47 @@ function isPlaceholderVector(pathOrUrl: string) {
   return pathOrUrl.toLowerCase().endsWith('.svg')
 }
 
-async function downloadImage(story: StoredStory, imageUrl: string): Promise<ImageAssetRecord> {
+function createStorySourceSignature(story: StoredStory) {
+  return crypto
+    .createHash('sha1')
+    .update(
+      [
+        story.brand,
+        story.sourceUrl,
+        story.sourceTitle,
+        story.publishedAt,
+        story.products.join('|'),
+      ].join('::'),
+    )
+    .digest('hex')
+}
+
+function shouldReuseLocalMirror(
+  story: StoredStory,
+  existingAsset: ImageAssetRecord | undefined,
+  sourceSignature: string,
+  hasRefreshableCandidate: boolean,
+) {
+  if (!existingAsset) {
+    return !hasRefreshableCandidate
+  }
+
+  if (existingAsset.fingerprint === story.fingerprint) {
+    return true
+  }
+
+  if (existingAsset.sourceSignature && existingAsset.sourceSignature === sourceSignature) {
+    return true
+  }
+
+  return !hasRefreshableCandidate
+}
+
+async function downloadImage(
+  story: StoredStory,
+  imageUrl: string,
+  sourceSignature: string,
+): Promise<ImageAssetRecord> {
   const normalizedUrl = decodeHtmlEntities(imageUrl)
   const response = await fetch(normalizedUrl, {
     headers: {
@@ -70,6 +110,7 @@ async function downloadImage(story: StoredStory, imageUrl: string): Promise<Imag
     sourceUrl: normalizedUrl,
     localPath: `/runtime/news-images/${sanitizeBrand(story.brand)}/${fileName}`,
     downloadedAt: new Date().toISOString(),
+    sourceSignature,
     mimeType: response.headers.get('content-type') ?? undefined,
     status: 'downloaded',
   }
@@ -85,17 +126,28 @@ export async function localizeStoryImages(stories: StoredStory[]) {
     }
 
     const ruleStory = await findImageRuleForStory(story)
+    const sourceSignature = createStorySourceSignature(story)
+    const existingLocalMirrorAsset = ruleStory?.acquisition.localMirrorPath
+      ? nextAssets.find(
+          (asset) =>
+            asset.fingerprint === story.fingerprint &&
+            asset.localPath === ruleStory.acquisition.localMirrorPath,
+        )
+      : undefined
+
     if (
       ruleStory?.automationStatus === 'ready' &&
       ruleStory.acquisition.localMirrorPath &&
       !isPlaceholderVector(ruleStory.acquisition.localMirrorPath) &&
-      (await hasLocalMirror(ruleStory.acquisition.localMirrorPath))
+      (await hasLocalMirror(ruleStory.acquisition.localMirrorPath)) &&
+      shouldReuseLocalMirror(
+        story,
+        existingLocalMirrorAsset,
+        sourceSignature,
+        Boolean(ruleStory.acquisition.candidateImageUrl),
+      )
     ) {
       story.image = ruleStory.acquisition.localMirrorPath
-
-      const existingLocalMirrorAsset = nextAssets.find(
-        (asset) => asset.fingerprint === story.fingerprint && asset.localPath === ruleStory.acquisition.localMirrorPath,
-      )
 
       if (!existingLocalMirrorAsset) {
         nextAssets.push({
@@ -104,10 +156,12 @@ export async function localizeStoryImages(stories: StoredStory[]) {
             ruleStory.acquisition.candidateImageUrl ?? ruleStory.sourcePage ?? ruleStory.acquisition.localMirrorPath,
           localPath: ruleStory.acquisition.localMirrorPath,
           downloadedAt: new Date().toISOString(),
+          sourceSignature,
           status: 'reused',
         })
-      } else if (existingLocalMirrorAsset.status !== 'reused') {
+      } else {
         existingLocalMirrorAsset.status = 'reused'
+        existingLocalMirrorAsset.sourceSignature = sourceSignature
       }
 
       continue
@@ -127,10 +181,6 @@ export async function localizeStoryImages(stories: StoredStory[]) {
     ) {
       story.image = ruleStory.acquisition.localMirrorPath
 
-      const existingLocalMirrorAsset = nextAssets.find(
-        (asset) => asset.fingerprint === story.fingerprint && asset.localPath === ruleStory.acquisition.localMirrorPath,
-      )
-
       if (!existingLocalMirrorAsset) {
         nextAssets.push({
           fingerprint: story.fingerprint,
@@ -138,10 +188,12 @@ export async function localizeStoryImages(stories: StoredStory[]) {
             ruleStory.acquisition.candidateImageUrl ?? ruleStory.sourcePage ?? ruleStory.acquisition.localMirrorPath,
           localPath: ruleStory.acquisition.localMirrorPath,
           downloadedAt: new Date().toISOString(),
+          sourceSignature,
           status: 'reused',
         })
-      } else if (existingLocalMirrorAsset.status !== 'reused') {
+      } else {
         existingLocalMirrorAsset.status = 'reused'
+        existingLocalMirrorAsset.sourceSignature = sourceSignature
       }
 
       continue
@@ -155,9 +207,8 @@ export async function localizeStoryImages(stories: StoredStory[]) {
     )
     if (existingAsset) {
       story.image = existingAsset.localPath
-      if (existingAsset.status !== 'reused') {
-        existingAsset.status = 'reused'
-      }
+      existingAsset.status = 'reused'
+      existingAsset.sourceSignature = sourceSignature
       continue
     }
 
@@ -166,7 +217,7 @@ export async function localizeStoryImages(stories: StoredStory[]) {
     }
 
     try {
-      const asset = await downloadImage(story, preferredImageUrl)
+      const asset = await downloadImage(story, preferredImageUrl, sourceSignature)
       nextAssets.push(asset)
       story.image = asset.localPath
     } catch (error) {
@@ -175,6 +226,7 @@ export async function localizeStoryImages(stories: StoredStory[]) {
         sourceUrl: preferredImageUrl,
         localPath: story.image,
         downloadedAt: new Date().toISOString(),
+        sourceSignature,
         status: 'failed',
         errorMessage: error instanceof Error ? error.message : '未知错误',
       })

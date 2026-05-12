@@ -11,8 +11,8 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 3,
-    "readyCount": 0,
-    "partialCount": 3,
+    "readyCount": 2,
+    "partialCount": 1,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -57,7 +57,7 @@
       "currentImage": "/news/sports/descente-allterrain-hero.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -87,7 +87,7 @@
       "currentImage": "/news/sports/descente-allterrain-81-hero.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [

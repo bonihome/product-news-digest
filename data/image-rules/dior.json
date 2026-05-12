@@ -10,8 +10,8 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 7,
-    "readyCount": 0,
+    "storyCount": 9,
+    "readyCount": 2,
     "partialCount": 7,
     "needsReplacementCount": 0
   },
@@ -248,6 +248,64 @@
         "candidateImageHost": null,
         "notes": [
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "dioramour-my-dior-mini-bag",
+      "title": "Dior 推出 Dioramour My Dior 迷你链条手袋，520 爱意主题包袋持续扩展",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Dioramour My Dior 迷你链条手袋",
+        "Doves & Roses 图案刺绣",
+        "迷你链条包"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/S0984PHJJ_M933",
+      "currentImage": "/news/luxury/dioramour-my-dior-mini-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dioramour-my-dior-mini-bag.jpg",
+        "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/S0984PHJJM933_SBG_E01?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+        "candidateImageHost": "assets.christiandior.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dioramour-mitzah",
+      "title": "Dior 推出 Dioramour Mitzah 丝巾，以 Floral Heart 图案补充 520 礼赠单品",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "Dioramour Mitzah 丝巾",
+        "Floral Heart 图案",
+        "520 礼赠配饰"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/62ART106I677_C082",
+      "currentImage": "/news/luxury/dioramour-mitzah.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dioramour-mitzah.jpg",
+        "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/62ART106I677C082_SBG_E01?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+        "candidateImageHost": "assets.christiandior.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

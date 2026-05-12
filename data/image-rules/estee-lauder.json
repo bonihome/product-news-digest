@@ -12,8 +12,8 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 3,
-    "readyCount": 0,
-    "partialCount": 3,
+    "readyCount": 2,
+    "partialCount": 1,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -41,7 +41,7 @@
     "fallbackUrl": "https://www.esteelauder.com/whats-new-skincare",
     "notes": [
       "This brand currently falls back to the default source page recorded from the existing story dataset.",
-      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
     ]
   },
   "stories": [
@@ -60,7 +60,7 @@
       "currentImage": "/news/beauty/estee-anr-official.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -90,7 +90,7 @@
       "currentImage": "/news/beauty/estee-doublewear-local.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [

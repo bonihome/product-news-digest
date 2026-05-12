@@ -84,6 +84,7 @@ export type ImageAssetRecord = {
   sourceUrl: string
   localPath: string
   downloadedAt: string
+  sourceSignature?: string
   mimeType?: string
   status: 'downloaded' | 'reused' | 'failed'
   errorMessage?: string
@@ -111,6 +112,7 @@ export type BrandCrawlRule = {
     | 'single_product_page'
     | 'prada_category_pages'
     | 'samsung_buy_pages'
+    | 'yonex_mall_pages'
     | 'pacogames_latest_games'
     | 'gamepix_new_games'
     | 'poki_new_games'

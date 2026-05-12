@@ -11,8 +11,8 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 4,
-    "readyCount": 0,
-    "partialCount": 4,
+    "readyCount": 1,
+    "partialCount": 3,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -155,7 +155,7 @@
       "currentImage": "/news/beauty/chanel-chance-splendide.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [

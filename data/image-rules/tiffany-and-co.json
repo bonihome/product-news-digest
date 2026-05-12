@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 3,
+    "storyCount": 4,
     "readyCount": 0,
-    "partialCount": 3,
+    "partialCount": 4,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -111,6 +111,35 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.tiffany.cn/jewelry/shop/bracelets/tiffany-lock/",
+      "currentImage": "/news/luxury/tiffany-lock.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/tiffany-lock.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "tiffany-lock-520",
+      "title": "Tiffany & Co. 以 Tiffany Lock 系列放大 520 礼赠珠宝热度",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "Tiffany Lock 系列",
+        "挂锁灵感珠宝",
+        "520 礼赠珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.tiffany.cn/jewelry/shop/tiffany-lock/",
       "currentImage": "/news/luxury/tiffany-lock.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,

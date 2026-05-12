@@ -11,8 +11,8 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 4,
-    "readyCount": 0,
-    "partialCount": 4,
+    "readyCount": 2,
+    "partialCount": 2,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -31,7 +31,7 @@
       {
         "label": "Hermès Beauty 香氛",
         "subcategory": "香水",
-        "url": "https://www.hermes.cn/cn/zh/category/fragrances/",
+        "url": "https://www.hermes.cn/cn/en/category/fragrances/",
         "extraction": "first_product"
       },
       {
@@ -47,9 +47,9 @@
         "extraction": "first_product"
       }
     ],
-    "fallbackUrl": "https://www.hermes.cn/cn/zh/category/beauty/",
+    "fallbackUrl": "https://www.hermes.cn/cn/en/category/fragrances-and-make-up/",
     "notes": [
-      "Hermès Beauty remains product-page led until broader category extraction is added."
+      "Hermès Beauty remains product-page led until broader category extraction is added, and should use the working cn/en fragrance category paths when category-level freshness is needed."
     ]
   },
   "stories": [
@@ -68,17 +68,17 @@
       "currentImage": "/news/beauty/hermes-terre-dhermes.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
         "localMirrorPath": "/news/beauty/hermes-terre-dhermes.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/爱马仕大地馥郁香根草香型香水--40946-front-wm-1-0-0-1000-1000_g.jpg",
+        "candidateImageHost": "assets.hermes.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -97,17 +97,17 @@
       "currentImage": "/news/beauty/hermes-twilly-ginger.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
         "localMirrorPath": "/news/beauty/hermes-twilly-ginger.jpg",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/爱马仕丝意荔韵淡香精--110826VN-worn-2-0-0-1000-1000_g.jpg",
+        "candidateImageHost": "assets.hermes.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -151,7 +151,7 @@
         "丝意荔韵淡香精"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.hermes.cn/cn/zh/category/perfume/",
+      "sourcePage": "https://www.hermes.cn/cn/en/category/fragrances/",
       "currentImage": "/news/beauty/hermes-jardin-monsieur-li.png",
       "currentImageMode": "local",
       "currentImageHost": null,

@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 13,
-    "readyCount": 0,
-    "partialCount": 13,
+    "storyCount": 15,
+    "readyCount": 9,
+    "partialCount": 6,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -180,7 +180,7 @@
       "currentImage": "/news/luxury/lv-sneakerina.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -209,7 +209,7 @@
       "currentImage": "/news/luxury/lv-keepall-bandouliere-25.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -238,7 +238,7 @@
       "currentImage": "/news/luxury/lv-speedy-bandouliere-20.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -267,7 +267,7 @@
       "currentImage": "/news/luxury/lv-hobo-pm.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -296,7 +296,7 @@
       "currentImage": "/news/luxury/lv-baggy.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -325,7 +325,7 @@
       "currentImage": "/news/luxury/lv-multipass.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -354,7 +354,7 @@
       "currentImage": "/news/luxury/lv-x-tm-neverfull-mm.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -452,6 +452,64 @@
         "candidateImageHost": null,
         "notes": [
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-nano-madeleine",
+      "title": "Louis Vuitton 推出 Nano Madeleine 手袋，520 礼赠向小尺寸包袋继续升温",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Nano Madeleine 手袋",
+        "Monogram Empreinte",
+        "小尺寸礼赠包袋"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/nano-madeleine-monogram-empreinte-nvprod7540010v/M29380",
+      "currentImage": "/news/luxury/lv-nano-madeleine.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-nano-madeleine.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/%E8%B7%AF%E6%98%93%E5%A8%81%E7%99%BB-nano-madeleine-%E6%89%8B%E8%A2%8B-monogram-empreinte-%E5%B0%8F%E5%9E%8B%E7%9A%AE%E5%85%B7--M29380_PM2_Front%20view.png?wid=730&hei=730",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "lv-all-in-bb",
+      "title": "Louis Vuitton 推出 All In BB 手袋，520 节点包袋礼赠选择继续扩充",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "All In BB 手袋",
+        "Monogram 帆布",
+        "520 礼赠包袋"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/all-in-bb-autres-toiles-monogram-nvprod7310161v/M29067",
+      "currentImage": "/news/luxury/lv-all-in-bb.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/lv-all-in-bb.png",
+        "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/%E8%B7%AF%E6%98%93%E5%A8%81%E7%99%BB-all-in-bb-%E6%89%8B%E8%A2%8B-%E5%85%B6%E4%BB%96monogram-%E5%B8%86%E5%B8%83-%E6%97%B6%E5%B0%9A%E6%89%8B%E8%A2%8B--M29067_PM2_Front%20view.png?wid=730&hei=730",
+        "candidateImageHost": "www.louisvuitton.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

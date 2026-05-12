@@ -988,8 +988,9 @@ export const luxuryNews: Story[] = [
     publishedAt: '2026-04-19',
     checkedAt: '官网核对：2026-04-29',
     sourceType: 'Official Site',
-    sourceLabel: '爱马仕中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/',
+    sourceLabel: '爱马仕中国官网 Garden Party 手袋',
+    sourceUrl:
+      'https://www.hermes.cn/cn/zh/product/garden-party%E5%A4%9A%E5%8F%A3%E8%A2%8B%E7%AB%96%E6%AC%BE%E6%89%8B%E6%8F%90%E5%8C%85-H084260CKAA/',
     image:
       '/news/luxury/hermes-garden-party.webp',
     summary:
@@ -1005,8 +1006,9 @@ export const luxuryNews: Story[] = [
     publishedAt: '2026-04-08',
     checkedAt: '官网核对：2026-04-29',
     sourceType: 'Official Site',
-    sourceLabel: '爱马仕中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/',
+    sourceLabel: '爱马仕中国官网 Kelly Pocket 长钱包',
+    sourceUrl:
+      'https://www.hermes.cn/cn/zh/product/kelly-pocket%E9%95%BF%E9%92%B1%E5%8C%85-H084940CC88/',
     image:
       '/news/luxury/hermes-kelly-pocket.webp',
     summary:
@@ -1070,8 +1072,9 @@ export const luxuryNews: Story[] = [
     publishedAt: '2026-04-14',
     checkedAt: '官网核对：2026-04-29',
     sourceType: 'Official Site',
-    sourceLabel: '爱马仕中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/',
+    sourceLabel: '爱马仕中国官网 Farandole 手链',
+    sourceUrl:
+      'https://www.hermes.cn/cn/zh/product/farandole%E6%89%8B%E9%93%BE-H104567Bv00SH/',
     image:
       '/news/luxury/hermes-farandole.webp',
     summary:
@@ -1087,8 +1090,9 @@ export const luxuryNews: Story[] = [
     publishedAt: '2026-04-06',
     checkedAt: '官网核对：2026-04-29',
     sourceType: 'Official Site',
-    sourceLabel: '爱马仕中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/',
+    sourceLabel: '爱马仕中国官网 Collier de Chien 手镯',
+    sourceUrl:
+      'https://www.hermes.cn/cn/zh/product/collier-de-chien%E6%89%8B%E9%95%AF%E5%B0%8F%E5%8F%B7-H108112Bv00SH/',
     image:
       '/news/luxury/hermes-collier-de-chien.webp',
     summary:
@@ -1120,8 +1124,9 @@ export const luxuryNews: Story[] = [
     publishedAt: '2026-04-12',
     checkedAt: '官网核对：2026-04-29',
     sourceType: 'Official Site',
-    sourceLabel: '爱马仕中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/',
+    sourceLabel: '爱马仕中国官网 Hermès H08 腕表',
+    sourceUrl:
+      'https://www.hermes.cn/cn/zh/product/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3-W049433WW00/',
     image:
       '/news/luxury/hermes-h08-watch.webp',
     summary:
@@ -1137,8 +1142,9 @@ export const luxuryNews: Story[] = [
     publishedAt: '2026-04-02',
     checkedAt: '官网核对：2026-04-29',
     sourceType: 'Official Site',
-    sourceLabel: '爱马仕中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/',
+    sourceLabel: '爱马仕中国官网 Cape Cod 腕表',
+    sourceUrl:
+      'https://www.hermes.cn/cn/zh/product/cape-cod%E8%85%95%E8%A1%A8%E5%B0%8F%E5%8F%B731%E6%AF%AB%E7%B1%B3-W044221WW00/',
     image:
       '/news/luxury/hermes-cape-cod-watch.webp',
     summary:
@@ -1554,5 +1560,119 @@ export const luxuryNews: Story[] = [
     summary:
       'Cape Cod 腕表继续作为 Hermès 标志性表款之一亮相，与 H08、Arceau 等系列共同构成品牌本季兼具珠宝感与日常佩戴属性的腕表组合。',
     products: ['Cape Cod 腕表', 'Hermès H08', 'Arceau 腕表'],
+  },
+  {
+    id: 'tiffany-lock-520',
+    category: 'luxury',
+    subcategory: '珠宝',
+    brand: 'Tiffany & Co.',
+    title: 'Tiffany & Co. 以 Tiffany Lock 系列放大 520 礼赠珠宝热度',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Tiffany 中国官网',
+    sourceUrl: 'https://www.tiffany.cn/jewelry/shop/tiffany-lock/',
+    image: '/news/luxury/tiffany-lock.jpg',
+    summary:
+      'Tiffany Lock 系列以挂锁灵感和“守卫珍贵之物、呵护挚爱之人”的情感叙事切入 520 礼赠场景，继续成为 Tiffany 当前最具爱意表达强度的珠宝主线之一。',
+    products: ['Tiffany Lock 系列', '挂锁灵感珠宝', '520 礼赠珠宝'],
+  },
+  {
+    id: 'lv-nano-madeleine',
+    category: 'luxury',
+    subcategory: '皮包',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Nano Madeleine 手袋，520 礼赠向小尺寸包袋继续升温',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Louis Vuitton 中国官网',
+    sourceUrl:
+      'https://www.louisvuitton.cn/zhs-cn/products/nano-madeleine-monogram-empreinte-nvprod7540010v/M29380',
+    image: '/news/luxury/lv-nano-madeleine.png',
+    summary:
+      'Nano Madeleine 以紧凑比例、链带结构与 Monogram Empreinte 压纹皮革切入礼赠场景，成为 Louis Vuitton 当前适合 520 节点补充的女士小尺寸手袋之一。',
+    products: ['Nano Madeleine 手袋', 'Monogram Empreinte', '小尺寸礼赠包袋'],
+  },
+  {
+    id: 'lv-all-in-bb',
+    category: 'luxury',
+    subcategory: '皮包',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 All In BB 手袋，520 节点包袋礼赠选择继续扩充',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Louis Vuitton 中国官网',
+    sourceUrl:
+      'https://www.louisvuitton.cn/zhs-cn/products/all-in-bb-autres-toiles-monogram-nvprod7310161v/M29067',
+    image: '/news/luxury/lv-all-in-bb.png',
+    summary:
+      'All In BB 以更柔和的桶形比例和 Monogram 帆布构成当季热门包袋更新，也让 Louis Vuitton 在 520 节点的礼赠型包袋选择更完整。',
+    products: ['All In BB 手袋', 'Monogram 帆布', '520 礼赠包袋'],
+  },
+  {
+    id: 'dioramour-my-dior-mini-bag',
+    category: 'luxury',
+    subcategory: '皮包',
+    brand: 'Dior',
+    title: 'Dior 推出 Dioramour My Dior 迷你链条手袋，520 爱意主题包袋持续扩展',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Dior 中国官网',
+    sourceUrl: 'https://www.dior.cn/zh_cn/fashion/products/S0984PHJJ_M933',
+    image: '/news/luxury/dioramour-my-dior-mini-bag.jpg',
+    summary:
+      'Dioramour My Dior 迷你链条手袋以 Doves & Roses 图案刺绣和链条结构强化节日礼赠语境，是 Dior 当前最贴近 520 节点的爱意主题包袋之一。',
+    products: ['Dioramour My Dior 迷你链条手袋', 'Doves & Roses 图案刺绣', '迷你链条包'],
+  },
+  {
+    id: 'dioramour-mitzah',
+    category: 'luxury',
+    subcategory: '服装',
+    brand: 'Dior',
+    title: 'Dior 推出 Dioramour Mitzah 丝巾，以 Floral Heart 图案补充 520 礼赠单品',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Dior 中国官网',
+    sourceUrl: 'https://www.dior.cn/zh_cn/fashion/products/62ART106I677_C082',
+    image: '/news/luxury/dioramour-mitzah.jpg',
+    summary:
+      'Dioramour Mitzah 丝巾以 Floral Heart 图案、修长丝巾结构和可点缀手袋或腕间的搭配场景，成为 Dior 520 节点极具礼赠氛围的小型配饰新作。',
+    products: ['Dioramour Mitzah 丝巾', 'Floral Heart 图案', '520 礼赠配饰'],
+  },
+  {
+    id: 'hermes-rodeo-charm',
+    category: 'luxury',
+    subcategory: '皮包',
+    brand: 'Hermes',
+    title: 'Hermes 推出 Rodeo 小号吊饰，以轻礼赠配件补充 520 节点皮具内容',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Hermes 中国官网',
+    sourceUrl: 'https://www.hermes.cn/cn/zh/product/rodeo%E5%B0%8F%E5%8F%B7%E5%90%8A%E9%A5%B0-H073422CAAF/',
+    image: '/news/luxury/hermes-rodeo-charm.jpg',
+    summary:
+      'Rodeo 小号吊饰延续 Hermès 在配件礼赠上的高辨识度表达，以轻巧比例和彩色皮革组合成为 520 节点更适合入门赠礼的单品之一。',
+    products: ['Rodeo 小号吊饰', '彩色皮革配件', '520 礼赠皮具配件'],
+  },
+  {
+    id: 'hermes-magsafe-cardholder',
+    category: 'luxury',
+    subcategory: '皮包',
+    brand: 'Hermes',
+    title: 'Hermes 推出“锚链”图案 MagSafe 卡包，科技配件礼赠线切入 520 场景',
+    publishedAt: '2026-05-12',
+    checkedAt: '官网核对：2026-05-12',
+    sourceType: 'Official Site',
+    sourceLabel: 'Hermes 中国官网',
+    sourceUrl: 'https://www.hermes.cn/cn/zh/product/%E9%94%9A%E9%93%BE%E5%9B%BE%E6%A1%88magsafe%E5%8D%A1%E5%8C%85-H0003611v1A/',
+    image: '/news/luxury/hermes-magsafe-cardholder.jpg',
+    summary:
+      '“锚链”图案 MagSafe 卡包把 Hermès 经典图案语言延展到科技配件场景，也让品牌在 520 节点拥有更轻量、更日常的礼赠选择。',
+    products: ['“锚链”图案 MagSafe 卡包', '科技配件', '520 礼赠单品'],
   },
 ]

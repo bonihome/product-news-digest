@@ -6,13 +6,14 @@
     "sports"
   ],
   "officialDomains": [
-    "www.adidas.com.cn"
+    "www.adidas.com.cn",
+    "www.adidas.com"
   ],
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 10,
-    "readyCount": 0,
-    "partialCount": 10,
+    "readyCount": 10,
+    "partialCount": 0,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -87,17 +88,17 @@
       "currentImage": "/news/sports/adidas-football.webp",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
         "localMirrorPath": "/news/sports/adidas-football.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NTAwNzQwNTAxMDI0OGU5NTk3LWQ4MDItNDIyOC1hMzM0.jpg?im=Resize=(500,500)",
+        "candidateImageHost": "static1.adidas.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -112,21 +113,21 @@
         "Messi series"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.adidas.com.cn/",
+      "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KJ3431",
       "currentImage": "/news/sports/adidas-football-boots.webp",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
         "localMirrorPath": "/news/sports/adidas-football-boots.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzAxNzYyNjc2NDlmOTlkMDM0LTdjMzctNDIzMy1iNzFi.jpg?im=Resize=(500,500)",
+        "candidateImageHost": "static1.adidas.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -142,20 +143,20 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.adidas.com.cn/",
-      "currentImage": "/news/sports/adidas-football-boots.webp",
+      "currentImage": "/news/sports/adidas-f50-hyperfast-elite-fg.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/adidas-football-boots.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/adidas-f50-hyperfast-elite-fg.jpg",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzAxNzYyNjc2NDlmOTlkMDM0LTdjMzctNDIzMy1iNzFi.jpg?im=Resize=(500,500)",
+        "candidateImageHost": "static1.adidas.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -170,21 +171,21 @@
         "AGRAVIC SPEED ULTRA"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.adidas.com.cn/",
-      "currentImage": "/news/sports/adidas-football.webp",
+      "sourcePage": "https://www.adidas.com/us/adizero-boston-13-shoes/JS4955.html",
+      "currentImage": "/news/sports/adidas-boston-13.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/adidas-football.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/adidas-boston-13.jpg",
+        "candidateImageUrl": "https://assets.adidas.com/images/w_600%2Cf_auto%2Cq_auto/6b870278f58d4d1eb23c405e9c16963b_9366/Adizero_Boston_13_Shoes_Purple_JS4955_HM1.jpg",
+        "candidateImageHost": "assets.adidas.com",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     },
@@ -203,7 +204,7 @@
       "currentImage": "/news/sports/adidas-anthony-edwards-2-blue.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -232,7 +233,7 @@
       "currentImage": "/news/sports/adidas-freehiker-sandal.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -261,7 +262,7 @@
       "currentImage": "/news/sports/adidas-refined-luxe-trench.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -290,7 +291,7 @@
       "currentImage": "/news/sports/adidas-city-tech-jacket.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -319,7 +320,7 @@
       "currentImage": "/news/sports/adidas-soft-lux-jacket.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -345,20 +346,20 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.adidas.com.cn/",
-      "currentImage": "/news/sports/adidas-football-boots.webp",
+      "currentImage": "/news/sports/adidas-f50-hyperfast-elite-ll-fg.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/adidas-football-boots.webp",
-        "candidateImageUrl": null,
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/adidas-f50-hyperfast-elite-ll-fg.jpg",
+        "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzAxNzYwMDE4MjA3ZDY0ODg0LTQ5ODYtNDg1NS04YTU4.jpg?im=Resize=(500,500)",
+        "candidateImageHost": "static1.adidas.com.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

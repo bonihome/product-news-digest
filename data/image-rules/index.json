@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T15:14:06.328Z",
+  "generatedAt": "2026-05-12T07:31:11.877Z",
   "brandCount": 57,
   "brands": [
     {
@@ -7,8 +7,8 @@
       "slug": "adidas",
       "file": "data/image-rules/adidas.json",
       "storyCount": 10,
-      "readyCount": 0,
-      "partialCount": 10,
+      "readyCount": 10,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -25,8 +25,8 @@
       "slug": "arc-teryx",
       "file": "data/image-rules/arc-teryx.json",
       "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
+      "readyCount": 2,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -70,8 +70,8 @@
       "slug": "bvlgari",
       "file": "data/image-rules/bvlgari.json",
       "storyCount": 6,
-      "readyCount": 0,
-      "partialCount": 6,
+      "readyCount": 2,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
@@ -88,8 +88,8 @@
       "slug": "chando",
       "file": "data/image-rules/chando.json",
       "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
+      "readyCount": 2,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -97,8 +97,8 @@
       "slug": "chanel",
       "file": "data/image-rules/chanel.json",
       "storyCount": 11,
-      "readyCount": 0,
-      "partialCount": 11,
+      "readyCount": 4,
+      "partialCount": 7,
       "needsReplacementCount": 0
     },
     {
@@ -106,8 +106,8 @@
       "slug": "chanel-beauty",
       "file": "data/image-rules/chanel-beauty.json",
       "storyCount": 4,
-      "readyCount": 0,
-      "partialCount": 4,
+      "readyCount": 1,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {
@@ -124,8 +124,8 @@
       "slug": "cle-de-peau-beaute",
       "file": "data/image-rules/cle-de-peau-beaute.json",
       "storyCount": 4,
-      "readyCount": 0,
-      "partialCount": 4,
+      "readyCount": 1,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {
@@ -151,16 +151,16 @@
       "slug": "descente",
       "file": "data/image-rules/descente.json",
       "storyCount": 3,
-      "readyCount": 0,
-      "partialCount": 3,
+      "readyCount": 2,
+      "partialCount": 1,
       "needsReplacementCount": 0
     },
     {
       "brand": "Dior",
       "slug": "dior",
       "file": "data/image-rules/dior.json",
-      "storyCount": 7,
-      "readyCount": 0,
+      "storyCount": 9,
+      "readyCount": 2,
       "partialCount": 7,
       "needsReplacementCount": 0
     },
@@ -169,8 +169,8 @@
       "slug": "dior-beauty",
       "file": "data/image-rules/dior-beauty.json",
       "storyCount": 5,
-      "readyCount": 0,
-      "partialCount": 5,
+      "readyCount": 2,
+      "partialCount": 3,
       "needsReplacementCount": 0
     },
     {
@@ -178,8 +178,8 @@
       "slug": "estee-lauder",
       "file": "data/image-rules/estee-lauder.json",
       "storyCount": 3,
-      "readyCount": 0,
-      "partialCount": 3,
+      "readyCount": 2,
+      "partialCount": 1,
       "needsReplacementCount": 0
     },
     {
@@ -204,9 +204,9 @@
       "brand": "Hermes",
       "slug": "hermes",
       "file": "data/image-rules/hermes.json",
-      "storyCount": 14,
-      "readyCount": 0,
-      "partialCount": 14,
+      "storyCount": 16,
+      "readyCount": 16,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -214,8 +214,8 @@
       "slug": "hermes-beauty",
       "file": "data/image-rules/hermes-beauty.json",
       "storyCount": 4,
-      "readyCount": 0,
-      "partialCount": 4,
+      "readyCount": 2,
+      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {
@@ -250,8 +250,8 @@
       "slug": "kiehl-s",
       "file": "data/image-rules/kiehl-s.json",
       "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
+      "readyCount": 2,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -259,8 +259,8 @@
       "slug": "kolon-sport",
       "file": "data/image-rules/kolon-sport.json",
       "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
+      "readyCount": 2,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -303,9 +303,9 @@
       "brand": "Louis Vuitton",
       "slug": "louis-vuitton",
       "file": "data/image-rules/louis-vuitton.json",
-      "storyCount": 13,
-      "readyCount": 0,
-      "partialCount": 13,
+      "storyCount": 15,
+      "readyCount": 9,
+      "partialCount": 6,
       "needsReplacementCount": 0
     },
     {
@@ -349,8 +349,8 @@
       "slug": "nike",
       "file": "data/image-rules/nike.json",
       "storyCount": 16,
-      "readyCount": 0,
-      "partialCount": 16,
+      "readyCount": 14,
+      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {
@@ -367,8 +367,8 @@
       "slug": "on",
       "file": "data/image-rules/on.json",
       "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
+      "readyCount": 2,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -430,8 +430,8 @@
       "slug": "samsung",
       "file": "data/image-rules/samsung.json",
       "storyCount": 4,
-      "readyCount": 0,
-      "partialCount": 4,
+      "readyCount": 4,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
@@ -448,17 +448,17 @@
       "slug": "shu-uemura",
       "file": "data/image-rules/shu-uemura.json",
       "storyCount": 1,
-      "readyCount": 0,
-      "partialCount": 1,
+      "readyCount": 1,
+      "partialCount": 0,
       "needsReplacementCount": 0
     },
     {
       "brand": "Tiffany & Co.",
       "slug": "tiffany-and-co",
       "file": "data/image-rules/tiffany-and-co.json",
-      "storyCount": 3,
+      "storyCount": 4,
       "readyCount": 0,
-      "partialCount": 3,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
@@ -507,21 +507,12 @@
       "needsReplacementCount": 0
     },
     {
-      "brand": "Rolex",
-      "slug": "rolex",
-      "file": "data/image-rules/rolex.json",
-      "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
-      "needsReplacementCount": 0
-    },
-    {
       "brand": "YONEX",
       "slug": "yonex",
       "file": "data/image-rules/yonex.json",
       "storyCount": 1,
-      "readyCount": 0,
-      "partialCount": 1,
+      "readyCount": 1,
+      "partialCount": 0,
       "needsReplacementCount": 0
     }
   ]

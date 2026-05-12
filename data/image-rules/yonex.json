@@ -11,24 +11,26 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 1,
-    "readyCount": 0,
-    "partialCount": 1,
+    "readyCount": 1,
+    "partialCount": 0,
     "needsReplacementCount": 0
   },
   "strategy": {
     "brandLevelMethods": [
+      "mall_listing_first_product_card",
+      "official_product_page_image_download",
       "local_mirror"
     ],
     "notes": [
-      "Default rule file generated from the current story dataset.",
-      "For remote official assets, the server can download and mirror the current image URL directly."
+      "YONEX China tennis now starts from the mall landing page and extracts the first visible product card instead of reusing a full-page screenshot.",
+      "Prefer the first mall product image and keep the mall detail page as the stable refresh source for tennis-product stories."
     ]
   },
   "crawl": {
-    "mode": "generic_html",
+    "mode": "yonex_mall_pages",
     "entryPages": [
       {
-        "label": "YONEX 默认入口",
+        "label": "YONEX 网球系列新品",
         "subcategory": "网球",
         "url": "https://www.yonex.cn/home/index/mall/id/1",
         "extraction": "first_product"
@@ -36,37 +38,40 @@
     ],
     "fallbackUrl": "https://www.yonex.cn/home/index/mall/id/1",
     "notes": [
-      "This brand currently falls back to the default source page recorded from the existing story dataset.",
-      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+      "Use the tennis mall landing page and promote the first visible product card into the sports news feed.",
+      "If the page layout changes, refresh the parser against the z-pro product list instead of falling back to a full-page screenshot."
     ]
   },
   "stories": [
     {
       "storyId": "yonex-tennis",
-      "title": "YONEX 持续扩充网球产品线，鞋拍包品类同步更新",
+      "title": "YONEX 推出 PERCEPT 97 网球拍，网球系列新品继续更新",
       "category": "sports",
       "subcategory": "网球",
       "products": [
-        "网球拍",
-        "网球鞋",
-        "网球包"
+        "PERCEPT 97网球拍",
+        "PERCEPT系列",
+        "网球拍"
       ],
       "sourceType": "Official Site",
-      "sourcePage": "https://www.yonex.cn/home/index/mall/id/1",
-      "currentImage": "/news/sports/yonex-tennis-page.png",
+      "sourcePage": "https://www.yonex.cn/home/index/mall_detail/id/1763",
+      "currentImage": "/news/sports/yonex-percept-97.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
-        "method": "local_mirror_of_official_asset",
+        "method": "mall_listing_first_product_card_to_local_mirror",
         "priority": [
+          "mall_listing_first_product_card",
+          "official_product_page_image_download",
           "local_mirror"
         ],
-        "localMirrorPath": "/news/sports/yonex-tennis-page.png",
-        "candidateImageUrl": "https://www.yonex.com/media/catalog/product/cache/1/small_image/295x295/beff4985b56e3afdbeabfc89641a4582/p/r/product_50268_20211018_0001.jpg",
-        "candidateImageHost": null,
+        "localMirrorPath": "/news/sports/yonex-percept-97.jpg",
+        "candidateImageUrl": "https://www.yonex.cn/public/uploads/20260416/bee3bd81f35350fa43d142fba5d0c684.jpg",
+        "candidateImageHost": "www.yonex.cn",
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "The current local mirror is backed by the first YONEX tennis mall product-card image and should be refreshed from the tennis mall landing page instead of a full-page screenshot.",
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
         ]
       }
     }

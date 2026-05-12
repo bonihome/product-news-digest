@@ -11,8 +11,8 @@
   "remoteImageHosts": [],
   "summary": {
     "storyCount": 11,
-    "readyCount": 0,
-    "partialCount": 11,
+    "readyCount": 4,
+    "partialCount": 7,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -115,7 +115,7 @@
       "currentImage": "/news/luxury/chanel-j12-bleu-watch.webp",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -291,7 +291,7 @@
       "currentImage": "/news/luxury/chanel-premiere-watch.png",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -321,7 +321,7 @@
       "currentImage": "/news/luxury/chanel-ss26-readytowear.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [
@@ -350,7 +350,7 @@
       "currentImage": "/news/luxury/chanel-handbag-story.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,
-      "automationStatus": "partial",
+      "automationStatus": "ready",
       "acquisition": {
         "method": "local_mirror_of_official_asset",
         "priority": [

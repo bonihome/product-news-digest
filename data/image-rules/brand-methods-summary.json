@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T15:14:06.329Z",
+  "generatedAt": "2026-05-12T07:31:11.883Z",
   "brandCount": 57,
   "brands": [
     {
@@ -9,13 +9,14 @@
         "sports"
       ],
       "officialDomains": [
-        "www.adidas.com.cn"
+        "www.adidas.com.cn",
+        "www.adidas.com"
       ],
       "storyCount": 10,
       "status": {
         "storyCount": 10,
-        "readyCount": 0,
-        "partialCount": 10,
+        "readyCount": 10,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -79,20 +80,20 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/sports/adidas-football.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NTAwNzQwNTAxMDI0OGU5NTk3LWQ4MDItNDIyOC1hMzM0.jpg?im=Resize=(500,500)",
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-football-boots",
           "subcategory": "足球",
-          "sourcePage": "https://www.adidas.com.cn/",
+          "sourcePage": "https://www.adidas.com.cn/pdp?articleId=KJ3431",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/sports/adidas-football-boots.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzAxNzYyNjc2NDlmOTlkMDM0LTdjMzctNDIzMy1iNzFi.jpg?im=Resize=(500,500)",
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-f50-club",
@@ -102,21 +103,21 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/adidas-football-boots.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/adidas-f50-hyperfast-elite-fg.jpg",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzAxNzYyNjc2NDlmOTlkMDM0LTdjMzctNDIzMy1iNzFi.jpg?im=Resize=(500,500)",
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-boston13",
           "subcategory": "跑步",
-          "sourcePage": "https://www.adidas.com.cn/",
+          "sourcePage": "https://www.adidas.com/us/adizero-boston-13-shoes/JS4955.html",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/adidas-football.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/adidas-boston-13.jpg",
+          "candidateImageUrl": "https://assets.adidas.com/images/w_600%2Cf_auto%2Cq_auto/6b870278f58d4d1eb23c405e9c16963b_9366/Adizero_Boston_13_Shoes_Purple_JS4955_HM1.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-anthony-edwards-2-blue",
@@ -128,7 +129,7 @@
           ],
           "localMirrorPath": "/news/sports/adidas-anthony-edwards-2-blue.jpg",
           "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3ODE0NzAyNjE0OWMwM2NiNWE3LTkxN2UtNGYwYS1hMzc5.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-freehiker-sandal",
@@ -140,7 +141,7 @@
           ],
           "localMirrorPath": "/news/sports/adidas-freehiker-sandal.jpg",
           "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzU1MDUzMTQ0M2RhMWVkOTU0LWFhM2EtNDUyNC1hZDcw.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-refined-luxe-trench",
@@ -152,7 +153,7 @@
           ],
           "localMirrorPath": "/news/sports/adidas-refined-luxe-trench.jpg",
           "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NDMzMjg3MjIzM2NjZTYwZWFkLTYxYWEtNDU1NC1hNDJl.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-city-tech-jacket",
@@ -164,7 +165,7 @@
           ],
           "localMirrorPath": "/news/sports/adidas-city-tech-jacket.png",
           "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3MDI3NTU4NzM1NzUxMDg2M2Y1LWFjZGYtNDk3ZC05MDEx.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-soft-lux-jacket",
@@ -176,7 +177,7 @@
           ],
           "localMirrorPath": "/news/sports/adidas-soft-lux-jacket.jpg",
           "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NjY3MTc1MTc3NjM1NjcxYWVhLWRjZWItNGQwNi04MTY2.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "adidas-f50-fastline",
@@ -186,9 +187,9 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/adidas-football-boots.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/adidas-f50-hyperfast-elite-ll-fg.jpg",
+          "candidateImageUrl": "https://static1.adidas.com.cn/t395/MTc3NzAxNzYwMDE4MjA3ZDY0ODg0LTQ5ODYtNDg1NS04YTU4.jpg?im=Resize=(500,500)",
+          "automationStatus": "ready"
         }
       ]
     },
@@ -315,8 +316,8 @@
       "storyCount": 2,
       "status": {
         "storyCount": 2,
-        "readyCount": 0,
-        "partialCount": 2,
+        "readyCount": 2,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -332,7 +333,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -353,7 +354,7 @@
           ],
           "localMirrorPath": "/news/sports/arcteryx-alpha-sv-hanging.jpg",
           "candidateImageUrl": "https://cdn.sanity.io/images/inkbj32c/production/7a649d6f8f0ee59bd267191e4d08009dc30afddf-600x600.jpg?auto=format&q=75",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "arcteryx-alpha-sv-detail",
@@ -365,7 +366,7 @@
           ],
           "localMirrorPath": "/news/sports/arcteryx-alpha-sv-detail.jpg",
           "candidateImageUrl": "https://cdn.sanity.io/images/inkbj32c/production/e5a16a928380d0c5c9e0f083bc2fe8133714d98d-600x600.jpg?auto=format&q=75",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -673,8 +674,8 @@
       "storyCount": 6,
       "status": {
         "storyCount": 6,
-        "readyCount": 0,
-        "partialCount": 6,
+        "readyCount": 2,
+        "partialCount": 4,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -689,7 +690,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -746,7 +747,7 @@
           ],
           "localMirrorPath": "/news/luxury/bulgari-serpenti-sedu-watch.png",
           "candidateImageUrl": "https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/103902-001.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "bulgari-octo-watch",
@@ -758,7 +759,7 @@
           ],
           "localMirrorPath": "/news/luxury/bulgari-octo-watch.png",
           "candidateImageUrl": "https://www.bulgari.cn/media/catalog/product/cache/6e8bf58cd790c423691f019c814cf844/1/0/104299-E-001.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "bulgari-serpenti-top-handle",
@@ -933,8 +934,8 @@
       "storyCount": 2,
       "status": {
         "storyCount": 2,
-        "readyCount": 0,
-        "partialCount": 2,
+        "readyCount": 2,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -950,7 +951,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -971,7 +972,7 @@
           ],
           "localMirrorPath": "/news/beauty/chando-purple-real.png",
           "candidateImageUrl": "https://chandowebprd.chandogroup.com/images/aa434f1dafda4fdfa4fe30e2f75166ff.1776224329550.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "chando-foundation",
@@ -983,7 +984,7 @@
           ],
           "localMirrorPath": "/news/beauty/chando-foundation-real.png",
           "candidateImageUrl": "https://chandowebprd.chandogroup.com/images/d1c85c4d6616409192aea01aed1b3c50.1713838299550.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -999,8 +1000,8 @@
       "storyCount": 11,
       "status": {
         "storyCount": 11,
-        "readyCount": 0,
-        "partialCount": 11,
+        "readyCount": 4,
+        "partialCount": 7,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1059,7 +1060,7 @@
           ],
           "localMirrorPath": "/news/luxury/chanel-j12-bleu-watch.webp",
           "candidateImageUrl": "https://www.chanel.cn/puls-img/c_limit,w_1920/f_webp,q_90,dpr_1.1/1774968766103-mspp-j12-bleue-h10288-cover-mobile-4-3_2500x4443.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "chanel-25-mini",
@@ -1131,7 +1132,7 @@
           ],
           "localMirrorPath": "/news/luxury/chanel-premiere-watch.png",
           "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/premiere-edition-originale-watch-yellow-black-calfskin-gold-coating-packshot-default-h6951-9590048751646.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "chanel-ss26-readytowear",
@@ -1143,7 +1144,7 @@
           ],
           "localMirrorPath": "/news/luxury/chanel-ss26-readytowear.jpg",
           "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1268/FSH-1771418302737-desktop-product_1.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "chanel-handbag-story",
@@ -1155,7 +1156,7 @@
           ],
           "localMirrorPath": "/news/luxury/chanel-handbag-story.jpg",
           "candidateImageUrl": "https://www.chanel.cn/images/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1024/FSH-1742141327919-desktop-1112.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -1171,8 +1172,8 @@
       "storyCount": 4,
       "status": {
         "storyCount": 4,
-        "readyCount": 0,
-        "partialCount": 4,
+        "readyCount": 1,
+        "partialCount": 3,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1254,7 +1255,7 @@
           ],
           "localMirrorPath": "/news/beauty/chanel-chance-splendide.jpg",
           "candidateImageUrl": "https://www.chanel.cn/images/t_one/w_0.45,h_0.45,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1240/chance-eau-splendide-eau-de-parfum-spray-1-7fl-oz--packshot-default-136210-9561648758814.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -1333,8 +1334,8 @@
       "storyCount": 4,
       "status": {
         "storyCount": 4,
-        "readyCount": 0,
-        "partialCount": 4,
+        "readyCount": 1,
+        "partialCount": 3,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1347,7 +1348,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 1."
       ],
       "crawlEntries": [
         {
@@ -1368,7 +1369,7 @@
           ],
           "localMirrorPath": "/news/beauty/cpb-home-local.jpg",
           "candidateImageUrl": "https://www.cledepeau-beaute.com.cn/on/demandware.static/-/Sites-cpb_cn-Library/default/dw4fcc2ecc/CPB/2024KV/KV1-PC-20241104.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "cpb-foundation",
@@ -1547,8 +1548,8 @@
       "storyCount": 3,
       "status": {
         "storyCount": 3,
-        "readyCount": 0,
-        "partialCount": 3,
+        "readyCount": 2,
+        "partialCount": 1,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1583,7 +1584,7 @@
           ],
           "localMirrorPath": "/news/sports/descente-allterrain-hero.jpg",
           "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_allterrain_head_pc.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "descente-allterrain-81",
@@ -1595,7 +1596,7 @@
           ],
           "localMirrorPath": "/news/sports/descente-allterrain-81-hero.jpg",
           "candidateImageUrl": "https://allterrain.descente.com/wp-content/uploads/2026/02/26ss_index_81_head_pc.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "descente-allterrain-shell",
@@ -1620,10 +1621,10 @@
       "officialDomains": [
         "www.dior.cn"
       ],
-      "storyCount": 7,
+      "storyCount": 9,
       "status": {
-        "storyCount": 7,
-        "readyCount": 0,
+        "storyCount": 9,
+        "readyCount": 2,
         "partialCount": 7,
         "needsReplacementCount": 0
       },
@@ -1738,6 +1739,30 @@
           "localMirrorPath": "/news/luxury/dior-lady-d-joy.jpg",
           "candidateImageUrl": null,
           "automationStatus": "partial"
+        },
+        {
+          "storyId": "dioramour-my-dior-mini-bag",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/S0984PHJJ_M933",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dioramour-my-dior-mini-bag.jpg",
+          "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/S0984PHJJM933_SBG_E01?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "dioramour-mitzah",
+          "subcategory": "服装",
+          "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/62ART106I677_C082",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/dioramour-mitzah.jpg",
+          "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/62ART106I677C082_SBG_E01?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+          "automationStatus": "ready"
         }
       ]
     },
@@ -1754,8 +1779,8 @@
       "storyCount": 5,
       "status": {
         "storyCount": 5,
-        "readyCount": 0,
-        "partialCount": 5,
+        "readyCount": 2,
+        "partialCount": 3,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1808,7 +1833,7 @@
           ],
           "localMirrorPath": "/news/beauty/dior-forever-new.jpg",
           "candidateImageUrl": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "dior-beauty-lips",
@@ -1820,7 +1845,7 @@
           ],
           "localMirrorPath": "/news/beauty/dior-addict-new.jpg",
           "candidateImageUrl": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw9831c51b/Y0319000/Y0319000_C031900038_E01_RHC.jpg?sw=640",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "dior-beauty-miss-dior-fragrance",
@@ -1873,8 +1898,8 @@
       "storyCount": 3,
       "status": {
         "storyCount": 3,
-        "readyCount": 0,
-        "partialCount": 3,
+        "readyCount": 2,
+        "partialCount": 1,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -1890,7 +1915,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -1911,7 +1936,7 @@
           ],
           "localMirrorPath": "/news/beauty/estee-anr-official.jpg",
           "candidateImageUrl": "https://www.esteelauder.com.cn/media/export/cms/products/308x424/el_sku_G37B01_308x424_0.jpg?w=3840",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "estee-makeup",
@@ -1923,7 +1948,7 @@
           ],
           "localMirrorPath": "/news/beauty/estee-doublewear-local.png",
           "candidateImageUrl": "https://www.esteelauder.com/media/export/cms/products/308x424/el_sku_PH7G10_308x424_0.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "estee-re-nutriv",
@@ -2111,11 +2136,11 @@
       "officialDomains": [
         "www.hermes.cn"
       ],
-      "storyCount": 14,
+      "storyCount": 16,
       "status": {
-        "storyCount": 14,
-        "readyCount": 0,
-        "partialCount": 14,
+        "storyCount": 16,
+        "readyCount": 16,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2129,13 +2154,13 @@
       ],
       "crawlMode": "single_product_page",
       "crawlNotes": [
-        "Hermes currently uses verified product/category pages rather than topic-feed extraction."
+        "Hermes watch automation should prefer stable editorial or product-led watch pages instead of brittle watch-category routes."
       ],
       "crawlEntries": [
         {
-          "label": "爱马仕中国官网腕表",
+          "label": "爱马仕中国官网 H08 腕表专题",
           "subcategory": "腕表",
-          "url": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+          "url": "https://www.hermes.cn/cn/zh/content/322394-hermes-h08/",
           "extraction": "first_product"
         }
       ],
@@ -2149,8 +2174,8 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-hacademi.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/hacademi手包--086976CK37-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-mini-clic-kelly",
@@ -2161,8 +2186,8 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-mini-clic-kelly.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/mini-clic-kelly手镯--200004F%2094-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-arceau-watch",
@@ -2173,32 +2198,32 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-arceau-watch.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/arceau-le-temps-voyageur腕表41毫米--057198WW00-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-garden-party",
           "subcategory": "皮包",
-          "sourcePage": "https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/garden-party%E5%A4%9A%E5%8F%A3%E8%A2%8B%E7%AB%96%E6%AC%BE%E6%89%8B%E6%8F%90%E5%8C%85-H084260CKAA/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-garden-party.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/garden-party%E5%A4%9A%E5%8F%A3%E8%A2%8B%E7%AB%96%E6%AC%BE%E6%89%8B%E6%8F%90%E5%8C%85--084260CKAA-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-kelly-pocket",
           "subcategory": "皮包",
-          "sourcePage": "https://www.hermes.cn/cn/zh/bags-and-small-leather-goods/bags-and-clutches/",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/kelly-pocket%E9%95%BF%E9%92%B1%E5%8C%85-H084940CC88/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-kelly-pocket.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/kelly-pocket%E9%95%BF%E9%92%B1%E5%8C%85--084940CC88-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-constance-slim",
@@ -2210,7 +2235,7 @@
           ],
           "localMirrorPath": "/news/luxury/hermes-constance-slim.jpg",
           "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/constance-slim%E9%92%B1%E5%8C%85--085259CC1H-front-wm-1-0-0-1000-1000_g.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-le-petit-sac",
@@ -2222,7 +2247,7 @@
           ],
           "localMirrorPath": "/news/luxury/hermes-le-petit-sac.jpg",
           "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/le-petit-sac%E6%89%8B%E6%8F%90%E5%8C%85--087968CC55-front-wm-1-0-0-1000-1000_g.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-zipengo",
@@ -2234,31 +2259,31 @@
           ],
           "localMirrorPath": "/news/luxury/hermes-zipengo.jpg",
           "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/zipengo-chaine-d-ancre%E5%B0%8F%E5%8F%B7%E6%89%8B%E5%8C%85--084321CC8L-front-wm-1-0-0-1000-1000_g.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-farandole",
           "subcategory": "珠宝",
-          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/farandole%E6%89%8B%E9%93%BE-H104567Bv00SH/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-farandole.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/farandole%E6%89%8B%E9%93%BE--104567B%2000-worn-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-collier-de-chien",
           "subcategory": "珠宝",
-          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/jewelry/",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/collier-de-chien%E6%89%8B%E9%95%AF%E5%B0%8F%E5%8F%B7-H108112Bv00SH/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-collier-de-chien.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/collier-de-chien%E6%89%8B%E9%95%AF%E5%B0%8F%E5%8F%B7--108112B%2000-worn-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-mini-clic-chaine-dancre",
@@ -2270,31 +2295,31 @@
           ],
           "localMirrorPath": "/news/luxury/hermes-mini-clic-chaine-dancre.jpg",
           "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/mini-clic-chaine-d-ancre%E6%89%8B%E9%95%AF--209000FP19-worn-1-0-0-1000-1000_g.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-h08-watch",
           "subcategory": "腕表",
-          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3-W049433WW00/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-h08-watch.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3--049433WW00-front-1-300-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-cape-cod-watch",
           "subcategory": "腕表",
-          "sourcePage": "https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/cape-cod%E8%85%95%E8%A1%A8%E5%B0%8F%E5%8F%B731%E6%AF%AB%E7%B1%B3-W044221WW00/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/cape-cod%E8%85%95%E8%A1%A8%E5%B0%8F%E5%8F%B731%E6%AF%AB%E7%B1%B3--044221WW00-front-1-300-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-cape-cod-watch",
@@ -2305,8 +2330,32 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/luxury/hermes-cape-cod-watch.webp",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/cape-cod%E8%85%95%E8%A1%A8%E5%B0%8F%E5%8F%B731%E6%AF%AB%E7%B1%B3--044221WW00-front-1-300-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "hermes-rodeo-charm",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/rodeo%E5%B0%8F%E5%8F%B7%E5%90%8A%E9%A5%B0-H073422CAAF/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-rodeo-charm.jpg",
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/rodeo%E5%B0%8F%E5%8F%B7%E5%90%8A%E9%A5%B0--073422CAAF-worn-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "hermes-magsafe-cardholder",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.hermes.cn/cn/zh/product/%E9%94%9A%E9%93%BE%E5%9B%BE%E6%A1%88magsafe%E5%8D%A1%E5%8C%85-H0003611v1A/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/hermes-magsafe-cardholder.jpg",
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/%E9%94%9A%E9%93%BE%E5%9B%BE%E6%A1%88magsafe%E5%8D%A1%E5%8C%85--0003611%201A-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         }
       ]
     },
@@ -2322,8 +2371,8 @@
       "storyCount": 4,
       "status": {
         "storyCount": 4,
-        "readyCount": 0,
-        "partialCount": 4,
+        "readyCount": 2,
+        "partialCount": 2,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2336,13 +2385,13 @@
       ],
       "crawlMode": "single_product_page",
       "crawlNotes": [
-        "Hermès Beauty remains product-page led until broader category extraction is added."
+        "Hermès Beauty remains product-page led until broader category extraction is added, and should use the working cn/en fragrance category paths when category-level freshness is needed."
       ],
       "crawlEntries": [
         {
           "label": "Hermès Beauty 香氛",
           "subcategory": "香水",
-          "url": "https://www.hermes.cn/cn/zh/category/fragrances/",
+          "url": "https://www.hermes.cn/cn/en/category/fragrances/",
           "extraction": "first_product"
         },
         {
@@ -2368,8 +2417,8 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/beauty/hermes-terre-dhermes.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/爱马仕大地馥郁香根草香型香水--40946-front-wm-1-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-beauty-twilly-ginger",
@@ -2380,8 +2429,8 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/beauty/hermes-twilly-ginger.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://assets.hermes.cn/is/image/hermesproduct/爱马仕丝意荔韵淡香精--110826VN-worn-2-0-0-1000-1000_g.jpg",
+          "automationStatus": "ready"
         },
         {
           "storyId": "hermes-beauty-nil-garden",
@@ -2398,7 +2447,7 @@
         {
           "storyId": "hermes-beauty-jardin-monsieur-li",
           "subcategory": "香水",
-          "sourcePage": "https://www.hermes.cn/cn/zh/category/perfume/",
+          "sourcePage": "https://www.hermes.cn/cn/en/category/fragrances/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
@@ -2622,8 +2671,8 @@
       "storyCount": 2,
       "status": {
         "storyCount": 2,
-        "readyCount": 0,
-        "partialCount": 2,
+        "readyCount": 2,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2638,7 +2687,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -2659,7 +2708,7 @@
           ],
           "localMirrorPath": "/news/beauty/kiehls-calendula-darkspot.jpg",
           "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/2.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "kiehls-best-sellers",
@@ -2671,7 +2720,7 @@
           ],
           "localMirrorPath": "/news/beauty/kiehls-cream-mask.jpg",
           "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-kie/about/products/1.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -2687,8 +2736,8 @@
       "storyCount": 2,
       "status": {
         "storyCount": 2,
-        "readyCount": 0,
-        "partialCount": 2,
+        "readyCount": 2,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -2702,7 +2751,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -2723,7 +2772,7 @@
           ],
           "localMirrorPath": "/news/sports/kolon-hyperleap-tlx.jpg",
           "candidateImageUrl": "https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4TX26010BLK_LM1.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "kolon-hawk-rise-gtx",
@@ -2735,7 +2784,7 @@
           ],
           "localMirrorPath": "/news/sports/kolon-hawk-rise-page.png",
           "candidateImageUrl": "https://images.kolonmall.com/Prod_Img/KS/2026/LM1/FE4KX26310GRY_LM1.jpg",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -3004,11 +3053,11 @@
       "officialDomains": [
         "www.louisvuitton.cn"
       ],
-      "storyCount": 13,
+      "storyCount": 15,
       "status": {
-        "storyCount": 13,
-        "readyCount": 0,
-        "partialCount": 13,
+        "storyCount": 15,
+        "readyCount": 9,
+        "partialCount": 6,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -3115,7 +3164,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-sneakerina.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-sneakerina-%E9%9C%B2%E8%B7%9F%E9%9E%8B--AWU024MI01_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-keepall-bandouliere-25",
@@ -3127,7 +3176,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-keepall-bandouliere-25.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-keepall-bandouliere-25-%E6%89%8B%E8%A2%8B--M29272_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-speedy-bandouliere-20",
@@ -3139,7 +3188,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-speedy-bandouliere-20.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-20-%E6%89%8B%E8%A2%8B--M29459_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-hobo-pm",
@@ -3151,7 +3200,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-hobo-pm.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-hobo-%E5%B0%8F%E5%8F%B7%E6%89%8B%E8%A2%8B--M29068_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-baggy",
@@ -3163,7 +3212,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-baggy.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-baggy-%E6%89%8B%E8%A2%8B--M27329_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-multipass",
@@ -3175,7 +3224,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-multipass.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-multipass-%E6%89%8B%E8%A2%8B--M29094_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-x-tm-neverfull-mm",
@@ -3187,7 +3236,7 @@
           ],
           "localMirrorPath": "/news/luxury/lv-x-tm-neverfull-mm.png",
           "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-tm-neverfull-%E4%B8%AD%E5%8F%B7%E6%89%8B%E8%A2%8B--M27787_PM2_Front%20view.png?wid=1440&hei=1440",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "lv-capucines-bb",
@@ -3224,6 +3273,30 @@
           "localMirrorPath": "/news/luxury/lv-silk-dress.webp",
           "candidateImageUrl": null,
           "automationStatus": "partial"
+        },
+        {
+          "storyId": "lv-nano-madeleine",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/nano-madeleine-monogram-empreinte-nvprod7540010v/M29380",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-nano-madeleine.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/%E8%B7%AF%E6%98%93%E5%A8%81%E7%99%BB-nano-madeleine-%E6%89%8B%E8%A2%8B-monogram-empreinte-%E5%B0%8F%E5%9E%8B%E7%9A%AE%E5%85%B7--M29380_PM2_Front%20view.png?wid=730&hei=730",
+          "automationStatus": "ready"
+        },
+        {
+          "storyId": "lv-all-in-bb",
+          "subcategory": "皮包",
+          "sourcePage": "https://www.louisvuitton.cn/zhs-cn/products/all-in-bb-autres-toiles-monogram-nvprod7310161v/M29067",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/lv-all-in-bb.png",
+          "candidateImageUrl": "https://www.louisvuitton.cn/images/is/image/lv/1/PP_VP_L/%E8%B7%AF%E6%98%93%E5%A8%81%E7%99%BB-all-in-bb-%E6%89%8B%E8%A2%8B-%E5%85%B6%E4%BB%96monogram-%E5%B8%86%E5%B8%83-%E6%97%B6%E5%B0%9A%E6%89%8B%E8%A2%8B--M29067_PM2_Front%20view.png?wid=730&hei=730",
+          "automationStatus": "ready"
         }
       ]
     },
@@ -3479,8 +3552,8 @@
       "storyCount": 16,
       "status": {
         "storyCount": 16,
-        "readyCount": 0,
-        "partialCount": 16,
+        "readyCount": 14,
+        "partialCount": 2,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -3574,8 +3647,8 @@
             "local_mirror"
           ],
           "localMirrorPath": "/news/sports/nike-basketball.png",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5eaa709b-cfe0-4ef5-b706-f90b952ac3cb/LEBRON+XXIII+EP.png",
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-basketball-feed",
@@ -3604,14 +3677,14 @@
         {
           "storyId": "nike-phantom6",
           "subcategory": "足球",
-          "sourcePage": "https://www.nike.com.cn/",
+          "sourcePage": "https://www.nike.com.cn/t/phantom-6-low-pro-%E8%80%90%E5%85%8B%E6%9A%97%E7%85%9E%E7%B3%BB%E5%88%97%E7%94%B7-%E5%A5%B3%E4%BA%BA%E9%80%A0%E5%9C%BA%E5%9C%B0%E4%BD%8E%E5%B8%AE%E8%B6%B3%E7%90%83%E9%9E%8B-wuEJ6Kfx",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/nike-basketball.png",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/nike-phantom-6.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b042e92e-9f86-4c33-8505-a4c4fb447fb7/REACTX+PHANTOM+6+LOW+PRO+TF.png",
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-pegasus42",
@@ -3623,7 +3696,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-pegasus-42.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/11552a29-a08e-4019-8501-3eaae4f4a2cf/AIR%2BZOOM%2BPEGASUS%2B42.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-running-family",
@@ -3633,9 +3706,9 @@
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/nike-pegasus-42.png",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/nike-pegasus-premium.png",
+          "candidateImageUrl": "https://static.nike.com.cn/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/93706731-f694-4c81-b5e1-9cdaea9ad43d/NIKE+PEGASUS+PREMIUM+RR.png",
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-pegasus42-se",
@@ -3647,7 +3720,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-pegasus-42-se.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/95c1c635-3904-475e-921a-2b605e0850a5/W+AIR+ZOOM+PEGASUS+42+SE.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-acg-zegama",
@@ -3659,7 +3732,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-acg-zegama.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ae4293b0-205b-42a0-be3c-cf1f6f405e95/NIKE+ACG+ZEGAMA+TRAIL.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-gt-cut-4-ep",
@@ -3671,7 +3744,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-gt-cut-4-ep.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/83730b18-631b-4dda-bdfb-a4bc2ec329a5/G.T.+CUT+4+LX+EP.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-china-tech-jacket",
@@ -3683,7 +3756,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-china-tech-jacket.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3fe95a2-797f-4c2f-b286-6c13647938c6/AS+CFA+M+TECH+WOVEN+TOP.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-kobe-9-low-protro",
@@ -3695,7 +3768,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-kobe-9-low-protro.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/377c9460-7632-443f-b465-764ba5f7d236/KOBE+IX+ELITE+LOW+EM+PROTRO.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-lebron-23-ep",
@@ -3707,7 +3780,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-lebron-23-ep.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5eaa709b-cfe0-4ef5-b706-f90b952ac3cb/LEBRON+XXIII+EP.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-ja-3-jp-ep",
@@ -3719,7 +3792,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-ja-3-jp-ep.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/38b2ca41-20ea-40a8-837c-5a80ef20f066/JA+3+JP+EP.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-shenhua-top",
@@ -3731,7 +3804,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-shenhua-top.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/516a2e3a-5b77-40d1-b7fe-3ca6a0d378b3/AS+SGS+M+NK+DF+ACD+SS+TOP+G.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-england-home-jersey",
@@ -3743,7 +3816,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-england-2026-home-jersey.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0bb0368e-cb48-4dfc-9b59-7325d7a9c181/ENT+M+NK+DF+JSY+SS+STAD+HM.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "nike-swim-hydrastrong",
@@ -3755,7 +3828,7 @@
           ],
           "localMirrorPath": "/news/sports/nike-swim-hydrastrong.png",
           "candidateImageUrl": "https://static.nike.com.cn/a/images/t_default/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a3523998-276e-4882-b8d4-48e25afc3525/NK+PLY+SLD+JAMMER+WITH+GUSSET.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -3846,8 +3919,8 @@
       "storyCount": 2,
       "status": {
         "storyCount": 2,
-        "readyCount": 0,
-        "partialCount": 2,
+        "readyCount": 2,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -3861,7 +3934,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 2."
       ],
       "crawlEntries": [
         {
@@ -3882,7 +3955,7 @@
           ],
           "localMirrorPath": "/news/sports/on-cloudsurfer-max.webp",
           "candidateImageUrl": "https://images.ctfassets.net/hnk2vsx53n6l/1VGvF5KSK6shaFwdzgvKRu/5009bc69b19aeb617e0cbebb12e23c83/e23710a3d0ff66844466531dd9d7940b7b22540f.png?fm=webp",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         },
         {
           "storyId": "on-cloudmonster-2",
@@ -3894,7 +3967,7 @@
           ],
           "localMirrorPath": "/news/sports/on-cloudmonster-2-page.png",
           "candidateImageUrl": "https://images.ctfassets.net/hnk2vsx53n6l/5e4SXNmPb6Cbk10oUts0co/6ac100992b4b8d5fda5a5ad8437aadb0/6f9dc9d16e22b1a3c0d722e8d71747f17630e582.png?fm=webp",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -4451,13 +4524,13 @@
         "digital"
       ],
       "officialDomains": [
-        "www.samsung.com"
+        "www.samsung.com.cn"
       ],
       "storyCount": 4,
       "status": {
         "storyCount": 4,
-        "readyCount": 0,
-        "partialCount": 4,
+        "readyCount": 4,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -4497,50 +4570,50 @@
         {
           "storyId": "samsung-tablet",
           "subcategory": "平板",
-          "sourcePage": "https://www.samsung.com/cn/",
+          "sourcePage": "https://www.samsung.com.cn/tablets/galaxy-tab-s11/buy/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/digital/samsung-tablet.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/digital/samsung-tab-s11-ultra.jpg",
+          "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Tab-S11-ultra_720X480.jpg?imbypass=true",
+          "automationStatus": "ready"
         },
         {
           "storyId": "samsung-phone",
           "subcategory": "手机",
-          "sourcePage": "https://www.samsung.com/cn/",
+          "sourcePage": "https://www.samsung.com.cn/smartphones/galaxy-s26-ultra/buy/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/digital/samsung-phone.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/digital/samsung-s26-ultra.jpg",
+          "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0401/S26-Ultra_720X480.jpg?imbypass=true",
+          "automationStatus": "ready"
         },
         {
           "storyId": "samsung-buds",
           "subcategory": "配件",
-          "sourcePage": "https://www.samsung.com/cn/",
+          "sourcePage": "https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/digital/samsung-phone.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/digital/samsung-buds4-pro.jpg",
+          "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Bud4-pro_720X480.jpg?imbypass=true",
+          "automationStatus": "ready"
         },
         {
           "storyId": "samsung-galaxy-ecosystem",
           "subcategory": "配件",
-          "sourcePage": "https://www.samsung.com/cn/",
+          "sourcePage": "https://www.samsung.com.cn/audio-sound/galaxy-buds4-pro/buy/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
           ],
-          "localMirrorPath": "/news/digital/samsung-tablet.jpg",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/digital/samsung-buds4-pro.jpg",
+          "candidateImageUrl": "https://images.samsung.com.cn/is/image/samsung/assets/cn/buy/kv/0421/Bud4-pro_720X480.jpg?imbypass=true",
+          "automationStatus": "ready"
         }
       ]
     },
@@ -4639,8 +4712,8 @@
       "storyCount": 1,
       "status": {
         "storyCount": 1,
-        "readyCount": 0,
-        "partialCount": 1,
+        "readyCount": 1,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -4655,7 +4728,7 @@
       "crawlMode": "generic_html",
       "crawlNotes": [
         "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 1."
       ],
       "crawlEntries": [
         {
@@ -4676,7 +4749,7 @@
           ],
           "localMirrorPath": "/news/beauty/shuuemura-ultime8-oil.png",
           "candidateImageUrl": "https://res-wxec-unipt.lorealchina.com/ow1/ow-shu/banner/22.png",
-          "automationStatus": "partial"
+          "automationStatus": "ready"
         }
       ]
     },
@@ -4689,11 +4762,11 @@
       "officialDomains": [
         "www.tiffany.cn"
       ],
-      "storyCount": 3,
+      "storyCount": 4,
       "status": {
-        "storyCount": 3,
+        "storyCount": 4,
         "readyCount": 0,
-        "partialCount": 3,
+        "partialCount": 4,
         "needsReplacementCount": 0
       },
       "methods": [
@@ -4745,6 +4818,18 @@
           "storyId": "tiffany-lock",
           "subcategory": "珠宝",
           "sourcePage": "https://www.tiffany.cn/jewelry/shop/bracelets/tiffany-lock/",
+          "method": "local_mirror_of_official_asset",
+          "priority": [
+            "local_mirror"
+          ],
+          "localMirrorPath": "/news/luxury/tiffany-lock.jpg",
+          "candidateImageUrl": null,
+          "automationStatus": "partial"
+        },
+        {
+          "storyId": "tiffany-lock-520",
+          "subcategory": "珠宝",
+          "sourcePage": "https://www.tiffany.cn/jewelry/shop/tiffany-lock/",
           "method": "local_mirror_of_official_asset",
           "priority": [
             "local_mirror"
@@ -5104,25 +5189,27 @@
       "storyCount": 1,
       "status": {
         "storyCount": 1,
-        "readyCount": 0,
-        "partialCount": 1,
+        "readyCount": 1,
+        "partialCount": 0,
         "needsReplacementCount": 0
       },
       "methods": [
+        "mall_listing_first_product_card",
+        "official_product_page_image_download",
         "local_mirror"
       ],
       "notes": [
-        "Default rule file generated from the current story dataset.",
-        "For remote official assets, the server can download and mirror the current image URL directly."
+        "YONEX China tennis now starts from the mall landing page and extracts the first visible product card instead of reusing a full-page screenshot.",
+        "Prefer the first mall product image and keep the mall detail page as the stable refresh source for tennis-product stories."
       ],
-      "crawlMode": "generic_html",
+      "crawlMode": "yonex_mall_pages",
       "crawlNotes": [
-        "This brand currently falls back to the default source page recorded from the existing story dataset.",
-        "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+        "Use the tennis mall landing page and promote the first visible product card into the sports news feed.",
+        "If the page layout changes, refresh the parser against the z-pro product list instead of falling back to a full-page screenshot."
       ],
       "crawlEntries": [
         {
-          "label": "YONEX 默认入口",
+          "label": "YONEX 网球系列新品",
           "subcategory": "网球",
           "url": "https://www.yonex.cn/home/index/mall/id/1",
           "extraction": "first_product"
@@ -5132,14 +5219,16 @@
         {
           "storyId": "yonex-tennis",
           "subcategory": "网球",
-          "sourcePage": "https://www.yonex.cn/home/index/mall/id/1",
-          "method": "local_mirror_of_official_asset",
+          "sourcePage": "https://www.yonex.cn/home/index/mall_detail/id/1763",
+          "method": "mall_listing_first_product_card_to_local_mirror",
           "priority": [
+            "mall_listing_first_product_card",
+            "official_product_page_image_download",
             "local_mirror"
           ],
-          "localMirrorPath": "/news/sports/yonex-tennis-page.png",
-          "candidateImageUrl": null,
-          "automationStatus": "partial"
+          "localMirrorPath": "/news/sports/yonex-percept-97.jpg",
+          "candidateImageUrl": "https://www.yonex.cn/public/uploads/20260416/bee3bd81f35350fa43d142fba5d0c684.jpg",
+          "automationStatus": "ready"
         }
       ]
     }

@@ -133,8 +133,8 @@ const coreBrandSources: BrandSourceRule[] = [
     subcategory: '腕表',
     region: 'cn',
     sourceType: 'Official Site',
-    listUrl: 'https://www.hermes.cn/cn/zh/jewelry-and-watches/watches/',
-    sourceLabel: '爱马仕中国官网',
+    listUrl: 'https://www.hermes.cn/cn/zh/content/322394-hermes-h08/',
+    sourceLabel: '爱马仕中国官网 H08 腕表专题',
     fetchMode: 'browser',
     products: ['Hermes H08', 'Arceau', 'Cape Cod'],
     keywords: ['腕表', '新品', 'H08', 'Arceau', 'Cape Cod'],
@@ -328,7 +328,7 @@ const coreBrandSources: BrandSourceRule[] = [
     subcategory: '香水',
     region: 'cn',
     sourceType: 'Official Site',
-    listUrl: 'https://www.hermes.cn/cn/zh/category/fragrances/',
+    listUrl: 'https://www.hermes.cn/cn/en/category/fragrances/',
     sourceLabel: 'Hermès Beauty 香氛',
     fetchMode: 'html',
     products: ['大地馥郁香根草香型香水', '尼罗河花园香水', '李先生的花园香水'],
@@ -631,7 +631,7 @@ function buildRuleFromStory(story: Story): BrandSourceRule {
     listUrl = 'https://www.chanel.cn/cn/fragrance/'
     sourceLabel = 'CHANEL Beauty 中国官网香氛'
   } else if (story.brand === 'Hermès Beauty') {
-    listUrl = 'https://www.hermes.cn/cn/zh/category/fragrances/'
+    listUrl = 'https://www.hermes.cn/cn/en/category/fragrances/'
     sourceLabel = 'Hermès Beauty 香氛'
   } else if (story.brand === 'DESCENTE') {
     listUrl = 'https://allterrain.descente.com/'

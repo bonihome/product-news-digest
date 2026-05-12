@@ -778,8 +778,8 @@ export const beautyNews: Story[] = [
     publishedAt: '2026-05-09',
     checkedAt: '官网核对：2026-05-09',
     sourceType: 'Official Site',
-    sourceLabel: 'Hermes 中国官网',
-    sourceUrl: 'https://www.hermes.cn/cn/zh/category/perfume/',
+    sourceLabel: 'Hermès Beauty 香氛',
+    sourceUrl: 'https://www.hermes.cn/cn/en/category/fragrances/',
     image: '/news/beauty/hermes-jardin-monsieur-li.png',
     summary:
       '李先生的花园香水继续作为 Hermès 花园系列中的代表香型之一亮相，以更清润的东方花香表达补充品牌在清新花木调市场中的选择。',

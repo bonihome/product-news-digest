@@ -187,6 +187,7 @@ function extractMatch(html: string, pattern: RegExp, group = 1) {
 
 async function fetchHtml(url: string) {
   const response = await fetch(url, {
+    signal: AbortSignal.timeout(15000),
     headers: {
       'user-agent':
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
@@ -284,6 +285,15 @@ type PradaCategoryProduct = {
 type SamsungBuyPageProduct = {
   label: string
   subcategory: string
+  sourceUrl: string
+  title: string
+  image: string
+}
+
+type YonexMallProduct = {
+  label: string
+  subcategory: string
+  listingUrl: string
   sourceUrl: string
   title: string
   image: string
@@ -449,6 +459,31 @@ function extractSamsungBuyPageProduct(
     sourceUrl: pageUrl,
     title: collapseWhitespace(decodeHtmlEntities(title)),
     image: image ? makeAbsoluteUrl(decodeHtmlEntities(image), 'https://www.samsung.com.cn') : '',
+  }
+}
+
+function extractYonexMallProduct(
+  html: string,
+  listingUrl: string,
+  label: string,
+  subcategory: string,
+): YonexMallProduct | null {
+  const productListHtml = extractMatch(html, /<ul class="z-pro">([\s\S]*?)<\/ul>/i, 1) ?? html
+  const match = productListHtml.match(
+    /<li>\s*<a href="(\/home\/index\/mall_detail\/id\/\d+)">[\s\S]*?<img src="([^"]+)" alt="">[\s\S]*?<div class="s1">([^<]+)<\/div>/i,
+  )
+
+  if (!match) {
+    return null
+  }
+
+  return {
+    label,
+    subcategory,
+    listingUrl,
+    sourceUrl: makeAbsoluteUrl(decodeHtmlEntities(match[1]), 'https://www.yonex.cn'),
+    title: collapseWhitespace(decodeHtmlEntities(match[3])),
+    image: makeAbsoluteUrl(decodeHtmlEntities(match[2]), 'https://www.yonex.cn'),
   }
 }
 
@@ -974,6 +1009,23 @@ async function fetchSamsungBuyPageProducts(subcategory: string) {
   return products.filter((product): product is SamsungBuyPageProduct => Boolean(product))
 }
 
+async function fetchYonexMallProducts(subcategory: string) {
+  const crawlRule = await findBrandCrawlRule('YONEX')
+  if (!crawlRule || crawlRule.mode !== 'yonex_mall_pages') {
+    return []
+  }
+
+  const pages = crawlRule.entryPages.filter((page) => page.subcategory === subcategory)
+  const products = await Promise.all(
+    pages.map(async (page) => {
+      const html = await fetchHtml(page.url)
+      return extractYonexMallProduct(html, page.url, page.label, page.subcategory)
+    }),
+  )
+
+  return products.filter((product): product is YonexMallProduct => Boolean(product))
+}
+
 async function fetchPokiNewGameProducts(subcategory: string) {
   const crawlRule = await findBrandCrawlRule('Poki')
   if (!crawlRule || crawlRule.mode !== 'poki_new_games') {
@@ -1212,7 +1264,7 @@ async function fetchConfiguredSinglePageCandidates(rule: BrandSourceRule, checke
     return null
   }
 
-  const candidates = await Promise.all(
+  const settled = await Promise.allSettled(
     pages.map(async (page) => {
       const html = await fetchHtml(page.url)
       const sourceTitle =
@@ -1232,6 +1284,18 @@ async function fetchConfiguredSinglePageCandidates(rule: BrandSourceRule, checke
     }),
   )
 
+  const candidates = settled
+    .filter((result): result is PromiseFulfilledResult<CrawlCandidate> => result.status === 'fulfilled')
+    .map((result) => result.value)
+
+  if (candidates.length === 0) {
+    const firstRejected = settled.find((result): result is PromiseRejectedResult => result.status === 'rejected')
+    if (firstRejected) {
+      throw firstRejected.reason
+    }
+    return null
+  }
+
   return candidates
 }
 
@@ -1246,6 +1310,8 @@ async function fetchConfiguredRuleCandidates(rule: BrandSourceRule, checkedAt: s
       return fetchPradaCategoryCandidates(rule, checkedAt)
     case 'samsung_buy_pages':
       return fetchSamsungBuyPageCandidates(rule, checkedAt)
+    case 'yonex_mall_pages':
+      return fetchYonexMallCandidates(rule, checkedAt)
     case 'pacogames_latest_games':
       return fetchWebgameCandidates(rule, checkedAt, await fetchPacoGamesLatestProducts(rule.subcategory))
     case 'gamepix_new_games':
@@ -1279,6 +1345,22 @@ async function fetchMicrosoftSurfaceCandidate(rule: BrandSourceRule, checkedAt: 
     sourceSummary: 'Microsoft Surface 中国官网当前可稳定抓到 Surface Laptop 6 页面标题与官方主视觉，可用于生成电脑新品新闻。',
     image: decodeHtmlEntities(image ?? ''),
   })
+}
+
+async function fetchYonexMallCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const products = await fetchYonexMallProducts(rule.subcategory)
+
+  return products.map((product) =>
+    buildCandidate(rule, checkedAt, {
+      sourceUrl: product.sourceUrl,
+      sourceLabel: `YONEX 中国官网·${product.label}`,
+      sourceTitle: product.title,
+      sourceSummary: `YONEX 中国官网“${product.label}”页当前首个商品卡已提取，可直接作为 ${rule.subcategory} 新品新闻来源。`,
+      image: product.image,
+      products: [product.title, ...rule.products].slice(0, 3),
+      matchedKeywords: [product.label, ...detectMatchedKeywords(rule)].slice(0, 4),
+    }),
+  )
 }
 
 async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
