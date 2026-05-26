@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "brand": "Saint Laurent",
+  "slug": "saint-laurent",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.ysl.cn",
+    "www.ysl.com"
+  ],
+  "remoteImageHosts": [
+    "media.ysl.cn"
+  ],
+  "summary": {
+    "storyCount": 12,
+    "readyCount": 12,
+    "partialCount": 0,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "resolved_browser_image",
+      "reconstructed_dam_path",
+      "local_mirror"
+    ],
+    "notes": [
+      "YSL uses Next.js with static rendering; product data and images loaded via __NEXT_DATA__ JSON.",
+      "Images hosted on media.ysl.cn with UUID-based asset paths.",
+      "URL pattern: /shop-women/{category}/view-all/{sku}.html"
+    ]
+  },
+  "crawl": {
+    "mode": "ysl_category_pages",
+    "entryPages": [
+      {
+        "label": "YSL 女士鞋履",
+        "subcategory": "鞋履",
+        "url": "https://www.ysl.cn/categories/shop-women/shoes/view-all.html",
+        "extraction": "first_product"
+      },
+      {
+        "label": "YSL 女士成衣",
+        "subcategory": "服装",
+        "url": "https://www.ysl.cn/categories/shop-women/ready-to-wear/view-all.html",
+        "extraction": "first_product"
+      },
+      {
+        "label": "YSL 女士珠宝",
+        "subcategory": "珠宝",
+        "url": "https://www.ysl.cn/categories/shop-women/jewelry/view-all.html",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.ysl.cn/",
+    "notes": [
+      "YSL.cn now uses category URLs under /categories/ instead of /zh-cn/.",
+      "Each category page embeds a __NEXT_DATA__ script with full product listing JSON."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "saint-laurent-shoes-1",
+      "title": "Saint Laurent 推出 RENÉE网眼露跟高跟鞋，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "RENÉE网眼露跟高跟鞋",
+        "YSL 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/shoes/view-all/869662aagmc1000.html",
+      "currentImage": "/news/luxury/saint-laurent-shoes-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-shoes-1.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/fbe85de6-3f35-4546-9328-37ae301a28a1/Medium/869662AAGMC1000_A.jpg?v=5",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-shoes-2",
+      "title": "Saint Laurent 推出 JEANNE光滑皮革露跟高跟鞋，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "JEANNE光滑皮革露跟高跟鞋",
+        "YSL 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/shoes/view-all/800164aadx21000.html",
+      "currentImage": "/news/luxury/saint-laurent-shoes-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-shoes-2.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/m/6829a97f4319d275/Medium-800164AADX21000_A.jpg?v=6",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-shoes-3",
+      "title": "Saint Laurent 推出 BABYLONE光滑皮革凉鞋，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "BABYLONE光滑皮革凉鞋",
+        "YSL 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/shoes/view-all/7857061n8001000.html",
+      "currentImage": "/news/luxury/saint-laurent-shoes-3.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-shoes-3.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/m/7fe6c838d4bf41b6/Medium-7857061N8001000_A.jpg?v=5",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-shoes-4",
+      "title": "Saint Laurent 推出 OPYUM 金色鞋跟漆皮凉鞋，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "OPYUM 金色鞋跟漆皮凉鞋",
+        "YSL 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/shoes/view-all/5576791tv1a1000.html",
+      "currentImage": "/news/luxury/saint-laurent-shoes-4.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-shoes-4.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/m/1e33f6c39dae1e91/Medium-5576791TV1A1000_A.jpg?v=4",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-rtw-1",
+      "title": "Saint Laurent 推出 LE CASSANDRE聚酰胺纤维罗缎风衣，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "LE CASSANDRE聚酰胺纤维罗缎风衣",
+        "YSL 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/ready-to-wear/view-all/863446y6j184010.html",
+      "currentImage": "/news/luxury/saint-laurent-rtw-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-rtw-1.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/af58d4d5-104f-453b-93ff-7c0686943f3e/Medium/863446Y6J184010_A.jpg?v=2",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-rtw-2",
+      "title": "Saint Laurent 推出 LE CASSANDRE拉绒棉质帆布双面工装夹克，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "LE CASSANDRE拉绒棉质帆布双面工装夹克",
+        "YSL 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/ready-to-wear/view-all/a0001ry6j984032.html",
+      "currentImage": "/news/luxury/saint-laurent-rtw-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-rtw-2.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/8a907d83-222e-4fd3-9a6c-aed74949e032/Medium/A0001RY6J984032_A.jpg?v=2",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-rtw-3",
+      "title": "Saint Laurent 推出 棉和桑蚕丝风衣，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "棉和桑蚕丝风衣",
+        "YSL 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/ready-to-wear/view-all/851259y6j952601.html",
+      "currentImage": "/news/luxury/saint-laurent-rtw-3.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-rtw-3.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/768a1532-afc5-45a7-a21e-232a1585edaf/Medium/851259Y6J952601_A.jpg?v=2",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-rtw-4",
+      "title": "Saint Laurent 推出 LE CASSANDRE珠地Polo衫，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "LE CASSANDRE珠地Polo衫",
+        "YSL 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/ready-to-wear/view-all/862601y37ze1000.html",
+      "currentImage": "/news/luxury/saint-laurent-rtw-4.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-rtw-4.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/3fc350bd-1036-49aa-9de8-89a4e9f0c97d/Medium/862601Y37ZE1000_A.jpg?v=2",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-jewelry-1",
+      "title": "Saint Laurent 推出 LE CASSANDRE金属花朵吊坠环状耳环，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "LE CASSANDRE金属花朵吊坠环状耳环",
+        "YSL 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/accessories/view-all/a002yyy15007006.html",
+      "currentImage": "/news/luxury/saint-laurent-jewelry-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-jewelry-1.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/851d1006-c67c-4ec8-a2ff-c4baaa892736/Medium/A002YYY15007006_A.jpg?v=3",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-jewelry-2",
+      "title": "Saint Laurent 推出 LE CASSANDRE徽章金属项链，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "LE CASSANDRE徽章金属项链",
+        "YSL 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/accessories/view-all/a00421y15007006.html",
+      "currentImage": "/news/luxury/saint-laurent-jewelry-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-jewelry-2.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/9ad68600-3d1e-42f1-8eeb-224ede7d53ab/Medium/A00421Y15007006_A.jpg?v=3",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-jewelry-3",
+      "title": "Saint Laurent 推出 LE CASSANDRE金属吊坠，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "LE CASSANDRE金属吊坠",
+        "YSL 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/accessories/view-all/a003r0y15007006.html",
+      "currentImage": "/news/luxury/saint-laurent-jewelry-3.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-jewelry-3.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/99e87c01-1d65-401c-a706-d807acef7808/Medium/A003R0Y15007006_A.jpg?v=4",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    },
+    {
+      "storyId": "saint-laurent-jewelry-4",
+      "title": "Saint Laurent 推出 LE CASSANDRE鸽子金属手链，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "LE CASSANDRE鸽子金属手链",
+        "YSL 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.ysl.cn/shop-women/accessories/view-all/a003ioy15007006.html",
+      "currentImage": "/news/luxury/saint-laurent-jewelry-4.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "resolved_browser_image_to_local_mirror",
+        "priority": [
+          "resolved_browser_image",
+          "reconstructed_dam_path",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/saint-laurent-jewelry-4.jpg",
+        "candidateImageUrl": "https://media.ysl.cn/asset/8fe3e012-6f6d-4568-9d57-4beca6163262/Medium/A003IOY15007006_A.jpg?v=1",
+        "candidateImageHost": "media.ysl.cn",
+        "notes": [
+          "Image sourced from YSL.cn product listing page __NEXT_DATA__ JSON."
+        ]
+      }
+    }
+  ]
+}

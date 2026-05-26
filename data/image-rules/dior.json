@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 9,
+    "storyCount": 19,
     "readyCount": 2,
-    "partialCount": 7,
+    "partialCount": 17,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -306,6 +306,296 @@
         "candidateImageHost": "assets.christiandior.cn",
         "notes": [
           "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-ribbon-sneaker",
+      "title": "Dior 推出 Dior Ribbon 运动鞋，鞋履线以运动风元素扩展经典系列",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "Dior Ribbon 运动鞋",
+        "黑色绒面牛皮革和科技面料",
+        "¥7,900"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/KCK554TFS_S900",
+      "currentImage": "/news/luxury/dior-ribbon-sneaker.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-ribbon-sneaker.jpg",
+        "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/KCK554TFSS900_SBG_E02?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+        "candidateImageHost": "assets.christiandior.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-walkn-dior",
+      "title": "Dior 推出 Walk'n'Dior 厚底运动鞋，以亚麻面料水洗 Oblique 印花展现夏日休闲风",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "Walk'n'Dior 厚底运动鞋",
+        "水洗 Oblique 印花",
+        "亚麻面料"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/KCK563LIO_S60W",
+      "currentImage": "/news/luxury/dior-walkn-dior.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-walkn-dior.jpg",
+        "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/KCK563LIOS60W_SBG_E02?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+        "candidateImageHost": "assets.christiandior.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-saltwind-sneaker",
+      "title": "Dior 推出 Dior Saltwind 运动鞋，Oblique 印花刺绣面料鞋履持续扩展鞋履系列",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "Dior Saltwind 运动鞋",
+        "Oblique 印花刺绣面料",
+        "¥7,900"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion/shoes/all-shoes",
+      "currentImage": "/news/luxury/dior-saltwind-sneaker.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-saltwind-sneaker.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-jadior-ballet",
+      "title": "Dior 推出 J'Adior 芭蕾鞋，以经典平底鞋型延续 Dior 精致品味",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "J'Adior 芭蕾鞋",
+        "黑色羊皮革",
+        "¥7,900"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion/shoes/all-shoes",
+      "currentImage": "/news/luxury/dior-jadior-ballet.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-jadior-ballet.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-medaillon-bag",
+      "title": "Dior 推出 Dior Médaillon 手袋，经典包型融入徽章装饰新元素",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "Dior Médaillon 手袋",
+        "徽章装饰",
+        "经典包型"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/bags/lady-d-joy",
+      "currentImage": "/news/luxury/dior-medaillon-bag.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-medaillon-bag.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-autumn-2026-rtw",
+      "title": "Dior 二零二六秋季成衣系列发布，历史标识与现代花朵共舞新季廓形",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "二零二六秋季成衣系列",
+        "历史标识与现代花朵",
+        "柔和张力廓形"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion",
+      "currentImage": "/news/luxury/dior-autumn-2026-rtw.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-autumn-2026-rtw.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
+        ]
+      }
+    },
+    {
+      "storyId": "dioriviera-summer-2026",
+      "title": "Dior 推出二零二六 Dioriviera 夏日系列，以清爽色彩与印花延续度假风情",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "Dioriviera 夏日系列",
+        "印花与图案交融",
+        "夏日精致造型"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion",
+      "currentImage": "/news/luxury/dioriviera-summer-2026.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dioriviera-summer-2026.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-scarves-collection",
+      "title": "Dior 推出全新丝巾系列，Mitzah 丝巾与方巾共同丰富配饰线",
+      "category": "luxury",
+      "subcategory": "配饰",
+      "products": [
+        "Mitzah 丝巾",
+        "方巾",
+        "Floral Heart 图案"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/products/62ART106I677_C082",
+      "currentImage": "/news/luxury/dior-scarves-collection.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-scarves-collection.jpg",
+        "candidateImageUrl": "https://assets.christiandior.cn/is/image/diorprod/62ART106I677C082_SBG_E02?$r9x10_raw$&crop=0,0,4000,5000&wid=720&hei=778&scale=0.3892&bfc=on&qlt=80",
+        "candidateImageHost": "assets.christiandior.cn",
+        "notes": [
+          "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-small-leather-goods",
+      "title": "Dior 扩展女士小型皮具系列，卡包与零钱包推出经典藤格纹新作",
+      "category": "luxury",
+      "subcategory": "配饰",
+      "products": [
+        "女士小型皮具",
+        "藤格纹卡包",
+        "零钱包"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/womens-fashion",
+      "currentImage": "/news/luxury/dior-small-leather-goods.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-small-leather-goods.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
+        ]
+      }
+    },
+    {
+      "storyId": "dior-la-rose-jewelry",
+      "title": "Dior 推出 La Rose Dior 珠宝新作，以玫瑰为主题扩展轻珠宝系列",
+      "category": "luxury",
+      "subcategory": "首饰",
+      "products": [
+        "La Rose Dior 系列",
+        "玫瑰主题耳环",
+        "玫瑰主题项链"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.dior.cn/zh_cn/fashion/jewelry-timepieces",
+      "currentImage": "/news/luxury/dior-la-rose-jewelry.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/dior-la-rose-jewelry.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet."
         ]
       }
     }

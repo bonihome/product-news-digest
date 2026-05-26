@@ -40,6 +40,11 @@ const LOUIS_VUITTON_LATEST_PAGES = [
     subcategory: '皮包',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9',
   },
+  {
+    label: '早秋男士系列 2026',
+    subcategory: '服装',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/pre-fall-2026/_/N-t1t8llmn',
+  },
 ] as const
 const SHISEIDO_ULTIMUNE_URL =
   'https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums'
@@ -177,6 +182,30 @@ function normalizeIsoDate(value: string) {
     return null
   }
 
+  const y = Number(match[1])
+  const m = Number(match[2])
+  const d = Number(match[3])
+
+  if (y < 2020 || y > 2030) {
+    return null
+  }
+  if (m < 1 || m > 12) {
+    return null
+  }
+
+  const maxDay = new Date(y, m, 0).getDate()
+  if (d < 1 || d > maxDay) {
+    return null
+  }
+
+  const parsed = new Date(y, m - 1, d)
+  const tomorrow = new Date()
+  tomorrow.setDate(tomorrow.getDate() + 2)
+  tomorrow.setHours(23, 59, 59)
+  if (parsed.getTime() > tomorrow.getTime()) {
+    return null
+  }
+
   return `${match[1]}-${match[2]}-${match[3]}`
 }
 
@@ -185,23 +214,40 @@ function extractMatch(html: string, pattern: RegExp, group = 1) {
   return match?.[group] ?? null
 }
 
+import { execFileSync } from "node:child_process"
+
+const SCRAPLING_SCRIPT = new URL("../../scripts/scrapling-fetch.py", import.meta.url).pathname
 async function fetchHtml(url: string) {
-  const response = await fetch(url, {
-    signal: AbortSignal.timeout(15000),
-    headers: {
-      'user-agent':
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
-      'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-    },
-  })
-
-  if (!response.ok) {
-    throw new Error(`抓取失败：${url} 返回 ${response.status}`)
+  try {
+    const response = await fetch(url, {
+      signal: AbortSignal.timeout(15000),
+      headers: {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+      },
+    })
+    if (response.ok) { return response.text() }
+    console.warn("[fetchHtml] normal fetch failed (" + response.status + "), trying Scrapling: " + url)
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e)
+    console.warn("[fetchHtml] normal fetch error (" + msg + "), trying Scrapling: " + url)
   }
-
-  return response.text()
+  try {
+    const result = execFileSync("python3", [SCRAPLING_SCRIPT, url], {
+      timeout: 30000,
+      maxBuffer: 2 * 1024 * 1024,
+      encoding: "utf-8",
+    })
+    if (result.startsWith("{")) {
+      const parsed = JSON.parse(result)
+      if (parsed.error) { throw new Error(parsed.error + " (status " + parsed.status + ")") }
+    }
+    return result
+  } catch (e2) {
+    const msg2 = e2 instanceof Error ? e2.message : String(e2)
+    throw new Error("Scrapling fetch failed for " + url + ": " + msg2)
+  }
 }
-
 function makeAbsoluteUrl(url: string, baseUrl: string) {
   try {
     return new URL(url, baseUrl).toString()

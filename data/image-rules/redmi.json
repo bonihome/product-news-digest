@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "brand": "Redmi",
+  "slug": "redmi",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.mi.com"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 2,
+    "readyCount": 0,
+    "partialCount": 2,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "Redmi 中国官网",
+        "subcategory": "手机",
+        "url": "https://www.mi.com/redmi",
+        "extraction": "first_product"
+      },
+      {
+        "label": "Redmi 平板频道",
+        "subcategory": "平板",
+        "url": "https://www.mi.com/redmi-pad",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.mi.com/redmi",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "redmi-redmi-note-14-pro",
+      "title": "REDMI 推出 REDMI Note 15 Pro+ 5G，手机新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "手机",
+      "products": [
+        "REDMI Note 15 Pro+ 5G",
+        "REDMI Note 15 Pro 5G",
+        "REDMI Note 15"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.mi.com/redmi",
+      "currentImage": "/news/digital/redmi-note-14.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/redmi-note-14.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "redmi-redmi-pad-pro",
+      "title": "REDMI 推出 REDMI Pad 2 Pro，平板新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "平板",
+      "products": [
+        "REDMI Pad 2 Pro",
+        "REDMI Pad Pro"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.mi.com/redmi-pad",
+      "currentImage": "/news/digital/redmi-pad-pro.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/redmi-pad-pro.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

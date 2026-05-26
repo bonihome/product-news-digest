@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "brand": "Sony",
+  "slug": "sony",
+  "categories": [
+    "digital"
+  ],
+  "officialDomains": [
+    "www.sonystyle.com.cn",
+    "www.sony.com.cn",
+    "www.sony.jp"
+  ],
+  "remoteImageHosts": [],
+  "summary": {
+    "storyCount": 3,
+    "readyCount": 0,
+    "partialCount": 3,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "local_mirror"
+    ],
+    "notes": [
+      "Default rule file generated from the current story dataset.",
+      "For remote official assets, the server can download and mirror the current image URL directly."
+    ]
+  },
+  "crawl": {
+    "mode": "generic_html",
+    "entryPages": [
+      {
+        "label": "Sony 官方商城",
+        "subcategory": "耳机/电视/相机",
+        "url": "https://www.sonystyle.com.cn/",
+        "extraction": "first_product"
+      }
+    ],
+    "fallbackUrl": "https://www.sonystyle.com.cn/",
+    "notes": [
+      "This brand currently falls back to the default source page recorded from the existing story dataset.",
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "sony-wh-1000xm6",
+      "title": "Sony 推出 WH-1000XM6，耳机新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "耳机",
+      "products": [
+        "WH-1000XM6",
+        "DSEE Extreme",
+        "双芯片降噪系统"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.sonystyle.com.cn/",
+      "currentImage": "/news/digital/sony-wh1000xm6-front.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/sony-wh1000xm6-front.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "sony-sony-bravia-8",
+      "title": "Sony 推出 Sony Bravia 8，电视新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "电视",
+      "products": [
+        "Sony Bravia 8",
+        "XR 认知芯片",
+        "Mini LED 面板"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.sonystyle.com.cn/",
+      "currentImage": "/news/digital/sony-wh1000xm6-front.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/sony-wh1000xm6-front.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "sony-sony-7-v",
+      "title": "Sony 推出 Sony α7 V，相机新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "相机",
+      "products": [
+        "Sony α7 V",
+        "5000 万像素传感器",
+        "AI 智能对焦"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.sonystyle.com.cn/",
+      "currentImage": "/news/digital/sony-wh1000xm6-front.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/sony-wh1000xm6-front.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    }
+  ]
+}

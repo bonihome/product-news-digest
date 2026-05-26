@@ -294,6 +294,12 @@ npm run analytics:server
 npm run report:weekly
 ```
 
+## 品牌图片获取工作流
+
+各品牌官网的图片获取方式和注意事项见：
+
+- [docs/chanel-image-workflow.md](./docs/chanel-image-workflow.md) — Chanel 奢侈品产品图片获取流程
+
 ## 下一步开发重点
 
 1. 继续扩充真实品牌抓取器，并补齐更多中国官网规则。

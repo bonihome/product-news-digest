@@ -98,7 +98,12 @@ function App() {
   const [route, setRoute] = useState<Route>(() => parseHash(window.location.hash))
   const [activeCategory, setActiveCategory] = useState<CategoryId>('all')
   const [activeSubcategory, setActiveSubcategory] = useState<string>('全部')
-  const [runtimeStories, setRuntimeStories] = useState<Story[]>([])
+  const [runtimeStories, setRuntimeStories] = useState<Story[]>(() => {
+  if (typeof window !== 'undefined' && (window as any).__RUNTIME_FEED__?.stories) {
+    return (window as any).__RUNTIME_FEED__.stories
+  }
+  return []
+})
   const [siteVisitors, setSiteVisitors] = useState<number | null>(null)
   const allStories = useMemo(() => composeStoryFeed(runtimeStories), [runtimeStories])
   const [interactions, setInteractions] = useState<StoryInteractions>(() => {
@@ -205,7 +210,13 @@ function App() {
         ? byCategory
         : byCategory.filter((story) => story.subcategory === activeSubcategory)
 
-    return [...bySubcategory].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    return [...bySubcategory].sort((a, b) => {
+      const dateCmp = b.publishedAt.localeCompare(a.publishedAt)
+      if (dateCmp !== 0) return dateCmp
+      const aCheck = (a.checkedAt ?? '').replace(/[^0-9-]/g, '').slice(0, 10)
+      const bCheck = (b.checkedAt ?? '').replace(/[^0-9-]/g, '').slice(0, 10)
+      return bCheck.localeCompare(aCheck)
+    })
   }, [activeCategory, activeSubcategory, allStories])
 
   const storyDetail = route.view === 'story' ? getStoryById(route.storyId, allStories) : null
@@ -314,7 +325,13 @@ function App() {
       )}
 
       {route.view === 'brand' && brandDetailStories.length > 0 && (
-        <BrandDetailView brand={route.brand} brandStories={brandDetailStories} />
+        <BrandDetailView
+          brand={route.brand}
+          brandStories={brandDetailStories}
+          interactions={interactions}
+          onToggleLike={toggleLike}
+          onAddComment={addComment}
+        />
       )}
 
       {route.view === 'story' && storyDetail && (
@@ -585,22 +602,22 @@ function StoryEngagement({
 function BrandDetailView({
   brand,
   brandStories,
+  interactions,
+  onToggleLike,
+  onAddComment,
 }: {
   brand: string
   brandStories: Story[]
+  interactions: StoryInteractions
+  onToggleLike: (storyId: string) => void
+  onAddComment: (storyId: string, comment: string) => void
 }) {
-  const latestStory = [...brandStories].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))[0]
   const [activeBrandSubcategory, setActiveBrandSubcategory] = useState('全部')
   const brandSubcategories = ['全部', ...Array.from(new Set(brandStories.map((story) => story.subcategory)))]
   const filteredBrandStories =
     activeBrandSubcategory === '全部'
       ? brandStories
       : brandStories.filter((story) => story.subcategory === activeBrandSubcategory)
-  const latestFiltered = filteredBrandStories[0]
-  const olderStories = filteredBrandStories.slice(1)
-  const highlightedProducts = Array.from(
-    new Set(filteredBrandStories.flatMap((story) => story.products)),
-  ).slice(0, 10)
 
   return (
     <section className="detail-layout">
@@ -611,8 +628,7 @@ function BrandDetailView({
         <p className="eyebrow">Brand Detail</p>
         <h1 className="detail-title">{brand}</h1>
         <p className="detail-copy">
-          这个品牌当前共收录 {brandStories.length} 条新品新闻，最新一条属于
-          {categoryLabels[latestStory.category]} · {latestStory.subcategory}。
+          这个品牌当前共收录 {brandStories.length} 条新品新闻
         </p>
         <div className="subcategory-row brand-filter">
           {brandSubcategories.map((item) => (
@@ -628,61 +644,43 @@ function BrandDetailView({
         </div>
       </div>
 
-      <div className="detail-grid">
-        <section className="detail-panel">
-          <h2>最新新闻</h2>
-          {latestFiltered ? (
-            <article className="feature-story">
-              <img className="detail-cover" src={latestFiltered.image} alt={latestFiltered.title} />
+      <div className="story-grid">
+        {filteredBrandStories.map((story) => (
+          <article key={story.id} className="story-card">
+            <a className="image-link" href={buildStoryHash(story.id)}>
+              <img className="story-image" src={story.image} alt={story.brand} />
+            </a>
+            <div className="story-head">
               <div>
-                <p className="detail-meta">
-                  {categoryLabels[latestFiltered.category]} · {latestFiltered.subcategory} ·{' '}
-                  {latestFiltered.publishedAt}
-                </p>
-                <a className="detail-story-link" href={buildStoryHash(latestFiltered.id)}>
-                  {latestFiltered.title}
-                </a>
-                <p className="detail-blurb">{latestFiltered.summary}</p>
+                <span className="brand-name">{story.brand}</span>
+                <p className="source-name">{story.subcategory}</p>
               </div>
-            </article>
-          ) : null}
-        </section>
-
-        <aside className="detail-panel">
-          <h2>当前重点产品</h2>
-          <div className="detail-tag-list">
-            {highlightedProducts.map((product) => (
-              <span key={`${brand}-${product}`}>{product}</span>
-            ))}
-          </div>
-        </aside>
-      </div>
-
-      <div className="detail-grid">
-        <section className="detail-panel">
-          <h2>更多历史新闻</h2>
-          <div className="detail-story-list">
-            {olderStories.map((story) => (
-              <article key={story.id} className="detail-story-item">
-                <img src={story.image} alt={story.title} />
-                <div>
-                  <p className="detail-meta">
-                    {categoryLabels[story.category]} · {story.subcategory} · {story.publishedAt}
-                  </p>
-                  <a className="detail-story-link" href={buildStoryHash(story.id)}>
-                    {story.title}
-                  </a>
-                  <p className="detail-blurb">{story.summary}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+              <span className="source-pill">{story.sourceType}</span>
+            </div>
+            <p className="story-date">
+              {story.publishedAt} · {story.checkedAt}
+            </p>
+            <a className="story-title-link" href={buildStoryHash(story.id)}>
+              <h3 className="story-title">{story.title}</h3>
+            </a>
+            <p className="story-summary">{story.summary}</p>
+            <div className="product-row">
+              {story.products.map((product) => (
+                <span key={`${story.id}-${product}`}>{product}</span>
+              ))}
+            </div>
+            <StoryEngagement
+              storyId={story.id}
+              interaction={interactions[story.id] ?? { liked: false, likes: 0, comments: [] }}
+              onToggleLike={onToggleLike}
+              onAddComment={onAddComment}
+            />
+          </article>
+        ))}
       </div>
     </section>
   )
 }
-
 function StoryDetailView({
   story,
   sourceStories,

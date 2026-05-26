@@ -10,9 +10,9 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 2,
+    "storyCount": 4,
     "readyCount": 0,
-    "partialCount": 2,
+    "partialCount": 4,
     "needsReplacementCount": 0
   },
   "strategy": {
@@ -28,16 +28,34 @@
     "mode": "generic_html",
     "entryPages": [
       {
-        "label": "Huawei 默认入口",
+        "label": "华为手机",
         "subcategory": "手机",
         "url": "https://consumer.huawei.com/cn/phones/pura90-pro-max/",
         "extraction": "first_product"
+      },
+      {
+        "label": "华为平板",
+        "subcategory": "平板",
+        "url": "https://consumer.huawei.com/cn/tablets/",
+        "extraction": "first_product"
+      },
+      {
+        "label": "华为音频",
+        "subcategory": "音频",
+        "url": "https://consumer.huawei.com/cn/audio/",
+        "extraction": "first_product"
+      },
+      {
+        "label": "华为笔记本",
+        "subcategory": "电脑",
+        "url": "https://consumer.huawei.com/cn/laptops/",
+        "extraction": "first_product"
       }
     ],
-    "fallbackUrl": "https://consumer.huawei.com/cn/phones/pura90-pro-max/",
+    "fallbackUrl": "https://consumer.huawei.com/cn/",
     "notes": [
       "This brand currently falls back to the default source page recorded from the existing story dataset.",
-      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode. Current ready stories: 0."
+      "When newer brand-specific crawl rules are added, replace this generic_html mode with a specialized mode."
     ]
   },
   "stories": [
@@ -82,6 +100,64 @@
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://consumer.huawei.com/cn/tablets/",
+      "currentImage": "/news/digital/huawei-matepad.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/huawei-matepad.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "huawei-huawei-freebuds-6",
+      "title": "Huawei 推出 HUAWEI FreeBuds 6，音频新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "音频",
+      "products": [
+        "HUAWEI FreeBuds 6",
+        "HUAWEI FreeBuds 6 Pro",
+        "超感知主动降噪"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://consumer.huawei.com/cn/audio/",
+      "currentImage": "/news/digital/huawei-freebuds6.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "partial",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/digital/huawei-freebuds6.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "huawei-huawei-matebook-x-pro",
+      "title": "Huawei 推出 HUAWEI MateBook X Pro，电脑新品阵容继续扩展",
+      "category": "digital",
+      "subcategory": "电脑",
+      "products": [
+        "HUAWEI MateBook X Pro",
+        "Intel Core Ultra",
+        "3.1K OLED 全面屏"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://consumer.huawei.com/cn/laptops/",
       "currentImage": "/news/digital/huawei-matepad.jpg",
       "currentImageMode": "local",
       "currentImageHost": null,

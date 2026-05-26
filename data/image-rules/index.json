@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-05-12T07:31:11.877Z",
-  "brandCount": 57,
+  "brandCount": 61,
   "brands": [
     {
       "brand": "Adidas",
@@ -231,9 +231,9 @@
       "brand": "Huawei",
       "slug": "huawei",
       "file": "data/image-rules/huawei.json",
-      "storyCount": 2,
+      "storyCount": 4,
       "readyCount": 0,
-      "partialCount": 2,
+      "partialCount": 4,
       "needsReplacementCount": 0
     },
     {
@@ -513,6 +513,42 @@
       "storyCount": 1,
       "readyCount": 1,
       "partialCount": 0,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Xiaomi",
+      "slug": "xiaomi",
+      "file": "data/image-rules/xiaomi.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Redmi",
+      "slug": "redmi",
+      "file": "data/image-rules/redmi.json",
+      "storyCount": 2,
+      "readyCount": 0,
+      "partialCount": 2,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Sony",
+      "slug": "sony",
+      "file": "data/image-rules/sony.json",
+      "storyCount": 3,
+      "readyCount": 0,
+      "partialCount": 3,
+      "needsReplacementCount": 0
+    },
+    {
+      "brand": "Sonos",
+      "slug": "sonos",
+      "file": "data/image-rules/sonos.json",
+      "storyCount": 1,
+      "readyCount": 0,
+      "partialCount": 1,
       "needsReplacementCount": 0
     }
   ]

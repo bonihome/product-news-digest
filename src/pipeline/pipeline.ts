@@ -240,6 +240,24 @@ export async function runPipeline(options: PipelineOptions = {}) {
             (item) => item.id === story.id || item.fingerprint === story.fingerprint,
           )
           if (existingIndex >= 0) {
+            const existing = nextStories[existingIndex]
+            // When refreshing an existing story, preserve the original publishedAt
+            // if the new date looks like a pipeline fallback (within 2 days of now).
+            // Real extracted dates from brand websites pass through unchanged.
+            const newDate = story.publishedAt
+            const oldDate = existing.publishedAt
+            if (newDate !== oldDate) {
+              const now = new Date()
+              const twoDaysAgo = new Date(now)
+              twoDaysAgo.setDate(twoDaysAgo.getDate() - 2)
+              const newDt = new Date(newDate)
+              const oldDt = new Date(oldDate)
+              if (!isNaN(newDt.getTime()) && !isNaN(oldDt.getTime()) &&
+                  newDt >= twoDaysAgo && newDt <= now &&
+                  oldDt < twoDaysAgo) {
+                story.publishedAt = oldDate
+              }
+            }
             nextStories[existingIndex] = story
           } else {
             nextStories.push(story)

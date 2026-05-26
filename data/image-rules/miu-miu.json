@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "brand": "Miu Miu",
+  "slug": "miu-miu",
+  "categories": [
+    "luxury"
+  ],
+  "officialDomains": [
+    "www.miumiu.com",
+    "www.miumiu.cn"
+  ],
+  "remoteImageHosts": [
+    "www.miumiu.com",
+    "media.miumiu.com"
+  ],
+  "summary": {
+    "storyCount": 8,
+    "readyCount": 8,
+    "partialCount": 0,
+    "needsReplacementCount": 0
+  },
+  "strategy": {
+    "brandLevelMethods": [
+      "resolved_browser_image",
+      "local_mirror"
+    ],
+    "notes": [
+      "Miu Miu uses AEM (Adobe Experience Manager) with client-side rendering.",
+      "Product data loaded dynamically via JavaScript. Category and product pages render in browser.",
+      "Product images use AEM DAM with cq5dam renditions."
+    ]
+  },
+  "crawl": {
+    "mode": "miumiu_category_pages",
+    "entryPages": [
+      {
+        "label": "Miu Miu 女士鞋履",
+        "subcategory": "鞋履",
+        "url": "https://www.miumiu.com/cn/zh/women/shoes/c/10177CN",
+        "extraction": "browser_pdp"
+      },
+      {
+        "label": "Miu Miu 女士成衣",
+        "subcategory": "服装",
+        "url": "https://www.miumiu.com/cn/zh/ready-to-wear/c/10216CN",
+        "extraction": "browser_pdp"
+      },
+      {
+        "label": "Miu Miu 女士珠宝",
+        "subcategory": "珠宝",
+        "url": "https://www.miumiu.com/cn/zh/fashion-jewellery/c/10227CN",
+        "extraction": "browser_pdp"
+      }
+    ],
+    "fallbackUrl": "https://www.miumiu.com/cn/zh.html",
+    "notes": [
+      "Miu Miu site requires browser rendering (full JS hydration).",
+      "Use headless browser to access product pages and extract images."
+    ]
+  },
+  "stories": [
+    {
+      "storyId": "miu-miu-shoes-1",
+      "title": "Miu Miu 推出 The Gymnasium Sneakers，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "The Gymnasium Sneakers",
+        "Miu Miu 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/the-gymnasium-sneakers/5XX813_06B_F0002",
+      "currentImage": "/news/luxury/miu-miu-shoes-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-shoes-1.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-shoes-2",
+      "title": "Miu Miu 推出 Ruches Nappa Leather Loafers，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "Ruches Nappa Leather Loafers",
+        "Miu Miu 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/nappa-leather-loafers/5XX813_06B_F0002",
+      "currentImage": "/news/luxury/miu-miu-shoes-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-shoes-2.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-shoes-3",
+      "title": "Miu Miu 推出 皮革凉鞋，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "皮革凉鞋",
+        "Miu Miu 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/leather-sandal/5X119D_067_F0002",
+      "currentImage": "/news/luxury/miu-miu-shoes-3.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-shoes-3.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-shoes-4",
+      "title": "Miu Miu 推出 缎面高跟鞋，鞋履新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "products": [
+        "缎面高跟鞋",
+        "Miu Miu 鞋履"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/satin-pumps/5X119D_067_F0002",
+      "currentImage": "/news/luxury/miu-miu-shoes-4.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-shoes-4.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-rtw-1",
+      "title": "Miu Miu 推出 围裙式连衣裙，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "围裙式连衣裙",
+        "Miu Miu 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/apron-dress/MF6427_1BMS_F0124",
+      "currentImage": "/news/luxury/miu-miu-rtw-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-rtw-1.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-rtw-2",
+      "title": "Miu Miu 推出 格纹迷你裙，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "格纹迷你裙",
+        "Miu Miu 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/gingham-check-mini-dress/MF6142_163M_F0009",
+      "currentImage": "/news/luxury/miu-miu-rtw-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-rtw-2.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-rtw-3",
+      "title": "Miu Miu 推出 府绸衬衫，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "府绸衬衫",
+        "Miu Miu 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/poplin-shirt/MG2062_13JH_F0007",
+      "currentImage": "/news/luxury/miu-miu-rtw-3.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-rtw-3.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-rtw-4",
+      "title": "Miu Miu 推出 涂蜡质感夹克，服装新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "服装",
+      "products": [
+        "涂蜡质感夹克",
+        "Miu Miu 服装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/waxed-suede-jacket/MF6181_19EK_F0241",
+      "currentImage": "/news/luxury/miu-miu-rtw-4.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-rtw-4.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-jewelry-1",
+      "title": "Miu Miu 推出 时尚珠宝项链，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "时尚珠宝项链",
+        "Miu Miu 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/fashion-jewellery-necklace/",
+      "currentImage": "/news/luxury/miu-miu-jewelry-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-jewelry-1.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-jewelry-2",
+      "title": "Miu Miu 推出 徽标耳环，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "徽标耳环",
+        "Miu Miu 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/logo-earrings/",
+      "currentImage": "/news/luxury/miu-miu-jewelry-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-jewelry-2.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-jewelry-3",
+      "title": "Miu Miu 推出 吊坠项链，珠宝新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "珠宝",
+      "products": [
+        "吊坠项链",
+        "Miu Miu 珠宝"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/pendant-necklace/",
+      "currentImage": "/news/luxury/miu-miu-jewelry-3.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-jewelry-3.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-accessories-1",
+      "title": "Miu Miu 推出 腰带，配饰新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "配饰",
+      "products": [
+        "腰带",
+        "Miu Miu 配饰"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/leather-belt/",
+      "currentImage": "/news/luxury/miu-miu-accessories-1.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-accessories-1.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    },
+    {
+      "storyId": "miu-miu-accessories-2",
+      "title": "Miu Miu 推出 太阳镜，配饰新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "配饰",
+      "products": [
+        "太阳镜",
+        "Miu Miu 配饰"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.miumiu.cn/cn/zh/p/sunglasses/",
+      "currentImage": "/news/luxury/miu-miu-accessories-2.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "browser_screenshot_to_local",
+        "priority": [
+          "resolved_browser_image",
+          "local_mirror"
+        ],
+        "localMirrorPath": "/news/luxury/miu-miu-accessories-2.jpg",
+        "notes": [
+          "Image sourced through browser rendering of Miu Miu product page."
+        ]
+      }
+    }
+  ]
+}
