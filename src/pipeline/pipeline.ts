@@ -3,6 +3,7 @@ import { getEnabledBrandSources } from './brandSources'
 import { createBrandSnapshot, createFingerprint, isDuplicateStory } from './dedupe'
 import { fetchCandidatesForBrand, probeBrandSource } from './fetchCandidates'
 import { localizeStoryImages } from './imageStore'
+import { checkImageIntegrity, formatIntegrityReport } from './imageIntegrityChecker'
 import { generateStoryFromCandidate } from './newsWriter'
 import { publishRuntimeFeed } from './publisher'
 import {
@@ -267,6 +268,14 @@ export async function runPipeline(options: PipelineOptions = {}) {
 
       const normalizedStories = normalizeStoredStories(nextStories)
       await localizeStoryImages(normalizedStories)
+
+      // ── 图片引用完整性校验 ──
+      const integrityReport = await checkImageIntegrity(normalizedStories, runId)
+      console.log(formatIntegrityReport(integrityReport))
+      if (integrityReport.alerts.length > 0) {
+        await appendPipelineAlerts(integrityReport.alerts)
+      }
+
       await writeStoredStories(normalizedStories)
       await publishRuntimeFeed(normalizedStories)
     }
