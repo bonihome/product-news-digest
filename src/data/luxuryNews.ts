@@ -4,7 +4,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 推出新一季 Capucines 包袋系列',
     publishedAt: '2026-04-26',
@@ -40,7 +40,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-my-capucines',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 推出 My Capucines 个性化版本，延展经典手袋系列',
     publishedAt: '2026-04-29',
@@ -74,7 +74,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-keepall-bandouliere-25',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 以 Keepall Bandoulière 25 带动男士新品系列更新',
     publishedAt: '2026-05-09',
@@ -90,7 +90,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-speedy-bandouliere-20',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 以 Speedy Bandoulière 20 带动 LV Resort 系列新品更新',
     publishedAt: '2026-05-09',
@@ -106,7 +106,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-hobo-pm',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 以 Hobo 小号手袋带动 Flight Mode 系列更新',
     publishedAt: '2026-05-09',
@@ -122,7 +122,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-baggy',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 以 Baggy 手袋带动 Nautical 系列更新',
     publishedAt: '2026-05-09',
@@ -138,7 +138,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-multipass',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 以 Multipass 手袋带动春夏女装系列新品更新',
     publishedAt: '2026-05-09',
@@ -154,7 +154,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-x-tm-neverfull-mm',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 以 LV x TM Neverfull 中号手袋带动村上隆合作系列更新',
     publishedAt: '2026-05-09',
@@ -186,7 +186,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'burberry-rider',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Burberry',
     title: 'Burberry 推出新款 Rider Bag，包袋线迎来当季重点更新',
     publishedAt: '2026-04-08',
@@ -202,7 +202,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'cartier',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Cartier',
     title: 'Cartier 推出新一轮珠宝作品，经典系列与高珠并进',
     publishedAt: '2026-04-20',
@@ -236,7 +236,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'cartier-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Cartier',
     title: 'Cartier 推出 Must 系列黑色小牛皮手拿包，皮具线再添新作',
     publishedAt: '2026-04-29',
@@ -252,7 +252,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'vca-alhambra',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Van Cleef & Arpels',
     title: 'Van Cleef & Arpels 推出 Vintage Alhambra 吊坠，经典幸运珠宝再迎新作',
     publishedAt: '2026-04-29',
@@ -269,7 +269,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'vca-bracelet',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Van Cleef & Arpels',
     title: 'Van Cleef & Arpels 推出 Vintage Alhambra 手链，幸运系列持续扩充',
     publishedAt: '2026-04-29',
@@ -286,7 +286,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'vca-magic-alhambra',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Van Cleef & Arpels',
     title: 'Van Cleef & Arpels 推出 Magic Alhambra 手链，扩大高珠幸运主题阵容',
     publishedAt: '2026-04-29',
@@ -303,7 +303,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'gucci-horsebit',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Gucci',
     title: 'Gucci 推出 Horsebit 1955 迷你手袋，经典马衔扣系列再添新作',
     publishedAt: '2026-04-29',
@@ -320,7 +320,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'gucci-marmont',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Gucci',
     title: 'Gucci 推出 GG Marmont 中号肩背包，延续标志性皮具系列',
     publishedAt: '2026-04-29',
@@ -337,7 +337,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'gucci-horsebit-soft',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Gucci',
     title: 'Gucci 推出 Horsebit 1955 柔软小号肩背包，拓展经典系列新廓形',
     publishedAt: '2026-04-29',
@@ -354,7 +354,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'burberry-backpack',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Burberry',
     title: 'Burberry 推出 EKD 饰牌双肩包，皮具线新增实用款式',
     publishedAt: '2026-04-29',
@@ -490,7 +490,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'bulgari-serpenti-bag-grey',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Bvlgari',
     title: 'Bvlgari 推出灰色 Serpenti East-West Maxi Chain 肩包',
     publishedAt: '2026-04-29',
@@ -507,7 +507,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'bulgari-serpenti-bag-green',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Bvlgari',
     title: 'Bvlgari 推出绿色 Serpenti East-West Maxi Chain 肩包，拓展系列配色',
     publishedAt: '2026-04-29',
@@ -524,7 +524,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-hacademi',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Hacademi 手包，皮具线迎来新一轮更新',
     publishedAt: '2026-04-29',
@@ -542,7 +542,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-mini-clic-kelly',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Hermes',
     title: 'Hermes 推出 Mini Clic Kelly 手镯，珠宝配饰线持续扩展',
     publishedAt: '2026-04-29',
@@ -578,7 +578,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-book-tote',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Dior',
     title: 'Dior 推出超大藤格纹 Book Tote 手袋，包袋线迎来重点新作',
     publishedAt: '2026-04-29',
@@ -595,7 +595,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-dioramour-book-tote',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Dior',
     title: 'Dior 推出 Dioramour 迷你 Book Tote 手袋，限定系列再添新作',
     publishedAt: '2026-04-29',
@@ -612,7 +612,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-gem-dior',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Dior',
     title: 'Dior 推出 GEM DIOR 系列，珠宝与腕表线同步扩展',
     publishedAt: '2026-04-29',
@@ -629,7 +629,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'tiffany-hardwear',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Tiffany & Co.',
     title: 'Tiffany & Co. 推出 HardWear 链环项链，都市珠宝线持续升级',
     publishedAt: '2026-04-29',
@@ -645,7 +645,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'tiffany-smile-necklace',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Tiffany & Co.',
     title: 'Tiffany & Co. 推出 Tiffany T Smile 项链，轻珠宝系列延续热度',
     publishedAt: '2026-04-29',
@@ -662,7 +662,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'tiffany-lock',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Tiffany & Co.',
     title: 'Tiffany & Co. 推出 Tiffany Lock 系列手链，锁扣主题珠宝再添新作',
     publishedAt: '2026-04-29',
@@ -678,7 +678,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 推出 CHANEL 25 中号手袋，精品手袋线迎来新作',
     publishedAt: '2026-04-29',
@@ -695,7 +695,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-coco-crush',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Chanel',
     title: 'Chanel 推出 COCO CRUSH 白金镶钻新作，珠宝线持续焕新',
     publishedAt: '2026-04-29',
@@ -729,7 +729,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-capucines-bb',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 推出 Capucines BB 新作，经典手袋系列持续扩容',
     publishedAt: '2026-04-18',
@@ -815,7 +815,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'burberry-rocking-horse',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Burberry',
     title: 'Burberry 推出 Rocking Horse 包款，皮具线继续扩展马术主题',
     publishedAt: '2026-04-02',
@@ -831,7 +831,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'cartier-love-necklace',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Cartier',
     title: 'Cartier 推出 LOVE 项链新作，经典珠宝系列继续延展',
     publishedAt: '2026-04-16',
@@ -848,7 +848,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'cartier-clash-ring',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Cartier',
     title: 'Cartier 推出 Clash de Cartier 戒指，珠宝线再添辨识度单品',
     publishedAt: '2026-04-01',
@@ -899,7 +899,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'cartier-must-shoulder-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Cartier',
     title: 'Cartier 推出 Must 系列肩背包，皮具线扩展日常通勤选择',
     publishedAt: '2026-04-15',
@@ -915,7 +915,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'cartier-must-wallet',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Cartier',
     title: 'Cartier 推出 Must 系列小皮具，完善皮具线产品层次',
     publishedAt: '2026-04-04',
@@ -965,7 +965,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'bulgari-serpenti-top-handle',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Bvlgari',
     title: 'Bvlgari 推出 Serpenti Top Handle 手袋，包袋线再添新廓形',
     publishedAt: '2026-04-10',
@@ -982,7 +982,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-garden-party',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Garden Party 手袋，皮具线继续扩展日常经典款',
     publishedAt: '2026-04-19',
@@ -1000,7 +1000,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-kelly-pocket',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Kelly Pocket 紧凑包型，丰富小尺寸皮具阵容',
     publishedAt: '2026-04-08',
@@ -1018,7 +1018,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-constance-slim',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Constance Slim 钱包，继续扩展紧凑皮具线',
     publishedAt: '2026-05-09',
@@ -1034,7 +1034,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-le-petit-sac',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Le Petit Sac 手提包，迷你包袋线继续加深',
     publishedAt: '2026-05-09',
@@ -1050,7 +1050,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-zipengo',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Zipengo Chaine d’Ancre 小号手包，皮具线继续延展链条元素',
     publishedAt: '2026-05-09',
@@ -1066,7 +1066,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-farandole',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Hermes',
     title: 'Hermes 推出 Farandole 项链，珠宝配饰线持续延展',
     publishedAt: '2026-04-14',
@@ -1084,7 +1084,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-collier-de-chien',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Hermes',
     title: 'Hermes 推出 Collier de Chien 手镯，经典配饰线再度更新',
     publishedAt: '2026-04-06',
@@ -1102,7 +1102,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-mini-clic-chaine-dancre',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Hermes',
     title: 'Hermes 推出 Mini Clic Chaine d’Ancre 手镯，珠宝配饰线继续延展锚链元素',
     publishedAt: '2026-05-09',
@@ -1154,7 +1154,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-lady-d-joy',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Dior',
     title: 'Dior 推出 Lady D-Joy 手袋，包袋线持续扩展经典轮廓',
     publishedAt: '2026-04-11',
@@ -1171,7 +1171,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-rose-des-vents',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Dior',
     title: 'Dior 推出 Rose des Vents 珠宝新作，延续幸运星主题',
     publishedAt: '2026-04-15',
@@ -1188,7 +1188,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-oui-ring',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Dior',
     title: 'Dior 推出 Oui 戒指新作，轻珠宝线再添精致单品',
     publishedAt: '2026-04-04',
@@ -1205,7 +1205,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-mini',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 推出 CHANEL 25 小号手袋，经典手袋系列持续延展',
     publishedAt: '2026-04-16',
@@ -1222,7 +1222,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-flap-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 推出翻盖手袋新作，精品皮具线再添标志性款式',
     publishedAt: '2026-04-07',
@@ -1239,7 +1239,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-mini-metiers-art-2026',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 推出 CHANEL 25 迷你手袋 2026 高级手工坊系列新作，羊皮革与金属质感牛皮革两大新配色',
     publishedAt: '2026-05-25',
@@ -1255,7 +1255,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-tweed',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 推出 CHANEL 25 斜纹软呢迷你手袋，棉质羊毛斜纹软呢与金色金属碰撞',
     publishedAt: '2026-05-25',
@@ -1271,7 +1271,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-denim',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 推出 CHANEL 25 丹宁系列手袋，水洗丹宁诠释随性优雅',
     publishedAt: '2026-05-25',
@@ -1287,7 +1287,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-large',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 正式推出 CHANEL 25 大号手袋，尺寸线首次拓展至大号规格',
     publishedAt: '2026-05-25',
@@ -1303,7 +1303,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-25-ss26-new-materials',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel CHANEL 25 春夏系列玩转新材质：编织酒椰纤维、穿孔小牛皮与亮色皱纹小牛皮',
     publishedAt: '2026-05-25',
@@ -1320,7 +1320,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-coco-crush-necklace',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Chanel',
     title: 'Chanel 推出 COCO CRUSH 项链新作，珠宝线延续菱格纹主题',
     publishedAt: '2026-04-13',
@@ -1337,7 +1337,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-camelia-ring',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Chanel',
     title: 'Chanel 推出 Camélia 戒指新作，花卉主题珠宝持续扩展',
     publishedAt: '2026-04-03',
@@ -1403,7 +1403,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'chanel-handbag-story',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Chanel',
     title: 'Chanel 继续扩展 The Chanel Handbag 专题，经典手袋叙事再添新内容',
     publishedAt: '2026-05-09',
@@ -1419,7 +1419,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-passage-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Passage 中号皮革手袋，皮具线延续标志性都市廓形',
     publishedAt: '2026-05-04',
@@ -1451,7 +1451,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-eternal-gold-necklace',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Prada',
     title: 'Prada 推出 Eternal Gold 项链作品，珠宝线延续极简几何语汇',
     publishedAt: '2026-05-04',
@@ -1468,7 +1468,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-reedition-2005-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Re-Edition 2005 绒面皮革迷你手袋，经典 Hobo 轮廓持续焕新',
     publishedAt: '2026-05-04',
@@ -1484,7 +1484,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-double-mini-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Double 小号 Saffiano 皮革手袋，经典商务包线延续精致比例',
     publishedAt: '2026-05-04',
@@ -1533,7 +1533,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-symbole-necklace',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Prada',
     title: 'Prada 推出 Symbole 项链，徽标珠宝线继续拓展日常佩戴场景',
     publishedAt: '2026-05-04',
@@ -1549,7 +1549,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-bonnie-medium-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Bonnie 中号印花亚麻皮革拼接手提包，夏季包袋线继续扩展',
     publishedAt: '2026-05-04',
@@ -1565,7 +1565,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-route-large-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Route 大号皮革手袋，秀场包袋线继续强化结构感',
     publishedAt: '2026-05-04',
@@ -1581,7 +1581,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-carry-mini-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Carry 迷你皮革手袋，小尺寸包袋线继续增长',
     publishedAt: '2026-05-04',
@@ -1597,7 +1597,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'prada-jardiniere-mini-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Prada',
     title: 'Prada 推出 Jardinière 棉帆布迷你手袋，轻盈材质丰富夏季包袋线',
     publishedAt: '2026-05-04',
@@ -1613,7 +1613,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dior-lady-d-joy',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Dior',
     title: 'Dior 推出 Lady D-Joy 手袋，经典包型继续延展当季皮具线',
     publishedAt: '2026-05-09',
@@ -1645,7 +1645,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'tiffany-lock-520',
     category: 'luxury',
-    subcategory: '珠宝',
+    subcategory: '首饰',
     brand: 'Tiffany & Co.',
     title: 'Tiffany & Co. 以 Tiffany Lock 系列放大 520 礼赠珠宝热度',
     publishedAt: '2026-05-12',
@@ -1661,7 +1661,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-nano-madeleine',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 推出 Nano Madeleine 手袋，520 礼赠向小尺寸包袋继续升温',
     publishedAt: '2026-05-12',
@@ -1678,7 +1678,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'lv-all-in-bb',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Louis Vuitton',
     title: 'Louis Vuitton 推出 All In BB 手袋，520 节点包袋礼赠选择继续扩充',
     publishedAt: '2026-05-12',
@@ -1695,7 +1695,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'dioramour-my-dior-mini-bag',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Dior',
     title: 'Dior 推出 Dioramour My Dior 迷你链条手袋，520 爱意主题包袋持续扩展',
     publishedAt: '2026-05-12',
@@ -1727,7 +1727,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-rodeo-charm',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出 Rodeo 小号吊饰，以轻礼赠配件补充 520 节点皮具内容',
     publishedAt: '2026-05-12',
@@ -1743,7 +1743,7 @@ export const luxuryNews: Story[] = [
   {
     id: 'hermes-magsafe-cardholder',
     category: 'luxury',
-    subcategory: '皮包',
+    subcategory: '包袋',
     brand: 'Hermes',
     title: 'Hermes 推出“锚链”图案 MagSafe 卡包，科技配件礼赠线切入 520 场景',
     publishedAt: '2026-05-12',
@@ -1756,4 +1756,125 @@ export const luxuryNews: Story[] = [
       '“锚链”图案 MagSafe 卡包把 Hermès 经典图案语言延展到科技配件场景，也让品牌在 520 节点拥有更轻量、更日常的礼赠选择。',
     products: ['“锚链”图案 MagSafe 卡包', '科技配件', '520 礼赠单品'],
   },
+  {
+    id: 'lv-darjeeling-speedy-18',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Speedy Bandoulière 18 手袋 · LV X THE DARJEELING LIMITED 联名系列',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·男士 2026 春夏大秀',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/speedy-bandouliere-18-x-the-darjeeling-limited-damier-other-nvprod7260136v/N40868',
+    image: '/news/luxury/lv-darjeeling-speedy-18.webp',
+    summary: '在 Louis Vuitton 男士 2026 春夏大秀中，Speedy Bandoulière 18 手袋以 LV X THE DARJEELING LIMITED 联名系列的限定身份亮相，将品牌围绕电影《穿越大吉岭》展开的胶囊内容落到包袋单品。',
+    products: ["Speedy Bandoulière 18", "LV X THE DARJEELING LIMITED", "Damier"],
+  },
+  {
+    id: 'lv-darjeeling-speedy-25',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Speedy 25 Bandoulière 手袋 · LV X THE DARJEELING LIMITED 联名系列',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·男士 2026 春夏大秀',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/speedy-25-bandouliere-x-the-darjeeling-limited-damier-other-nvprod7260132v/N40857',
+    image: '/news/luxury/lv-darjeeling-speedy-25.webp',
+    summary: '在 Louis Vuitton 男士 2026 春夏大秀中，Speedy 25 Bandoulière 手袋以 LV X THE DARJEELING LIMITED 联名系列的限定身份进入胶囊系列，与同系列 Speedy 18 一起延展包袋线。',
+    products: ["Speedy 25 Bandoulière", "LV X THE DARJEELING LIMITED", "Damier"],
+  },
+  {
+    id: 'lv-horizon-55-monogram',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Horizon 四轮拉杆箱 55 厘米 · Monogram 印花新季旅行系列',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·男士旅行新品',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/horizon-55-monogram-other-nvprod7550096v/M29160',
+    image: '/news/luxury/lv-horizon-55-monogram.webp',
+    summary: '在 Louis Vuitton 男士旅行新品页面中，Horizon 四轮拉杆箱 55 厘米以 Monogram 印花版本作为首个新品露出，延展了品牌围绕夏季旅行场景推出的硬箱内容。',
+    products: ["Horizon 四轮拉杆箱 55 厘米", "Monogram", "旅行箱"],
+  },
+  {
+    id: 'lv-horizon-55-taigarama',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Horizon 四轮拉杆箱 55 厘米 · Taigarama 限定印花版',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·男士旅行新品',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/horizon-55-taigarama-nvprod7110127v/M13778',
+    image: '/news/luxury/lv-horizon-55-taigarama.webp',
+    summary: '在 Louis Vuitton 男士旅行新品页面中，Horizon 四轮拉杆箱 55 厘米以 Taigarama 限定印花版本呈现，继续推进品牌围绕硬箱的印花节奏。',
+    products: ["Horizon 四轮拉杆箱 55 厘米", "Taigarama", "旅行箱"],
+  },
+  {
+    id: 'lv-voyageur-antigua',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Voyageur 手袋 · Antigua 印花旅行系列',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·女士旅行新品',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/voyageur-antigua-nvprod7550062v/M28509',
+    image: '/news/luxury/lv-voyageur-antigua.webp',
+    summary: '在 Louis Vuitton 女士旅行新品页面中，Voyageur 手袋以 Antigua 印花版本作为新品露出，延展了品牌围绕夏季旅行场景推出的女士包袋内容。',
+    products: ["Voyageur 手袋", "Antigua", "旅行袋"],
+  },
+  {
+    id: 'lv-escale-antigua',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Escale 手袋 · Antigua 印花旅行系列',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·女士旅行新品',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/escale-antigua-nvprod7550064v/M28503',
+    image: '/news/luxury/lv-escale-antigua.webp',
+    summary: '在 Louis Vuitton 女士旅行新品页面中，Escale 手袋以 Antigua 印花版本作为新品露出，补充了品牌在夏季旅行主题下的小型手袋选择。',
+    products: ["Escale 手袋", "Antigua", "旅行袋"],
+  },
+  {
+    id: 'lv-strap-and-trunk',
+    category: 'luxury',
+    subcategory: '配件',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Strap and Trunk 90 方巾与系列配饰，Resort 度假系列继续延展',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·LV Resort 系列',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/strap-and-trunk-square-90-s00-nvprod7670149v/M98340',
+    image: '/news/luxury/lv-strap-and-trunk.webp',
+    summary: '在 Louis Vuitton 官网 LV Resort 系列专题中，Strap and Trunk 90 方巾作为新品露出，与同系列丝巾、发带等配饰一起延展品牌围绕度假语境推出的配件内容。',
+    products: ["Strap and Trunk 90 方巾", "LV Resort", "丝巾"],
+  },
+  {
+    id: 'lv-horizon-55-d16',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Louis Vuitton',
+    title: 'Louis Vuitton 推出 Horizon 四轮拉杆箱 55 厘米 · Damier 16 配色旅行系列',
+    publishedAt: '2026-06-06',
+    checkedAt: '官网核对：2026-06-06',
+    sourceType: 'New Arrivals',
+    sourceLabel: '中国官网·男士旅行新品',
+    sourceUrl: 'https://www.louisvuitton.cn/zhs-cn/products/horizon-55-d16-nvprod7550102v/M28850',
+    image: '/news/luxury/lv-horizon-55-d16.webp',
+    summary: '在 Louis Vuitton 男士旅行新品页面中，Horizon 四轮拉杆箱 55 厘米以 Damier 16 配色版本呈现，为夏季旅行硬箱线增加更具结构感的深色选择。',
+    products: ["Horizon 四轮拉杆箱 55 厘米", "Damier 16", "旅行箱"],
+  },
+
 ]

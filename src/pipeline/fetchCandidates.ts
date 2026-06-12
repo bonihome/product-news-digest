@@ -2,8 +2,6 @@ import type { BrandProbe, BrandSourceRule, CrawlCandidate } from './types'
 import { findBrandCrawlRule, findBrandImageRule, findImageRuleForCandidate } from './imageRules'
 
 const APPLE_NEWSROOM_BASE = 'https://www.apple.com.cn'
-const LOUIS_VUITTON_CAPUCINES_URL =
-  'https://www.louisvuitton.cn/zhs-cn/products/capucines-mini-capucines-nvprod7540209v/M28548'
 const LOUIS_VUITTON_LATEST_PAGES = [
   {
     label: '女士新品',
@@ -12,32 +10,32 @@ const LOUIS_VUITTON_LATEST_PAGES = [
   },
   {
     label: '男士新品',
-    subcategory: '皮包',
+    subcategory: '包袋',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9',
   },
   {
     label: 'LV Resort 系列',
-    subcategory: '皮包',
+    subcategory: '包袋',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2',
   },
   {
     label: 'Flight Mode 系列',
-    subcategory: '皮包',
+    subcategory: '包袋',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk',
   },
   {
     label: 'Nautical 系列',
-    subcategory: '皮包',
+    subcategory: '包袋',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc',
   },
   {
     label: '春夏女装系列',
-    subcategory: '皮包',
+    subcategory: '包袋',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1',
   },
   {
     label: '路易威登 × 村上隆合作系列',
-    subcategory: '皮包',
+    subcategory: '包袋',
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9',
   },
   {
@@ -425,7 +423,7 @@ function extractPradaTitleFromProductUrl(url: string) {
 }
 
 function getPradaSubcategoryMatchers(subcategory: string) {
-  if (subcategory === '皮包') {
+  if (subcategory === '包袋') {
     return ['handbag', 'tote-bag', 'tote', 'shoulder-bag', 'bag', 'pouch', 'wallet']
   }
 
@@ -433,7 +431,7 @@ function getPradaSubcategoryMatchers(subcategory: string) {
     return ['shirt', 'skirt', 'jacket', 'dress', 'coat', 'pants', 'shorts', 'top', 'sweater', 'cardigan']
   }
 
-  if (subcategory === '珠宝') {
+  if (subcategory === '首饰') {
     return ['necklace', 'bracelet', 'pendant', 'earrings', 'ring', 'brooch']
   }
 
@@ -916,21 +914,10 @@ async function fetchAdidasPdpCandidate(
   })
 }
 
-async function fetchLouisVuittonCandidate(rule: BrandSourceRule, checkedAt: string) {
-  const html = await fetchHtml(LOUIS_VUITTON_CAPUCINES_URL)
-  const sourceTitle = extractMatch(html, /<title>([^<]+)<\/title>/)
-  const image = extractMatch(
-    html,
-    /(https:\/\/www\.louisvuitton\.cn\/images\/is\/image\/lv\/1\/PP_VP_L\/[^"' )]+PM2_Front%20view\.jpg)/,
-  )
-
-  return buildCandidate(rule, checkedAt, {
-    sourceUrl: LOUIS_VUITTON_CAPUCINES_URL,
-    sourceTitle: collapseWhitespace(sourceTitle ?? 'CAPUCINES 迷你手袋'),
-    sourceSummary: 'Louis Vuitton 中国官网当前可稳定抓到 Capucines 产品页主图与标题，可用于生成本季皮包新品新闻。',
-    image: image ? encodeURI(decodeURIComponent(image)) : '',
-  })
-}
+// DEPRECATED 2026-06-07: fetchLouisVuittonCandidate 已删除。
+// 旧版硬塞 LOUIS_VUITTON_CAPUCINES_URL (M28548) 作为 fallback，导致 title-sourceUrl 错配。
+// 新版 fetchLouisVuittonLatestCandidates 在 products.length === 0 时 return []。
+// LOUIS_VUITTON_CAPUCINES_URL 常量保留为历史参考（顶部已 DEPRECATED 标注）。
 
 async function fetchHermesCandidate(rule: BrandSourceRule, checkedAt: string) {
   const html = await fetchHtml(HERMES_H08_URL)
@@ -1201,7 +1188,10 @@ async function fetchLouisVuittonLatestCandidates(rule: BrandSourceRule, checkedA
   const products = await fetchLouisVuittonLatestProducts(rule.subcategory)
 
   if (products.length === 0) {
-    return [await fetchLouisVuittonCandidate(rule, checkedAt)]
+    // 列表页未抓到任何产品 → 本批次不输出 LV 候选，宁缺毋滥。
+    // 旧版这里会 fallback 到 LOUIS_VUITTON_CAPUCINES_URL (M28548) 硬塞一条与所有 title 不匹配的
+    // 错配新闻（同一 SKU 被复用 4 次），已于 2026-06-07 改为 return []。
+    return []
   }
 
   return products.map((product) =>
