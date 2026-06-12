@@ -1,0 +1,4 @@
+# publisher-rejections.resolved
+# Boni 手工维护。每行一条 resolved 记录。
+# 格式：resolved_at=<ISO8601> id=<storyId> resolution=<fixed-data|loosened-rule|false-positive|other> note=<free text>
+# 示例：resolved_at=2026-06-15T09:00:00+08:00 id=louis-vuitton-lv-accessories-4 resolution=fixed-data note=补全 title 让 initials 与 slug 匹配
