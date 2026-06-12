@@ -2,3 +2,24 @@
 # Boni 手工维护。每行一条 resolved 记录。
 # 格式：resolved_at=<ISO8601> id=<storyId> resolution=<fixed-data|loosened-rule|false-positive|other> note=<free text>
 # 示例：resolved_at=2026-06-15T09:00:00+08:00 id=louis-vuitton-lv-accessories-4 resolution=fixed-data note=补全 title 让 initials 与 slug 匹配
+resolved_at=2026-06-12T08:51:00.000Z id=louis-vuitton-strap-and-trunk-90 resolution=other note=LV listing page 顶部永远是 M28548 Capucines（首页主推），commit d62fcc5 已修根（href 直取，等下次 listing HTML 变化时自动生效）。30 天后自动归档
+resolved_at=2026-06-12T08:51:00.000Z id=louis-vuitton-keepall-bandouli-re-25 resolution=other note=同 louis-vuitton-strap-and-trunk-90（LV listing M28548 共用问题，d62fcc5 治根中）
+resolved_at=2026-06-12T08:51:00.000Z id=louis-vuitton-nano-madeleine resolution=other note=同 louis-vuitton-strap-and-trunk-90（LV listing M28548 共用问题，d62fcc5 治根中）
+resolved_at=2026-06-12T08:51:00.000Z id=louis-vuitton-ready-to-wear-pieces resolution=other note=同 louis-vuitton-strap-and-trunk-90（LV listing M28548 共用问题，d62fcc5 治根中）
+resolved_at=2026-06-12T08:51:00.000Z id=louis-vuitton-lv-accessories-4 resolution=false-positive note=LV 官方页面 <title> 用 INITIALES（法语带 e），URL slug 用 initials（英文无 e）。B 方案规则正确，是真实数据差异。30 天后自动归档
+resolved_at=2026-06-12T08:51:00.000Z id=lv-prefall-8 resolution=other note=LV listing 第一条产品（MONOGRAM 救生圈）与 URL slug（buoy-s00-nvprod7650022v）不匹配。listing 取首条产品策略的局限，30 天后自动归档
+resolved_at=2026-06-12T08:51:00.000Z id=dior-dioramour-my-dior resolution=other note=Dior 抓取源 listUrl 配置问题，多产品塞同 URL（S0984PHJJ_M933）。等季度优化时重写 brandSources.ts，30 天后自动归档
+resolved_at=2026-06-12T08:51:00.000Z id=dior-ribbon-sneaker resolution=other note=Dior 抓取源 listUrl 配置问题，等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=dior-walkn-dior resolution=other note=Dior 抓取源 listUrl 配置问题，等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=dior-scarves-collection resolution=other note=Dior 抓取源 listUrl 配置问题（62ART106I677_C082），等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=dior-dioramour-mitzah resolution=other note=Dior 抓取源 listUrl 配置问题，等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=dior-book-tote resolution=other note=Dior 抓取源 listUrl 配置问题（M1324OWHP_M51U），等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=dior-beauty-miss-dior resolution=other note=Dior Beauty 把多产品塞到 y0685240-sauvage-eau-de-toilette 同 URL。等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=dior-beauty-j-adore resolution=other note=同 dior-beauty-miss-dior（Dior Beauty 抓取源问题）
+resolved_at=2026-06-12T08:51:00.000Z id=bvlgari-serpenti-east-west-maxi-chain resolution=other note=Bvlgari slug 是内部编号 292033-e，不含产品名（serpenti/east-west/maxi/chain）。等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=bvlgari-serpenti resolution=other note=Bvlgari slug 是内部编号 102678-e，不含产品名。等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=ct resolution=other note=Charlotte Tilbury listUrl = /us/products/new（分类页），不是单品 URL。等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=ct-pillowtalk resolution=other note=同 ct（Charlotte Tilbury 分类页 listUrl 问题）
+resolved_at=2026-06-12T08:51:00.000Z id=charlotte-tilbury-airbrush-flawless-blur-concealer resolution=other note=同 ct（Charlotte Tilbury 分类页 listUrl 问题）
+resolved_at=2026-06-12T08:51:00.000Z id=estee-makeup resolution=other note=Estée Lauder listUrl = /products/708/.../whats-new（分类页）。等季度优化时重写 brandSources.ts
+resolved_at=2026-06-12T08:51:00.000Z id=estee-makeup-lip resolution=other note=同 estee-makeup（Estée Lauder 分类页 listUrl 问题）
