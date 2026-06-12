@@ -148,9 +148,22 @@ function App() {
         }
 
         const feed = (await response.json()) as PublishedFeed
-        if (!cancelled && Array.isArray(feed.stories)) {
-          setRuntimeStories(feed.stories)
+        if (cancelled || !Array.isArray(feed.stories) || !feed.generatedAt) {
+          return
         }
+
+        // 版本比对：fetch 拿到的 generatedAt 必须严格大于 SSR 嵌入的 generatedAt 才覆盖。
+        // 否则保持 SSR 快照不变，避免"首屏 A、几百 ms 后跳 B"的内容跳变。
+        const ssrAt = (window as any).__RUNTIME_FEED__?.generatedAt
+        if (ssrAt && new Date(feed.generatedAt) <= new Date(ssrAt)) {
+          // eslint-disable-next-line no-console
+          console.info(
+            `[runtime-feed] skip stale fetch: ssr=${ssrAt} fetch=${feed.generatedAt}`,
+          )
+          return
+        }
+
+        setRuntimeStories(feed.stories)
       } catch {
         // Ignore runtime feed failures and keep static feed as fallback.
       }
@@ -346,6 +359,8 @@ function App() {
 
       <footer className="site-footer">
         <span>累计访客 {siteVisitors ?? '--'} 人</span>
+        <span className="footer-sep"> · </span>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" className="beian-link">沪ICP备2021024575号-2</a>
       </footer>
     </main>
   )
