@@ -6,42 +6,42 @@ const LOUIS_VUITTON_LATEST_PAGES = [
   {
     label: '女士新品',
     subcategory: '服装',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5?_=cb-20260612',
   },
   {
     label: '男士新品',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9?_=cb-20260612',
   },
   {
     label: 'LV Resort 系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2?_=cb-20260612',
   },
   {
     label: 'Flight Mode 系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk?_=cb-20260612',
   },
   {
     label: 'Nautical 系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc?_=cb-20260612',
   },
   {
     label: '春夏女装系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1?_=cb-20260612',
   },
   {
     label: '路易威登 × 村上隆合作系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9?_=cb-20260612',
   },
   {
     label: '早秋男士系列 2026',
     subcategory: '服装',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/pre-fall-2026/_/N-t1t8llmn',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/pre-fall-2026/_/N-t1t8llmn?_=cb-20260612',
   },
 ] as const
 const SHISEIDO_ULTIMUNE_URL =
