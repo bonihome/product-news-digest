@@ -701,30 +701,45 @@ function extractLouisVuittonLatestProduct(
   label: string,
   subcategory: string,
 ): LouisVuittonLatestProduct | null {
-  const image = extractMatch(
-    html,
-    /(https:\/\/www\.louisvuitton\.cn\/images\/is\/image\/lv\/1\/PP_VP_L\/[^"' )]+\.(?:png|jpg|jpeg|webp)\?wid=\d+&hei=\d+)/i,
-  )
+  // 优先从 listing 卡片 href 取第一个 product URL（治根）：
+  // 旧版用图片 articleCode 反推 product URL 会撞上 M28548 Capucines（首页主推），
+  // 导致 4 条 LV 新闻（男士新品/LV Resort/Flight Mode/Nautical/春夏女装）共用
+  // https://www.louisvuitton.cn/.../capucines-mini-capucines-nvprod7540209v/M28548
+  // 触发布局 sourceUrl 错配，publisher B 方案 reject。
+  // 2026-06-12 改：从 href 直接取 product URL，丢弃 articleCode 反推。
+  // 所有 pattern 都以 capture group(1) = 完整 URL / 完整相对路径为标准，
+  // 这样 extractMatch(html, pattern) 默认取 group(1) 就能拿到完整 sourceUrl。
+  const hrefPatterns = [
+    /href=["'](https:\/\/www\.louisvuitton\.cn\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
+    /href=["'](\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
+    /["'](https:\/\/www\.louisvuitton\.cn\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
+  ]
+  let listingProductUrl: string | null = null
+  for (const pattern of hrefPatterns) {
+    listingProductUrl = extractMatch(html, pattern)
+    if (listingProductUrl) {
+      break
+    }
+  }
 
-  if (!image) {
+  if (!listingProductUrl) {
     return null
   }
 
-  const articleCodeMatch = image.match(/--([A-Z0-9]+)_PM2_/i)
-  const articleCode = articleCodeMatch?.[1] ?? ''
-  const relativeProductUrl = articleCode
-    ? extractMatch(
-        html,
-        new RegExp(`(\\/zhs-cn\\/products\\/[^"' )]+\\/${articleCode})`, 'i'),
-      ) ?? extractMatch(html, new RegExp(`(\\/products\\/[^"' )]+\\/${articleCode})`, 'i'))
-    : null
+  const absoluteProductUrl: string = makeAbsoluteUrl(listingProductUrl as string, 'https://www.louisvuitton.cn')
+
+  // 同步从 listing HTML 抓首张 PP_VP_L 商品图（保留原有 image 字段，便于 imageRules 匹配）
+  const image: string = extractMatch(
+    html,
+    /(https:\/\/www\.louisvuitton\.cn\/images\/is\/image\/lv\/1\/PP_VP_L\/[^"' )]+\.(?:png|jpg|jpeg|webp)\?wid=\d+&hei=\d+)/i,
+  ) ?? ''
 
   return {
     label,
     subcategory,
     listingUrl,
-    sourceUrl: relativeProductUrl ? makeAbsoluteUrl(relativeProductUrl, 'https://www.louisvuitton.cn') : listingUrl,
-    title: normalizeLouisVuittonTitleFromImage(image),
+    sourceUrl: absoluteProductUrl,
+    title: image ? normalizeLouisVuittonTitleFromImage(image) : `${label} 新品`,
     image,
   }
 }

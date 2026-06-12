@@ -3,7 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 import { readStoredStories, writeStoredStories } from './runtimeStore'
-import { monitorRejections, type RejectionEntry } from './rejection-monitor'
+import { monitorRejections } from './rejection-monitor'
 
 /**
  * rejection-archiver（2026-06-12 引入）
