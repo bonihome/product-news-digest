@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-05-12T07:31:11.877Z",
-  "brandCount": 61,
+  "brandCount": 60,
   "brands": [
     {
       "brand": "Adidas",
@@ -108,15 +108,6 @@
       "storyCount": 4,
       "readyCount": 1,
       "partialCount": 3,
-      "needsReplacementCount": 0
-    },
-    {
-      "brand": "Charlotte Tilbury",
-      "slug": "charlotte-tilbury",
-      "file": "data/image-rules/charlotte-tilbury.json",
-      "storyCount": 2,
-      "readyCount": 0,
-      "partialCount": 2,
       "needsReplacementCount": 0
     },
     {
