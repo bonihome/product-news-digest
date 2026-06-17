@@ -1876,5 +1876,19 @@ export const luxuryNews: Story[] = [
     summary: '在 Louis Vuitton 男士旅行新品页面中，Horizon 四轮拉杆箱 55 厘米以 Damier 16 配色版本呈现，为夏季旅行硬箱线增加更具结构感的深色选择。',
     products: ["Horizon 四轮拉杆箱 55 厘米", "Damier 16", "旅行箱"],
   },
-
+  {
+    id: 'celine-halfmoon-soft-triomphe',
+    category: 'luxury',
+    subcategory: '包袋',
+    brand: 'Celine',
+    title: 'Celine 推出 HALFMOON SOFT TRIOMPHE 小号手袋，延续黑色 SOFT TRIOMPHE 系列',
+    publishedAt: '2026-06-17',
+    checkedAt: '官网核对：2026-06-17',
+    sourceType: 'Official Site',
+    sourceLabel: 'Celine 中国官网手袋',
+    sourceUrl: 'https://www.celine.cn/CONF.L10373778.38NO',
+    image: '/news/luxury/celine-halfmoon-soft-triomphe.png',
+    summary: 'Celine 围绕 HALFMOON SOFT TRIOMPHE 小号手袋更新经典皮具线，黑色 SOFT TRIOMPHE 织物配以凯旋门金属饰件，呈现品牌标志性的极简巴黎美学。',
+    products: ['HALFMOON SOFT TRIOMPHE 小号手袋', 'SOFT TRIOMPHE 织物', '凯旋门金属饰件'],
+  },
 ]
