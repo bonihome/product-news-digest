@@ -44,12 +44,12 @@ const LOUIS_VUITTON_LATEST_PAGES = [
     listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/pre-fall-2026/_/N-t1t8llmn?_=cb-20260612',
   },
 ] as const
-const SHISEIDO_ULTIMUNE_URL =
-  'https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums'
+// 2026-06-17 unused: fetchShiseidoCandidate 现改用 rule.listUrl
+// const SHISEIDO_ULTIMUNE_URL =
+//   'https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums'
 const HERMES_H08_URL = 'https://www.hermes.cn/cn/zh/product/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3-W049430WW00/'
-const DIOR_FOREVER_GLOW_URL = 'https://www.dior.com/en_us/beauty/products/dior-forever-skin-glow-Y0998020.html'
-const DIOR_FOREVER_GLOW_IMAGE =
-  'https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/en_US/dw5e4619d5/Y0000149/Y0000149_E000001270_E01_RHC.jpg?sw=640'
+const DIOR_FOREVER_GLOW_URL = 'https://www.dior.cn/zh_cn/beauty/products/y0998020-dior-forever-skin-glow'
+const DIOR_FOREVER_GLOW_IMAGE = ''
 const WILSON_RUSH_PRO_ARTICLE_URL =
   'https://www.wilson.com/en-us/blog/tennis/wilson-labs/introducing-new-rush-pro-45-tennis-shoe'
 const ADIDAS_HOME_FEED_PAGES = [
@@ -867,7 +867,7 @@ async function fetchAppleCandidate(rule: BrandSourceRule, checkedAt: string) {
 }
 
 async function fetchShiseidoCandidate(rule: BrandSourceRule, checkedAt: string) {
-  const html = await fetchHtml(SHISEIDO_ULTIMUNE_URL)
+  const html = await fetchHtml(rule.listUrl)
   const sourceTitle =
     extractMatch(html, /property="og:title" content="([^"]+)"/) ??
     extractMatch(html, /<title>([^<]+)<\/title>/) ??
@@ -875,9 +875,9 @@ async function fetchShiseidoCandidate(rule: BrandSourceRule, checkedAt: string) 
   const image = extractMatch(html, /property="og:image" content="([^"]+)"/)
 
   return buildCandidate(rule, checkedAt, {
-    sourceUrl: SHISEIDO_ULTIMUNE_URL,
-    sourceTitle: collapseWhitespace(decodeHtmlEntities(sourceTitle ?? '「红腰子」抗老精华')),
-    sourceSummary: '资生堂中国官网产品页当前主推「红腰子」抗老精华，可作为护肤新品新闻的主要来源。',
+    sourceUrl: rule.listUrl,
+    sourceTitle: collapseWhitespace(decodeHtmlEntities(sourceTitle ?? `${rule.brand} ${rule.subcategory} 新品检索`)),
+    sourceSummary: `${rule.brand} 中国官网产品页 ${rule.sourceLabel} 当前可作为 ${rule.subcategory} 新品新闻的主要来源。`,
     image: decodeHtmlEntities(image ?? ''),
   })
 }
