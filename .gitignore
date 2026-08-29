@@ -49,3 +49,7 @@ __pycache__/
 
 # 个人笔记（不进仓库）
 notes/
+
+# pnpm（项目主用 npm，package-lock.json 为权威锁文件）
+pnpm-lock.yaml
+pnpm-workspace.yaml
