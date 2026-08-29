@@ -433,7 +433,7 @@ function ChannelView({
           {channelStories.map((story) => (
             <article key={story.id} className="story-card">
               <a className="image-link" href={buildStoryHash(story.id)}>
-                <img className="story-image" src={story.image} alt={story.brand} />
+                {story.image ? <img className="story-image" src={story.image} alt={story.brand} /> : <div className="story-image" />}
               </a>
               <div className="story-head">
                 <div>
@@ -524,7 +524,7 @@ function HomeView({
         {pageStories.map((story) => (
           <article key={story.id} className="story-card">
             <a className="image-link" href={buildStoryHash(story.id)}>
-              <img className="story-image" src={story.image} alt={story.brand} />
+              {story.image ? <img className="story-image" src={story.image} alt={story.brand} /> : <div className="story-image" />}
             </a>
 
             <div className="story-head">
@@ -700,7 +700,7 @@ function BrandDetailView({
         {filteredBrandStories.map((story) => (
           <article key={story.id} className="story-card">
             <a className="image-link" href={buildStoryHash(story.id)}>
-              <img className="story-image" src={story.image} alt={story.brand} />
+              {story.image ? <img className="story-image" src={story.image} alt={story.brand} /> : <div className="story-image" />}
             </a>
             <div className="story-head">
               <div>

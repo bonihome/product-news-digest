@@ -149,6 +149,9 @@ function tryLocalMirror(story: Story): string | null {
       const rule = JSON.parse(readFileSync(join(rulesDir, fname), 'utf-8'))
       const rules = rule.stories || []
       for (const rs of rules) {
+        // 精确匹配 storyId：只把人工验证过的图填给「同一个故事」，
+        // 避免把品牌第一条规则图错误地填给所有空图故事（2026-08-29 修复 On/KOLON/Clinique 同图复用问题）
+        if (rs.storyId !== story.id) continue
         const acq = rs.acquisition || {}
         if (acq.localMirrorPath) {
           const pubPath = join(ROOT, 'public', acq.localMirrorPath)
@@ -268,17 +271,9 @@ function main() {
       continue
     }
 
-    // ⑤ 最后兜底：品牌 Logo SVG
-    const logoSlug = slugify(story.brand)
-    const logoPath = `/news/logos/${logoSlug}.svg`
-    const logoSysPath = join(ROOT, 'dist', logoPath)
-    if (existsSync(logoSysPath)) {
-      story.image = logoPath
-      console.log(`  🏷️  [logo]   ${story.id.padEnd(45)} ${story.brand.padEnd(22)} -> ${logoPath}`)
-      fixed++
-      continue
-    }
-    console.log(`  ⚠️  [empty] ${story.id.padEnd(45)} ${story.brand.padEnd(22)} no fallback available`)
+    // ⑤ 最后兜底：留空（不填品牌 logo —— logo 不是产品图，宁缺毋滥）
+    story.image = ''
+    console.log(`  ⬜ [empty] ${story.id.padEnd(45)} ${story.brand.padEnd(22)} 留空（无正确产品图）`)
     unfixed++
   }
 
