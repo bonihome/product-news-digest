@@ -19,8 +19,10 @@ const publicPublishedFeedPath = path.resolve(process.cwd(), 'public/runtime/publ
 const SEED_BRANDS: string[] = [
   'Givenchy Beauty',
   'Chanel',
+  'CHANEL Beauty',
+  'Louis Vuitton',
+  'Prada',
 ]
-
 interface StaticStory {
   id: string
   category: string
@@ -88,13 +90,18 @@ async function extractStoriesFromSource(sourcePath: string, brands: string[]): P
     const imageMatch = block.match(/image:\s*'([^']+)'/)
     const summaryMatch = block.match(/summary:\s*\n\s+'([^']+)'/)
     const summaryDQMatch = block.match(/summary:\s*\n\s+"([^"]+)"/)
-    const productsMatch = block.match(/products:\s*\[([^\]]+)\]/)
+    // products: ['x', 'y'] OR products: ["x", "y"]
+    const productsSQMatch = block.match(/products:\s*\[((?:'[^']*'(?:\s*,\s*'[^']*')*)\s*,?\s*)\]/)
+    const productsDQMatch = block.match(/products:\s*\[((?:"[^"]*"(?:\s*,\s*"[^"]*")*)\s*,?\s*)\]/)
 
     if (idMatch && subcatMatch && (titleMatch || titleDQMatch) && publishedAtMatch && checkedAtMatch &&
-        sourceTypeMatch && sourceLabelMatch && sourceUrlMatch && imageMatch && (summaryMatch || summaryDQMatch) && productsMatch) {
-      const products = productsMatch[1].split(',').map(p =>
-        p.trim().replace(/^'/, '').replace(/'$/, '').replace(/^"/, '').replace(/"$/, '')
-      )
+        sourceTypeMatch && sourceLabelMatch && sourceUrlMatch && imageMatch && (summaryMatch || summaryDQMatch) && (productsSQMatch || productsDQMatch)) {
+      const productsRaw = productsSQMatch ? productsSQMatch[1] : productsDQMatch![1]
+      const quote = productsSQMatch ? "'" : '"'
+      const products = productsRaw
+        .split(new RegExp(`\\s*,\\s*${quote}`))
+        .map(p => p.replace(new RegExp(`^${quote}`), '').replace(new RegExp(`${quote}$`), '').trim())
+        .filter(p => p.length > 0)
 
       stories.push({
         id: idMatch[1],
@@ -157,6 +164,13 @@ async function main() {
       existingStories.push(story)
       existingIds.add(story.id)
       addedCount++
+    } else {
+      // Update existing entry with fresh data so corrections (e.g. removing
+      // escaped apostrophes in product names) propagate to the feed.
+      const idx = existingStories.findIndex((s) => s.id === story.id)
+      if (idx >= 0) {
+        existingStories[idx] = story
+      }
     }
   }
 

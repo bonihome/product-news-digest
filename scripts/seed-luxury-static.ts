@@ -32,6 +32,7 @@ const NEW_LUXURY_BRANDS = [
   'Saint Laurent',
   'TAG Heuer',
   'Valentino',
+  'Van Cleef & Arpels',
   'Versace',
 ]
 
@@ -96,7 +97,7 @@ async function main() {
 
     const idMatch = block.match(/id:\s*'([^']+)'/)
     const subcatMatch = block.match(/subcategory:\s*'([^']+)'/)
-    const titleMatch = block.match(/title:\s*'([^']+)'/)
+    const titleMatch = block.match(/title:\s*(?:'([^']+)'|"([^"]+)")/)
     const publishedAtMatch = block.match(/publishedAt:\s*'([^']+)'/)
     const checkedAtMatch = block.match(/checkedAt:\s*'([^']+)'/)
     const sourceTypeMatch = block.match(/sourceType:\s*'([^']+)'/)
@@ -117,7 +118,7 @@ async function main() {
         category: 'luxury',
         subcategory: subcatMatch[1],
         brand,
-        title: titleMatch[1],
+        title: titleMatch[1] || titleMatch[2],
         publishedAt: publishedAtMatch[1],
         checkedAt: checkedAtMatch[1],
         sourceType: sourceTypeMatch[1] as StaticStory['sourceType'],

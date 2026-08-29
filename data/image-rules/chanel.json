@@ -10,8 +10,8 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 11,
-    "readyCount": 4,
+    "storyCount": 12,
+    "readyCount": 5,
     "partialCount": 7,
     "needsReplacementCount": 0
   },
@@ -68,6 +68,37 @@
         "candidateImageHost": null,
         "notes": [
           "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-chanel-25",
+      "title": "Chanel 推出 CHANEL 25 迷你手袋，包袋新品阵容继续扩展",
+      "category": "luxury",
+      "subcategory": "皮包",
+      "products": [
+        "CHANEL 25 迷你手袋",
+        "羊皮革",
+        "金属质感牛皮革",
+        "2026 高级手工坊系列",
+        "¥49,200 ~ ¥63,500"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fashion/chanel-25/c/1x3x26x1/handbags/",
+      "currentImage": "/runtime/news-images/chanel/chanel-25-mini-1b8037b0fa99.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/runtime/news-images/chanel/chanel-25-mini-1b8037b0fa99.jpg",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "2026-06-22 修复：之前图片是 Chanel 黑色 logo 占位图 (192×192 favicon)。已替换为 Chanel CDN 真实产品图 (880×1174)。"
         ]
       }
     },

@@ -1,1 +1,403 @@
-[]
+[
+  {
+    "id": "alexander-mcqueen-skull",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.879Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [alexander, mcqueen, skull] do not match slug \"6130881hb0i9205.html\"",
+    "originalStory": {
+      "id": "alexander-mcqueen-skull",
+      "brand": "Alexander McQueen",
+      "category": "luxury",
+      "subcategory": "包袋",
+      "title": "Alexander McQueen 推出 小号 Skull 手袋，包袋新品阵容继续扩展",
+      "publishedAt": "2026-06-30",
+      "checkedAt": "2026-07-26T23:12:10.928Z",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·女士包袋",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/6130881hb0i9205.html",
+      "image": "",
+      "summary": "Alexander McQueen 本轮围绕 小号 Skull 手袋 展开更新，并联动 骷髅搭扣和柔软皮革结构 进一步完善当季新品组合。",
+      "products": [
+        "小号 Skull 手袋",
+        "骷髅搭扣",
+        "柔软皮革结构"
+      ],
+      "fingerprint": "e131ea6b4b56de315502bfae6c311cb5e96d636b6a4644675313f750c164f70e",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "\\xe6\\x90\\x9c\\xe7\\xb4\\xa2",
+      "matchedKeywords": [
+        "包袋",
+        "小号 Skull 手袋",
+        "骷髅搭扣",
+        "柔软皮革结构"
+      ]
+    }
+  },
+  {
+    "id": "alexander-mcqueen",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T07:42:10.993Z",
+    "hitCount": 2,
+    "rejectionReason": "title keywords [alexander, mcqueen] do not match slug \"584968qeaaa9007.html\" or products [烟管裤, Leaf Crepe 面料, 女士成衣]",
+    "originalStory": {
+      "id": "alexander-mcqueen",
+      "brand": "Alexander McQueen",
+      "category": "luxury",
+      "subcategory": "服装",
+      "title": "Alexander McQueen 推出 烟管裤，服装新品阵容继续扩展",
+      "publishedAt": "2026-07-22",
+      "checkedAt": "2026-07-26T23:11:18.962Z",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·女士成衣",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/584968qeaaa9007.html",
+      "image": "",
+      "summary": "Alexander McQueen 本轮围绕 烟管裤 展开更新，并联动 Leaf Crepe 面料和女士成衣 进一步完善当季新品组合。",
+      "products": [
+        "烟管裤",
+        "Leaf Crepe 面料",
+        "女士成衣"
+      ],
+      "fingerprint": "c33c68f071f128393040c9a7ab011909040d5a56510712caeeee2ab84ca01735",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "\\xe6\\x90\\x9c\\xe7\\xb4\\xa2",
+      "matchedKeywords": [
+        "服装",
+        "烟管裤",
+        "Leaf Crepe 面料",
+        "女士成衣"
+      ]
+    }
+  },
+  {
+    "id": "bottega-veneta-notturno",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.879Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [bottega, veneta, notturno] do not match slug \"women\"",
+    "originalStory": {
+      "id": "bottega-veneta-notturno",
+      "brand": "Bottega Veneta",
+      "category": "luxury",
+      "subcategory": "包袋",
+      "title": "Bottega Veneta 推出 Notturno 斜挎包，包袋新品阵容继续扩展",
+      "publishedAt": "2026-07-13",
+      "checkedAt": "2026-07-26T23:11:18.892Z",
+      "sourceType": "Official Site",
+      "sourceLabel": "Bottega Veneta 中国官网·2026 早秋系列",
+      "sourceUrl": "https://www.bottegaveneta.cn/products/women/bags/crossbags/notturno-843893vcpp06146.html",
+      "image": "",
+      "summary": "Bottega Veneta 本轮围绕 Notturno 斜挎包 展开更新，并联动 Intrecciato 编织工艺和2026 早秋度假系列 进一步完善当季新品组合。",
+      "products": [
+        "Notturno 斜挎包",
+        "Intrecciato 编织工艺",
+        "2026 早秋度假系列"
+      ],
+      "fingerprint": "0fbf7886ee3ae276fabeee8084b111ab72726482339172f38e8f50fa8f9d043e",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Notturno斜挎包 | Bottega Veneta",
+      "matchedKeywords": [
+        "包袋",
+        "Notturno 斜挎包",
+        "Intrecciato 编织工艺",
+        "2026 早秋度假系列"
+      ]
+    }
+  },
+  {
+    "id": "alexander-mcqueen-tread-slick",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.879Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [alexander, mcqueen, tread, slick] do not match slug \"611706w4l321000.html\"",
+    "originalStory": {
+      "id": "alexander-mcqueen-tread-slick",
+      "brand": "Alexander McQueen",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "title": "Alexander McQueen 推出 Tread Slick 靴子，鞋履新品阵容继续扩展",
+      "publishedAt": "2026-07-01",
+      "checkedAt": "2026-07-26T23:11:18.680Z",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·女士鞋履",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/611706w4l321000.html",
+      "image": "",
+      "summary": "Alexander McQueen 本轮围绕 Tread Slick 靴子 展开更新，并联动 厚底鞋底和女士秋冬靴款 进一步完善当季新品组合。",
+      "products": [
+        "Tread Slick 靴子",
+        "厚底鞋底",
+        "女士秋冬靴款"
+      ],
+      "fingerprint": "f5a8c06bb884de26b67a0c778de1a2394616c4449f08277f3464acf11513ffc3",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "\\xe6\\x90\\x9c\\xe7\\xb4\\xa2",
+      "matchedKeywords": [
+        "鞋履",
+        "Tread Slick 靴子",
+        "厚底鞋底",
+        "女士秋冬靴款"
+      ]
+    }
+  },
+  {
+    "id": "louis-vuitton-lv-cube",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.880Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.880Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [cube] do not match slug \"nice-nano-monogram-nvprod2320034v\"",
+    "originalStory": {
+      "id": "louis-vuitton-lv-cube",
+      "brand": "Louis Vuitton",
+      "category": "luxury",
+      "subcategory": "首饰",
+      "title": "Louis Vuitton 推出 Lv Cube 银质手链，首饰新品阵容继续扩展",
+      "publishedAt": "2026-05-14",
+      "checkedAt": "2026-07-08T00:19:16.728Z",
+      "sourceType": "Official Site",
+      "sourceLabel": "Louis Vuitton 中国官网·时尚首饰新品",
+      "sourceUrl": "https://www.louisvuitton.cn/zhs-cn/products/nice-nano-monogram-nvprod2320034v/M44936",
+      "image": "/runtime/news-images/louis-vuitton/louis-vuitton-lv-cube-fe1b389d25e1.webp",
+      "summary": "Louis Vuitton 本轮围绕 Lv Cube 银质手链 展开更新，并联动 时尚首饰新品和LV DIAMONDS PAVÉ SOLITAIRE 钻石戒指 进一步完善当季新品组合。",
+      "products": [
+        "Lv Cube 银质手链",
+        "时尚首饰新品",
+        "LV DIAMONDS PAVÉ SOLITAIRE 钻石戒指"
+      ],
+      "fingerprint": "7cf0a2293f588edc79c76b615bcdb530a99002e905b8b96d9402ad84dc918459",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Lv Cube 银质手链",
+      "matchedKeywords": [
+        "时尚首饰新品",
+        "首饰",
+        "LV DIAMONDS PAVÉ SOLITAIRE 钻石戒指",
+        "LV DIAMONDS SOLITAIRE 单钻戒指"
+      ]
+    }
+  },
+  {
+    "id": "amq-small-skull-bag",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.877Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.877Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [alexander, mcqueen, skull] do not match slug \"6130881hb0i9205.html\"",
+    "originalStory": {
+      "id": "amq-small-skull-bag",
+      "category": "luxury",
+      "subcategory": "包袋",
+      "brand": "Alexander McQueen",
+      "title": "Alexander McQueen 推出小号 Skull 手袋，经典骷髅元素延续",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "checkedAt": "2026-05-12",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·女士包袋",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/6130881hb0i9205.html",
+      "image": "/runtime/news-images/alexander-mcqueen/amq-p00-26022ef7.jpg",
+      "summary": "小号 Skull 手袋延续 Alexander McQueen 标志性骷髅搭扣与柔软皮革结构，作为该系列中适合日常通勤与晚宴场景的小型包袋新品登场。",
+      "products": [
+        "小号 Skull 手袋",
+        "骷髅搭扣",
+        "柔软皮革结构"
+      ],
+      "fingerprint": "689fd4daf7ebe0df037a1bb5569e92886a0cc8d32cebd8af113dff919939e7e9",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Alexander McQueen 中国官网",
+      "matchedKeywords": [
+        "包袋",
+        "小号 Skull 手袋",
+        "骷髅搭扣"
+      ]
+    }
+  },
+  {
+    "id": "amq-tread-slick-boot",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.878Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.878Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [alexander, mcqueen, tread, slick] do not match slug \"611706w4l321000.html\"",
+    "originalStory": {
+      "id": "amq-tread-slick-boot",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "brand": "Alexander McQueen",
+      "title": "Alexander McQueen 推出 Tread Slick 靴子，女士鞋履新作",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "checkedAt": "2026-05-12",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·女士鞋履",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/611706w4l321000.html",
+      "image": "/runtime/news-images/alexander-mcqueen/amq-p01-53d5f415.jpg",
+      "summary": "Tread Slick 靴子以厚重鞋底和流线靴型延续 Alexander McQueen 标志性的实验性鞋履语言，作为面向本季女士秋冬穿搭推出的厚底靴款新作。",
+      "products": [
+        "Tread Slick 靴子",
+        "厚底鞋底",
+        "女士秋冬靴款"
+      ],
+      "fingerprint": "36811fec9cddab5acaa7a644210a090caafd13e851f908aa539cf934f95bf73b",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Alexander McQueen 中国官网",
+      "matchedKeywords": [
+        "鞋履",
+        "Tread Slick 靴子",
+        "厚底鞋底"
+      ]
+    }
+  },
+  {
+    "id": "amq-oversized-sneaker",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.878Z",
+    "lastRejectedAt": "2026-06-24T07:42:10.991Z",
+    "hitCount": 2,
+    "rejectionReason": "title keywords [alexander, mcqueen] do not match slug \"553680whgp51070.html\" or products [阔型运动鞋, Oversized Sneaker 系列, 厚底设计]",
+    "originalStory": {
+      "id": "amq-oversized-sneaker",
+      "category": "luxury",
+      "subcategory": "鞋履",
+      "brand": "Alexander McQueen",
+      "title": "Alexander McQueen 推出阔型运动鞋，男士运动鞋系列新作",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "checkedAt": "2026-05-12",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·男士鞋履",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/553680whgp51070.html",
+      "image": "/runtime/news-images/alexander-mcqueen/amq-p02-fcd7e30a.jpg",
+      "summary": "阔型运动鞋以夸张鞋身比例和厚底设计延续 Alexander McQueen Oversized Sneaker 系列，是该品牌在男士运动休闲鞋品类的代表性常青款新作。",
+      "products": [
+        "阔型运动鞋",
+        "Oversized Sneaker 系列",
+        "厚底设计"
+      ],
+      "fingerprint": "ddf161fb2b15875e1688292187c6be3596f7041336e430aacab52d509e227d5d",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Alexander McQueen 中国官网",
+      "matchedKeywords": [
+        "鞋履",
+        "阔型运动鞋",
+        "Oversized Sneaker 系列"
+      ]
+    }
+  },
+  {
+    "id": "amq-leaf-crepe-cigarette-trouser",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T07:42:10.993Z",
+    "hitCount": 2,
+    "rejectionReason": "title keywords [alexander, mcqueen] do not match slug \"584968qeaaa9007.html\" or products [烟管裤, Leaf Crepe 面料, 女士成衣]",
+    "originalStory": {
+      "id": "amq-leaf-crepe-cigarette-trouser",
+      "category": "luxury",
+      "subcategory": "服装",
+      "brand": "Alexander McQueen",
+      "title": "Alexander McQueen 推出烟管裤，女士成衣系列新作",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "checkedAt": "2026-05-12",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·女士成衣",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/584968qeaaa9007.html",
+      "image": "/runtime/news-images/alexander-mcqueen/amq-p03-34b2f458.jpg",
+      "summary": "烟管裤以 Leaf Crepe 面料和修长廓形延续 Alexander McQueen 标志性的剪裁语言，作为女士成衣系列中面向通勤与晚宴场景的核心裤款新作。",
+      "products": [
+        "烟管裤",
+        "Leaf Crepe 面料",
+        "女士成衣"
+      ],
+      "fingerprint": "88b58c2b521ed443b68f24b976b30949576f32f95cd7f354e590f22b0f690054",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Alexander McQueen 中国官网",
+      "matchedKeywords": [
+        "服装",
+        "烟管裤",
+        "Leaf Crepe 面料"
+      ]
+    }
+  },
+  {
+    "id": "amq-classic-leather-biker-jacket",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T07:42:10.993Z",
+    "hitCount": 2,
+    "rejectionReason": "title keywords [alexander, mcqueen] do not match slug \"626381q5lds1000.html\" or products [经典皮革机车夹克, 铆钉与拉链, 男士外套]",
+    "originalStory": {
+      "id": "amq-classic-leather-biker-jacket",
+      "category": "luxury",
+      "subcategory": "服装",
+      "brand": "Alexander McQueen",
+      "title": "Alexander McQueen 推出经典皮革机车夹克，男士外套新作",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "checkedAt": "2026-05-12",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·男士外套",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/626381q5lds1000.html",
+      "image": "/runtime/news-images/alexander-mcqueen/amq-p04-0c9b1d84.jpg",
+      "summary": "McQueen 经典皮革机车夹克以铆钉细节、拉链结构与挺括皮革把英伦机车风格与高级定制剪裁结合，作为 Alexander McQueen 男士外套线的常青代表。",
+      "products": [
+        "经典皮革机车夹克",
+        "铆钉与拉链",
+        "男士外套"
+      ],
+      "fingerprint": "6dd261b836245bad793462a5fcbb318058bf958b841cb63fb3baefe1ab05a234",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Alexander McQueen 中国官网",
+      "matchedKeywords": [
+        "服装",
+        "经典皮革机车夹克",
+        "铆钉与拉链"
+      ]
+    }
+  },
+  {
+    "id": "amq-t-bar-sling-bag",
+    "archivedAt": "2026-07-27T01:15:08.321Z",
+    "firstRejectedAt": "2026-06-24T01:02:08.879Z",
+    "lastRejectedAt": "2026-06-24T01:02:08.879Z",
+    "hitCount": 1,
+    "rejectionReason": "title keywords [alexander, mcqueen, mcqueen, t-bar, sling] do not match slug \"8346551vdbf1000.html\"",
+    "originalStory": {
+      "id": "amq-t-bar-sling-bag",
+      "category": "luxury",
+      "subcategory": "包袋",
+      "brand": "Alexander McQueen",
+      "title": "Alexander McQueen 推出 McQueen T-Bar Sling 手袋，中性包袋新作",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "checkedAt": "2026-05-12",
+      "sourceType": "Official Site",
+      "sourceLabel": "Alexander McQueen 中国官网·中性包袋",
+      "sourceUrl": "https://www.alexandermcqueen.cn/products/8346551vdbf1000.html",
+      "image": "/runtime/news-images/alexander-mcqueen/amq-p05-7f6e2364.jpg",
+      "summary": "McQueen T-Bar Sling 手袋以 T 字形金属搭扣和紧凑斜挎包型延续 The Sling Bag 系列，作为本季面向男女通用场景推出的中性奢华斜挎包。",
+      "products": [
+        "McQueen T-Bar Sling 手袋",
+        "T 字形金属搭扣",
+        "中性斜挎包"
+      ],
+      "fingerprint": "e57e4aa2379e8ae74dc4c51783da2a4465624b8b50915e27d57785c00de726b5",
+      "toneVersion": "v3",
+      "imageSource": "product-page",
+      "sourceTitle": "Alexander McQueen 中国官网",
+      "matchedKeywords": [
+        "包袋",
+        "McQueen T-Bar Sling 手袋",
+        "T 字形金属搭扣"
+      ]
+    }
+  }
+]

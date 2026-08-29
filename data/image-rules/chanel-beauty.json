@@ -10,8 +10,8 @@
   ],
   "remoteImageHosts": [],
   "summary": {
-    "storyCount": 4,
-    "readyCount": 1,
+    "storyCount": 6,
+    "readyCount": 3,
     "partialCount": 3,
     "needsReplacementCount": 0
   },
@@ -166,6 +166,65 @@
         "candidateImageHost": "www.chanel.cn",
         "notes": [
           "A verified official source image URL is stored in candidateImageUrl for server-side re-download or COS sync."
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-beauty-n-5",
+      "title": "CHANEL Beauty 推出 N°5 香奈儿五号香水（经典），香水新品阵容继续扩展",
+      "category": "beauty",
+      "subcategory": "香水",
+      "products": [
+        "N°5 香奈儿五号香水（经典）",
+        "N°5 L'EAU 香奈儿五号之水",
+        "N°5 香奈儿五号香水随行手袋装"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/fragrance/p/125530/n5-eau-de-parfum-spray/",
+      "currentImage": "/runtime/news-images/chanel-beauty/chanel-n5-855dee88d8f4.png",
+      "currentImageMode": "local",
+      "currentImageHost": null,
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/runtime/news-images/chanel-beauty/chanel-n5-855dee88d8f4.png",
+        "candidateImageUrl": null,
+        "candidateImageHost": null,
+        "notes": [
+          "2026-06-22 修复：之前图片错误指向 CHANCE EAU SPLENDIDE 图。sourceUrl 也从 CHANCE 页面修正为 N°5 产品页。正确图片本地路径如上。"
+        ]
+      }
+    },
+    {
+      "storyId": "chanel-beauty-n-1-de-chanel-essence-lotion",
+      "title": "CHANEL Beauty 推出 N°1 DE CHANEL ESSENCE LOTION 爽肤水，护肤新品阵容继续扩展",
+      "category": "beauty",
+      "subcategory": "护肤",
+      "products": [
+        "N°1 DE CHANEL ESSENCE LOTION 爽肤水",
+        "N°1 DE CHANEL 精华",
+        "N°1 DE CHANEL 乳霜",
+        "N°1 DE CHANEL 眼霜"
+      ],
+      "sourceType": "Official Site",
+      "sourcePage": "https://www.chanel.cn/cn/skincare/p/140658/n1-de-chanel-essence-lotion-plumps-unifies-illuminates/",
+      "currentImage": "/runtime/news-images/chanel-beauty/chanel-beauty-n-1-de-chanel-essence-lotion-7546f25a447e.jpg",
+      "currentImageMode": "local",
+      "currentImageHost": "www.chanel.cn",
+      "automationStatus": "ready",
+      "acquisition": {
+        "method": "local_mirror_of_official_asset",
+        "priority": [
+          "local_mirror"
+        ],
+        "localMirrorPath": "/runtime/news-images/chanel-beauty/chanel-beauty-n-1-de-chanel-essence-lotion-7546f25a447e.jpg",
+        "candidateImageUrl": "https://www.chanel.cn/images/t_one/t_skincare/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1020/n-1-de-chanel-essence-lotion-plumps-unifies-illuminates-3-3fl-oz--packshot-default-140658-9540912447518.jpg",
+        "candidateImageHost": "www.chanel.cn",
+        "notes": [
+          "2026-08-18 修复：pipeline 误用 /cn/fragrance/ 分类页 sourceUrl 抓取，得到 5430B favicon。改为护肤线产品页 + 正确 packshot。"
         ]
       }
     }

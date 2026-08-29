@@ -141,18 +141,17 @@
       }
     },
     {
-      "storyId": "hermes-beauty-jardin-monsieur-li",
-      "title": "Hermès Beauty 推出 李先生的花园香水，花园系列继续扩展东方花香表达",
+      "storyId": "herm-s-beauty-h24-herbes-vives",
+      "title": "Hermès Beauty 推出 H24 Herbes Vives 淡香精，香水新品阵容继续扩展",
       "category": "beauty",
       "subcategory": "香水",
       "products": [
-        "李先生的花园香水",
-        "尼罗河花园香水",
-        "丝意荔韵淡香精"
+        "H24 Herbes Vives 淡香精",
+        "H24 香水"
       ],
       "sourceType": "Official Site",
       "sourcePage": "https://www.hermes.cn/cn/en/category/fragrances/",
-      "currentImage": "/news/beauty/hermes-jardin-monsieur-li.png",
+      "currentImage": "/runtime/news-images/herm-s-beauty/herm-s-beauty-h24-herbes-vives-3103b0a6f372.webp",
       "currentImageMode": "local",
       "currentImageHost": null,
       "automationStatus": "partial",
@@ -161,11 +160,11 @@
         "priority": [
           "local_mirror"
         ],
-        "localMirrorPath": "/news/beauty/hermes-jardin-monsieur-li.png",
+        "localMirrorPath": "/runtime/news-images/herm-s-beauty/herm-s-beauty-h24-herbes-vives-3103b0a6f372.webp",
         "candidateImageUrl": null,
         "candidateImageHost": null,
         "notes": [
-          "No direct official source image URL is stored yet; reacquire from sourcePage using the configured method if the local mirror needs refresh."
+          "H24 Herbes Vives 淡香精产品图，2026-08-19 更新，替换已删除的 jardin-monsieur-li.png"
         ]
       }
     }
