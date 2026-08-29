@@ -387,7 +387,11 @@ function extractProductLinks(html: string, baseUrl: string): string[] {
     }
 
     // 排除导航/工具/内容页
-    if (/\/(login|register|cart|checkout|account|wishlist|search|stores?|store-locator|help|faq|about|contact|privacy|terms|careers?|newsletter|sitemap|customer|support|delivery|returns?|buying-guide|article|news|stories|magazine|blog|events?|services?|sustainability|promotion)(\/|$|\?)/i.test(path)) {
+    if (/\/(login|register|cart|checkout|account|wishlist|search|stores?|store-locator|help|faq|about|contact|privacy|terms|careers?|newsletter|sitemap|customer|support|delivery|returns?|buying-guide|article|news(?:center|room)?|stories|magazine|blog|events?|services?|sustainability|promotion)(\/|$|\?)/i.test(path)) {
+      continue
+    }
+    // 排除索引页/首页（如 bravia/index.html），不是具体产品页
+    if (/\/index\.html?$/i.test(path)) {
       continue
     }
 
@@ -419,7 +423,9 @@ function inferProductLabelFromUrl(url: string, index: number): string {
     if (/^(buy|p|item|product|products|detail|creation|goods|sku)$/i.test(last)) {
       last = segments[segments.length - 2] || ''
     }
-    if (last && !/^\d+$/.test(last)) {
+    // 去掉文件扩展名（.html/.htm/.php/.aspx 等），避免 "2026.html" → "2026.Html"
+    last = last.replace(/\.(html?|php|aspx?|jsp)$/i, '')
+    if (last && !/^\d+$/.test(last) && !/^index$/i.test(last)) {
       return last.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
     }
   } catch {
