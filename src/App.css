@@ -472,3 +472,40 @@
     justify-content: space-between;
   }
 }
+
+/* ── 翻页 ── */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.page-btn {
+  padding: 8px 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--accent-soft, #e8f4fd);
+}
+
+.page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: var(--muted);
+  font-size: 0.88rem;
+}

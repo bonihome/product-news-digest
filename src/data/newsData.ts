@@ -1,3 +1,4 @@
+import { aiNews } from './aiNews'
 import { beautyNews } from './beautyNews'
 import { digitalNews } from './digitalNews'
 import { luxuryNews } from './luxuryNews'
@@ -14,6 +15,8 @@ export const categoryLabels: Record<CategoryId, string> = {
   sports: '运动',
   digital: '数码',
   webgames: '网页游戏',
+  toys: '潮玩',
+  ai: 'AI',
 }
 
 export const categoryDescriptions: Record<ContentCategory, string> = {
@@ -22,6 +25,8 @@ export const categoryDescriptions: Record<ContentCategory, string> = {
   sports: '聚焦足球、篮球、网球、跑步、户外、游泳与运动休闲七类运动产品，把品牌发售与新品系列做成可浏览的新闻频道。',
   digital: '围绕手机、平板、电脑、配件四个方向，收录科技品牌近期最重要的新品新闻。',
   webgames: '围绕网页游戏平台的新作上架、首页新游与最新可玩作品，持续整理轻量游戏网站的新品动态。',
+  toys: '聚焦乐高（LEGO）等潮玩、拼搭积木、收藏玩具品牌的新品发布与限量发售信息。',
+  ai: '聚焦美国和中国主流 AI 服务商，按模型发布、产品更新、开发者工具三条线追踪最新进展。',
 }
 
 export const subcategories: Record<ContentCategory, string[]> = {
@@ -30,12 +35,14 @@ export const subcategories: Record<ContentCategory, string[]> = {
   sports: ['足球', '篮球', '网球', '跑步', '户外', '游泳', '运动休闲'],
   digital: ['手机', '平板', '电脑', '配件'],
   webgames: ['新游'],
+  toys: ['乐高', '积木', '收藏'],
+  ai: ['模型发布', '产品更新', '开发者工具'],
 }
 
 // 注意：webgamesNews 放最后，保留 16 条静态兜底（PacoGames / Poki / Y8 等 5 月抓的），
 // 但在 sort-by-publishedAt 之后大部分排到 5 月日期段，首页前 10 不会出 webgames 静态条目。
 // pipeline 日更的 webgames 走 runtime feed（generatedAt 6-7），仍在前面。
-export const stories: Story[] = [...digitalNews, ...luxuryNews, ...beautyNews, ...sportsNews, ...webgamesNews]
+export const stories: Story[] = [...digitalNews, ...luxuryNews, ...beautyNews, ...sportsNews, ...webgamesNews, ...aiNews]
 
 export function composeStoryFeed(runtimeStories: Story[] = []) {
   const merged = [...runtimeStories, ...stories]

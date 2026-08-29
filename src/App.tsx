@@ -50,7 +50,7 @@ function parseHash(hash: string): Route {
   if (
     parts[0] === 'channel' &&
     parts[1] &&
-    ['luxury', 'beauty', 'sports', 'digital', 'webgames'].includes(parts[1])
+    ['luxury', 'beauty', 'sports', 'digital', 'webgames', 'toys', 'ai'].includes(parts[1])
   ) {
     return { view: 'channel', category: parts[1] as ContentCategory }
   }
@@ -224,8 +224,12 @@ function App() {
         : byCategory.filter((story) => story.subcategory === activeSubcategory)
 
     return [...bySubcategory].sort((a, b) => {
-      const dateCmp = b.publishedAt.localeCompare(a.publishedAt)
+      // 主排序: publishedAt 降序（新闻发布日期，生成后锁定不修改）
+      const aPub = (a.publishedAt ?? '').replace(/[^0-9-]/g, '').slice(0, 10)
+      const bPub = (b.publishedAt ?? '').replace(/[^0-9-]/g, '').slice(0, 10)
+      const dateCmp = bPub.localeCompare(aPub)
       if (dateCmp !== 0) return dateCmp
+      // tiebreaker：checkedAt 降序
       const aCheck = (a.checkedAt ?? '').replace(/[^0-9-]/g, '').slice(0, 10)
       const bCheck = (b.checkedAt ?? '').replace(/[^0-9-]/g, '').slice(0, 10)
       return bCheck.localeCompare(aCheck)
@@ -390,8 +394,8 @@ function ChannelView({
       : base.filter((story) => story.subcategory === activeSubcategory)
   }, [category, activeSubcategory, sourceStories])
 
-  const brands = useMemo(() => getChannelBrands(category, sourceStories), [category, sourceStories])
-  const filters = ['全部', ...subcategories[category]]
+  const brands = useMemo(() => getChannelBrands(category, sourceStories) ?? [], [category, sourceStories])
+  const filters = ['全部', ...(subcategories[category] ?? [])]
 
   return (
     <section className="detail-layout">
@@ -448,7 +452,7 @@ function ChannelView({
               </a>
               <p className="story-summary">{story.summary}</p>
               <div className="product-row">
-                {story.products.map((product) => (
+                {(story.products ?? []).map((product) => (
                   <span key={`${story.id}-${product}`}>{product}</span>
                 ))}
               </div>
@@ -485,6 +489,15 @@ function HomeView({
   onToggleLike: (storyId: string) => void
   onAddComment: (storyId: string, comment: string) => void
 }) {
+  const PAGE_SIZE = 30
+  const [page, setPage] = useState(0)
+  const totalPages = Math.ceil(visibleStories.length / PAGE_SIZE)
+  const pageStories = visibleStories.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
+  useEffect(() => {
+    setPage(0)
+  }, [activeCategory, activeSubcategory])
+
   return (
     <section className="section-panel">
       <div className="section-head">
@@ -508,7 +521,7 @@ function HomeView({
       </div>
 
       <div className="story-grid">
-        {visibleStories.map((story) => (
+        {pageStories.map((story) => (
           <article key={story.id} className="story-card">
             <a className="image-link" href={buildStoryHash(story.id)}>
               <img className="story-image" src={story.image} alt={story.brand} />
@@ -535,7 +548,7 @@ function HomeView({
             <p className="story-summary">{story.summary}</p>
 
             <div className="product-row">
-              {story.products.map((product) => (
+              {(story.products ?? []).map((product) => (
                 <span key={`${story.id}-${product}`}>{product}</span>
               ))}
             </div>
@@ -555,6 +568,30 @@ function HomeView({
           </article>
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="pagination">
+          <button
+            type="button"
+            className="page-btn"
+            disabled={page === 0}
+            onClick={() => setPage(page - 1)}
+          >
+            ← 上一页
+          </button>
+          <span className="page-info">
+            {page + 1} / {totalPages}
+          </span>
+          <button
+            type="button"
+            className="page-btn"
+            disabled={page >= totalPages - 1}
+            onClick={() => setPage(page + 1)}
+          >
+            下一页 →
+          </button>
+        </div>
+      )}
     </section>
   )
 }
@@ -680,7 +717,7 @@ function BrandDetailView({
             </a>
             <p className="story-summary">{story.summary}</p>
             <div className="product-row">
-              {story.products.map((product) => (
+              {(story.products ?? []).map((product) => (
                 <span key={`${story.id}-${product}`}>{product}</span>
               ))}
             </div>
@@ -731,7 +768,7 @@ function StoryDetailView({
         <section className="detail-panel detail-article">
           <img className="detail-cover" src={story.image} alt={story.title} />
           <div className="detail-tag-list">
-            {story.products.map((product) => (
+            {(story.products ?? []).map((product) => (
               <span key={`${story.id}-${product}`}>{product}</span>
             ))}
           </div>
