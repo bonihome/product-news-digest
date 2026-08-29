@@ -13,6 +13,7 @@ import {
   readStoredStories,
   writeBrandSnapshots,
   writeStoredStories,
+  syncNewsImages,
 } from './runtimeStore'
 import type {
   BrandSnapshotRecord,
@@ -238,29 +239,30 @@ export async function runPipeline(options: PipelineOptions = {}) {
       for (const result of results) {
         for (const story of result.storiesToUpsert) {
           const existingIndex = nextStories.findIndex(
-            (item) => item.id === story.id || item.fingerprint === story.fingerprint,
+            (item) =>
+              item.id === story.id ||
+              item.fingerprint === story.fingerprint ||
+              (story.sourceUrl && item.sourceUrl === story.sourceUrl),
           )
           if (existingIndex >= 0) {
             const existing = nextStories[existingIndex]
-            // When refreshing an existing story, preserve the original publishedAt
-            // if the new date looks like a pipeline fallback (within 2 days of now).
-            // Real extracted dates from brand websites pass through unchanged.
-            const newDate = story.publishedAt
-            const oldDate = existing.publishedAt
-            if (newDate !== oldDate) {
-              const now = new Date()
-              const twoDaysAgo = new Date(now)
-              twoDaysAgo.setDate(twoDaysAgo.getDate() - 2)
-              const newDt = new Date(newDate)
-              const oldDt = new Date(oldDate)
-              if (!isNaN(newDt.getTime()) && !isNaN(oldDt.getTime()) &&
-                  newDt >= twoDaysAgo && newDt <= now &&
-                  oldDt < twoDaysAgo) {
-                story.publishedAt = oldDate
-              }
+            // 🔒 新闻一旦生成就锁定：发布日期和图片不再被后续 pipeline 运行修改
+            // publishedAt：永远保留首次生成时的值（不为空就锁定）
+            if (existing.publishedAt) {
+              story.publishedAt = existing.publishedAt
+            }
+            // image：保留已下载的真实产品图；仅当旧图为空/非 runtime 图时才用新图
+            if (existing.image && existing.image.startsWith('/runtime/news-images/')) {
+              story.image = existing.image
+            } else if (!story.image && existing.image) {
+              story.image = existing.image
             }
             nextStories[existingIndex] = story
           } else {
+            // 全新故事：也做二次检查，防止 publishedAt 为空字符串被当"新"
+            if (!story.publishedAt) {
+              story.publishedAt = story.checkedAt
+            }
             nextStories.push(story)
           }
         }
@@ -268,6 +270,7 @@ export async function runPipeline(options: PipelineOptions = {}) {
 
       const normalizedStories = normalizeStoredStories(nextStories)
       await localizeStoryImages(normalizedStories)
+      await syncNewsImages()
 
       // ── 图片引用完整性校验 ──
       const integrityReport = await checkImageIntegrity(normalizedStories, runId)

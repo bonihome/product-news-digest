@@ -9,7 +9,9 @@ function normalizeText(value: string) {
 export function createFingerprint(candidate: CrawlCandidate) {
   const payload = [
     normalizeText(candidate.brand),
-    normalizeText(candidate.sourceTitle),
+    // NOTE: sourceTitle intentionally excluded — it can change between runs
+    // (page <title> varies vs brand-name fallback), breaking deduplication.
+    // brand + products + sourceUrl is sufficient for uniqueness.
     candidate.products.map(normalizeText).sort().join('|'),
     normalizeText(candidate.sourceUrl),
   ].join('::')

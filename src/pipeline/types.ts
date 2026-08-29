@@ -14,7 +14,7 @@ export type BrandSourceRule = {
   products: string[]
   keywords: string[]
   imageStrategy: 'product-page' | 'gallery-image' | 'page-screenshot' | 'homepage-module'
-  cadence: 'wed-sun-twice'
+  cadence: 'wed-sun-twice' | 'daily'
   enabled: boolean
 }
 

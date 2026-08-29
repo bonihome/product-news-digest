@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile, cp } from 'node:fs/promises'
 import path from 'node:path'
 
 import type { PublishedFeed } from '../data/types'
@@ -26,6 +26,7 @@ const analyticsReportsPath = path.join(runtimeDir, 'weekly-analytics-reports.jso
 const databasePath = path.join(runtimeDir, 'pipeline.db')
 const publishedFeedPath = path.join(runtimeDir, 'published-feed.json')
 const publicRuntimeDir = path.resolve(process.cwd(), 'public/runtime')
+const publicStoriesPath = path.join(publicRuntimeDir, 'news-items.json')
 const publicPublishedFeedPath = path.join(publicRuntimeDir, 'published-feed.json')
 
 async function ensureRuntimeDir() {
@@ -52,6 +53,8 @@ export async function readStoredStories() {
 
 export async function writeStoredStories(stories: StoredStory[]) {
   await writeJsonFile(storiesPath, stories)
+  await mkdir(publicRuntimeDir, { recursive: true })
+  await writeFile(publicStoriesPath, `${JSON.stringify(stories, null, 2)}\n`, 'utf8')
 }
 
 export async function appendCrawlRun(run: CrawlRun) {
@@ -134,6 +137,18 @@ export async function writePublishedFeed(feed: PublishedFeed) {
   await writeFile(publicPublishedFeedPath, `${JSON.stringify(feed, null, 2)}\n`, 'utf8')
 }
 
+/**
+ * Sync data/runtime/news-images → public/runtime/news-images.
+ * Used after downloading product images so nginx serves the latest files.
+ * Resolves at the end of pipeline/seed runs to keep public dir in sync.
+ */
+export async function syncNewsImages() {
+  const srcDir = path.join(runtimeDir, 'news-images')
+  const dstDir = path.join(publicRuntimeDir, 'news-images')
+  await mkdir(dstDir, { recursive: true })
+  await cp(srcDir, dstDir, { recursive: true, force: true })
+}
+
 export function getRuntimePaths() {
   return {
     runtimeDir,
@@ -147,6 +162,7 @@ export function getRuntimePaths() {
     analyticsReportsPath,
     databasePath,
     publishedFeedPath,
+    publicStoriesPath,
     publicPublishedFeedPath,
   }
 }

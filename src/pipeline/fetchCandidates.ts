@@ -6,48 +6,59 @@ const LOUIS_VUITTON_LATEST_PAGES = [
   {
     label: '女士新品',
     subcategory: '服装',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/the-latest/_/N-t18gb9e5?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/women/new-in-women/_/N-ty7er6l?_=cb-20260624',
   },
   {
     label: '男士新品',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/the-latest/_/N-t1blflj9?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/men/new-in-men/_/N-t14l5lul?_=cb-20260624',
   },
   {
     label: 'LV Resort 系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/lv-resort-collection/_/N-t1h80en2?_=cb-20260624',
   },
   {
     label: 'Flight Mode 系列',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/flight-mode-collection/_/N-t97bofk?_=cb-20260624',
   },
   {
-    label: 'Nautical 系列',
+    label: 'High Summer 系列',
+    subcategory: '夏季系列',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/women/high-summer/_/N-t6p07xp',
+  },
+  {
+    label: 'Sports 胶囊系列',
+    subcategory: '线上首发',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/men/sports-capsule/_/N-t1oxl8c0',
+  },
+  {
+    label: '秋冬男士 2026',
+    subcategory: '时装秀',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/men/fall-winter-2026-show/_/N-t1g31ztu',
+  },
+  {
+    label: '女士当季新品包袋',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/nautical/_/N-tyfjxmc?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/women/handbags/new-in-handbags/_/N-t1dzbzff',
   },
   {
-    label: '春夏女装系列',
+    label: 'Speedy 手袋',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/spring-summer-2026-collection/_/N-t88m6o1?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/women/handbags/all-handbags/speedy/_/N-tfr7qdp-ak5wlig',
   },
   {
-    label: '路易威登 × 村上隆合作系列',
+    label: 'Neverfull 手袋',
     subcategory: '包袋',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-women/louis-vuitton-x-murakami/_/N-t2xost9?_=cb-20260612',
-  },
-  {
-    label: '早秋男士系列 2026',
-    subcategory: '服装',
-    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/new/for-men/pre-fall-2026/_/N-t1t8llmn?_=cb-20260612',
+    listingUrl: 'https://www.louisvuitton.cn/zhs-cn/women/handbags/all-handbags/neverfull/_/N-tfr7qdp-akyxcuct',
   },
 ] as const
 // 2026-06-17 unused: fetchShiseidoCandidate 现改用 rule.listUrl
 // const SHISEIDO_ULTIMUNE_URL =
 //   'https://www.shiseido.com.cn/ultimune-power-infusing-serum-s17283.html?cgid=S2_Category_Serums'
-const HERMES_H08_URL = 'https://www.hermes.cn/cn/zh/product/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3-W049430WW00/'
+// Hermès H08 product page (kept as historical reference):
+// const HERMES_H08_URL = 'https://www.hermes.cn/cn/zh/product/hermes-h08%E8%85%95%E8%A1%A842%E6%AF%AB%E7%B1%B3-W049430WW00/'
 const DIOR_FOREVER_GLOW_URL = 'https://www.dior.cn/zh_cn/beauty/products/y0998020-dior-forever-skin-glow'
 const DIOR_FOREVER_GLOW_IMAGE = ''
 const WILSON_RUSH_PRO_ARTICLE_URL =
@@ -161,7 +172,8 @@ function decodeHtmlEntities(value: string) {
 }
 
 function normalizeCheckedAt(checkedAt: string) {
-  return checkedAt.slice(0, 10)
+  // Keep full ISO datetime for precise sorting; fall back to date-only
+  return checkedAt.length > 10 ? checkedAt : checkedAt.slice(0, 10)
 }
 
 function normalizeChineseDate(value: string) {
@@ -230,21 +242,61 @@ async function fetchHtml(url: string) {
     const msg = e instanceof Error ? e.message : String(e)
     console.warn("[fetchHtml] normal fetch error (" + msg + "), trying Scrapling: " + url)
   }
-  try {
-    const result = execFileSync("python3", [SCRAPLING_SCRIPT, url], {
-      timeout: 30000,
-      maxBuffer: 2 * 1024 * 1024,
-      encoding: "utf-8",
-    })
-    if (result.startsWith("{")) {
-      const parsed = JSON.parse(result)
-      if (parsed.error) { throw new Error(parsed.error + " (status " + parsed.status + ")") }
+  // Retry loop for transient spawn errors (ENOBUFS from concurrent subprocess limits)
+  const MAX_RETRIES = 3
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    try {
+      const result = execFileSync("python3", [SCRAPLING_SCRIPT, url], {
+        timeout: 30000,
+        maxBuffer: 2 * 1024 * 1024,
+        encoding: "utf-8",
+      })
+      if (result.startsWith("{")) {
+        const parsed = JSON.parse(result)
+        if (parsed.error) { throw new Error(parsed.error + " (status " + parsed.status + ")") }
+      }
+      return result
+    } catch (e2) {
+      const msg2 = e2 instanceof Error ? e2.message : String(e2)
+      if (msg2.includes("ENOBUFS") && attempt < MAX_RETRIES - 1) {
+        const delay = 3000 + attempt * 2000
+        console.warn("[fetchHtml] ENOBUFS retry " + (attempt + 1) + "/" + (MAX_RETRIES - 1) + " in " + delay + "ms: " + url)
+        await new Promise(r => setTimeout(r, delay))
+        continue
+      }
+      throw new Error("Scrapling fetch failed for " + url + ": " + msg2, { cause: e2 })
     }
-    return result
-  } catch (e2) {
-    const msg2 = e2 instanceof Error ? e2.message : String(e2)
-    throw new Error("Scrapling fetch failed for " + url + ": " + msg2)
   }
+  throw new Error("Scrapling fetch failed for " + url + ": max retries exhausted")
+}
+
+/** Fetch a URL via headless browser (StealthyFetcher) for SPA / anti-bot pages. */
+async function fetchBrowserHtml(url: string) {
+  const MAX_RETRIES = 3
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    try {
+      const result = execFileSync("python3", [SCRAPLING_SCRIPT, "--browser", "--no-network-idle", "--timeout=120", url], {
+        timeout: 180000,
+        maxBuffer: 4 * 1024 * 1024,
+        encoding: "utf-8",
+      })
+      if (result.startsWith("{")) {
+        const parsed = JSON.parse(result)
+        throw new Error(parsed.error + " (status " + parsed.status + ")")
+      }
+      return result
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e)
+      if (msg.includes("ENOBUFS") && attempt < MAX_RETRIES - 1) {
+        const delay = 5000 + attempt * 3000
+        console.warn("[fetchBrowserHtml] ENOBUFS retry " + (attempt + 1) + "/" + (MAX_RETRIES - 1) + " in " + delay + "ms: " + url)
+        await new Promise(r => setTimeout(r, delay))
+        continue
+      }
+      throw new Error("Browser fetch failed for " + url + ": " + msg, { cause: e })
+    }
+  }
+  throw new Error("Browser fetch failed for " + url + ": max retries exhausted")
 }
 function makeAbsoluteUrl(url: string, baseUrl: string) {
   try {
@@ -288,6 +340,92 @@ function extractImageFromHtml(html: string, baseUrl: string) {
   )
 
   return preferredImage ? makeAbsoluteUrl(preferredImage, baseUrl) : null
+}
+
+// 从列表页提取「产品链接」（同域名、非静态资源、非导航、含产品页特征）。
+// 只对非 SPA 站点有效——SPA 站点（Cartier/Dior/Valentino 等）产品链接由 JS 拼接，
+// curl 拿不到静态 href，这里会返回空，由调用方决定是否 browser 兜底。
+function extractProductLinks(html: string, baseUrl: string): string[] {
+  let host: string
+  try {
+    host = new URL(baseUrl).host
+  } catch {
+    return []
+  }
+
+  const seen = new Set<string>()
+  const links: string[] = []
+
+  for (const match of html.matchAll(/href=["']([^"']+)["']/gi)) {
+    const href = (match[1] || '').trim()
+    if (!href || href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+      continue
+    }
+
+    let abs: string
+    try {
+      abs = new URL(href, baseUrl).toString()
+    } catch {
+      continue
+    }
+
+    let url: URL
+    try {
+      url = new URL(abs)
+    } catch {
+      continue
+    }
+    if (url.host !== host) {
+      continue
+    }
+
+    const path = url.pathname + (url.search || '')
+
+    // 排除静态资源
+    if (/\.(css|js|png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf|xml|json|pdf|mp4|webm|zip)(\?|$)/i.test(path)) {
+      continue
+    }
+
+    // 排除导航/工具/内容页
+    if (/\/(login|register|cart|checkout|account|wishlist|search|stores?|store-locator|help|faq|about|contact|privacy|terms|careers?|newsletter|sitemap|customer|support|delivery|returns?|buying-guide|article|news|stories|magazine|blog|events?|services?|sustainability|promotion)(\/|$|\?)/i.test(path)) {
+      continue
+    }
+
+    // 产品页特征：购买页 / 带 product_id 参数 / 显式产品路径 / 含 SKU 编号
+    const isProduct =
+      /(\/buy\/|\/buy\?|product[_=]id|\/product\/|\/products\/|\/p\/|\/item\/|\/goods\/|\/detail\/|\/creation\/|\/sku\/)/i.test(path) ||
+      /\/[a-z0-9-]*[A-Z]{2,}\d{3,}/.test(path)
+
+    if (isProduct && !seen.has(abs)) {
+      seen.add(abs)
+      links.push(abs)
+    }
+  }
+
+  return links
+}
+
+// 从产品 URL 推断一个可读的产品标识，用作 products[0]（保证 story.id 唯一，
+// 避免多个候选因 products 相同而生成相同 id 被去重）。
+function inferProductLabelFromUrl(url: string, index: number): string {
+  try {
+    const u = new URL(url)
+    const pid = u.searchParams.get('product_id') || u.searchParams.get('id') || u.searchParams.get('sku')
+    if (pid) {
+      return `产品 ${pid}`
+    }
+    const segments = u.pathname.split('/').filter(Boolean)
+    let last = segments[segments.length - 1] || ''
+    if (/^(buy|p|item|product|products|detail|creation|goods|sku)$/i.test(last)) {
+      last = segments[segments.length - 2] || ''
+    }
+    if (last && !/^\d+$/.test(last)) {
+      return last.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+    }
+  } catch {
+    // ignore
+  }
+  return `新品 ${index + 1}`
 }
 
 type NikeTrendProduct = {
@@ -450,7 +588,7 @@ function extractPradaCategoryProduct(
     ),
   )
   const imageUrls = unique(
-    [...html.matchAll(/https:\/\/www\.prada\.com\/content\/dam\/[^"' )]+_SLF\.jpg(?:\/_jcr_content\/renditions\/[^"' )]+)?/gi)].map(
+    [...html.matchAll(/https:\/\/www\.prada\.cn\/content\/dam\/[^"' )]+\.jpg(?:\/_jcr_content\/renditions\/[^"' )]+)?/gi)].map(
       (match) => decodeHtmlEntities(match[0].replace(/,$/, '')),
     ),
   )
@@ -638,11 +776,71 @@ function extractNikeFirstProductFromListing(
   label: string,
   subcategory: string,
 ): NikeTrendProduct | null {
-  const match = html.match(
-    /"products":\[\{"groupKey":"[^"]+"[\s\S]*?"copy":\{"title":"([^"]+)","subTitle":"([^"]*)"\}[\s\S]*?"colorwayImages":\{"portraitURL":"([^"]+)"[\s\S]*?"pdpUrl":\{"url":"([^"]+)"/,
-  )
+  // 2026-08-29 重写：旧正则用非贪婪 [\s\S]*? 跨字段匹配，遇到定制款
+  // （productSubType=CUSTOMIZED 时 colorwayImages.portraitURL 为 null）会跳过
+  // 第一个产品、跨边界命中第二个产品，导致 title 与 sourceUrl 错位（ja-3-by、
+  // air-force-1-low-by 串图根因）。改为括号计数提取第一个完整产品对象 JSON 后
+  // parse，title/image/sourceUrl 保证同源。
+  const startIdx = html.indexOf('"products":[{')
+  if (startIdx < 0) {
+    return null
+  }
+  const objStart = html.indexOf('{', startIdx)
+  if (objStart < 0) {
+    return null
+  }
 
-  if (!match) {
+  let depth = 0
+  let inStr = false
+  let escape = false
+  let objEnd = -1
+  for (let i = objStart; i < html.length; i++) {
+    const c = html[i]
+    if (inStr) {
+      if (escape) {
+        escape = false
+      } else if (c === '\\') {
+        escape = true
+      } else if (c === '"') {
+        inStr = false
+      }
+    } else if (c === '"') {
+      inStr = true
+    } else if (c === '{') {
+      depth++
+    } else if (c === '}') {
+      depth--
+      if (depth === 0) {
+        objEnd = i + 1
+        break
+      }
+    }
+  }
+  if (objEnd < 0) {
+    return null
+  }
+
+  let product: {
+    copy?: { title?: string; subTitle?: string }
+    pdpUrl?: { url?: string }
+    colorwayImages?: { squarishURL?: string | null; portraitURL?: string | null }
+  }
+  try {
+    product = JSON.parse(html.slice(objStart, objEnd))
+  } catch {
+    return null
+  }
+
+  const title = product?.copy?.title ?? ''
+  const subtitle = product?.copy?.subTitle ?? ''
+  const sourceUrl = product?.pdpUrl?.url ?? ''
+  // 定制款 portraitURL 为 null，squarishURL 才有图；标准款两者都有
+  const image =
+    product?.colorwayImages?.squarishURL ??
+    product?.colorwayImages?.portraitURL ??
+    ''
+
+  if (!title || !sourceUrl) {
     return null
   }
 
@@ -650,10 +848,10 @@ function extractNikeFirstProductFromListing(
     label,
     subcategory,
     listingUrl,
-    title: decodeHtmlEntities(match[1]),
-    subtitle: decodeHtmlEntities(match[2]),
-    image: decodeHtmlEntities(match[3]),
-    sourceUrl: decodeHtmlEntities(match[4]),
+    title: decodeHtmlEntities(title),
+    subtitle: decodeHtmlEntities(subtitle),
+    image: decodeHtmlEntities(image),
+    sourceUrl: decodeHtmlEntities(sourceUrl),
   }
 }
 
@@ -710,8 +908,12 @@ function extractLouisVuittonLatestProduct(
   // 所有 pattern 都以 capture group(1) = 完整 URL / 完整相对路径为标准，
   // 这样 extractMatch(html, pattern) 默认取 group(1) 就能拿到完整 sourceUrl。
   const hrefPatterns = [
-    /href=["'](https:\/\/www\.louisvuitton\.cn\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
+    // 产品网格卡片用相对路径 /zhs-cn/products/...，必须优先匹配。
+    // 2026-08-18 修复：旧版把绝对 URL pattern 放最前，会匹配到 footer 链接
+    // （如 nice-nano-monogram）而非列表页首个产品（如 squire-east-west），
+    // 导致 title(从 image 反推) 与 sourceUrl(从 href 提取) 错位。
     /href=["'](\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
+    /href=["'](https:\/\/www\.louisvuitton\.cn\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
     /["'](https:\/\/www\.louisvuitton\.cn\/zhs-cn\/products\/[a-z0-9-]+\/[A-Z0-9]+)["']/i,
   ]
   let listingProductUrl: string | null = null
@@ -771,6 +973,68 @@ async function fetchGenericCandidate(rule: BrandSourceRule, checkedAt: string) {
     sourceSummary: `${rule.brand} ${rule.sourceLabel} 当前可抓取到 ${rule.subcategory} 页面内容，已按产品与分类规则生成候选新闻。`,
     image,
     publishedAt,
+  })
+}
+
+const MAX_GENERIC_CANDIDATES = 5
+
+// 有专用 fetch handler 的品牌（fetchRealCandidate 的 switch 分支）。
+// 这些品牌走各自的精确提取逻辑，不走通用多候选。
+const DEDICATED_HANDLER_BRANDS = new Set([
+  'Nike',
+  'Adidas',
+  'Louis Vuitton',
+  'Apple',
+  'Hermes',
+  'Chanel',
+  'Dior Beauty',
+  'SHISEIDO',
+  'Wilson',
+  'Microsoft Surface',
+  'Boucheron',
+  'LEGO',
+])
+
+// 通用品牌的多候选抓取：从列表页提取多个产品链接，每个产品一个候选。
+// 这样 sourceUrl 会随列表变化（新品上架出现新链接），snapshotKey / fingerprint 随之变化，
+// 才能产生「新增」而非每天「去重刷新」。对 SPA 站点（curl 拿不到产品链接）尝试
+// browser 渲染兜底，仍拿不到则退回单候选。
+async function fetchGenericCandidates(rule: BrandSourceRule, checkedAt: string): Promise<CrawlCandidate[]> {
+  let html: string
+  try {
+    html = await fetchHtml(rule.listUrl)
+  } catch {
+    return [await fetchGenericCandidate(rule, checkedAt)]
+  }
+
+  let productLinks = extractProductLinks(html, rule.listUrl)
+
+  // SPA 兜底：curl 拿不到产品链接时，用 browser 渲染再试
+  if (productLinks.length === 0) {
+    try {
+      const browserHtml = await fetchBrowserHtml(rule.listUrl)
+      productLinks = extractProductLinks(browserHtml, rule.listUrl)
+    } catch {
+      // browser 也失败，退回单候选
+    }
+  }
+
+  if (productLinks.length === 0) {
+    return [await fetchGenericCandidate(rule, checkedAt)]
+  }
+
+  const publishedAt = extractPublishedAtFromHtml(html, checkedAt)
+
+  return productLinks.slice(0, MAX_GENERIC_CANDIDATES).map((url, index) => {
+    const label = inferProductLabelFromUrl(url, index)
+    return buildCandidate(rule, checkedAt, {
+      sourceUrl: url,
+      sourceTitle: `${rule.brand} ${label}`,
+      sourceSummary: `${rule.brand} ${rule.sourceLabel} 页面抓取到 ${rule.subcategory} 新品「${label}」，已作为新品候选写入抓取流程。`,
+      products: [label, ...rule.products.slice(0, 2)],
+      image: '',
+      publishedAt,
+    })
   })
 }
 
@@ -932,22 +1196,48 @@ async function fetchAdidasPdpCandidate(
 // DEPRECATED 2026-06-07: fetchLouisVuittonCandidate 已删除。
 // 旧版硬塞 LOUIS_VUITTON_CAPUCINES_URL (M28548) 作为 fallback，导致 title-sourceUrl 错配。
 // 新版 fetchLouisVuittonLatestCandidates 在 products.length === 0 时 return []。
+
+async function fetchChanelCandidate(rule: BrandSourceRule, checkedAt: string) {
+  const html = await fetchBrowserHtml(rule.listUrl)
+  const sourceTitle =
+    extractMatch(html, /<title>([^<]+)<\/title>/) ??
+    extractMatch(html, /property="og:title" content="([^"]+)"/) ??
+    `${rule.brand} ${rule.subcategory} 新品检索`
+  const image =
+    // Chanel product CDN images (no file extension)
+    extractMatch(html, /(https:\/\/www\.chanel\.cn\/cn\/img\/\/prd-emea\/sys-master\/content\/[^"'\s]+)/i) ??
+    // Chanel puls-img CDN
+    extractMatch(html, /(https:\/\/www\.chanel\.cn\/puls-img\/[^"'\s]+\.(?:jpg|jpeg|png|webp))/i) ??
+    // Generic og:image / standard image with extension
+    extractMatch(html, /property="og:image" content="([^"]+)"/) ??
+    extractMatch(html, /(https:\/\/www\.chanel\.cn\/[^"'\s]+\.(?:jpg|jpeg|png|webp))/i) ??
+    ''
+
+  return buildCandidate(rule, checkedAt, {
+    sourceUrl: rule.listUrl,
+    sourceTitle: collapseWhitespace(decodeHtmlEntities(sourceTitle)),
+    sourceSummary: `Chanel 中国官网 ${rule.subcategory} 页面已通过无头浏览器渲染生成候选新闻。`,
+    image: decodeHtmlEntities(image),
+  })
+}
 // LOUIS_VUITTON_CAPUCINES_URL 常量保留为历史参考（顶部已 DEPRECATED 标注）。
 
 async function fetchHermesCandidate(rule: BrandSourceRule, checkedAt: string) {
-  const html = await fetchHtml(HERMES_H08_URL)
+  const html = await fetchBrowserHtml(rule.listUrl)
   const sourceTitle =
     extractMatch(html, /<title>([^<]+)<\/title>/) ??
-    extractMatch(html, /property="og:title" content="([^"]+)"/)
+    extractMatch(html, /property="og:title" content="([^"]+)"/) ??
+    `${rule.brand} ${rule.subcategory} 新品检索`
   const image =
     extractMatch(html, /property="og:image" content="([^"]+)"/) ??
-    extractMatch(html, /(https:\/\/assets\.hermes\.cn\/is\/image\/hermesproduct\/[^"' )]+\.(?:jpg|jpeg|png))/i)
+    extractMatch(html, /(https:\/\/assets\.hermes\.cn\/is\/image\/hermesproduct\/[^"' )]+\.(?:jpg|jpeg|png))/i) ??
+    ''
 
   return buildCandidate(rule, checkedAt, {
-    sourceUrl: HERMES_H08_URL,
-    sourceTitle: collapseWhitespace(decodeHtmlEntities(sourceTitle ?? 'Hermès H08腕表，42毫米')),
-    sourceSummary: '爱马仕中国官网当前可稳定抓到 Hermès H08 产品页主图与标题，可用于生成腕表新品新闻。',
-    image: decodeHtmlEntities(image ?? ''),
+    sourceUrl: rule.listUrl,
+    sourceTitle: collapseWhitespace(decodeHtmlEntities(sourceTitle)),
+    sourceSummary: `爱马仕中国官网 ${rule.subcategory} 页面已按产品与分类规则生成候选新闻。`,
+    image: decodeHtmlEntities(image),
   })
 }
 
@@ -986,7 +1276,32 @@ async function fetchNikeTrendProducts(subcategory: string) {
   const products = await Promise.all(
     pages.map(async (page) => {
       const html = await fetchHtml(page.url)
-      return extractNikeFirstProductFromListing(html, page.url, page.label, page.subcategory)
+      const product = extractNikeFirstProductFromListing(html, page.url, page.label, page.subcategory)
+      if (!product) {
+        return null
+      }
+      // 列表页 portraitURL 会错位（懒加载占位 + 非贪婪正则跨产品匹配），
+      // 从产品详情页 sourceUrl 提取真实产品图。
+      // ⚠️ 2026-08-29：Nike og:image 现在返回 t_default 白底占位图（320×400），
+      // 真实大图在 t_PDP_1728_v1（1728×2160）/ t_PDP_936_v1（936×1170）路径。
+      // 优先抓 t_PDP 大图，避免白底占位图 + 跨产品串图。
+      try {
+        const detailHtml = await fetchHtml(product.sourceUrl)
+        const pdpImage =
+          extractMatch(detailHtml, /(https:\/\/static\.nike\.com\.cn\/a\/images\/t_PDP_1728_v1\/[^"' )]+)/i) ??
+          extractMatch(detailHtml, /(https:\/\/static\.nike\.com\.cn\/a\/images\/t_PDP_936_v1\/[^"' )]+)/i)
+        if (pdpImage) {
+          product.image = decodeHtmlEntities(pdpImage)
+        } else {
+          const ogImage = extractMatch(detailHtml, /property="og:image" content="([^"]+)"/i)
+          if (ogImage) {
+            product.image = decodeHtmlEntities(ogImage)
+          }
+        }
+      } catch {
+        // 详情页抓取失败时保留列表页图
+      }
+      return product
     }),
   )
 
@@ -1414,6 +1729,111 @@ async function fetchYonexMallCandidates(rule: BrandSourceRule, checkedAt: string
   )
 }
 
+export async function fetchLegoCandidates(rule: BrandSourceRule, checkedAt: string) {
+  const html = await fetchHtml(rule.listUrl)
+
+  // Extract JSON-LD structured data from the page
+  const jsonLdRegex =
+    /<script type="application\/ld\+json">(.+?)<\/script>/
+  const match = html.match(jsonLdRegex)
+
+  if (!match) {
+    return []
+  }
+
+  const listing = JSON.parse(match[1]) as { itemListElement?: Array<{ item: Record<string, unknown> }> }
+  const items = listing.itemListElement ?? []
+
+  if (items.length === 0) {
+    return []
+  }
+
+  const candidates = items.map((entry) => {
+    const product = entry.item as Record<string, unknown>
+    const name = String(product.name ?? '')
+    const url = String(product.url ?? '')
+    const image = String(product.image ?? '')
+    const offers = (product.offers ?? {}) as Record<string, unknown>
+    const price = offers.price != null ? `¥${offers.price}` : ''
+    const pieceCount = ((product.pieceCount ?? {}) as Record<string, unknown>).value ?? ''
+
+    const sourceTitle = pieceCount ? `${name}（${pieceCount}块${price ? ` / ${price}` : ''}）` : name
+
+    return buildCandidate(rule, checkedAt, {
+      sourceUrl: url || rule.listUrl,
+      sourceTitle,
+      sourceSummary: `LEGO 乐高新品：${name}，${pieceCount ? `共 ${pieceCount} 块颗粒` : '全新套装'}${price ? `，官方售价 ${price} 元` : ''}。`,
+      image,
+      products: [name, ...rule.products].slice(0, 3),
+      matchedKeywords: [name, ...rule.keywords].slice(0, 4),
+    })
+  })
+
+  return candidates
+}
+
+export async function fetchBoucheronCandidate(rule: BrandSourceRule, checkedAt: string) {
+  const html = await fetchHtml(rule.listUrl)
+
+  // Extract product URLs from Boucheron listing pages
+  // Pattern: /cn_zh/<slug>-<sku>.html where SKU = 3 letters + 5 digits
+  const productUrlRegex = /href="(https:\/\/www\.boucheron\.cn\/cn_zh\/[a-z][a-z0-9-]+-[a-z]{3}\d{5}\.html)"/gi
+  const matches = [...html.matchAll(productUrlRegex)]
+  const productUrls = matches.map((m) => m[1])
+
+  if (productUrls.length === 0) {
+    return null
+  }
+
+  // Use the first product
+  const sourceUrl = productUrls[0]
+
+  // Extract SKU from product URL
+  const skuMatch = sourceUrl.match(/-([a-z]{3}\d{5})\.html$/)
+  const sku = skuMatch?.[1] ?? ''
+
+  // Try to get image from product detail page (more reliable than guessing suffix)
+  let image = ''
+  if (sku && sku.length >= 2) {
+    // Start with CDN guess based on common pattern
+    image = `https://www.boucheron.cn/media/catalog/product/${sku[0]}/${sku[1]}/${sku}_1_3.jpg`
+
+    // Attempt to extract the real image URL from the product detail page
+    try {
+      const productHtml = await fetchHtml(sourceUrl)
+      const imgMatch = productHtml.match(
+        /media\/catalog\/product\/[a-z]\/[a-z]\/[a-z]{3}\d{5}[^"'\s]*\.(?:jpg|png|webp)/i,
+      )
+      if (imgMatch) {
+        image = `https://www.boucheron.cn/${imgMatch[0]}`
+      }
+    } catch {
+      // Keep the CDN guess if product page fetch fails
+    }
+  }
+
+  // Try to extract a product title from the listing page (or fallback to URL slug)
+  const titleMatch = html.match(/<title>([^<]+)<\/title>/)
+  const sourceTitle =
+    titleMatch?.[1]?.trim() ||
+    sourceUrl
+      .split('/')
+      .pop()
+      ?.replace(/\.html$/, '')
+      ?.replace(/-/g, ' ')
+      ?.replace(/\b\w/g, (c) => c.toUpperCase()) ||
+    'Boucheron 珠宝新作'
+
+  return buildCandidate(rule, checkedAt, {
+    sourceUrl,
+    sourceTitle,
+    sourceSummary: `Boucheron 宝诗龙 ${rule.sourceLabel} 页面当前首个产品已提取，可作为珠宝新品新闻来源。`,
+    image,
+    products: [sourceTitle, ...rule.products].slice(0, 3),
+    matchedKeywords: rule.keywords.slice(0, 4),
+  })
+}
+
 async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
   const configuredRuleCandidates = await fetchConfiguredRuleCandidates(rule, checkedAt)
   if (configuredRuleCandidates && configuredRuleCandidates.length > 0) {
@@ -1431,6 +1851,8 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
       return fetchAppleCandidate(rule, checkedAt)
     case 'Hermes':
       return fetchHermesCandidate(rule, checkedAt)
+    case 'Chanel':
+      return fetchChanelCandidate(rule, checkedAt)
     case 'Dior Beauty':
       return fetchDiorBeautyCandidate(rule, checkedAt)
     case 'SHISEIDO':
@@ -1439,6 +1861,10 @@ async function fetchRealCandidate(rule: BrandSourceRule, checkedAt: string) {
       return fetchWilsonCandidate(rule, checkedAt)
     case 'Microsoft Surface':
       return fetchMicrosoftSurfaceCandidate(rule, checkedAt)
+    case 'Boucheron':
+      return fetchBoucheronCandidate(rule, checkedAt)
+    case 'LEGO':
+      return (await fetchLegoCandidates(rule, checkedAt))[0]
     default:
       return fetchGenericCandidate(rule, checkedAt)
   }
@@ -1493,6 +1919,12 @@ async function fetchRealProbe(rule: BrandSourceRule, checkedAt: string): Promise
     ]
   }
 
+  // 通用品牌（无专用 handler）走多候选提取；专用 handler 品牌保持单候选
+  if (!DEDICATED_HANDLER_BRANDS.has(rule.brand)) {
+    const candidates = await fetchGenericCandidates(rule, checkedAt)
+    return candidates.map(toProbe)
+  }
+
   const candidate = await fetchRealCandidate(rule, checkedAt)
   return candidate ? [toProbe(candidate)] : null
 }
@@ -1534,6 +1966,12 @@ export async function fetchCandidatesForBrand(rule: BrandSourceRule, probes?: Br
   if (rule.brand === 'Louis Vuitton') {
     const candidates = await fetchLouisVuittonLatestCandidates(rule, checkedAt)
     return Promise.all(candidates.map((candidate) => applyImageRuleHints(rule, candidate)))
+  }
+
+  // 通用品牌（无专用 handler）走多候选提取；专用 handler 品牌保持单候选
+  if (!DEDICATED_HANDLER_BRANDS.has(rule.brand)) {
+    const genericCandidates = await fetchGenericCandidates(rule, checkedAt)
+    return Promise.all(genericCandidates.map((candidate) => applyImageRuleHints(rule, candidate)))
   }
 
   const realCandidate = await fetchRealCandidate(rule, checkedAt)

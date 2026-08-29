@@ -275,6 +275,11 @@ export async function checkImageIntegrity(
           brand: story.brand,
           message: `[图片完整性] ${story.id}: ${issue.message}`,
         })
+        // Clear the fallback URL from the story so the frontend doesn't render the placeholder.
+        // The story will be picked up by the next pipeline run with a real image, or the static
+        // seed will overwrite it if it has a better local image. Until then, the story still
+        // shows with its title/summary — just no broken thumbnail.
+        story.image = ''
         continue
       }
 
@@ -465,8 +470,22 @@ export async function checkImageIntegrity(
         const isRealAvif = head[4] === 0x66 && head[5] === 0x74 && head[6] === 0x79 && head[7] === 0x70 &&
           head[8] === 0x61 && head[9] === 0x76 && head[10] === 0x69 && head[11] === 0x66
         const ext = path.extname(img).toLowerCase()
-        // AVIF 流配 .jpg/.png/.webp 扩展名 = nginx MIME 撒谎
-        if (isRealAvif && ext !== '.avif') {
+        // 内容真实类型与扩展名交叉校验（2026-08-13 起：不只 AVIF，WebP 字节存成 .png 同样 MIME 撒谎）
+        const realType = isRealJpeg
+          ? 'jpeg'
+          : isRealPng
+            ? 'png'
+            : isRealWebp
+              ? 'webp'
+              : isRealAvif
+                ? 'avif'
+                : null
+        const extMatchesRealType =
+          (realType === 'jpeg' && (ext === '.jpg' || ext === '.jpeg')) ||
+          (realType === 'png' && ext === '.png') ||
+          (realType === 'webp' && ext === '.webp') ||
+          (realType === 'avif' && ext === '.avif')
+        if (realType && !extMatchesRealType) {
           const repaired = await tryRepairFromImageRules(story)
           if (repaired) {
             repairedCount = applyRepair(story, repaired, repairedCount)
@@ -475,7 +494,7 @@ export async function checkImageIntegrity(
               createdAt: checkedAt,
               level: 'warning',
               brand: story.brand,
-              message: `[图片完整性修复] ${story.id}: AVIF 流配 ${ext} 扩展名（MIME 撒谎），已从 image-rules 自动修复 → ${repaired}`,
+              message: `[图片完整性修复] ${story.id}: ${realType} 流配 ${ext} 扩展名（MIME 撒谎），已从 image-rules 自动修复 → ${repaired}`,
             })
             continue
           }
@@ -486,7 +505,7 @@ export async function checkImageIntegrity(
             currentImage: img,
             kind: 'FILE_MIME_INVALID',
             severity: 'critical',
-            message: `本地图片文件实际是 AVIF 流但扩展名是 ${ext}（nginx MIME 撒谎），浏览器解码失败: ${img}`,
+            message: `本地图片文件实际是 ${realType} 流但扩展名是 ${ext}（nginx MIME 撒谎），浏览器解码失败: ${img}`,
             repairable: false,
           }
           issues.push(issue)
@@ -542,7 +561,7 @@ export async function checkImageIntegrity(
     }
 
     // ── Check 6: Image matches story products (heuristic) ──
-    if (isLocalized(img) && story.products.length > 0) {
+    if (isLocalized(img) && (story.products ?? []).length > 0) {
       const matches = imageMatchesStoryProducts(story)
       if (!matches) {
         // Check against image-rules to see if the expected product is different

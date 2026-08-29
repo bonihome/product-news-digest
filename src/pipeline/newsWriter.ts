@@ -89,6 +89,10 @@ function getCategoryLabel(candidate: CrawlCandidate) {
       return `${candidate.subcategory}产品线`
     case 'webgames':
       return `${candidate.subcategory}阵列`
+    case 'toys':
+      return `${candidate.subcategory}系列`
+    case 'ai':
+      return `${candidate.subcategory}动态`
   }
 }
 
@@ -142,6 +146,10 @@ function buildRuleTitle(candidate: CrawlCandidate, facts: NewsFactSheet) {
       return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，${candidate.subcategory}产品阵容继续扩展`
     case 'webgames':
       return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，${candidate.subcategory}游戏继续上新`
+    case 'toys':
+      return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，${candidate.subcategory}新品阵容登场`
+    case 'ai':
+      return `${candidate.brand} ${facts.launchVerb} ${facts.leadProduct}，AI ${candidate.subcategory}再添新动态`
   }
 }
 
@@ -169,6 +177,14 @@ function buildRuleSummary(candidate: CrawlCandidate, facts: NewsFactSheet) {
       return supportProducts
         ? `${candidate.brand} 本轮将 ${facts.leadProduct} 作为新游更新焦点，并以 ${supportProducts} 继续丰富平台的${candidate.subcategory}可玩内容。`
         : `${candidate.brand} 本轮将 ${facts.leadProduct} 作为新游更新焦点，继续丰富平台的${candidate.subcategory}可玩内容。`
+    case 'toys':
+      return supportProducts
+        ? `${candidate.brand} 本轮推出 ${facts.leadProduct}，联动 ${supportProducts} 进一步丰富${candidate.subcategory}新品矩阵。`
+        : `${candidate.brand} 本轮推出 ${facts.leadProduct}，继续扩展${candidate.subcategory}新品矩阵。`
+    case 'ai':
+      return supportProducts
+        ? `${candidate.brand} 本轮以 ${facts.leadProduct} 为核心发布更新，并与 ${supportProducts} 一起扩展 AI ${candidate.subcategory}。`
+        : `${candidate.brand} 本轮以 ${facts.leadProduct} 为核心发布更新，继续扩展 AI ${candidate.subcategory}。`
   }
 }
 
