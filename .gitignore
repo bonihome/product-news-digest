@@ -42,3 +42,10 @@ tmp-*.webp
 .aider*
 .aider.chat.history.md
 .aider.input.history
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# 个人笔记（不进仓库）
+notes/
