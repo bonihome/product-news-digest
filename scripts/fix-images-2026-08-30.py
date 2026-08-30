@@ -77,30 +77,34 @@ def magic_ext(buf):
     return None
 
 
-def mcqueen_image_url(source_url):
-    """从 McQueen 产品页抓与产品码精确匹配的 Original-Ecom 正面图。"""
+MCQUEEN_ASSET = re.compile(
+    r'https?://media\.alexandermcqueen\.cn/asset/[a-f0-9-]+'
+    r'/(?P<size>Original-Ecom|Large|Medium)/(?P<code>[A-Z0-9]+)_(?P<view>[A-Z])\.jpg', re.I)
+SIZE_ORDER = ('original-ecom', 'large', 'medium')
+VIEW_ORDER = ('F', 'E', 'D', 'R', 'L')
+
+
+def mcqueen_product_code(source_url):
+    """产品码 = slug 末尾 token。⚠️ 可能以字母开头（a002yuqjagd1080），别用「数字开头」的正则。"""
     slug = source_url.split('?')[0].split('#')[0].rstrip('/').split('/')[-1]
-    last_token = re.sub(r'\.html?$', '', slug, flags=re.I).split('-')[-1]
-    code = last_token.upper() if (re.fullmatch(r'[A-Za-z0-9]{10,}', last_token)
-                                  and re.search(r'\d', last_token)) else None
-    html = fetch_text(source_url)
-    found = re.findall(
-        r'https?://media\.alexandermcqueen\.cn/asset/[a-f0-9-]+/(?:Original-Ecom|Large|Medium)/([A-Z0-9]+)_([A-Z])\.jpg',
-        html, re.I)
-    urls = re.findall(
-        r'https?://media\.alexandermcqueen\.cn/asset/[a-f0-9-]+/(?:Original-Ecom|Large|Medium)/[A-Z0-9]+_[A-Z]\.jpg',
-        html, re.I)
-    pool = []
-    for url, (c, v) in zip(urls, found):
-        if code and c.upper() != code:
-            continue  # 不同色号，绝不使用
-        size_rank = 0 if 'Original-Ecom' in url else (1 if 'Large' in url else 2)
-        view_rank = {'F': 0, 'E': 1, 'D': 2, 'R': 3, 'L': 4}.get(v.upper(), 9)
-        pool.append((size_rank, view_rank, url))
-    if not pool:
-        return None
-    pool.sort()
-    return pool[0][2]
+    token = re.sub(r'\.html?$', '', slug, flags=re.I).split('-')[-1]
+    return token.upper() if re.fullmatch(r'(?=.*\d)[A-Za-z0-9]{10,}', token) else None
+
+
+def pick_mcqueen_asset(html, source_url):
+    """从产品页 HTML 选出与产品码精确匹配的最大尺寸正面图（纯函数，便于验证）。"""
+    code = mcqueen_product_code(source_url)
+    pool = [
+        (SIZE_ORDER.index(m['size'].lower()), VIEW_ORDER.index(m['view'].upper())
+         if m['view'].upper() in VIEW_ORDER else len(VIEW_ORDER), m[0])
+        for m in MCQUEEN_ASSET.finditer(html)
+        if not code or m['code'].upper() == code  # 不同色号绝不使用
+    ]
+    return min(pool)[2] if pool else None
+
+
+def mcqueen_image_url(source_url):
+    return pick_mcqueen_asset(fetch_text(source_url), source_url)
 
 
 def nike_image_url(source_url):
@@ -127,7 +131,6 @@ def save_image(buf, brand_slug, story_id):
     # 与 compress-oversized-images.py 一致：>=1500px 缩到 800px
     if max(w, h) >= 1500:
         scale = 800 / max(w, h)
-        img = img.convert('RGB' if ext in ('jpg', 'jpeg') else img.mode)
         img = img.resize((int(w * scale), int(h * scale)), Image.Resampling.LANCZOS)
         out = io.BytesIO()
         if ext == 'png':
