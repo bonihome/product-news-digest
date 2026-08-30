@@ -376,12 +376,55 @@ function extractAlexanderMcQueenImage(html: string, pageUrl: string): string | n
   return pool[0].url
 }
 
+// Miu Miu 产品图提取（2026-08-30 新增）。
+// 官网产品详情页没有 og:image / twitter:image / itemprop=image，且通用提取器的
+// 品牌 CDN 白名单里没有 miumiu，导致 Miu Miu 新故事一直拿不到产品图，最终落到
+// post-pipeline 的 Playwright 截图兜底 → 600×800 整页截图被当成产品图。
+// 产品图 CDN：content/dam/miumiubkg_products/{首}/{前3}/{SKU前6}/{颜色码}/{SKU}_{视角}.jpg
+//   - SKU = 产品页 URL 最后一段（大写+下划线），如 5BB199_2BBL_F0D57_V_OOO
+//   - 视角后缀：_SLF(正面) _SLO(其他) _SLR _SLB(背面) _SLD(细节)
+// ⚠️ 同一产品页会内嵌同款其他颜色的图（颜色码不同），必须用 sourceUrl 的 SKU 精确过滤。
+function extractMiuMiuImage(html: string, pageUrl: string): string | null {
+  // SKU = URL 最后一段（去 query / hash / 尾斜杠）
+  const sku = pageUrl.split('?')[0].split('#')[0].replace(/\/+$/, '').split('/').pop() ?? ''
+  if (!/^[A-Z0-9_]{6,}$/i.test(sku)) {
+    return null
+  }
+  const skuUpper = sku.toUpperCase()
+
+  // 匹配绝对 URL 或 /content/dam 相对路径里的同 SKU 产品图
+  const assetPattern = new RegExp(
+    `(?:https?:\\/\\/www\\.miumiu\\.cn)?\\/content\\/dam\\/miumiubkg_products\\/[^"']*?\\/${skuUpper}_([A-Z]{3})\\.jpg`,
+    'gi',
+  )
+  const viewOrder = ['SLF', 'SLO', 'SLR', 'SLB', 'SLD']
+  const found: { url: string; rank: number }[] = []
+  for (const m of html.matchAll(assetPattern)) {
+    const view = (m[1] || '').toUpperCase()
+    const idx = viewOrder.indexOf(view)
+    const url = m[0].startsWith('http') ? m[0] : `https://www.miumiu.cn${m[0]}`
+    found.push({ url, rank: idx === -1 ? viewOrder.length : idx })
+  }
+  if (found.length === 0) {
+    return null
+  }
+  found.sort((a, b) => a.rank - b.rank)
+  return found[0].url
+}
+
 function extractImageFromHtml(html: string, baseUrl: string) {
   // 品牌专属提取优先（这些站点 og:image 缺失或指向 logo/其他色号）
   if (/(?:^|\.)alexandermcqueen\.cn$/i.test(safeHostname(baseUrl))) {
     const mcqueenImage = extractAlexanderMcQueenImage(html, baseUrl)
     if (mcqueenImage) {
       return decodeHtmlEntities(mcqueenImage)
+    }
+  }
+
+  if (/(?:^|\.)miumiu\.cn$/i.test(safeHostname(baseUrl))) {
+    const miuMiuImage = extractMiuMiuImage(html, baseUrl)
+    if (miuMiuImage) {
+      return decodeHtmlEntities(miuMiuImage)
     }
   }
 
