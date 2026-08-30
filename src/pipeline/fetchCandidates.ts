@@ -317,7 +317,74 @@ function extractTitleFromHtml(html: string) {
   return rawTitle ? collapseWhitespace(decodeHtmlEntities(rawTitle.replace(/<[^>]+>/g, ' '))) : null
 }
 
+function safeHostname(url: string): string {
+  try {
+    return new URL(url).hostname
+  } catch {
+    return ''
+  }
+}
+
+// Alexander McQueen 产品图提取（2026-08-30 新增）。
+// 官网 2026 改版后：
+//   - 产品详情页**没有 og:image / twitter:image / itemprop=image**
+//   - 产品图 CDN 路径为 media.alexandermcqueen.cn/asset/<uuid>/<size>/<PRODUCTCODE>_<view>.jpg
+//     （旧的 /m/<uuid>/Original_Ecom-<code>_F.jpg 已废弃）
+//   - 尺寸档位：Original-Ecom / Large / Medium / eCom / Small / Thumbnail / Swatch ...
+//   - 视角后缀：_F(正面) _E _D _R _L
+//
+// ⚠️ 同一产品页会同时内嵌**其他色号**的图（如 876348Q1BH31000 页面里还有 876348Q1BH39004），
+// 所以必须用 sourceUrl 里的产品码精确匹配，否则会配到别的颜色/款式（用户明确不接受乱配）。
+function extractAlexanderMcQueenImage(html: string, pageUrl: string): string | null {
+  // 产品码 = URL 最后一段（去 .html）按 '-' 切分后的末尾 token，如
+  //   .../pointelle-knit-top-876348q1bh31000.html → 876348Q1BH31000
+  //   .../gingham-check-tailored-trousers-a002yuqjagd1080.html → A002YUQJAGD1080（以字母开头）
+  //   .../584968qeaaa9007.html                    → 584968QEAAA9007（整段就是产品码）
+  const slug = pageUrl.split('?')[0].split('#')[0].replace(/\/$/, '').split('/').pop() ?? ''
+  const lastToken = slug.replace(/\.html?$/i, '').split('-').pop() ?? ''
+  const productCode =
+    /^[a-z0-9]{10,}$/i.test(lastToken) && /[0-9]/.test(lastToken) ? lastToken.toUpperCase() : null
+
+  const assetPattern =
+    /https?:\/\/media\.alexandermcqueen\.cn\/asset\/[a-f0-9-]+\/(?:Original-Ecom|Large|Medium|eCom)\/([A-Z0-9]+)_([A-Z])\.jpg/gi
+  const found = [...html.matchAll(assetPattern)].map((m) => ({
+    url: m[0],
+    code: (m[1] || '').toUpperCase(),
+    view: (m[2] || '').toUpperCase(),
+    // Original-Ecom 是最大尺寸原图，优先
+    sizeRank: /Original-Ecom/i.test(m[0]) ? 0 : /Large/i.test(m[0]) ? 1 : /Medium/i.test(m[0]) ? 2 : 3,
+  }))
+
+  if (found.length === 0) {
+    return null
+  }
+
+  // 视角优先级：正面图优先
+  const viewOrder = ['F', 'E', 'D', 'R', 'L']
+  const rank = (view: string) => {
+    const index = viewOrder.indexOf(view)
+    return index === -1 ? viewOrder.length : index
+  }
+
+  // 只要 sourceUrl 能解析出产品码，就**只接受同产品码**的图（宁可无图，不可串色号）
+  const pool = productCode ? found.filter((item) => item.code === productCode) : found
+  if (pool.length === 0) {
+    return null
+  }
+
+  pool.sort((a, b) => a.sizeRank - b.sizeRank || rank(a.view) - rank(b.view))
+  return pool[0].url
+}
+
 function extractImageFromHtml(html: string, baseUrl: string) {
+  // 品牌专属提取优先（这些站点 og:image 缺失或指向 logo/其他色号）
+  if (/(?:^|\.)alexandermcqueen\.cn$/i.test(safeHostname(baseUrl))) {
+    const mcqueenImage = extractAlexanderMcQueenImage(html, baseUrl)
+    if (mcqueenImage) {
+      return decodeHtmlEntities(mcqueenImage)
+    }
+  }
+
   const directImage =
     extractMatch(html, /property="og:image" content="([^"]+)"/i) ??
     extractMatch(html, /name="twitter:image" content="([^"]+)"/i) ??
@@ -1031,14 +1098,30 @@ async function fetchGenericCandidates(rule: BrandSourceRule, checkedAt: string):
 
   const publishedAt = extractPublishedAtFromHtml(html, checkedAt)
 
-  return productLinks.slice(0, MAX_GENERIC_CANDIDATES).map((url, index) => {
+  // ⚠️ 2026-08-30：以前这里 image 恒为 ''，通用品牌的新故事全靠 post-pipeline 截图兜底
+  // （Alexander McQueen 今天 6 条新闻全空图就是这条路径导致的）。
+  // 现在为每个产品链接抓一次详情页，用 extractImageFromHtml 提取真实产品图。
+  // 抓不到就保持空字符串，交给既有回退链（截图 / 留空），不猜、不用同品牌其他产品图。
+  const links = productLinks.slice(0, MAX_GENERIC_CANDIDATES)
+  const detailImages = await Promise.all(
+    links.map(async (url) => {
+      try {
+        const detailHtml = await fetchHtml(url)
+        return extractImageFromHtml(detailHtml, url) ?? ''
+      } catch {
+        return ''
+      }
+    }),
+  )
+
+  return links.map((url, index) => {
     const label = inferProductLabelFromUrl(url, index)
     return buildCandidate(rule, checkedAt, {
       sourceUrl: url,
       sourceTitle: `${rule.brand} ${label}`,
       sourceSummary: `${rule.brand} ${rule.sourceLabel} 页面抓取到 ${rule.subcategory} 新品「${label}」，已作为新品候选写入抓取流程。`,
       products: [label, ...rule.products.slice(0, 2)],
-      image: '',
+      image: detailImages[index] ?? '',
       publishedAt,
     })
   })

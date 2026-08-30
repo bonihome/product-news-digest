@@ -256,7 +256,10 @@ export async function localizeStoryImages(stories: StoredStory[]) {
     // Bing image search DISABLED — produces contaminated images from random CDNs
     const canSearch = false // isImageSearchAvailable()
 
-    const ruleStory = await findImageRuleForStory(story)
+    // ⚠️ exactOnly：只认 storyId / sourcePage 精确匹配的规则。
+    // 模糊匹配（category+subcategory）会把同品牌其他产品的 candidateImageUrl /
+    // localMirrorPath 套到本故事上，且优先级高于故事自己抓到的正确图 → 跨产品串图。
+    const ruleStory = await findImageRuleForStory(story, { exactOnly: true })
     const sourceSignature = createStorySourceSignature(story)
     const existingLocalMirrorAsset = ruleStory?.acquisition.localMirrorPath
       ? nextAssets.find(
